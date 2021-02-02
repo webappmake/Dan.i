@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import "var", "reset";
+
+/* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
+.header {
+  @include flex;
+  width: 100vw;
+  height: $header-height;
+  flex-direction: column;
+  border-bottom: 0.09766vw solid $color-border;
+  z-index: 999;
+  .top_menu { 
+    @include flex;
+    width: 100vw;
+    height: 11.71875vw;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.09766vw solid $color-border;
+  }
+  .gnb {
+
+  }
+}
+.container-wrap {
+    @include flex;
+    width: 100vw;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 997;
+    .container {
+    }
+}
+.footer {
+  width: 100vw; 
+  height: $footer-height;
+  // 앗...푸터에 메뉴가?! ㅋㅋㅋ 다시 잡아야징~
+}
