@@ -7,36 +7,52 @@
 .header {
   @include flex;
   width: 100vw;
-  height: $header-height;
-  flex-direction: column;
-  border-bottom: 0.09766vw solid $color-border;
+  height: $header_height;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.09766vw solid $color_border;
   z-index: 999;
-  .top_menu { 
-    @include flex;
-    width: 100vw;
-    height: 11.71875vw;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 0.09766vw solid $color-border;
-  }
-  .gnb {
-
-  }
 }
 .container-wrap {
-    @include flex;
-    width: 100vw;
-    min-height: calc(100vh - #{$header-height} - #{$footer-height});
-    align-items: center;
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: 997;
-    .container {
+  @include flex;
+  width: 100vw;
+  height: calc(100vh - #{$header_height} - #{$footer_height});
+  position: relative;
+  z-index: 998;
+  .container {
+    & > .nav {
+      width: 100vw;
+      height: $nav_height;
+      border-bottom: 0.09766vw solid $color_border;
+      z-index: 997;
     }
+    & > .contents {
+      width: 100vw;
+      height: calc(100vh - #{$header_height} - #{$footer_height} - #{$nav_height});
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: lightgray;
+    }
+  }
 }
 .footer {
   width: 100vw; 
-  height: $footer-height;
-  // 앗...푸터에 메뉴가?! ㅋㅋㅋ 다시 잡아야징~
+  height: $footer_height;
+  position: relative;
+  text-align: center;
+  z-index: 999;
+  & > .nav {
+    width: calc(100vw - #{$gutter_md}*2);
+    height: 100%;
+    margin: 0 auto;
+    .main_menu {
+      @include flex;
+      height: 100%;      
+      li {
+        width: 20%;
+        height: 100%;
+        flex-shrink: 0;
+      }
+    }
+  }
 }

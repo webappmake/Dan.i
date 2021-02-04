@@ -2,41 +2,39 @@
 $base-font-family: 'Noto Sans KR', 'Noto Sans KR', sans-serif !important ;
 
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
-$color-primary: #337ab7;
-$color-secondary: #ba8748;
-$color-secondary-light: #4d61af;
-$color-secondary-dark: #755125;
-$color-danger: #B71C1C;
-$color-background: #ececec;
-$color-border: #e7e7e7;
+$color_primary: #337ab7;
+$color_secondary: #ba8748;
+$color_danger: #B71C1C;
+$color_background: #ececec;
+$color_border: #e6e7e8;
 
 /* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
-$header-height: 23.43750vw;
-$footer-height: 19.53125vw;
-$lnb-width: 220px;
-$form-min-width: 200px;
+$header_height: 11.71875vw; //120px;
+$nav_height: 11.71875vw; //120px;
+$footer_height: 18.55469vw; //190px;
+$form_min_width: 200px;
 
-$gutter-xs: 3px;
-$gutter-sm: 6px;
-$gutter-md: 12px;
-$gutter-lg: 24px;
-$gutter-xl: 36px;
+$gutter_sm: 1.95313vw; //20px;
+$gutter_md: 3.90625vw; //40px;
+$gutter_lg: 24px;
+$gutter_xl: 36px;
 $radius: 12px;
+
 /* ------------------------------------------------------- MIXINS ------------------------------------------------------- */
 // Drop shadows
-@mixin shadow-bottom() {
+@mixin shadow_bottom() {
     -webkit-box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
             box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
   }
-  @mixin shadow-right() {
+  @mixin shadow_right() {
     -webkit-box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
             box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
   }
-  @mixin shadow-box() {
+  @mixin shadow_box() {
     -webkit-box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
             box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
   }
-  @mixin shadow-header() {
+  @mixin shadow_footer() {
     -webkit-box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
             box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
   }
@@ -53,7 +51,7 @@ $radius: 12px;
     display: -ms-flexbox;
     display: flex;
   }
-  @mixin flex-inline() {
+  @mixin flex_inline() {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -64,10 +62,10 @@ $radius: 12px;
     display: -ms-flexbox;
     display: box;
   }
-  @mixin card-design() {
+  @mixin card_design() {
     border-radius: $radius;
     background-color: #f7f7f7;
-    border: 1px solid $basic-border-color;
+    border: 1px solid $color_border;
     box-shadow: 0 2px 6px rgba(0,0,0,.1);
     overflow: hidden;
   }
