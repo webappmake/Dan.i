@@ -2,18 +2,22 @@
 $base-font-family: 'Noto Sans KR', 'Noto Sans KR', sans-serif !important ;
 
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
-$color_primary: #337ab7;
+$color_primary: #0054a3;
 $color_secondary: #ba8748;
 $color_danger: #B71C1C;
 $color_background: #ececec;
 $color_border: #e6e7e8;
 
+$font_lightgray: #b1b1b1;
+$font_gray: #888;
+$font_black: #222;
 /* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
 $header_height: 11.71875vw; //120px;
 $nav_height: 11.71875vw; //120px;
 $footer_height: 18.55469vw; //190px;
 $form_min_width: 200px;
 
+$gutter_xs: 0.97656vw; //10px;
 $gutter_sm: 1.95313vw; //20px;
 $gutter_md: 3.90625vw; //40px;
 $gutter_lg: 24px;

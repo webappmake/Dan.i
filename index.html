@@ -16,42 +16,109 @@
 <body>
 	<header class="header">
 		<h1 class="logo">
-			<a href="index.html">
-				<img src="" alt="Dan.i"/><span class="sr_only">Dan.i</span>
-			</a>
+			<!-- <a href="index.html"><i class="ic logo">단아이</i></a> -->
 		</h1>
 		<div class="location">
-			알림 / 로그아웃
-		</div>		
-	</header>
-	<div class="container-wrap">		
-		<div class="container">
-			<nav class="nav">
-				<h2 class="skip">2차메뉴</h2>
-				<ul class="sub_menu">
-					<li><a href="#">분석토픽</a></li>
-					<li><a href="#">관심토픽</a></li>
-					<li><a href="#">수강이력</a></li>
-					<li><a href="#">교과과정</a></li>
-					<li><a href="#">설정</a></li>
+			<!-- 알림이 있을 경우 on 클래스 추가 -->
+			<a href="#" class="ico_noti" onclick="fn_MoreToggle(this)"><i class="ic alert">알림</i></a>
+			<div class="noti_pop_area" style="display: none;">
+				<div class="noti_pop_hd">
+					<h4 class="ft_gong_400">알림</h4>
+					<button type="button" class="btn_icon btn_noti_colse" onclick="fn_NotiClose();"><span>알림 팝업 닫기</span></button>
+				</div>
+				<ul class="noti_pop_list">
+					<!-- 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
+					<li>
+						<p>
+							<strong>[주간브리핑]</strong>
+							<!-- 알림 내용이 길 경우 미리보기 되므로 title 필요 -->
+							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+						</p>
+						<span class="date">2020.12.13 09:0:00</span>
+						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+					</li>
+					<li>
+						<p>
+							<strong>[주간브리핑]</strong>
+							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+						</p>
+						<span class="date">2020.12.13 09:0:00</span>
+						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+					</li>
+					<li>
+						<p>
+							<strong>[주간브리핑]</strong>
+							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+						</p>
+						<span class="date">2020.12.13 09:0:00</span>
+						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+					</li>
+					<li>
+						<p>
+							<strong>[주간브리핑]</strong>
+							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+						</p>
+						<span class="date">2020.12.13 09:0:00</span>
+						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+					</li>
+					<li>
+						<p>
+							<strong>[주간브리핑]</strong>
+							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+						</p>
+						<span class="date">2020.12.13 09:0:00</span>
+						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+					</li>
+					<!-- // 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
+					<!-- 알림이 없을 경우 -->
+					<!--<li class="none">도착한 알림이 없어요!</li>-->
+					<!-- // 알림이 없을 경우 -->
 				</ul>
+				<div class="noti_pop_ft">
+					<p class="more"><a href="../Common/Notification.html"><span class="icon_after">더보기</span></a></p>
+				</div>
+			</div>
+			<a href="#"><i class="ic logout">로그아웃</i></a>
+		</div>
+	</header><!--//.header-->
+
+	<div class="container-wrap">
+		<div class="container">
+			<nav class="nav_select_swiper">
+				<h2 class="skip">2차메뉴</h2>
+				<ul class="sub_menu swiper-wrapper">
+					<li class="swiper-slide active"><a href="#">분석토픽</a></li>
+					<li class="swiper-slide"><a href="#">관심토픽</a></li>
+					<li class="swiper-slide"><a href="#">수강이력</a></li>
+					<li class="swiper-slide"><a href="#">교과과정</a></li>
+					<li class="swiper-slide"><a href="#">스크랩</a></li>
+					<li class="swiper-slide"><a href="#">즐겨찾기</a></li>
+				</ul>
+				<script>
+					var swiper = new Swiper('.nav_select_swiper', {
+						slidesPerView: 5,
+						centeredSlides: false,
+						grabCursor: true,
+					});
+				</script>
 			</nav>
 			<div class="contents">
 			</div>
 		</div><!--//.container-->
 	</div><!--//.container-wrap-->
+
   	<footer class="footer">
 		<nav class="nav">
 			<h2 class="skip">1차메뉴</h2>
 			<ul class="main_menu">
-				<li><a href="#">MY-Desk</a></li>
-				<li><a href="#">학과라운지</a></li>
-				<li><a href="#">교과/비교과</a></li>
-				<li><a href="#">채용</a></li>
-				<li><a href="#">챗봇</a></li>
+				<li class="my_desk active"><a href="#">MY-Desk</a></li>
+				<li class="department_lounge"><a href="#">학과라운지</a></li>
+				<li class="subject"><a href="#">교과/비교과</a></li>
+				<li class="recruit"><a href="#">채용</a></li>
+				<li class="chatbot"><a href="#">챗봇</a></li>
 			</ul>
 		</nav>
-	</footer>
+	</footer><!--//.footer-->
 </body>
 </html>
 
