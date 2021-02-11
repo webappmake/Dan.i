@@ -33,7 +33,6 @@
       width: 5.66406vw;
       height: 5.66406vw;
       display: inline-block;
-      &:first-child { margin-right: 3.71094vw; }
     }
   }
 }
@@ -150,6 +149,7 @@
   @at-root .cont_hd > .tit { 
     font-weight: 400;
     line-height: 1.5; 
+    margin: $gutter_md 0 $gutter_xs;
   } //60px; 
   @at-root .list_hd .tit {    
     font-family: $sub_font_family;
@@ -184,7 +184,11 @@
   background: #fff;
 }
 
-.cont_hd {}
+.cont_hd {
+  & > .right { 
+    padding: $gutter_sm 0;
+  }
+}
 .cont_body {}
 .inline_wrap {
   @include flex;

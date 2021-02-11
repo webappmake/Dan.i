@@ -171,8 +171,6 @@ em, strong {
     width: 5.66406vw;
     height: 5.66406vw;
     display: inline-block; }
-    .header .location > a:first-child {
-      margin-right: 3.71094vw; }
 
 .container-wrap {
   display: -webkit-box;
@@ -282,7 +280,8 @@ em, strong {
   line-height: 1.25; }
   .cont_hd > .tit {
     font-weight: 400;
-    line-height: 1.5; }
+    line-height: 1.5;
+    margin: 3.90625vw 0 0.97656vw; }
   .list_hd .tit {
     font-family: "Gong Gothic", sans-serif !important;
     font-size: 5.07813vw;
@@ -307,6 +306,9 @@ em, strong {
 /* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
 .btn {
   background: #fff; }
+
+.cont_hd > .right {
+  padding: 1.95313vw 0; }
 
 .inline_wrap {
   display: -webkit-box;
