@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
-@import "var", "reset";
+@import "fonts", "var", "reset";
 
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .ic {
@@ -12,6 +12,7 @@
   text-indent: -1000vw;
   &.alert { background-position: -13.86719vw 0; }
   &.logout { background-position: -19.53125vw 0; }
+  &.selectbox { background-position: -17.57813vw -24.02344vw; }
 }
 .header {
   @include flex;
@@ -86,7 +87,8 @@
       height: calc(100vh - #{$header_height} - #{$footer_height} - #{$nav_height});
       overflow-x: hidden;
       overflow-y: auto;
-      background-color: lightgray;
+      background-color: #fff;
+      padding: 0 $gutter_md;
     }
   }
 }
@@ -137,5 +139,126 @@
         }
       }
     }
+  }
+}
+/* ------------------------------------------------------- COMMON > FONTS ------------------------------------------------------- */
+.tit {
+  color: #333;
+  font-size: 3.90625vw;
+  font-weight: 500;
+  line-height: 1.25; //50px;
+  @at-root .cont_hd > .tit { 
+    font-weight: 400;
+    line-height: 1.5; 
+  } //60px; 
+  @at-root .list_hd .tit {    
+    font-family: $sub_font_family;
+    font-size: 5.07813vw;
+    font-weight: 500;
+    color: #000;
+  }
+  @at-root h4.tit {}
+  & > small {
+  }
+}
+.desc {
+  color: #555;  
+  line-height: 1.8;
+  @at-root .list .desc { 
+    font-size: 28px;
+    line-height: 1.78;
+  }
+  @at-root .list_hd .desc {
+    font-family: $sub_font_family;
+    font-size: 3.51563vw; //36px;
+    font-weight: 500;
+    color: 000;
+  }
+}
+.text_blue {
+  color: $color_primary !important;
+  @at-root strong.text_blue {}
+}
+/* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
+.btn{
+  background: #fff;
+}
+
+.cont_hd {}
+.cont_body {}
+.inline_wrap {
+  @include flex;
+	align-items: center;
+	justify-content: space-between;
+	.form-group, label { 
+		flex-grow: 1;
+		margin-right: 4px;
+		min-width: 200px;
+  }
+	button { 
+		flex: 0 0 auto;
+		margin-left: .75rem;
+  }
+  &.align_top {
+    align-items: flex-start;
+  }
+}
+.list_view {
+  @include flex;
+  flex-direction: column;   
+  .list_hd {
+    @include flex; 
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.19531vw solid $color_border_list;
+    padding: 1.17188vw 0;
+    & > div {      
+      * { display: inline-block; }
+      .tit{ margin-right: 1.56250vw; }
+      .btn {
+        width: 9.76563vw;
+        height: 9.76563vw;
+        padding: 0.48828vw;
+        display: inline-block;
+        border: 0.09766vw solid $color_border_ic;
+      }
+    } 
+  }
+  .list_cont {
+    .list {      
+      & > li {
+        padding: $gutter_md 0;
+        border-bottom: 0.09766vw solid #ddd;
+        & > div {
+          margin-bottom: $gutter_sm;
+        }
+      }
+      .tag_list {
+        & > li {
+          display: inline-block;
+          margin: 0 0.48828vw;
+          & > a {
+            padding: 1.46484vw $gutter_md;
+            border: 0.09766vw solid $color_border;
+            border-radius: 6.34766vw;
+            font-size: 3.12500vw;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .list_ft {
+
+  }
+}
+/* ------------------------------------------------------- COMMON > FORM ------------------------------------------------------- */
+.select_wrap {
+  & > label {
+
+  }
+  & > select {
+
   }
 }

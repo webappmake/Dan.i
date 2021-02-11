@@ -1,12 +1,14 @@
 /* ------------------------------------------------------- FONT ------------------------------------------------------- */
-$base-font-family: 'Noto Sans KR', 'Noto Sans KR', sans-serif !important ;
-
+$base_font_family: 'Noto Sans KR', 'Noto Sans KR', sans-serif !important ;
+$sub_font_family: 'Gong Gothic', sans-serif !important ;
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
 $color_primary: #0054a3;
 $color_secondary: #ba8748;
 $color_danger: #B71C1C;
 $color_background: #ececec;
 $color_border: #e6e7e8;
+$color_border_list: #a3a3a3;
+$color_border_ic: #dadada;
 
 $font_lightgray: #b1b1b1;
 $font_gray: #888;

@@ -1,4 +1,53 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/NanumGothicLight.eot");
+  src: url("../fonts/NanumGothicLight.eot") format("embedded-opentype"), url("../fonts/NanumGothicLight.woff") format("woff"), url("../fonts/NanumGothicLight.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/NanumGothic.eot");
+  src: url("../fonts/NanumGothic.eot") format("embedded-opentype"), url("../fonts/NanumGothic.woff") format("woff"), url("../fonts/NanumGothic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/NanumGothicBold.eot");
+  src: url("../fonts/NanumGothicBold.eot") format("embedded-opentype"), url("../fonts/NanumGothicBold.woff") format("woff"), url("../fonts/NanumGothicBold.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/NanumGothicExtraBold.eot");
+  src: url("../fonts/NanumGothicExtraBold.eot") format("embedded-opentype"), url("../fonts/NanumGothicExtraBold.woff") format("woff"), url("../fonts/NanumGothicExtraBold.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'Gong Gothic';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Gong Gothic Light.eot");
+  src: url("../fonts/Gong Gothic Light.eot") format("embedded-opentype"), url("../fonts/Gong Gothic Light.woff") format("woff"), url("../fonts/Gong Gothic Light.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'Gong Gothic';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Gong Gothic Medium.eot");
+  src: url("../fonts/Gong Gothic Medium.eot") format("embedded-opentype"), url("../fonts/Gong Gothic Medium.woff") format("woff"), url("../fonts/Gong Gothic Medium.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'Gong Gothic';
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Gong Gothic Bold.eot");
+  src: url("../fonts/Gong Gothic Bold.eot") format("embedded-opentype"), url("../fonts/Gong Gothic Bold.woff") format("woff"), url("../fonts/Gong Gothic Bold.TTF") format("truetype"); }
+
 /* ------------------------------------------------------- FONT ------------------------------------------------------- */
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
 /* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
@@ -75,12 +124,18 @@ sup {
   font-size: smaller;
   color: #B71C1C; }
 
-em {
+em, strong {
   font-style: normal;
   font-weight: 600; }
 
+.left {
+  text-align: left !important; }
+
 .center {
-  text-align: center; }
+  text-align: center !important; }
+
+.right {
+  text-align: right !important; }
 
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .ic {
@@ -93,6 +148,8 @@ em {
     background-position: -13.86719vw 0; }
   .ic.logout {
     background-position: -19.53125vw 0; }
+  .ic.selectbox {
+    background-position: -17.57813vw -24.02344vw; }
 
 .header {
   display: -webkit-box;
@@ -162,7 +219,8 @@ em {
     height: calc(100vh - 11.71875vw - 18.55469vw - 11.71875vw);
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: lightgray; }
+    background-color: #fff;
+    padding: 0 3.90625vw; }
 
 .footer {
   width: 100vw;
@@ -215,3 +273,97 @@ em {
           color: #0054a3; }
           .footer > .nav .main_menu li.active a::before {
             background-position-y: -14.94141vw !important; }
+
+/* ------------------------------------------------------- COMMON > FONTS ------------------------------------------------------- */
+.tit {
+  color: #333;
+  font-size: 3.90625vw;
+  font-weight: 500;
+  line-height: 1.25; }
+  .cont_hd > .tit {
+    font-weight: 400;
+    line-height: 1.5; }
+  .list_hd .tit {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 5.07813vw;
+    font-weight: 500;
+    color: #000; }
+
+.desc {
+  color: #555;
+  line-height: 1.8; }
+  .list .desc {
+    font-size: 28px;
+    line-height: 1.78; }
+  .list_hd .desc {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 3.51563vw;
+    font-weight: 500;
+    color: 000; }
+
+.text_blue {
+  color: #0054a3 !important; }
+
+/* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
+.btn {
+  background: #fff; }
+
+.inline_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .inline_wrap .form-group, .inline_wrap label {
+    flex-grow: 1;
+    margin-right: 4px;
+    min-width: 200px; }
+  .inline_wrap button {
+    flex: 0 0 auto;
+    margin-left: .75rem; }
+  .inline_wrap.align_top {
+    align-items: flex-start; }
+
+.list_view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column; }
+  .list_view .list_hd {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.19531vw solid #a3a3a3;
+    padding: 1.17188vw 0; }
+    .list_view .list_hd > div * {
+      display: inline-block; }
+    .list_view .list_hd > div .tit {
+      margin-right: 1.56250vw; }
+    .list_view .list_hd > div .btn {
+      width: 9.76563vw;
+      height: 9.76563vw;
+      padding: 0.48828vw;
+      display: inline-block;
+      border: 0.09766vw solid #dadada; }
+  .list_view .list_cont .list > li {
+    padding: 3.90625vw 0;
+    border-bottom: 0.09766vw solid #ddd; }
+    .list_view .list_cont .list > li > div {
+      margin-bottom: 1.95313vw; }
+  .list_view .list_cont .list .tag_list > li {
+    display: inline-block;
+    margin: 0 0.48828vw; }
+    .list_view .list_cont .list .tag_list > li > a {
+      padding: 1.46484vw 3.90625vw;
+      border: 0.09766vw solid #e6e7e8;
+      border-radius: 6.34766vw;
+      font-size: 3.12500vw;
+      font-weight: 600; }
+
+/* ------------------------------------------------------- COMMON > FORM ------------------------------------------------------- */

@@ -8,10 +8,10 @@
 	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 	<!--lib-->
-	<link rel="stylesheet" href="css/lib/swiper.css">
-	<script type="text/javascript" src="js/lib/swiper.min.js"></script>
+	<link rel="stylesheet" href="../css/lib/swiper.css">
+	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
 	<!--custom-->
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
 </head>
 <body>
 	<header class="header">
@@ -102,7 +102,77 @@
 				</script>
 			</nav>
 			<div class="contents">
-			</div>
+				<div class="cont_hd">
+					<p class="tit">EduAI가 교과/비교과 수강 이력, 관심사 등을 종합적으로 분석한 토픽을 모아봤어요!</p>
+					<p class="right">
+						<strong class="text_blue">관심토픽</strong>
+						<button type="button" class="btn btn_toggle on">On/Off</button>
+					</p>
+				</div>
+				<div class="cont_body">
+					<section class="list_view">
+						<div class="list_hd">
+							<div>
+								<h3 class="tit">타이틀</h3>
+								<p class="desc">총 <span class="text_blue">N</span>개</p>
+							</div>
+							<div>
+								<p class="">
+									<label for="select_01">선택</label>
+									<select class="" id="select_01" name="budget">
+										<option value="hide">-- 전체 --</option>
+										<option value="전체">전체</option>
+									</select>
+								</p>
+								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
+							</div>
+						</div><!--//.list_hd-->
+						<div class="list_cont">
+							<ul class="list">
+								<li>
+									<div class="inline_wrap">
+										<h4 class="tit">국어학개론</h4>
+										<p>
+											<input id="r1" type="radio" name="onOff" value="onOff" checked>
+											<label for="r1">On/Off</label>
+										</p>
+									</div>
+									<div class="inline_wrap">
+										<ul class="tag_list">
+											<li><a href="#">교과</a></li>
+											<li><a href="#">교과</a></li>
+											<li><a href="#">교과</a></li>
+										</ul>
+										<span class="desc"></span>
+									</div>
+								</li>
+								<li>
+									<div class="inline_wrap">
+										<h4 class="tit">국어학개론</h4>
+										<p>
+											<input id="r1" type="radio" name="onOff" value="onOff" checked>
+											<label for="r1">On/Off</label>
+										</p>
+									</div>
+									<div class="inline_wrap">
+										<ul class="tag_list">
+											<li><a href="#">교과</a></li>
+											<li><a href="#">교과</a></li>
+											<li><a href="#">교과</a></li>
+										</ul>
+										<span class="desc"></span>
+									</div>
+								</li>
+							</ul>
+						</div><!--//.list_cont-->
+						<div class="list_ft">
+							<div class="pagination">
+
+							</div>
+						</div><!--//.list_ft-->
+					</section><!--//.list_view-->
+				</div>
+			</div><!--//.contents-->
 		</div><!--//.container-->
 	</div><!--//.container-wrap-->
 
