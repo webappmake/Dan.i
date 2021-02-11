@@ -140,7 +140,7 @@ em, strong {
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .ic {
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: inline-block;
   background: url(../images/icons_m.png) no-repeat 0 0/97.65625vw auto;
   text-indent: -1000vw; }
