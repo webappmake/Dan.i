@@ -325,6 +325,12 @@ strong.p_sub_title{font-weight:400; margin-bottom:5px; margin-top:0;}
 .voca_box > li.business{border-color:#a3ca95;} /* 기업 */
 .voca_box > li.license{border-color:#e58dd5;} /* 자격증 */
 .voca_box > li.research{border-color:#2f5597;} /* 연구 */
+.topic_color_list > li.subject > button{background-color:#676ee3; border-color:#676ee3;} /* 교과 */
+.topic_color_list > li.nonsubject > button{background-color:#ae60e3; border-color:#ae60e3;} /* 비교과 */
+.topic_color_list > li.voca > button{background-color:#48b9e1; border-color:#48b9e1;} /* 용어 */
+.topic_color_list > li.business > button{background-color:#a3ca95; border-color:#a3ca95;} /* 기업 */
+.topic_color_list > li.license > button{background-color:#e58dd5; border-color:#e58dd5;} /* 자격증 */
+.topic_color_list > li.research > button{background-color:#2f5597; border-color:#2f5597;} /* 자격증 */
 .voca_box > li .voca_list{text-align:right;}
 .voca_box > li .voca_tit{padding:5px 5px 15px 5px;}
 .voca_box > li .voca_tit > strong, .voca_box > li .voca_tit > span{display:block;}

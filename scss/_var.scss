@@ -4,6 +4,15 @@ $sub_font_family: 'Gong Gothic', sans-serif !important ;
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
 $color_primary: #0054a3;
 $color_secondary: #ba8748;
+$color_tertiary: #ccc;
+
+$color_white:#fff;
+$color_gray:#ccc;
+$color_darkgray:#555;
+$color_pink:#da97ab;
+$color_sky:#48b9e1;
+$color_red:#b70000;
+
 $color_danger: #B71C1C;
 $color_background: #ececec;
 $color_border: #e6e7e8;
@@ -11,9 +20,16 @@ $color_border_list: #a3a3a3;
 $color_border_ic: #d4d4d4;
 $color_border_light: #d4d4d4;
 $color_border_dark: #a3a3a3;
+$color_subject:#676ee3; /* 교과 */
+$color_nonsubject:#ae60e3; /* 비교과 */
+$color_voca:#48b9e1; /* 용어 */
+$color_business:#a3ca95; /* 기업 */
+$color_license:#e58dd5; /* 자격증 */
+$color_research:#2f5597; /* 연구 */
 
 $font_lightgray: #b1b1b1;
 $font_gray: #888;
+$font_darkgray: #555;
 $font_black: #222;
 /* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
 $header_height: 11.71875vw; //120px;
@@ -24,9 +40,9 @@ $form_min_width: 200px;
 $gutter_xs: 0.97656vw; //10px;
 $gutter_sm: 1.95313vw; //20px;
 $gutter_md: 3.90625vw; //40px;
-$gutter_lg: 24px;
+$gutter_lg: 24px; 
 $gutter_xl: 36px;
-$radius: 0.97656vw; 
+$radius: 0.97656vw; //10px;
 
 /* ------------------------------------------------------- MIXINS ------------------------------------------------------- */
 // Drop shadows
