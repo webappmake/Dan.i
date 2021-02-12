@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @font-face {
   font-family: 'NanumGothic';
   font-weight: 300;
@@ -212,8 +212,8 @@ em, strong {
     width: 5.66406vw;
     height: 5.66406vw;
     display: inline-block; }
-    .header .location > a:first-child {
-      margin-right: 3.71094vw; }
+    /*.header .location > a:first-child {
+      margin-right: 3.71094vw;*/ }
 
 .container-wrap {
   display: -webkit-box;
@@ -264,11 +264,12 @@ em, strong {
     padding: 0 3.90625vw; }
 
 .footer {
-  width: 100vw;
-  height: 18.55469vw;
-  position: relative;
-  text-align: center;
-  z-index: 999; }
+    width: 100vw;
+    height: 18.55469vw;
+    position: relative;
+    text-align: center;
+    z-index: 999;
+}
   .footer > .nav {
     width: calc(100vw - 3.90625vw*2);
     height: 100%;
