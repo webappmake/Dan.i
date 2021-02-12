@@ -189,9 +189,9 @@ em, strong {
   .icon_chk.icon_chk_use + label:before {
     width: 11.91406vw;
     height: 6.44531vw;
-    background-position: -470px -58px; }
+    background-position: -45.89844vw -5.66406vw; }
   .icon_chk.icon_chk_use:checked + label:before {
-    background-position: -470px -124px; }
+    background-position: -45.89844vw -12.10938vw; }
 
 .header {
   display: -webkit-box;
