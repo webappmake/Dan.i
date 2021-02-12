@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
 @import "fonts", "var", "reset";
 
-/* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
+/* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .ic {
   width: 100%;
   height: 100%;
@@ -12,17 +11,21 @@
   text-indent: -1000vw;
   &.alert { background-position: -13.86719vw 0; }
   &.logout { background-position: -19.53125vw 0; }
-  &.selectbox { background-position: -17.57813vw -24.02344vw; }  
+  &.selectbox { background-position: -17.57813vw -24.02344vw; }   
 }
+
 .icon_chk{
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;
+
   &.icon_notxt + label{font-size: 0;}
   &.icon_chk + label{display: inline-block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; font-weight:normal; margin-bottom:0;}
   &.icon_chk + label:before{content: ''; display: inline-block; text-align: center; vertical-align: middle; background-image:url(../images/icons_m.png); background-size: 97.65625vw auto; background-repeat:no-repeat;}
-  &.icon_chk_use + label:before{width: 11.91406vw; height: 6.44531vw; background-position: -45.89844vw -5.66406vw;}
-  &.icon_chk_use:checked + label:before{background-position: -45.89844vw -12.10938vw;}
+  &.icon_chk_use + label:before{width:11.91406vw; height:6.44531vw; background-position: -45.89844vw -5.66406vw;}
+  &.icon_chk_use:checked + label:before{background-position:-45.89844vw -12.10938vw;}
+
 }
-/* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
+
+
 .header {
   @include flex;
   width: 100vw;
