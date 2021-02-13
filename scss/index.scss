@@ -14,13 +14,16 @@
   &.selectbox { background-position: -17.57813vw -24.02344vw; }
   &.search { background-position: -26.36719vw -23.92578vw; }
 }
-.icon_chk {
-  position: absolute; width: 0.09766vw; height: 0.09766vw; padding: 0; margin: -0.09766vw; overflow: hidden; clip:rect(0,0,0,0); border: 0;
-  &.icon_notxt + label{font-size: 0;}
-  &.icon_chk + label{display: inline-block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; font-weight:normal; margin-bottom:0;}
-  &.icon_chk + label:before{content: ''; display: inline-block; text-align: center; vertical-align: middle; background-image:url(../images/icons_m.png); background-size: 97.65625vw auto; background-repeat:no-repeat;}
-  &.icon_chk_use + label:before{width:11.91406vw; height:6.44531vw; background-position: -45.89844vw -5.66406vw;}
-  &.icon_chk_use:checked + label:before{background-position:-45.89844vw -12.10938vw;}
+.icon_chk_wrap {
+  position: relative;
+  .icon_chk {
+    position: absolute; width: 0.09766vw; height: 0.09766vw; padding: 0; margin: -0.09766vw; overflow: hidden; clip:rect(0,0,0,0); border: 0;
+    &.icon_notxt + label{font-size: 0;}
+    &.icon_chk + label{display: inline-block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; font-weight:normal; margin-bottom:0;}
+    &.icon_chk + label:before{content: ''; display: inline-block; text-align: center; vertical-align: middle; background-image:url(../images/icons_m.png); background-size: 97.65625vw auto; background-repeat:no-repeat;}
+    &.icon_chk_use + label:before{width:11.91406vw; height:6.44531vw; background-position: -45.89844vw -5.66406vw;}
+    &.icon_chk_use:checked + label:before{background-position:-45.89844vw -12.10938vw;}
+  }
 }
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .header {
@@ -52,6 +55,9 @@
   position: relative;
   z-index: 998;
   .container {
+    max-width: unset !important;
+    padding: 0 !important;
+    margin: 0 !important;
     & > .nav_select_swiper {
       width: 100vw;
       height: $nav_height;
@@ -107,7 +113,7 @@
   position: relative;
   text-align: center;
   z-index: 999;
-  & > .nav {
+  & > .footer_nav {
     width: calc(100vw - #{$gutter_md}*2);
     height: 100%;
     margin: 0 auto;
