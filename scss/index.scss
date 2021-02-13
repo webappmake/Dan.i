@@ -15,7 +15,27 @@
   &.search { background-position: -26.36719vw -23.92578vw; }
   &.pagination_prev { background-position: 0 -24.02344vw; }
   &.pagination_next { background-position: -8.78906vw -24.02344vw; }
+  &.ic_pop_close {width: $gutter_md; height: $gutter_md; background-position: 0 -32.81250vw;}
+  &.ic_info{width:5.66406vw; height:5.66406vw; margin-right:1.46484vw; background-position:-25.19531vw 0;}
 }
+.ic_before{
+  position:relative;
+    &:before{
+      content:""; display:inline-block; vertical-align:middle; background-image:url(../images/icons_m.png); background-repeat: no-repeat; background-position:0 0; background-size:97.65625vw auto;        
+      @at-root .ic_info_lg:before{width:10.74219vw; height:10.74219vw; background-position:-57.71484vw -5.66406vw;}
+    }       
+}
+
+.ic_after{
+  position:relative;
+    &:after{
+      content:""; display:inline-block; vertical-align:middle; background-image:url(../images/icons_m.png); background-repeat: no-repeat; background-position:0 0; background-size:97.65625vw auto;
+
+      @at-root .ic_toggle:after{width:$gutter_md; height:$gutter_md; background-position:-11.71875vw -32.81250vw; margin-left:$gutter_sm;}
+      @at-root .ic_toggle.active:after{background-position:-11.71875vw -36.71875vw;}
+    }
+}
+
 .icon_chk_wrap {
   position: relative;
   .icon_chk {
@@ -268,10 +288,74 @@
         & + .desc { margin-left: 2.44141vw; }
       }
     }
+
+    &.list_cont_box{
+      .list{
+        & > li{
+          padding: 0 ; margin-bottom:5.37109vw;
+          &:last-child{
+              margin-bottom:0;
+          }
+          & .tit{
+            padding-bottom:$gutter_sm;
+          }
+          & .tit_info{
+            margin-top:0;
+            @at-root .topic_box .tit_info{color:#888; padding:0 $gutter_xs $gutter_md $gutter_xs;}
+          }
+            .topic_box{
+                padding:0 $gutter_sm; margin-bottom:0;
+                & > .inline_wrap{
+                  padding:5.85938vw $gutter_xs 0 $gutter_xs;
+                }
+            }
+            .topic_btn{
+              padding:$gutter_md $gutter_xs 4.39453vw $gutter_xs; border-top:0.09766vw solid $border;
+                & strong{
+                  display:inline-block; font-size: 3.90625vw; padding-bottom:0.48828vw; border-bottom:0.29297vw solid $color_primary;
+                }
+            }
+            .topic_list {
+              padding:4.88281vw $gutter_md; background-color:#f5f5f5; border-top:0.09766vw solid $border_light; /*border-bottom:0.09766vw solid $border_light; */display:none;
+                & > li{
+                  padding:$gutter_md 4.88281vw; margin-bottom:$gutter_xs; background-color:#fff; border:0.09766vw solid $border;
+                    &:last-child{
+                      margin-bottom:0;
+                    }
+                    & .tag_list > li > a{
+                        padding-top:$gutter_xs; padding-bottom:$gutter_xs;
+                    }
+                }
+            }
+        }
+      }
+    }
+    
   }
   .list_ft {
   }
 }
+
+.filter_list {
+    margin:2.92969vw 0;
+    @at-root .pop_sub_title + .filter_list{margin-top:6.83594vw; margin-bottom:1.56250vw;}
+    & > li {
+        display: inline-block;
+        margin: 0 0.48828vw;
+        &:first-child { margin-left: 0; }
+        & > a {
+        padding: 2.14844vw 5.27344vw;
+        border-radius: 9.76563vw;
+        font-size: 3.90625vw;
+        font-weight: 600;
+        color:#999;
+        display: block;
+        background-color:#e3e3e3;            
+        }
+        &.active > a{ background-color: $color_black; color: $color_white; }
+    }
+}
+
 /* ------------------------------------------------------- COMMON > BUTTON ------------------------------------------------------- */
 .btn {
   background-color: transparent;
@@ -288,6 +372,11 @@
   &.a_btn_sky{color:$color_sky; background-color:$color_white; border-color:$color_sky;}
   &.a_btn_red{color:$color_white; background-color:$color_red; border-color:$color_red;}
   &.a_btn_pink{color:$color_white; background-color:$color_pink; border-color:$color_pink;}
+}
+.btn_icon {
+    font-size:0;
+    background-color: transparent;
+    border: none;
 }
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {

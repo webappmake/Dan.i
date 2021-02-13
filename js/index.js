@@ -93,16 +93,16 @@
     });
 
     // Topic Toggle
-    $('.rel_toggle').click(function () {
-        if ($(this).find("span").hasClass('active')) {
-            $(this).next().hide();
-            $(this).find("span").text("토픽보기").removeClass('active');
+    $('.topic_btn').click(function () {
+        if ($(this).find("strong").hasClass('active')) {
+            $(this).parent().next().hide();
+            $(this).find("strong").text("토픽보기").removeClass('active');
         }
         else {
-            $(".rel_topic_list").hide();
-            $('.rel_toggle').find("span").text("토픽보기").removeClass('active');
-            $(this).next().show();
-            $(this).find("span").text("토픽접기").addClass('active');
+            $(".topic_list").hide();
+            $(this).find("strong").text("토픽보기").removeClass('active');
+            $(this).parent().next().show();
+            $(this).find("strong").text("토픽접기").addClass('active');
         }
     });
 

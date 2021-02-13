@@ -7,11 +7,12 @@ $color_secondary: #ba8748;
 $color_tertiary: #ccc;
 
 $color_white: #fff;
+$color_sky: #48b9e1;
+$color_pink: #da97ab;
+$color_red: #b70000;
 $color_gray: #ccc;
 $color_darkgray: #555;
-$color_pink: #da97ab;
-$color_sky: #48b9e1;
-$color_red: #b70000;
+$color_black: #000;
 
 $color_danger: #B71C1C;
 $color_background: #ececec;
@@ -40,8 +41,8 @@ $form_min_width: 200px;
 $gutter_xs: 0.97656vw; //10px;
 $gutter_sm: 1.95313vw; //20px;
 $gutter_md: 3.90625vw; //40px;
-$gutter_lg: 24px;
-$gutter_xl: 36px;
+$gutter_lg: 2.34375vw; //24px
+$gutter_xl: 3.51563vw; //36px
 $radius: 0.97656vw; //10px;
 
 /* ------------------------------------------------------- MIXINS ------------------------------------------------------- */

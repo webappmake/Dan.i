@@ -146,42 +146,27 @@ em, strong {
   text-align: right !important; }
 
 /* common */
-.ic.ic_pop_close {
-  width: 40px;
-  height: 40px;
-  background-position: 0 -336px; }
-
-.ic.ic_info {
-  width: 58px;
-  height: 58px;
-  margin-right: 15px;
-  background-position: -258px 0; }
-
 /* modal */
 .modal {
   overflow-y: auto;
   text-align: center; }
-
-.modal:not(.full_modal):before {
-  display: inline-block;
-  vertical-align: middle;
-  content: "";
-  height: 100%; }
-
-.modal:not(.full_modal) .modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-  border-radius: 5px; }
-
-.modal .modal-dialog {
-  max-width: inherit;
-  margin: 0 auto; }
+  .modal.full_modal {
+    text-align: left; }
+  .modal:not(.full_modal):before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    height: 100%; }
+  .modal .modal-dialog {
+    max-width: inherit;
+    margin: 0 auto; }
+  .modal:not(.full_modal) modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 0.48828vw; }
 
 /* full modal */
-.full_modal {
-  text-align: left; }
-
 .full_modal .modal-dialog {
   width: 100%;
   height: 100%; }
@@ -203,165 +188,157 @@ em, strong {
   width: 100%;
   height: 100%;
   overflow-y: auto; }
-
-.full_modal .modal_body .pag_info_none {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%; }
-  .full_modal .modal_body .pag_info_none > span {
-    display: block;
-    line-height: 64px;
-    font-family: "Gong Gothic", sans-serif !important;
-    font-weight: 300;
-    font-size: 44px;
-    color: #999;
-    text-align: center; }
+  .full_modal .modal_body .pag_info_none {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; }
+    .full_modal .modal_body .pag_info_none.pag_sm_info_none {
+      max-height: calc(100% - 24.21875vw); }
+    .full_modal .modal_body .pag_info_none > span {
+      display: block;
+      line-height: 6.25000vw;
+      font-family: "Gong Gothic", sans-serif !important;
+      font-weight: 300;
+      font-size: 4.29688vw;
+      color: #999;
+      padding-top: 15.62500vw;
+      text-align: center; }
+      .full_modal .modal_body .pag_info_none > span:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -5.37109vw; }
 
 .modal_header {
-  padding: 3.90625vw 3.90625vw 3.90625vw 88px;
+  padding: 3.90625vw 3.90625vw 3.90625vw 8.59375vw;
   background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
+  border-bottom: 0.09766vw solid #d4d4d4;
   position: relative;
   z-index: 9; }
-
-.modal_header .pop_title {
-  line-height: 3.90625vw;
-  font-family: "Gong Gothic", sans-serif !important;
-  font-weight: 300;
-  font-size: 40px;
-  color: #222; }
-
-.modal_header .btn_pop_close {
-  position: absolute;
-  left: 40px;
-  top: 50%;
-  margin-top: -20px; }
+  .modal_header .pop_title {
+    line-height: 3.90625vw;
+    font-family: "Gong Gothic", sans-serif !important;
+    font-weight: 300;
+    font-size: 3.90625vw;
+    color: #222; }
+  .modal_header .btn_pop_close {
+    height: 3.90625vw;
+    position: absolute;
+    left: 3.90625vw;
+    top: 50%;
+    margin-top: -2.34375vw; }
 
 .modal_body {
-  padding: 80px 3.90625vw; }
-
-.modal_body .pop_sub_title {
-  font-family: "Gong Gothic", sans-serif !important;
-  font-size: 52px;
-  color: #222; }
-
-.modal_body .pop_sub_title + .search_form_wrap {
-  margin-top: 45px; }
-
-.modal_body .tit {
-  font-size: 36px; }
-
-.modal_body .tit_info {
-  font-size: 36px;
-  line-height: 50px;
-  color: #555;
-  margin-top: 1.95313vw; }
+  padding: 7.8125vw 3.90625vw; }
+  .modal_body .pop_sub_title {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 5.07813vw;
+    color: #222; }
+  .modal_body .pop_sub_title + .search_form_wrap {
+    margin-top: 4.39453vw; }
+  .modal_body .tit {
+    font-size: 3.51563vw; }
+  .modal_body .tit_info {
+    font-size: 3.51563vw;
+    line-height: 4.88281vw;
+    color: #555;
+    margin-top: 1.95313vw; }
+  .modal_body .paging {
+    padding-bottom: 7.81250vw; }
 
 /* 토픽 출처 */
 .modal_body .summary_tit {
-  margin-top: 35px;
-  margin-bottom: 30px; }
+  margin-top: 3.41797vw;
+  margin-bottom: 2.92969vw; }
   .modal_body .summary_tit .desc {
     font-family: "Gong Gothic", sans-serif !important;
     font-size: 3.51563vw;
     color: #000; }
 
 .summary_tit .pag_info {
-  margin-top: 50px; }
+  margin-top: 4.88281vw; }
 
 .modal_body .pag_info span {
-  font-size: 40px;
-  line-height: 58px; }
+  font-size: 3.90625vw;
+  line-height: 5.66406vw; }
 
 .modal_body .summary_info {
   padding: 3.90625vw;
-  border: 1px solid #d4d4d4; }
-
-.modal_body .summary_info > dt, .modal_body .summary_info > dd {
-  padding-left: 25px; }
-
-.modal_body .summary_info > dt {
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 25px;
-  position: relative; }
-
-.modal_body .summary_info > dt:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  margin-top: -6px;
-  margin-right: 15px;
-  background-color: #333; }
-
-.modal_body .summary_info > dd {
-  line-height: 56px;
-  font-size: 36px;
-  color: #555;
-  margin-bottom: 60px;
-  word-break: keep-all; }
-
-.modal_body .summary_info > dd:last-of-type {
-  margin-bottom: 0; }
-
-.modal_body .ability_list > li {
-  align-items: flex-start;
-  margin-bottom: 0.97656vw;
-  padding: 1.95313vw 3.90625vw;
-  border: 1px solid #d4d4d4; }
-
-.modal_body .ability_list > li > strong, .modal_body .ability_list > li > span {
-  line-height: 65px;
-  color: #555; }
-
-.modal_body .ability_list > li > strong {
-  width: 172px;
-  height: 65px;
-  font-size: 34px;
-  margin-right: 1.95313vw;
-  border: 1px solid #555;
-  border-radius: 65px;
-  text-align: center; }
-
-.modal_body .summary_info > dd .depart_info_list > li > strong, .modal_body .summary_info > dd .depart_info_list > li > span {
-  display: block; }
-
-.modal_body .summary_info > dd .depart_info_list > li > strong {
-  padding-left: 7px;
-  position: relative; }
-
-.modal_body .summary_info > dd .depart_info_list > li > strong:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 2px;
-  height: 2px;
-  margin-top: -1px;
-  margin-right: 5px;
-  background-color: #333; }
-
-.modal_body .summary_info > dd .depart_info_list > li > span {
-  padding-left: 7px;
-  margin-bottom: 12px; }
+  border: 0.09766vw solid #d4d4d4; }
+  .modal_body .summary_info > dt, .modal_body .summary_info > dd {
+    padding-left: 2.44141vw; }
+  .modal_body .summary_info > dt {
+    font-size: 3.90625vw;
+    font-weight: 600;
+    margin-bottom: 2.44141vw;
+    position: relative; }
+    .modal_body .summary_info > dt:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1.17188vw;
+      height: 1.17188vw;
+      margin-top: -0.58594vw;
+      margin-right: 1.46484vw;
+      background-color: #333; }
+  .modal_body .summary_info > dd {
+    line-height: 5.46875vw;
+    font-size: 3.51563vw;
+    color: #555;
+    margin-bottom: 5.85938vw;
+    word-break: keep-all; }
+    .modal_body .summary_info > dd:last-of-type {
+      margin-bottom: 0; }
+  .modal_body .summary_info .ability_list > li {
+    align-items: flex-start;
+    margin-bottom: 0.97656vw;
+    padding: 1.95313vw 3.90625vw;
+    border: 0.09766vw solid #d4d4d4; }
+    .modal_body .summary_info .ability_list > li > strong, .modal_body .summary_info .ability_list > li > span {
+      line-height: 6.34766vw;
+      color: #555; }
+    .modal_body .summary_info .ability_list > li > strong {
+      width: 16.79688vw;
+      height: 6.34766vw;
+      font-size: 3.32031vw;
+      margin-right: 1.95313vw;
+      border: 0.09766vw solid #555;
+      border-radius: 6.34766vw;
+      text-align: center; }
+  .modal_body .summary_info .depart_info_list > li > strong, .modal_body .summary_info .depart_info_list > li > span {
+    display: block; }
+  .modal_body .summary_info .depart_info_list > li > span {
+    padding-left: 0.68359vw;
+    margin-bottom: 1.17188vw; }
+  .modal_body .summary_info .depart_info_list > strong {
+    padding-left: 0.68359vw;
+    position: relative; }
+    .modal_body .summary_info .depart_info_list > strong:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0.19531vw;
+      height: 0.19531vw;
+      margin-top: -0.09766vw;
+      margin-right: 0.48828vw;
+      background-color: #333; }
 
 .tag_btn_list {
-  margin-top: 35px;
+  margin-top: 3.41797vw;
   margin-bottom: 0; }
   .tag_btn_list > li {
     display: inline-block;
     margin: 0 0.48828vw; }
     .tag_btn_list > li > a {
       display: block;
-      padding: 24px 30px;
+      padding: 2.34375vw 2.92969vw;
       border: 0.09766vw solid #d4d4d4;
-      border-radius: 20px;
-      font-size: 36px;
+      border-radius: 1.95313vw;
+      font-size: 3.51563vw;
       font-weight: 600;
       background-color: #eee; }
 
@@ -552,21 +529,11 @@ em, strong {
   overflow-y: auto;
   position: relative; }
 
-.modal_body .filter_list {
-  margin-top: 10px; }
-
-.modal_body .filter_list > li {
-  margin-top: 0; }
-
-.modal_body .filter_list01 {
-  margin-top: -10px; }
-
-.modal_body .filter_list01 > li {
-  margin-top: 10px; }
-
-.modal_body .filter_list + .list_title_area {
-  margin-top: 15px; }
-
+/*.modal_body .filter_list{margin-top:10px;}
+.modal_body .filter_list > li{margin-top:0;} 
+.modal_body .filter_list01{margin-top:-10px;}
+.modal_body .filter_list01 > li{margin-top:10px;}
+.modal_body .filter_list + .list_title_area{margin-top:15px;}*/
 /* 팝업 - 토픽 출처  */
 .modal_tab_area .modal_tab_dual_area {
   display: flex; }
@@ -1265,6 +1232,48 @@ em, strong {
     background-position: 0 -24.02344vw; }
   .ic.pagination_next {
     background-position: -8.78906vw -24.02344vw; }
+  .ic.ic_pop_close {
+    width: 3.90625vw;
+    height: 3.90625vw;
+    background-position: 0 -32.81250vw; }
+  .ic.ic_info {
+    width: 5.66406vw;
+    height: 5.66406vw;
+    margin-right: 1.46484vw;
+    background-position: -25.19531vw 0; }
+
+.ic_before {
+  position: relative; }
+  .ic_before:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/icons_m.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 97.65625vw auto; }
+    .ic_info_lg:before {
+      width: 10.74219vw;
+      height: 10.74219vw;
+      background-position: -57.71484vw -5.66406vw; }
+
+.ic_after {
+  position: relative; }
+  .ic_after:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/icons_m.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 97.65625vw auto; }
+    .ic_toggle:after {
+      width: 3.90625vw;
+      height: 3.90625vw;
+      background-position: -11.71875vw -32.81250vw;
+      margin-left: 1.95313vw; }
+    .ic_toggle.active:after {
+      background-position: -11.71875vw -36.71875vw; }
 
 .icon_chk_wrap {
   position: relative; }
@@ -1537,6 +1546,69 @@ em, strong {
         color: #da97ab; }
   .list_view .list_cont .list .tag_list + .desc {
     margin-left: 2.44141vw; }
+  .list_view .list_cont.list_cont_box .list > li {
+    padding: 0;
+    margin-bottom: 5.37109vw; }
+    .list_view .list_cont.list_cont_box .list > li:last-child {
+      margin-bottom: 0; }
+    .list_view .list_cont.list_cont_box .list > li .tit {
+      padding-bottom: 1.95313vw; }
+    .list_view .list_cont.list_cont_box .list > li .tit_info {
+      margin-top: 0; }
+      .topic_box .tit_info {
+        color: #888;
+        padding: 0 0.97656vw 3.90625vw 0.97656vw; }
+    .list_view .list_cont.list_cont_box .list > li .topic_box {
+      padding: 0 1.95313vw;
+      margin-bottom: 0; }
+      .list_view .list_cont.list_cont_box .list > li .topic_box > .inline_wrap {
+        padding: 5.85938vw 0.97656vw 0 0.97656vw; }
+    .list_view .list_cont.list_cont_box .list > li .topic_btn {
+      padding: 3.90625vw 0.97656vw 4.39453vw 0.97656vw;
+      border-top: 0.09766vw solid #d4d4d4; }
+      .list_view .list_cont.list_cont_box .list > li .topic_btn strong {
+        display: inline-block;
+        font-size: 3.90625vw;
+        padding-bottom: 0.48828vw;
+        border-bottom: 0.29297vw solid #0054a3; }
+    .list_view .list_cont.list_cont_box .list > li .topic_list {
+      padding: 4.88281vw 3.90625vw;
+      background-color: #f5f5f5;
+      border-top: 0.09766vw solid #a3a3a3;
+      /*border-bottom:0.09766vw solid $border_light; */
+      display: none; }
+      .list_view .list_cont.list_cont_box .list > li .topic_list > li {
+        padding: 3.90625vw 4.88281vw;
+        margin-bottom: 0.97656vw;
+        background-color: #fff;
+        border: 0.09766vw solid #d4d4d4; }
+        .list_view .list_cont.list_cont_box .list > li .topic_list > li:last-child {
+          margin-bottom: 0; }
+        .list_view .list_cont.list_cont_box .list > li .topic_list > li .tag_list > li > a {
+          padding-top: 0.97656vw;
+          padding-bottom: 0.97656vw; }
+
+.filter_list {
+  margin: 2.92969vw 0; }
+  .pop_sub_title + .filter_list {
+    margin-top: 6.83594vw;
+    margin-bottom: 1.56250vw; }
+  .filter_list > li {
+    display: inline-block;
+    margin: 0 0.48828vw; }
+    .filter_list > li:first-child {
+      margin-left: 0; }
+    .filter_list > li > a {
+      padding: 2.14844vw 5.27344vw;
+      border-radius: 9.76563vw;
+      font-size: 3.90625vw;
+      font-weight: 600;
+      color: #999;
+      display: block;
+      background-color: #e3e3e3; }
+    .filter_list > li.active > a {
+      background-color: #000;
+      color: #fff; }
 
 /* ------------------------------------------------------- COMMON > BUTTON ------------------------------------------------------- */
 .btn {
@@ -1575,6 +1647,11 @@ em, strong {
     color: #fff;
     background-color: #da97ab;
     border-color: #da97ab; }
+
+.btn_icon {
+  font-size: 0;
+  background-color: transparent;
+  border: none; }
 
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {
