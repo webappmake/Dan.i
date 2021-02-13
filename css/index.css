@@ -161,10 +161,10 @@ em, strong {
 
 .icon_chk {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.09766vw;
+  height: 0.09766vw;
   padding: 0;
-  margin: -1px;
+  margin: -0.09766vw;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0; }
@@ -338,7 +338,7 @@ em, strong {
   color: #555;
   line-height: 1.8; }
   .list .desc {
-    font-size: 28px;
+    font-size: 2.73438vw;
     line-height: 1.78; }
   .list_hd .desc {
     font-family: "Gong Gothic", sans-serif !important;
@@ -350,9 +350,6 @@ em, strong {
   color: #0054a3 !important; }
 
 /* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
-.btn {
-  background: #fff; }
-
 .inline_wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -361,9 +358,7 @@ em, strong {
   align-items: center;
   justify-content: space-between; }
   .inline_wrap .form-group {
-    flex-grow: 1;
-    margin-right: 4px;
-    min-width: 200px; }
+    flex-grow: 1; }
   .inline_wrap button {
     flex: 0 0 auto;
     margin-left: .75rem; }
@@ -411,10 +406,10 @@ em, strong {
       font-size: 3.12500vw;
       font-weight: 600; }
 
-/* ------------------------------------------------------- COMMON > FORM ------------------------------------------------------- */
+/* ------------------------------------------------------- COMMON > BUTTON ------------------------------------------------------- */
 .btn {
   background-color: transparent;
-  border: 1px solid transparent; }
+  border: 0.09766vw solid transparent; }
   .btn.btn_primary {
     color: #fff; }
   .btn.btn_primary01 {
@@ -427,7 +422,7 @@ em, strong {
 
 .a_btn {
   background-color: transparent;
-  border: 1px solid transparent; }
+  border: 0.09766vw solid transparent; }
   .a_btn.a_btn_white {
     color: #555;
     background-color: #fff;
@@ -449,61 +444,7 @@ em, strong {
     background-color: #da97ab;
     border-color: #da97ab; }
 
-/* ------------------------------------------------------- TOPIC ------------------------------------------------------- */
-.topic_count {
-  font-size: 15px;
-  color: #fff; }
-
-.topic_count > strong {
-  font-size: 26px;
-  font-weight: 500;
-  margin-left: 10px; }
-
-.topic_info {
-  font-size: 0;
-  margin-top: 10px;
-  padding: 10px 23px 20px 23px;
-  background-color: #f5f5f5;
-  border-radius: 10px; }
-
-.topic_info > li {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
-  font-size: 0;
-  margin-top: 10px; }
-
-.topic_info > li > strong, .topic_info > li > span {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 14px; }
-
-.topic_info > li > strong {
-  width: 40px;
-  font-weight: 500;
-  color: #333;
-  position: relative; }
-
-.topic_info > li:nth-child(even) > strong {
-  width: 140px; }
-
-.topic_info > li > strong:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 3px;
-  height: 3px;
-  margin-right: 4px;
-  margin-top: -1px;
-  background-color: #333;
-  border-radius: 50%; }
-
-.topic_info > li > span {
-  font-weight: 500;
-  font-style: italic;
-  color: #555; }
-
-/* ------------------------------------------------------- SEARCH ------------------------------------------------------- */
+/* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap .search_form {
   display: flex;
   border-bottom: 0.58594vw solid #222;
@@ -520,8 +461,43 @@ em, strong {
     display: inline-block;
     padding: 0.97656vw; }
 
-.search_form_wrap .desc {
-  position: inherit;
-  font-size: 14px;
-  color: #999;
-  padding: 12px 0 4px; }
+/* ------------------------------------------------------- TOPIC ------------------------------------------------------- */
+.topic_area .topic_box {
+  height: 45.89844vw; }
+  .topic_area .topic_box .topic_count {
+    font-size: 3.12500vw;
+    line-height: 1.2;
+    color: #fff; }
+    .topic_area .topic_box .topic_count > span {
+      display: block; }
+    .topic_area .topic_box .topic_count > strong {
+      font-size: 5.07813vw;
+      font-weight: 600; }
+
+.topic_info {
+  border: 0.09766vw solid #d4d4d4;
+  border-radius: 0.97656vw;
+  padding: 2.92969vw 3.90625vw;
+  margin: 1.95313vw 0; }
+  .topic_info li {
+    font-size: 3.12500vw;
+    line-height: 1.875; }
+    .topic_info li > strong {
+      width: 30.27344vw;
+      display: inline-block; }
+      .topic_info li > strong::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.78125vw;
+        height: 0.78125vw;
+        margin-right: 0.97656vw;
+        margin-top: -0.39063vw;
+        background-color: #333;
+        border-radius: 50%; }
+    .topic_info li > span {
+      width: calc(100% - 30.27344vw);
+      font-style: italic;
+      color: #555555; }
+  .topic_info + .search_form_wrap {
+    margin-top: 5.27344vw; }
