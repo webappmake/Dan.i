@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 @font-face {
   font-family: 'NanumGothic';
   font-weight: 300;
@@ -143,7 +143,7 @@ em, strong {
 .right {
   text-align: right !important; }
 
-/* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
+/* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
   height: 100%;
@@ -192,6 +192,7 @@ em, strong {
   .icon_chk.icon_chk_use:checked + label:before {
     background-position: -45.89844vw -12.10938vw; }
 
+/* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -212,8 +213,6 @@ em, strong {
     width: 5.66406vw;
     height: 5.66406vw;
     display: inline-block; }
-    /*.header .location > a:first-child {
-      margin-right: 3.71094vw;*/ }
 
 .container-wrap {
   display: -webkit-box;
@@ -264,12 +263,11 @@ em, strong {
     padding: 0 3.90625vw; }
 
 .footer {
-    width: 100vw;
-    height: 18.55469vw;
-    position: relative;
-    text-align: center;
-    z-index: 999;
-}
+  width: 100vw;
+  height: 18.55469vw;
+  position: relative;
+  text-align: center;
+  z-index: 999; }
   .footer > .nav {
     width: calc(100vw - 3.90625vw*2);
     height: 100%;
@@ -324,7 +322,8 @@ em, strong {
   line-height: 1.25; }
   .cont_hd > .tit {
     font-weight: 400;
-    line-height: 1.5; }
+    line-height: 1.5;
+    margin: 3.90625vw 0 0.97656vw; }
   .list_hd .tit {
     font-family: "Gong Gothic", sans-serif !important;
     font-size: 5.07813vw;
