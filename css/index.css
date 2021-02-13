@@ -446,7 +446,7 @@ em, strong {
 
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {
-  margin: 5.27344vw 0; }
+  margin: 5.27344vw 0 7.22656vw; }
   .search_form_wrap .search_form {
     display: flex;
     border-bottom: 0.58594vw solid #222;

@@ -273,7 +273,7 @@
 }
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {
-  margin: 5.27344vw 0; //54px 기준으로 우선 잡고 나중에 공통 찾기 
+  margin: 5.27344vw 0 7.22656vw; //54px 0 74px 기준으로 우선 잡고 나중에 공통 찾기 
   .search_form {
     display: flex; 
     border-bottom: 0.58594vw solid #222;
@@ -291,7 +291,7 @@
     }
   }
   .desc { }
-}.
+}
 /* ------------------------------------------------------- TOPIC ------------------------------------------------------- */
 .topic_area {
   .topic_box {
@@ -307,7 +307,6 @@
       }
     }
   }
-  .search_form_wrap { margin-bottom: 7.22656vw; }
 }
 .topic_info {
   border: 0.09766vw solid $color_border_light;
