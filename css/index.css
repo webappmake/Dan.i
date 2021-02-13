@@ -52,6 +52,7 @@
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
 /* 교과 */
 /* 비교과 */
+/* 채용 */
 /* 용어 */
 /* 기업 */
 /* 자격증 */
@@ -342,9 +343,9 @@ em, strong {
 
 .desc {
   color: #555;
-  line-height: 1.8; }
+  line-height: 1.8;
+  font-size: 2.73438vw; }
   .list .desc {
-    font-size: 2.73438vw;
     line-height: 1.78; }
   .list_hd .desc {
     font-family: "Gong Gothic", sans-serif !important;
@@ -363,6 +364,8 @@ em, strong {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  .inline_wrap.justify_start {
+    justify-content: start; }
   .inline_wrap .form-group {
     flex-grow: 1; }
   .inline_wrap button {
@@ -411,6 +414,17 @@ em, strong {
       border-radius: 6.34766vw;
       font-size: 3.12500vw;
       font-weight: 600; }
+      .list_view .list_cont .list .tag_list > li > a.subject {
+        border-color: #676ee3;
+        color: #676ee3; }
+      .list_view .list_cont .list .tag_list > li > a.nonsubject {
+        border-color: #ae60e3;
+        color: #ae60e3; }
+      .list_view .list_cont .list .tag_list > li > a.recruit {
+        border-color: #da97ab;
+        color: #da97ab; }
+  .list_view .list_cont .list .tag_list + .desc {
+    margin-left: 2.44141vw; }
 
 /* ------------------------------------------------------- COMMON > BUTTON ------------------------------------------------------- */
 .btn {
