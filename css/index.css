@@ -1486,7 +1486,9 @@ em, strong {
       border: 0.09766vw solid #d4d4d4; }
   .list_view .list_cont .list > li {
     padding: 3.90625vw 0;
-    border-bottom: 0.09766vw solid #ddd; }
+    border-bottom: 0.09766vw solid #d4d4d4; }
+    .list_view .list_cont .list > li:last-child {
+      border-bottom: 0.19531vw solid #a3a3a3; }
     .list_view .list_cont .list > li > div {
       margin-bottom: 1.95313vw; }
       .list_view .list_cont .list > li > div:last-child {

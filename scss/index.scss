@@ -238,10 +238,11 @@
     } 
   }
   .list_cont {
-    .list {      
+    .list {   
       & > li {
         padding: $gutter_md 0;
-        border-bottom: 0.09766vw solid #ddd;
+        border-bottom: 0.09766vw solid $border;
+        &:last-child { border-bottom: 0.19531vw solid $border_light; }
         & > div { 
           margin-bottom: $gutter_sm; 
           &:last-child { margin-bottom: 0; }
