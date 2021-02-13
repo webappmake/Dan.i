@@ -11,7 +11,8 @@
   text-indent: -1000vw;
   &.alert { background-position: -13.86719vw 0; }
   &.logout { background-position: -19.53125vw 0; }
-  &.selectbox { background-position: -17.57813vw -24.02344vw; }   
+  &.selectbox { background-position: -17.57813vw -24.02344vw; }
+  &.search { background-position: -26.36719vw -23.92578vw; }
 }
 .icon_chk{
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;
@@ -100,6 +101,7 @@
   }
 }
 .footer {
+  @include shadow_footer;
   width: 100vw; 
   height: $footer_height;
   position: relative;
@@ -298,12 +300,24 @@
 .topic_info > li > span{font-weight:500; font-style:italic; color:#555;}
 
 /* ------------------------------------------------------- SEARCH ------------------------------------------------------- */
-.search_area{margin-top:45px; margin-bottom:40px; text-align:center;}
-.search_area01{margin-top:0;}
-.search_area02{margin-top:30px; margin-bottom:30px;}
-.search_area > .search_box{display:inline-block; vertical-align:middle; width:460px; padding-right:43px; border-bottom:3px solid #222; position:relative;}
-.search_area > .search_box > input{height:34px; font-size:16px; padding:5px 8px; border:none;}
-.search_area > .search_box > button{position:absolute; right:10px; top:50%; margin-top:-11.5px;}
-.search_area > .search_box > button > span{width:23px; height:23px; background-position:-300px -160px;}
+.search_form_wrap {
+  .search_form {
+    display: flex; 
+    border-bottom: 0.58594vw solid #222;
+    margin: 0 8.78906vw;
+    input::-webkit-input-placeholder, input::-moz-input-placeholder, input::-o-input-placeholder, input::-ms-input-placeholder { color: #999; opacity: 1; }
+    input {
+      width: calc(100% - 8.20313vw);
+      font-size: 3.90625vw;
+    }
+    .btn {
+      width: 8.20313vw;
+      height: 8.20313vw;
+      display: inline-block;
+      padding: $gutter_xs
+    }
+  }
+  .desc { position: inherit; font-size: 14px; color: #999; padding: 12px 0 4px; }
+}
 
 @import "test";
