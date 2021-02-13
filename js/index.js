@@ -6,7 +6,6 @@
 
     $('.modal').on('hidden.bs.modal', function (e) {
         //alert("팝업 닫힘");
-        chatbot_box();
     });
 
     // 스크롤 여부에 따라 top 버튼 생성

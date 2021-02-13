@@ -1,27 +1,27 @@
 /* ------------------------------------------------------- FONT ------------------------------------------------------- */
-$base_font_family: 'NanumGothic', 'NanumGothic', sans-serif !important ;
-$sub_font_family: 'Gong Gothic', sans-serif !important ;
+$base_font_family: 'NanumGothic', 'NanumGothic', sans-serif !important;
+$sub_font_family: 'Gong Gothic', sans-serif !important;
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
 $color_primary: #0054a3;
 $color_secondary: #ba8748;
 $color_tertiary: #ccc;
 
-$color_white:#fff;
-$color_gray:#ccc;
-$color_darkgray:#555;
-$color_pink:#da97ab;
-$color_sky:#48b9e1;
-$color_red:#b70000;
+$color_white: #fff;
+$color_gray: #ccc;
+$color_darkgray: #555;
+$color_pink: #da97ab;
+$color_sky: #48b9e1;
+$color_red: #b70000;
 
 $color_danger: #B71C1C;
 $color_background: #ececec;
-$color_subject:#676ee3; /* 교과 */
-$color_nonsubject:#ae60e3; /* 비교과 */
-$color_recruit:#da97ab; /* 채용 */
-$color_voca:#48b9e1; /* 용어 */
-$color_business:#a3ca95; /* 기업 */
-$color_license:#e58dd5; /* 자격증 */
-$color_research:#2f5597; /* 연구 */
+$color_subject: #676ee3; /* 교과 */
+$color_nonsubject: #ae60e3; /* 비교과 */
+$color_recruit: #da97ab; /* 채용 */
+$color_voca: #48b9e1; /* 용어 */
+$color_business: #a3ca95; /* 기업 */
+$color_license: #e58dd5; /* 자격증 */
+$color_research: #2f5597; /* 연구 */
 
 $border: #d4d4d4;
 $border_light: #a3a3a3;
@@ -40,7 +40,7 @@ $form_min_width: 200px;
 $gutter_xs: 0.97656vw; //10px;
 $gutter_sm: 1.95313vw; //20px;
 $gutter_md: 3.90625vw; //40px;
-$gutter_lg: 24px; 
+$gutter_lg: 24px;
 $gutter_xl: 36px;
 $radius: 0.97656vw; //10px;
 
@@ -48,54 +48,61 @@ $radius: 0.97656vw; //10px;
 // Drop shadows
 @mixin shadow_bottom() {
     -webkit-box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
-            box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
-  }
-  @mixin shadow_right() {
+    box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+
+@mixin shadow_right() {
     -webkit-box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
-            box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
-  }
-  @mixin shadow_box() {
+    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+
+@mixin shadow_box() {
     -webkit-box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-            box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-  }
-  @mixin shadow_footer() {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+@mixin shadow_footer() {
     // -webkit-box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
     //         box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
-    -webkit-box-shadow: 0px -2px 38px 38px rgba(0,0,0,0.05); 
-            box-shadow: 0px -2px 38px 38px rgba(0,0,0,0.05);
-  }
-  @mixin shadow_gnb() {
+    -webkit-box-shadow: 0px -2px 38px 38px rgba(0,0,0,0.05);
+    box-shadow: 0px -2px 38px 38px rgba(0,0,0,0.05);
+}
+
+@mixin shadow_gnb() {
     -webkit-box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
-            box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
-  }
-  // Opacity
-  @mixin opacity($opacity) {
+    box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
+}
+// Opacity
+@mixin opacity($opacity) {
     opacity: $opacity; /* All modern browsers */
     $opacityIE: $opacity * 100;
     filter: alpha(opacity=$opacityIE); /* For IE5~IE9 */
-  }
-  // Flex
-  @mixin flex() {
+}
+// Flex
+@mixin flex() {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  }
-  @mixin flex_inline() {
+}
+
+@mixin flex_inline() {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-  }
-  @mixin box() {
+}
+
+@mixin box() {
     display: -webkit-box;
     display: -ms-flexbox;
     display: box;
-  }
-  @mixin card_design() {
+}
+
+@mixin card_design() {
     border-radius: $radius;
     background-color: #f7f7f7;
     border: 1px solid $border;
     box-shadow: 0 2px 6px rgba(0,0,0,.1);
     overflow: hidden;
-  }
+}

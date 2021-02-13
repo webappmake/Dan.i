@@ -230,13 +230,13 @@
 		</nav>
 	</footer><!--//.footer-->
 	<!-- Modal -->
-	<!-- 교과개요 팝업 -->
+	<!-- 토픽 출처 정보 - 교과 팝업 -->
 	<div class="modal fade full_modal" id="Pop_Subject" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal_header">
 					<h3 class="pop_title">토픽 출처 정보 - 교과</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic pop_close">목록선택</i></button>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
 				</div>
 				<div class="modal_body">
 					<h4 class="pop_sub_title">르네상스문화와 인문주의</h4>
@@ -249,46 +249,39 @@
 					<section class="list_view">
 						<div class="list_hd">
 							<div>
-								<p class="desc">총 <span class="text_blue">N</span>개</p>
+								<p class="desc">총 <span class="text_blue">12</span>개</p>
 							</div>
 							<div>
+								<p class="">
+									<label for="select_01">선택</label>
+									<select class="" id="select_01" name="budget">
+										<option value="hide">-- 전체 --</option>
+										<option value="전체">전체</option>
+									</select>
+								</p>
 								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
 							</div>
 						</div><!--//.list_hd-->
 						<div class="list_cont">
 							<ul class="list">
 								<li>
+									<h4 class="tit">국어학개론</h4>
+									<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
 									<div class="inline_wrap">
-										<h4 class="tit">국어학개론</h4>
-										<p class="icon_chk_wrap">
-											<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
-											<label for="r1">On/Off</label>
-										</p>
-									</div>
-									<div class="inline_wrap">
-										<ul class="tag_list">
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
+										<ul class="tag_btn_list">
+											<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+											<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
 										</ul>
-										<span class="desc"></span>
 									</div>
 								</li>
 								<li>
+									<h4 class="tit">조선시가론</h4>
+									<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
 									<div class="inline_wrap">
-										<h4 class="tit">국어학개론</h4>
-										<p class="icon_chk_wrap">
-											<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
-											<label for="r2">On/Off</label>
-										</p>
-									</div>
-									<div class="inline_wrap">
-										<ul class="tag_list">
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
+										<ul class="tag_btn_list">
+											<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+											<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
 										</ul>
-										<span class="desc"></span>
 									</div>
 								</li>
 							</ul>
@@ -303,7 +296,61 @@
 			</div>
 		</div>
 	</div>
-	<!-- // 교과개요 팝업 -->
+	<!-- // 토픽 출처 정보 - 교과 팝업 -->
+	<!-- 교과목 교과개요 팝업 -->
+	<div class="modal fade full_modal" id="Pop_SubjectSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h3 class="pop_title">교과 개요</h3>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+				</div>
+				<div class="modal_body">
+					<h4 class="pop_sub_title">국문학개론</h4>
+					<div class="summary_tit">
+						<p class="desc">전체분반 <span class="text_blue">3</span>개</p>
+						<p class="pag_info"><i class="ic ic_info"></i>분반이 있는 경우 01반 기준으로 정보를 제공합니다.</p>
+					</div>
+					<dl class="summary_info">
+						<dt>교수자</dt>
+						<dd>윤재환</dd>
+						<dt>교과목 개요</dt>
+						<dd>&lt;국문학개론&gt;은 각 장르의 생성과 발전, 소멸과정을 살피면서 장르간의 영향관계와 특색을 파악하는 것이 중요하다. 각 장르의 주요 작가와 작품을 중심으로 분석, 비판하는 능력을 기른다.</dd>
+						<dt>학습목표</dt>
+						<dd>국문학 각 장르의 생성배경과 장르간의 상호 영향관계를 살핀다. 주요 작가와 작품 분석을 통해 장르의 특성을 이해한다.</dd>
+						<dt>학습효과</dt>
+						<dd>전공을 심화하기 전에 국문학 각 장르의 특색을 살피고, 주요 작품 분석 및 작가 연구를 통해 국문학 이해의 폭을 넓힌다.</dd>
+						<dt>전공역량</dt>
+						<dd>
+							<ul class="ability_list">
+								<li>
+									<strong>주역량</strong>
+									<span>지식활용 40%</span>
+								</li>
+								<li>
+									<strong>부역량</strong>
+									<span>
+										창의적 문제해결 30%<br>
+										의사소통 30%
+									</span>
+								</li>
+							</ul>
+						</dd>
+
+					</dl>
+					<!-- null 값일 경우 -->
+					<!--<p class="sub_tab_none">
+		<span>
+			선택한 교과의 교과개요는<br />
+			아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+		</span>
+	</p>-->
+					<!-- // null 값일 경우 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 교과목 교과개요 팝업 -->
 	<!-- // modal -->
 </body>
 </html>
