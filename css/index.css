@@ -92,6 +92,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "NanumGothic", "NanumGothic", sans-serif !important;
+  font-weight: 400;
   margin: 0; }
 
 ul, ol {
@@ -165,6 +166,9 @@ em, strong {
   margin: 0 auto; }
 
 /* full modal */
+.full_modal {
+  text-align: left; }
+
 .full_modal .modal-dialog {
   width: 100%;
   height: 100%; }
@@ -172,7 +176,39 @@ em, strong {
 .full_modal .modal-content {
   width: 100%;
   height: 100%;
+  padding: 0;
   border-radius: 0; }
+
+.modal_header {
+  padding: 40px 40px 40px 88px;
+  border-bottom: 1px solid #d4d4d4;
+  position: relative; }
+
+.modal_header .pop_title {
+  line-height: 40px;
+  font-family: "Gong Gothic", sans-serif !important;
+  font-weight: 300;
+  font-size: 40px;
+  color: #222; }
+
+.modal_header .btn_pop_close {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  margin-top: -20px; }
+
+.modal_header .btn_pop_close .pop_close {
+  width: 40px;
+  height: 40px;
+  background-position: 0 -336px; }
+
+.modal_body {
+  padding: 80px 3.90625vw; }
+
+.modal_body .pop_sub_title {
+  font-family: "Gong Gothic", sans-serif !important;
+  font-size: 52px;
+  color: #222; }
 
 .modal-open .modal {
   overflow-x: auto; }
@@ -190,28 +226,6 @@ em, strong {
   padding: 0 20px;
   border: none;
   border-radius: 10px; }
-
-.modal-header {
-  padding: 0 3px;
-  position: relative; }
-
-.modal-header .pop_title {
-  line-height: 60px;
-  font-family: "Gong Gothic";
-  font-weight: 400;
-  font-size: 20px;
-  color: #222; }
-
-.modal-header .btn_pop_close {
-  position: absolute;
-  right: 3px;
-  top: 50%;
-  margin-top: -7.5px; }
-
-.modal-header .btn_pop_close > span {
-  width: 16px;
-  height: 16px;
-  background-position: -180px -160px; }
 
 .modal-footer {
   font-size: 0;
