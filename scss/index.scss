@@ -13,6 +13,8 @@
   &.logout { background-position: -19.53125vw 0; }
   &.selectbox { background-position: -17.57813vw -24.02344vw; }
   &.search { background-position: -26.36719vw -23.92578vw; }
+  &.pagination_prev { background-position: 0 -24.02344vw; }
+  &.pagination_next { background-position: -8.78906vw -24.02344vw; }
 }
 .icon_chk_wrap {
   position: relative;
@@ -107,7 +109,7 @@
   }
 }
 .footer {
-  @include shadow_footer;
+  @include shadow_gnb;
   width: 100vw; 
   height: $footer_height;
   position: relative;
@@ -187,8 +189,7 @@
   @at-root .list_hd .desc {
     font-family: $sub_font_family;
     font-size: 3.51563vw; //36px;
-    font-weight: 500;
-    color: 000;
+    color: #000;
   }
 }
 .text_blue {
@@ -241,21 +242,23 @@
       & > li {
         padding: $gutter_md 0;
         border-bottom: 0.09766vw solid #ddd;
-        & > div {
-          margin-bottom: $gutter_sm;
+        & > div { 
+          margin-bottom: $gutter_sm; 
+          &:last-child { margin-bottom: 0; }
         }
-        .desc { }
       }
       .tag_list {
         & > li {
           display: inline-block;
           margin: 0 0.48828vw;
+          &:first-child { margin-left: 0; }
           & > a {
             padding: 1.46484vw $gutter_md;
             border: 0.09766vw solid $border;
             border-radius: 6.34766vw;
             font-size: 3.12500vw;
             font-weight: 600;
+            display: block;
             &.subject { border-color: $color_subject; color: $color_subject; }
             &.nonsubject { border-color: $color_nonsubject; color: $color_nonsubject; }
             &.recruit { border-color: $color_recruit; color: $color_recruit; }
@@ -331,7 +334,7 @@
     font-size: 3.12500vw;
     line-height: 1.875;
     & > strong {
-      width: 30.27344vw;
+      width: 26.36719vw;
       display: inline-block;
       &::before {
         content: '';
@@ -346,7 +349,7 @@
       }
     }
     & > span {
-      width: calc(100% - 30.27344vw); 
+      width: calc(100% - 26.36719vw); 
       font-style: italic;
       color: #555555;
     }
@@ -372,4 +375,33 @@
     border-radius: 6.64063vw;
     &.active { background-color: $color_primary; }
   }
+}
+
+
+/* ------------------------------------------------------- COMMON > PAGING ------------------------------------------------------- */
+.paging {
+  @include flex;
+  justify-content: center;
+  padding: 5.85938vw 0 19.53125vw;
+	& > li {
+		margin: 0 $gutter_xs;
+		& > a {
+			display: block;
+			width: 8.88672vw;
+			height: 8.88672vw;
+			line-height: 8.88672vw;
+			font-size: 4.29688vw;
+			color: #999;
+			background-color: #fff;
+			border: 0.09766vw solid #d4d4d4;
+			text-align: center;
+		}
+    &.active {
+      & > a {
+        color: #fff;
+        background-color: #646464;
+        border-color: #646464;
+      }
+    }
+	}
 }

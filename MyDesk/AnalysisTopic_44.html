@@ -158,13 +158,6 @@
 							<p class="desc">총 <span class="text_blue">N</span>개</p>
 						</div>
 						<div>
-							<p class="">
-								<label for="select_01">선택</label>
-								<select class="" id="select_01" name="budget">
-									<option value="hide">-- 전체 --</option>
-									<option value="전체">전체</option>
-								</select>
-							</p>
 							<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
 						</div>
 					</div><!--//.list_hd-->
@@ -174,7 +167,7 @@
 								<div class="inline_wrap">
 									<h4 class="tit">국어학개론</h4>
 									<p class="icon_chk_wrap">
-										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked>
 										<label for="r1">On/Off</label>
 									</p>
 								</div>
@@ -207,9 +200,15 @@
 						</ul>
 					</div><!--//.list_cont-->
 					<div class="list_ft">
-						<div class="pagination">
-
-						</div>
+						<ul class="paging">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
 					</div><!--//.list_ft-->
 				</section><!--//.list_view-->
 			</div><!--//.contents-->
