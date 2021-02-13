@@ -79,7 +79,7 @@ body {
   background-color: #fff;
   color: #222;
   font-family: "NanumGothic", "NanumGothic", sans-serif !important;
-  font-size: 13px;
+  font-size: 3.12500vw;
   font-weight: normal;
   line-height: 1.4;
   margin-left: auto;
@@ -327,7 +327,7 @@ em, strong {
   .cont_hd > .tit {
     font-weight: 400;
     line-height: 1.5;
-    margin: 3.90625vw 0 0.97656vw; }
+    margin: 3.90625vw 0 1.95313vw; }
   .list_hd .tit {
     font-family: "Gong Gothic", sans-serif !important;
     font-size: 5.07813vw;
@@ -445,21 +445,23 @@ em, strong {
     border-color: #da97ab; }
 
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
-.search_form_wrap .search_form {
-  display: flex;
-  border-bottom: 0.58594vw solid #222;
-  margin: 0 8.78906vw; }
-  .search_form_wrap .search_form input::-webkit-input-placeholder, .search_form_wrap .search_form input::-moz-input-placeholder, .search_form_wrap .search_form input::-o-input-placeholder, .search_form_wrap .search_form input::-ms-input-placeholder {
-    color: #999;
-    opacity: 1; }
-  .search_form_wrap .search_form input {
-    width: calc(100% - 8.20313vw);
-    font-size: 3.90625vw; }
-  .search_form_wrap .search_form .btn {
-    width: 8.20313vw;
-    height: 8.20313vw;
-    display: inline-block;
-    padding: 0.97656vw; }
+.search_form_wrap {
+  margin: 5.27344vw 0; }
+  .search_form_wrap .search_form {
+    display: flex;
+    border-bottom: 0.58594vw solid #222;
+    margin: 0 8.78906vw; }
+    .search_form_wrap .search_form input::-webkit-input-placeholder, .search_form_wrap .search_form input::-moz-input-placeholder, .search_form_wrap .search_form input::-o-input-placeholder, .search_form_wrap .search_form input::-ms-input-placeholder {
+      color: #999;
+      opacity: 1; }
+    .search_form_wrap .search_form input {
+      width: calc(100% - 8.20313vw);
+      font-size: 3.90625vw; }
+    .search_form_wrap .search_form .btn {
+      width: 8.20313vw;
+      height: 8.20313vw;
+      display: inline-block;
+      padding: 0.97656vw; }
 
 /* ------------------------------------------------------- TOPIC ------------------------------------------------------- */
 .topic_area .topic_box {
@@ -501,3 +503,24 @@ em, strong {
       color: #555555; }
   .topic_info + .search_form_wrap {
     margin-top: 5.27344vw; }
+
+.topic_state {
+  text-align: right;
+  margin: 1.95313vw 0; }
+  .topic_state * {
+    font-size: 3.12500vw; }
+  .topic_state > strong {
+    color: #999;
+    margin-right: 0.97656vw;
+    line-height: 6.64063vw; }
+    .topic_state > strong.active {
+      color: #0054a3; }
+  .topic_state > button {
+    width: 10.93750vw;
+    height: 6.64063vw;
+    color: #fff;
+    font-weight: 500;
+    background-color: #999;
+    border-radius: 6.64063vw; }
+    .topic_state > button.active {
+      background-color: #0054a3; }

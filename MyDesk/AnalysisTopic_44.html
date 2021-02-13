@@ -141,6 +141,7 @@
 							<span>채용 정보를 분석했어요.</span>
 						</li>
 					</ul>
+					<!--공통 클래스 변경 > 웹의 .search_area 사용안함 -->
 					<div class="search_form_wrap">
 						<div class="search_form">
 							<input type="text" placeholder="토픽명을 입력하세요."/>
@@ -148,69 +149,67 @@
 						</div>
 					</div>
 				</div>
-				<div class="cont_body">
-					<section class="list_view">
-						<div class="list_hd">
-							<div>
-								<h3 class="tit">타이틀</h3>
-								<p class="desc">총 <span class="text_blue">N</span>개</p>
-							</div>
-							<div>
-								<p class="">
-									<label for="select_01">선택</label>
-									<select class="" id="select_01" name="budget">
-										<option value="hide">-- 전체 --</option>
-										<option value="전체">전체</option>
-									</select>
-								</p>
-								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
-							</div>
-						</div><!--//.list_hd-->
-						<div class="list_cont">
-							<ul class="list">
-								<li>
-									<div class="inline_wrap">
-										<h4 class="tit">국어학개론</h4>
-										<p>
-											<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
-											<label for="r1">On/Off</label>
-										</p>
-									</div>
-									<div class="inline_wrap">
-										<ul class="tag_list">
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
-										</ul>
-										<span class="desc"></span>
-									</div>
-								</li>
-								<li>
-									<div class="inline_wrap">
-										<h4 class="tit">국어학개론</h4>
-										<p>
-											<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
-											<label for="r2">On/Off</label>
-										</p>
-									</div>
-									<div class="inline_wrap">
-										<ul class="tag_list">
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
-											<li><a href="#">교과</a></li>
-										</ul>
-										<span class="desc"></span>
-									</div>
-								</li>
-							</ul>
-						</div><!--//.list_cont-->
-						<div class="list_ft">
-							<div class="pagination">
+				<section class="list_view">
+					<div class="list_hd">
+						<div>
+							<h3 class="tit">타이틀</h3>
+							<p class="desc">총 <span class="text_blue">N</span>개</p>
+						</div>
+						<div>
+							<p class="">
+								<label for="select_01">선택</label>
+								<select class="" id="select_01" name="budget">
+									<option value="hide">-- 전체 --</option>
+									<option value="전체">전체</option>
+								</select>
+							</p>
+							<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont">
+						<ul class="list">
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">국어학개론</h4>
+									<p>
+										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+										<label for="r1">On/Off</label>
+									</p>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_list">
+										<li><a href="#">교과</a></li>
+										<li><a href="#">교과</a></li>
+										<li><a href="#">교과</a></li>
+									</ul>
+									<span class="desc"></span>
+								</div>
+							</li>
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">국어학개론</h4>
+									<p>
+										<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+										<label for="r2">On/Off</label>
+									</p>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_list">
+										<li><a href="#">교과</a></li>
+										<li><a href="#">교과</a></li>
+										<li><a href="#">교과</a></li>
+									</ul>
+									<span class="desc"></span>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+					<div class="list_ft">
+						<div class="pagination">
 
-							</div>
-						</div><!--//.list_ft-->
-					</section><!--//.list_view-->
-				</div>
+						</div>
+					</div><!--//.list_ft-->
+				</section><!--//.list_view-->
 			</div><!--//.contents-->
 		</div><!--//.container-->
 	</div><!--//.container-wrap-->
