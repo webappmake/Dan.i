@@ -15,11 +15,6 @@ $color_red:#b70000;
 
 $color_danger: #B71C1C;
 $color_background: #ececec;
-$color_border: #e6e7e8;
-$color_border_list: #a3a3a3;
-$color_border_ic: #d4d4d4;
-$color_border_light: #d4d4d4;
-$color_border_dark: #a3a3a3;
 $color_subject:#676ee3; /* 교과 */
 $color_nonsubject:#ae60e3; /* 비교과 */
 $color_recruit:#da97ab; /* 채용 */
@@ -27,6 +22,10 @@ $color_voca:#48b9e1; /* 용어 */
 $color_business:#a3ca95; /* 기업 */
 $color_license:#e58dd5; /* 자격증 */
 $color_research:#2f5597; /* 연구 */
+
+$border: #d4d4d4;
+$border_light: #a3a3a3;
+$border_dark: #222;
 
 $font_lightgray: #b1b1b1;
 $font_gray: #888;
@@ -96,7 +95,7 @@ $radius: 0.97656vw; //10px;
   @mixin card_design() {
     border-radius: $radius;
     background-color: #f7f7f7;
-    border: 1px solid $color_border;
+    border: 1px solid $border;
     box-shadow: 0 2px 6px rgba(0,0,0,.1);
     overflow: hidden;
   }

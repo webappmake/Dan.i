@@ -33,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 $gutter_md;
-  border-bottom: 0.09766vw solid $color_border;
+  border-bottom: 0.09766vw solid $border;
   z-index: 999;
   h1.logo {
     width: 13.86719vw;
@@ -61,7 +61,7 @@
     & > .nav_select_swiper {
       width: 100vw;
       height: $nav_height;
-      border-bottom: 0.09766vw solid $color_border;
+      border-bottom: 0.09766vw solid $border;
       padding: 0 $gutter_md;
       z-index: 997;
       .sub_menu {
@@ -222,7 +222,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.19531vw solid $color_border_list;
+    border-bottom: 0.19531vw solid $border_light;
     padding: 1.17188vw 0;
     & > div {      
       * { display: inline-block; }
@@ -232,7 +232,7 @@
         height: 9.76563vw;
         padding: 0.48828vw;
         display: inline-block;
-        border: 0.09766vw solid $color_border_ic;
+        border: 0.09766vw solid $border;
       }
     } 
   }
@@ -252,7 +252,7 @@
           margin: 0 0.48828vw;
           & > a {
             padding: 1.46484vw $gutter_md;
-            border: 0.09766vw solid $color_border;
+            border: 0.09766vw solid $border;
             border-radius: 6.34766vw;
             font-size: 3.12500vw;
             font-weight: 600;
@@ -279,7 +279,7 @@
 .a_btn {
   background-color: transparent;
   border: 0.09766vw solid transparent;
-  &.a_btn_white{color:$font_darkgray; background-color:$color_white; border-color:$color_border_light;}
+  &.a_btn_white{color:$font_darkgray; background-color:$color_white; border-color:$border;}
   &.a_btn_gray{color:$color_white; background-color:$color_darkgray; border-color:$color_darkgray;}
   &.a_btn_sky{color:$color_sky; background-color:$color_white; border-color:$color_sky;}
   &.a_btn_red{color:$color_white; background-color:$color_red; border-color:$color_red;}
@@ -323,7 +323,7 @@
   }
 }
 .topic_info {
-  border: 0.09766vw solid $color_border_light;
+  border: 0.09766vw solid $border;
   border-radius: $radius;
   padding: 2.92969vw $gutter_md;
   margin: $gutter_sm 0;
