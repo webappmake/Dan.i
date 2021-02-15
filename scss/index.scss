@@ -1,6 +1,6 @@
 ﻿@charset "utf-8";
 
-@import "fonts", "var", "reset", "popup", "tab";
+@import "fonts", "var", "reset", "popup", "accordion";
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
@@ -17,6 +17,9 @@
   &.pagination_next { background-position: -8.78906vw -24.02344vw; }
   &.ic_pop_close {width: $gutter_md; height: $gutter_md; background-position: 0 -32.81250vw;}
   &.ic_info{width:5.66406vw; height:5.66406vw; margin-right:1.46484vw; background-position:-25.19531vw 0;}
+  &.major_lg { background-position: -20.21484vw -40.62500vw; }
+  &.toggle_open { background-position: -37.50000vw -24.02344vw; }
+  &.toggle_close { background-position: -42.87109vw -24.02344vw; }
 }
 .ic_before{
   position:relative;
@@ -189,7 +192,7 @@
     line-height: 1.5; 
     margin: $gutter_md 0 $gutter_sm;
   }
-  @at-root .list_hd .tit {    
+  @at-root .list_hd .tit {
     font-family: $sub_font_family;
     font-size: 5.07813vw;
     font-weight: 500;

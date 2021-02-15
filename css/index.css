@@ -1213,108 +1213,14 @@ em, strong {
   width: 136px;
   font-weight: 500; }
 
-/* ------------------------------------------------------- COMMON > TAB ------------------------------------------------------- */
-.cont_hd + .tab_wrap {
-  margin-top: 7.81250vw; }
-
-.tab_wrap > .nav {
+.accordion .card-header .btn_collapse {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-between;
   align-items: center; }
-  .tab_wrap > .nav > li {
-    height: 9.76563vw;
-    line-height: 9.76563vw;
-    text-align: center;
-    overflow: hidden; }
-    .nav_03 li {
-      width: 33.33333%; }
-    .tab_wrap > .nav > li a {
-      display: block;
-      font-family: "Gong Gothic", sans-serif !important;
-      font-size: 3.90625vw;
-      font-weight: 300;
-      color: rgba(51, 51, 51, 0.5);
-      background-color: #e3e3e3; }
-      .tab_wrap > .nav > li a span {
-        color: rgba(51, 51, 51, 0.8); }
-      .tab_wrap > .nav > li a.active {
-        background-color: #0054a3;
-        color: rgba(255, 255, 255, 0.8); }
-        .tab_wrap > .nav > li a.active span {
-          color: white;
-          font-weight: 400; }
-    .tab_wrap > .nav > li:first-child {
-      border-top-left-radius: 0.97656vw;
-      border-bottom-left-radius: 0.97656vw; }
-    .tab_wrap > .nav > li:last-child {
-      border-top-right-radius: 0.97656vw;
-      border-bottom-right-radius: 0.97656vw; }
-
-.tab_wrap > .tab-content {
-  padding: 1.95313vw 0; }
-  .tab_wrap > .tab-content .total {
-    padding: 3.90625vw 0; }
-
-.reactive_box_wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap; }
-  .reactive_box_wrap > div {
-    flex: 0 0 33.3333%;
-    height: 18.84766vw;
-    padding: 3.90625vw 2.92969vw; }
-    .reactive_box_wrap > div.voca {
-      background-color: #48b9e1; }
-    .reactive_box_wrap > div.subject {
-      background-color: #676ee3; }
-    .reactive_box_wrap > div.nonsubject {
-      background-color: #ae60e3; }
-    .reactive_box_wrap > div.business {
-      background-color: #a3ca95; }
-    .reactive_box_wrap > div.license {
-      background-color: #e58dd5; }
-    .reactive_box_wrap > div.research {
-      background-color: #2f5597; }
-    .reactive_box_wrap > div.recruit {
-      background-color: #da97ab; }
-  .reactive_box_wrap * {
-    font-size: 3.12500vw;
-    color: #fff; }
-  .reactive_box_wrap p {
-    text-align: right;
-    margin-top: 0.48828vw; }
-  .reactive_box_wrap strong {
-    font-size: 4.68750vw; }
-  .reactive_box_wrap.only > div {
-    flex: 0 0 100%; }
-  .reactive_box_wrap.even > div {
-    flex: 0 0 50%; }
-
-.ranking {
-  padding: 3.90625vw 0 19.53125vw; }
-  .ranking li {
-    border-bottom: 0.09766vw solid #d4d4d4; }
-    .ranking li:first-child {
-      border-top: 0.09766vw solid #d4d4d4; }
-    .ranking li a {
-      display: block;
-      padding: 3.90625vw 0; }
-      .ranking li a span {
-        font-family: "Gong Gothic", sans-serif !important;
-        vertical-align: middle;
-        font-style: oblique;
-        color: #333; }
-        .ranking li a span.num {
-          width: 4.88281vw;
-          margin-right: 3.90625vw;
-          text-align: right;
-          color: #999;
-          display: inline-block; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
@@ -1344,6 +1250,12 @@ em, strong {
     height: 5.66406vw;
     margin-right: 1.46484vw;
     background-position: -25.19531vw 0; }
+  .ic.major_lg {
+    background-position: -20.21484vw -40.62500vw; }
+  .ic.toggle_open {
+    background-position: -37.50000vw -24.02344vw; }
+  .ic.toggle_close {
+    background-position: -42.87109vw -24.02344vw; }
 
 .ic_before {
   position: relative; }
