@@ -1295,6 +1295,27 @@ em, strong {
   .reactive_box_wrap.even > div {
     flex: 0 0 50%; }
 
+.ranking {
+  padding: 3.90625vw 0 19.53125vw; }
+  .ranking li {
+    border-bottom: 0.09766vw solid #d4d4d4; }
+    .ranking li:first-child {
+      border-top: 0.09766vw solid #d4d4d4; }
+    .ranking li a {
+      display: block;
+      padding: 3.90625vw 0; }
+      .ranking li a span {
+        font-family: "Gong Gothic", sans-serif !important;
+        vertical-align: middle;
+        font-style: oblique;
+        color: #333; }
+        .ranking li a span.num {
+          width: 4.88281vw;
+          margin-right: 3.90625vw;
+          text-align: right;
+          color: #999;
+          display: inline-block; }
+
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;

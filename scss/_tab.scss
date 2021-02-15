@@ -63,3 +63,27 @@
     & > div { flex: 0 0 50%; }
   }
 }
+.ranking {
+  padding: $gutter_md 0 19.53125vw;
+  li {
+    border-bottom: 0.09766vw solid $border;
+    &:first-child { border-top: 0.09766vw solid $border; } 
+    a {
+      display: block;
+      padding: $gutter_md 0;
+      span {
+        font-family: $sub_font_family;
+        vertical-align: middle;
+        font-style: oblique;
+        color: #333;
+        &.num {
+          width: 4.88281vw;
+          margin-right: $gutter_md;
+          text-align: right;
+          color: #999;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
