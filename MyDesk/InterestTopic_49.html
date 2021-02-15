@@ -110,20 +110,49 @@
 				<div class="cont_hd">
 					<p class="tit">내가 담고 등록했던 토픽들과 내가 질의한 내용 등을 모두 확인하세요!</p>
 				</div>
-				<div class="sub_tab" role="tabpanel">
+				<div class="tab_wrap tab_sub" role="tabpanel">
 					<!-- Nav tabs -->
-					<ul class="nav" role="tablist">
+					<ul class="nav topic_nav" role="tablist">
 						<li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">관심 토픽</a></li>
-						<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">대표 질의(개인)</a></li>
-						<li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">대표 질의(전체)</a></li>
+						<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">대표 질의<span>(개인)</span></a></li>
+						<li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">대표 질의<span>(전체)</span></a></li>
 					</ul>
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="tab1">
-							<p class="desc">총 <span class="text_blue">N</span>개</p>
-							<div>
-
-							</div>
+							<p class="total">총 <span class="text_blue">N</span>개</p>
+							<!-- 
+								반응형 박스 개수에 따라 이중클래스 사용
+								1개: .only 
+								2개, 4개: .even
+							-->
+							<section class="reactive_box_wrap"> <!--<section class="reactive_box_wrap even">--> 
+								<h3 class="sr_only">반응형 박스 레이아웃</h3>
+								<div class="voca">
+									<h4>용어</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="subject">
+									<h4>교과</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="nonsubject">
+									<h4>비교과</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="business">
+									<h4>기업</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="license">
+									<h4>자격증</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<!-- <div class="research">
+									<h4>연구</h4>
+									<p><strong>N</strong>개</p>
+								</div> -->
+							</section>
 							<div class="search_form_wrap">
 								<div class="search_form">
 									<input type="text" placeholder="토픽명을 입력하세요."/>

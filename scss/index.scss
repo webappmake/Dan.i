@@ -1,6 +1,6 @@
 ﻿@charset "utf-8";
 
-@import "fonts", "var", "reset", "popup";
+@import "fonts", "var", "reset", "popup", "tab";
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
@@ -206,7 +206,7 @@
   @at-root .list .desc { 
     line-height: 1.78;
   }
-  @at-root .list_hd .desc {
+  @at-root .list_hd .desc, .total {
     font-family: $sub_font_family;
     font-size: 3.51563vw; //36px;
     color: #000;
