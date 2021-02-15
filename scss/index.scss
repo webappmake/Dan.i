@@ -25,7 +25,6 @@
       @at-root .ic_info_lg:before{width:10.74219vw; height:10.74219vw; background-position:-57.71484vw -5.66406vw;}
     }       
 }
-
 .ic_after{
   position:relative;
     &:after{
@@ -35,7 +34,6 @@
       @at-root .ic_toggle.active:after{background-position:-11.71875vw -36.71875vw;}
     }
 }
-
 .icon_chk_wrap {
   position: relative;
   .icon_chk {
@@ -47,6 +45,7 @@
     &.icon_chk_use:checked + label:before{background-position:-45.89844vw -12.10938vw;}
   }
 }
+
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .header {
   @include flex;
@@ -178,25 +177,23 @@
     }
   }
 }
+
 /* ------------------------------------------------------- COMMON > FONTS ------------------------------------------------------- */
 .tit {
   color: #333;
   font-size: 3.90625vw;
   font-weight: 500;
-  line-height: 1.25; //50px;
+  line-height: 1.25;
   @at-root .cont_hd > .tit { 
     font-weight: 400;
     line-height: 1.5; 
     margin: $gutter_md 0 $gutter_sm;
-  } //60px; 
+  }
   @at-root .list_hd .tit {    
     font-family: $sub_font_family;
     font-size: 5.07813vw;
     font-weight: 500;
     color: #000;
-  }
-  @at-root h4.tit {}
-  & > small {
   }
 }
 .desc {
@@ -212,10 +209,8 @@
     color: #000;
   }
 }
-.text_blue {
-  color: $color_primary !important;
-  @at-root strong.text_blue {}
-}
+.text_blue { color: $color_primary !important; }
+
 /* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
 .inline_wrap {
   @include flex;
@@ -330,12 +325,10 @@
         }
       }
     }
-    
   }
   .list_ft {
   }
 }
-
 .filter_list {
     margin:2.92969vw 0;
     @at-root .pop_sub_title + .filter_list{margin-top:6.83594vw; margin-bottom:1.56250vw;}
@@ -466,8 +459,6 @@
     &.active { background-color: $color_primary; }
   }
 }
-
-
 /* ------------------------------------------------------- COMMON > PAGING ------------------------------------------------------- */
 .paging {
   @include flex;
@@ -494,4 +485,92 @@
       }
     }
 	}
+}
+/* ------------------------------------------------------- COMMON > TAB ------------------------------------------------------- */
+.tab_wrap {
+  @at-root .cont_hd + .tab_wrap { margin-top: 7.81250vw; }
+  & > .nav {
+    @include flex;
+    justify-content: space-around;
+    align-items: center;
+    & > li {
+      height: 9.76563vw;
+      line-height: 9.76563vw;
+      text-align: center;
+      overflow: hidden;
+      @at-root .nav_03 li { width: 33.33333%; }
+      a { 
+        display: block;
+        font-family: $sub_font_family;
+        font-size: 3.90625vw;
+        font-weight: 300;
+        color: rgba(51, 51, 51, .5);
+        background-color: #e3e3e3;
+        span { color: rgba(51, 51, 51, .8); }
+
+        &.active {
+          background-color: $color_primary; 
+          color: rgba(255, 255, 255, .8); 
+          span { color: rgba(255, 255, 255, 1);  font-weight: 400; }
+        }
+      }
+      &:first-child { border-top-left-radius: $radius; border-bottom-left-radius: $radius; }
+      &:last-child { border-top-right-radius: $radius; border-bottom-right-radius: $radius; }
+    }
+  }
+  & > .tab-content {
+    padding: $gutter_sm 0;
+    .total { padding: $gutter_md 0; }
+  }
+}
+/* ------------------------------------------------------- Reactive_box_wrap ------------------------------------------------------- */
+.reactive_box_wrap {
+  @include flex;
+  flex-wrap: wrap;
+  & > div {
+    flex: 0 0 33.3333%;
+    height: 18.84766vw;
+    padding: $gutter_md 2.92969vw;
+    &.voca { background-color: $color_voca; }
+    &.subject { background-color: $color_subject; }
+    &.nonsubject { background-color: $color_nonsubject; }
+    &.business { background-color: $color_business; }
+    &.license { background-color: $color_license; }
+    &.research { background-color: $color_research; }
+    &.recruit { background-color: $color_recruit; }
+  }
+  * { font-size: 3.12500vw; color: #fff; }
+  p { text-align: right; margin-top: 0.48828vw; }
+  strong { font-size: 4.68750vw; }
+  &.only {
+    & > div { flex: 0 0 100%; }
+  }
+  &.even {
+    & > div { flex: 0 0 50%; }
+  }
+}
+/* ------------------------------------------------------- Ranking ------------------------------------------------------- */
+.ranking {
+  padding: $gutter_md 0 19.53125vw;
+  li {
+    border-bottom: 0.09766vw solid $border;
+    &:first-child { border-top: 0.09766vw solid $border; } 
+    a {
+      display: block;
+      padding: $gutter_md 0;
+      span {
+        font-family: $sub_font_family;
+        vertical-align: middle;
+        font-style: oblique;
+        color: #333;
+        &.num {
+          width: 4.88281vw;
+          margin-right: $gutter_md;
+          text-align: right;
+          color: #999;
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
