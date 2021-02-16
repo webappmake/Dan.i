@@ -1,42 +1,45 @@
 ﻿.accordion {
   margin: 0 -40px;
-  .card { margin: $gutter_xs 0; }
-  .card-header {
-    @include shadow_accodion;
-    background-color: #fff;
-    padding: 0;
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
-    .btn_collapse {
-      @include flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-      padding: 54px $gutter_md;
-      .tit {
-        font-size: 52px;
-        font-family: $sub_font_family;
-        font-weight: 400;
-        small {
-          display: inline-block;
-          font-size: 32px;
-          color: #555;
-          font-weight: 300;
-          strong { 
-            color: #000; 
-            font-weight: 400 !important;
+  .card { 
+    margin: $gutter_xs 0; 
+    &:first-child { margin: 0; }
+    .card-header {
+      @include shadow_accodion;
+      background-color: #fff;
+      padding: 0;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+      .btn_collapse {
+        @include flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        padding: 54px $gutter_md;
+        .tit {
+          font-size: 52px;
+          font-family: $sub_font_family;
+          font-weight: 400;
+          small {
+            display: inline-block;
+            font-size: 32px;
+            color: #555;
+            font-weight: 300;
+            strong { 
+              color: #000; 
+              font-weight: 400 !important;
+            }
           }
         }
-      }
-      .ic {
-        width: 55px;
-        height: 55px;
-      }
-      &.collapsed {
-        .ic { background-position: -37.50000vw -24.02344vw; }
+        .ic {
+          width: 55px;
+          height: 55px;
+        }
+        &.collapsed {
+          .ic { background-position: -37.50000vw -24.02344vw; }
+        } 
       } 
-    } 
+    }
   }
   .list_view {
     .topic_box { 
@@ -54,5 +57,23 @@
       border: 0 !important; 
       &:last-child { margin-bottom: 90px !important; }
     }
+  }
+}
+.major_wrap {
+  @include flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -40px;
+  background-color: #fafafa;
+  .ic {
+    width: 66px;
+    height: 66px;
+    margin-right: $gutter_xs;
+  }
+  span {
+    font-family: $sub_font_family;
+    font-size: 52px;
+    color: #222;
   }
 }

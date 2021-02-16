@@ -1202,40 +1202,42 @@ em, strong {
   margin: 0 -40px; }
   .accordion .card {
     margin: 0.97656vw 0; }
-  .accordion .card-header {
-    -webkit-box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
-    box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
-    background-color: #fff;
-    padding: 0;
-    border-top: 1px solid #d4d4d4;
-    border-bottom: 1px solid #d4d4d4; }
-    .accordion .card-header .btn_collapse {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-      padding: 54px 3.90625vw; }
-      .accordion .card-header .btn_collapse .tit {
-        font-size: 52px;
-        font-family: "Gong Gothic", sans-serif !important;
-        font-weight: 400; }
-        .accordion .card-header .btn_collapse .tit small {
-          display: inline-block;
-          font-size: 32px;
-          color: #555;
-          font-weight: 300; }
-          .accordion .card-header .btn_collapse .tit small strong {
-            color: #000;
-            font-weight: 400 !important; }
-      .accordion .card-header .btn_collapse .ic {
-        width: 55px;
-        height: 55px; }
-      .accordion .card-header .btn_collapse.collapsed .ic {
-        background-position: -37.50000vw -24.02344vw; }
+    .accordion .card:first-child {
+      margin: 0; }
+    .accordion .card .card-header {
+      -webkit-box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+      box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+      background-color: #fff;
+      padding: 0;
+      border-top: 1px solid #d4d4d4;
+      border-bottom: 1px solid #d4d4d4; }
+      .accordion .card .card-header .btn_collapse {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        padding: 54px 3.90625vw; }
+        .accordion .card .card-header .btn_collapse .tit {
+          font-size: 52px;
+          font-family: "Gong Gothic", sans-serif !important;
+          font-weight: 400; }
+          .accordion .card .card-header .btn_collapse .tit small {
+            display: inline-block;
+            font-size: 32px;
+            color: #555;
+            font-weight: 300; }
+            .accordion .card .card-header .btn_collapse .tit small strong {
+              color: #000;
+              font-weight: 400 !important; }
+        .accordion .card .card-header .btn_collapse .ic {
+          width: 55px;
+          height: 55px; }
+        .accordion .card .card-header .btn_collapse.collapsed .ic {
+          background-position: -37.50000vw -24.02344vw; }
   .accordion .list_view .topic_box {
     margin: 0.97656vw 3.90625vw;
     padding: 0 3.90625vw !important;
@@ -1252,6 +1254,25 @@ em, strong {
     border: 0 !important; }
     .accordion .list_view > .list_cont .list > li:last-child {
       margin-bottom: 90px !important; }
+
+.major_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -40px;
+  background-color: #fafafa; }
+  .major_wrap .ic {
+    width: 66px;
+    height: 66px;
+    margin-right: 0.97656vw; }
+  .major_wrap span {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 52px;
+    color: #222; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
