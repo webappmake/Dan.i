@@ -9,7 +9,7 @@
   display: inline-block;
   background: url(../images/icons_m.png) no-repeat 0 0 / 97.65625vw auto;
   text-indent: -1000vw;
-  &.alert { background-position: -13.86719vw 0; }
+  &.alert { background-position: -13.99vw 0; }
   &.logout { background-position: -19.53125vw 0; }
   &.selectbox { background-position: -17.57813vw -24.02344vw; }
   &.search { background-position: -26.36719vw -23.92578vw; }
@@ -381,6 +381,10 @@
 .a_btn {
   background-color: transparent;
   border: 0.09766vw solid transparent;
+  font-size: 36px;
+  font-weight: 600;
+  padding: 30px 70px;
+  border-radius: $radius;
   &.a_btn_white{color:$font_darkgray; background-color:$color_white; border-color:$border;}
   &.a_btn_gray{color:$color_white; background-color:$color_darkgray; border-color:$color_darkgray;}
   &.a_btn_sky{color:$color_sky; background-color:$color_white; border-color:$color_sky;}

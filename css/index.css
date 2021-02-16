@@ -86,7 +86,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   word-break: keep-all;
-  -ms-word-break: keep-all; }
+  -ms-word-break: keep-all;
+  letter-spacing: -0.09766vw; }
 
 * {
   box-sizing: border-box; }
@@ -1282,7 +1283,7 @@ em, strong {
   background: url(../images/icons_m.png) no-repeat 0 0/97.65625vw auto;
   text-indent: -1000vw; }
   .ic.alert {
-    background-position: -13.86719vw 0; }
+    background-position: -13.99vw 0; }
   .ic.logout {
     background-position: -19.53125vw 0; }
   .ic.selectbox {
@@ -1710,7 +1711,11 @@ em, strong {
 
 .a_btn {
   background-color: transparent;
-  border: 0.09766vw solid transparent; }
+  border: 0.09766vw solid transparent;
+  font-size: 36px;
+  font-weight: 600;
+  padding: 30px 70px;
+  border-radius: 0.97656vw; }
   .a_btn.a_btn_white {
     color: #555;
     background-color: #fff;
