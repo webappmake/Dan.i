@@ -1266,6 +1266,9 @@ em, strong {
     border-radius: 0;
     margin: 8.78906vw 4.88281vw 19.53125vw;
     font-size: 4.68750vw; }
+    .accordion + .a_btn_sky .ic {
+      width: 3.90625vw;
+      height: 3.90625vw; }
 
 .major_wrap {
   display: -webkit-box;
@@ -1358,6 +1361,10 @@ em, strong {
     background-position: -37.50000vw -24.02344vw; }
   .ic.toggle_close {
     background-position: -42.87109vw -24.02344vw; }
+  .ic.arrow_shortcut {
+    background-position: -3.90625vw -32.81250vw; }
+  .ic.arrow_shortcut_white {
+    background-position: -3.90625vw -36.71875vw; }
 
 .ic_before {
   position: relative; }
@@ -1767,6 +1774,8 @@ em, strong {
   font-weight: 600;
   padding: 2.92969vw 6.83594vw;
   border-radius: 0.97656vw; }
+  .a_btn span, .a_btn i {
+    vertical-align: middle; }
   .a_btn.a_btn_white {
     color: #555;
     background-color: #fff;

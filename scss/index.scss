@@ -20,6 +20,8 @@
   &.major_lg { background-position: -20.21484vw -40.62500vw; }
   &.toggle_open { background-position: -37.50000vw -24.02344vw; }
   &.toggle_close { background-position: -42.87109vw -24.02344vw; }
+  &.arrow_shortcut { background-position: -3.90625vw -32.81250vw; }
+  &.arrow_shortcut_white { background-position: -3.90625vw -36.71875vw; }
 }
 .ic_before{
   position:relative;
@@ -386,6 +388,7 @@
   font-weight: 600;
   padding: 2.92969vw 6.83594vw;
   border-radius: $radius;
+  span, i { vertical-align: middle; }
   &.a_btn_white{color:$font_darkgray; background-color:$color_white; border-color:$border;}
   &.a_btn_gray{color:$color_white; background-color:$color_darkgray; border-color:$color_darkgray;}
   &.a_btn_sky_line{color:$color_sky; background-color:$color_white; border-color:$color_sky;}
