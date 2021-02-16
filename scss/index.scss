@@ -235,11 +235,16 @@
   }
   &.topic_btn_wrap {
     padding: $gutter_md;
-    margin: 0 $gutter_md;
-    border-top: 0.09766vw solid #d4d4d4;
+    margin: 0 $gutter_md !important;
+    border-top: 0.09766vw solid $border;
     .topic_btn {
       padding: 0 !important;
       border: none !important;
+    }
+    & + .topic_list {
+      margin: 0 $gutter_md;
+      border: 0.09766vw solid $border;
+      border-top: none;
     }
   }
 }

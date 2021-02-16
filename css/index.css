@@ -1241,6 +1241,8 @@ em, strong {
     padding: 0 3.90625vw !important;
     border: 1px solid #d4d4d4 !important;
     letter-spacing: -1px; }
+    .accordion .list_view .topic_box .tit {
+      font-size: 44px; }
   .accordion .list_view .topic_btn_wrap {
     border: 1px solid #d4d4d4 !important; }
     .accordion .list_view .topic_btn_wrap .tit {
@@ -1535,11 +1537,15 @@ em, strong {
     align-items: flex-start; }
   .inline_wrap.topic_btn_wrap {
     padding: 3.90625vw;
-    margin: 0 3.90625vw;
+    margin: 0 3.90625vw !important;
     border-top: 0.09766vw solid #d4d4d4; }
     .inline_wrap.topic_btn_wrap .topic_btn {
       padding: 0 !important;
       border: none !important; }
+    .inline_wrap.topic_btn_wrap + .topic_list {
+      margin: 0 3.90625vw;
+      border: 0.09766vw solid #d4d4d4;
+      border-top: none; }
 
 .list_view {
   display: -webkit-box;
