@@ -1239,8 +1239,7 @@ em, strong {
   .accordion .list_view .topic_box {
     margin: 0.97656vw 3.90625vw;
     padding: 0 3.90625vw !important;
-    border: 1px solid #d4d4d4 !important;
-    letter-spacing: -1px; }
+    border: 1px solid #d4d4d4 !important; }
     .accordion .list_view .topic_box .tit {
       font-size: 44px; }
   .accordion .list_view .topic_btn_wrap {
@@ -1252,7 +1251,7 @@ em, strong {
   .accordion .list_view > .list_cont .list > li {
     border: 0 !important; }
     .accordion .list_view > .list_cont .list > li:last-child {
-      margin-bottom: 100px !important; }
+      margin-bottom: 90px !important; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {

@@ -42,8 +42,7 @@
     .topic_box { 
       margin: $gutter_xs $gutter_md;
       padding: 0 $gutter_md !important;
-      border: 1px solid $border !important; 
-      letter-spacing: -1px;
+      border: 1px solid $border !important;
       .tit { font-size: 44px; }
     }
     .topic_btn_wrap {
@@ -53,7 +52,7 @@
     .topic_box + .topic_btn_wrap { border-top: none !important; }
     & > .list_cont .list > li { 
       border: 0 !important; 
-      &:last-child { margin-bottom: 100px !important; }
+      &:last-child { margin-bottom: 90px !important; }
     }
   }
 }
