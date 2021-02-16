@@ -244,8 +244,8 @@
     }
     & + .topic_list_wrap {
       margin: 0 $gutter_md;
-      border: 0.09766vw solid $border;
-      border-top: none;
+      border: 0.09766vw solid #d1d1d1;
+      border-top-width: 0.19531vw;
     }
   }
 }

@@ -86,8 +86,14 @@
     display: block !important;
     padding: 0 !important;
     border: 0 !important;
+    & + .a_btn_white {
+      width: 100%;
+      font-size: 40px;
+      border-radius: 0;
+      margin-top: 60px;
+    }
   }
-  .tab_wrap>.nav>li a {
+  .tab_wrap > .nav > li > a {
     font-size: 36px;
   }
 }
