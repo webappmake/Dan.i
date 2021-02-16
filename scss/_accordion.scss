@@ -1,8 +1,9 @@
 ﻿.accordion {
   margin: 0 -40px;
   .card { 
+    @include shadow_accodion;
     margin: $gutter_sm 0; 
-    border-bottom: 1px solid $border !important;
+    // border-bottom: 1px solid $border !important;
     &:first-child { margin: 0; }
     .card-header {
       @include shadow_accodion;
@@ -11,7 +12,7 @@
       border-top: 1px solid $border;
       border-bottom: 1px solid $border;
       .btn_collapse {
-        @include flex;
+        @include flex; 
         @include shadow_accodion;
         width: 100%;
         justify-content: space-between;
