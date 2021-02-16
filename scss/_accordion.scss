@@ -1,12 +1,58 @@
 ﻿.accordion {
+  margin: 0 -40px;
+  .card { margin: $gutter_xs 0; }
   .card-header {
+    @include shadow_accodion;
+    background-color: #fff;
+    padding: 0;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
     .btn_collapse {
       @include flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
-      small {}
+      background: transparent;
+      padding: 54px $gutter_md;
+      .tit {
+        font-size: 52px;
+        font-family: $sub_font_family;
+        font-weight: 400;
+        small {
+          display: inline-block;
+          font-size: 32px;
+          color: #555;
+          font-weight: 300;
+          strong { 
+            color: #000; 
+            font-weight: 400 !important;
+          }
+        }
+      }
+      .ic {
+        width: 55px;
+        height: 55px;
+      }
+      &.collapsed {
+        .ic { background-position: -37.50000vw -24.02344vw; }
+      } 
     } 
   }
-  .card-body {}
+  .list_view {
+    .topic_box { 
+      margin: $gutter_xs $gutter_md;
+      padding: 0 $gutter_md !important;
+      border: 1px solid $border !important; 
+      letter-spacing: -1px;
+    }
+    .topic_btn_wrap {
+      border: 1px solid $border !important; 
+      .tit { padding-bottom: 0 !important; }
+    }
+    .topic_box + .topic_btn_wrap { border-top: none !important; }
+    & > .list_cont .list > li { 
+      border: 0 !important; 
+      &:last-child { margin-bottom: 100px !important; }
+    }
+  }
 }

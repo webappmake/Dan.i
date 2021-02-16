@@ -152,26 +152,6 @@
     }
 }
 
-
-.tag_btn_list {
-    margin-top:3.41797vw;
-    margin-bottom:0;
-    & > li {
-        display: inline-block;
-        margin: 0 0.48828vw;
-
-        & > a {
-            display: block;
-            padding: 2.34375vw 2.92969vw;
-            border: 0.09766vw solid $border;
-            border-radius: 1.95313vw;
-            font-size: 3.51563vw;
-            font-weight: 600;
-            background-color: #eee;
-        }
-    }
-}
-
 .modal_footer{}
 
 

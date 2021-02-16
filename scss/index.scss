@@ -195,7 +195,7 @@
   @at-root .list_hd .tit {
     font-family: $sub_font_family;
     font-size: 5.07813vw;
-    font-weight: 500;
+    font-weight: 400;
     color: #000;
   }
 }
@@ -210,6 +210,7 @@
     font-family: $sub_font_family;
     font-size: 3.51563vw; //36px;
     color: #000;
+    font-weight: 400;
   }
 }
 .text_blue { color: $color_primary !important; }
@@ -231,6 +232,15 @@
   }
   &.align_top {
     align-items: flex-start;
+  }
+  &.topic_btn_wrap {
+    padding: $gutter_md;
+    margin: 0 $gutter_md;
+    border-top: 0.09766vw solid #d4d4d4;
+    .topic_btn {
+      padding: 0 !important;
+      border: none !important;
+    }
   }
 }
 .list_view {
@@ -303,6 +313,7 @@
           & .tit_info{
             margin-top:0;
             @at-root .topic_box .tit_info{color:#888; padding:0 $gutter_xs $gutter_md $gutter_xs;}
+            & + .tag_btn_list { margin-top: 0; margin-bottom: $gutter_md; }
           }
             .topic_box{
                 padding:0 $gutter_sm; margin-bottom:0;
@@ -354,7 +365,6 @@
         &.active > a{ background-color: $color_black; color: $color_white; }
     }
 }
-
 /* ------------------------------------------------------- COMMON > BUTTON ------------------------------------------------------- */
 .btn {
   background-color: transparent;
@@ -578,5 +588,23 @@
         }
       }
     }
+  }
+}
+//_popup.scss 에서 이동 공통으로 사용
+.tag_btn_list {
+  margin-top:3.41797vw;
+  margin-bottom:0;
+  & > li {
+      display: inline-block;
+      margin: 0 0.48828vw;
+      & > a {
+          display: block;
+          padding: 2.34375vw 2.92969vw;
+          border: 0.09766vw solid $border;
+          border-radius: 1.95313vw;
+          font-size: 3.51563vw;
+          font-weight: 600;
+          background-color: #eee;
+      }
   }
 }
