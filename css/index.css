@@ -1529,6 +1529,8 @@ em, strong {
       padding: 0.48828vw;
       display: inline-block;
       border: 0.09766vw solid #d4d4d4; }
+      .list_view .list_hd > div .btn.active .ic.selectbox {
+        background-position: 0 -47.07031vw; }
   .list_view .list_cont .list > li {
     padding: 3.90625vw 0;
     border-bottom: 0.09766vw solid #d4d4d4; }

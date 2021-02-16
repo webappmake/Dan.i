@@ -49,6 +49,16 @@ function fn_NotiClose() {
     $(".noti_pop_area").hide();
 }
 
+// ListSequence Toggle
+function fn_ListSequence(obj) {
+    if ($(obj).hasClass('active')) {
+        $(obj).removeClass('active');
+    }
+    else {
+        $(obj).addClass('active');
+    }
+};
+
 // 챗봇 입력 창 열기
 function fn_Chatbot_Open(obj) {
     $(obj).parent().addClass("active");
