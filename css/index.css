@@ -1203,7 +1203,8 @@ em, strong {
 .accordion {
   margin: 0 -40px; }
   .accordion .card {
-    margin: 0.97656vw 0; }
+    margin: 1.95313vw 0;
+    border-bottom: 1px solid #d4d4d4 !important; }
     .accordion .card:first-child {
       margin: 0; }
     .accordion .card .card-header {
@@ -1218,11 +1219,14 @@ em, strong {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+        box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
         width: 100%;
         justify-content: space-between;
         align-items: center;
         background: transparent;
-        padding: 54px 3.90625vw; }
+        padding: 54px 3.90625vw;
+        border-bottom: 1px solid #d4d4d4 !important; }
         .accordion .card .card-header .btn_collapse .tit {
           font-size: 52px;
           font-family: "Gong Gothic", sans-serif !important;
@@ -1258,6 +1262,10 @@ em, strong {
     border: 0 !important; }
     .accordion .list_view > .list_cont .list > li:last-child {
       margin-bottom: 90px !important; }
+  .accordion + .a_btn_sky {
+    width: 840px;
+    border-radius: 0;
+    margin: 90px 50px 200px; }
 
 .major_wrap {
   display: -webkit-box;
@@ -1767,7 +1775,7 @@ em, strong {
     color: #fff;
     background-color: #555;
     border-color: #555; }
-  .a_btn.a_btn_sky {
+  .a_btn.a_btn_sky_line {
     color: #48b9e1;
     background-color: #fff;
     border-color: #48b9e1; }
@@ -1779,6 +1787,10 @@ em, strong {
     color: #fff;
     background-color: #da97ab;
     border-color: #da97ab; }
+  .a_btn.a_btn_sky {
+    color: #fff;
+    background-color: #48b9e1;
+    border-color: #48b9e1; }
 
 .btn_icon {
   font-size: 0;

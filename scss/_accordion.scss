@@ -1,7 +1,8 @@
 ﻿.accordion {
   margin: 0 -40px;
   .card { 
-    margin: $gutter_xs 0; 
+    margin: $gutter_sm 0; 
+    border-bottom: 1px solid $border !important;
     &:first-child { margin: 0; }
     .card-header {
       @include shadow_accodion;
@@ -11,11 +12,13 @@
       border-bottom: 1px solid $border;
       .btn_collapse {
         @include flex;
+        @include shadow_accodion;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         background: transparent;
         padding: 54px $gutter_md;
+        border-bottom: 1px solid $border !important;
         .tit {
           font-size: 52px;
           font-family: $sub_font_family;
@@ -58,6 +61,11 @@
       border: 0 !important; 
       &:last-child { margin-bottom: 90px !important; }
     }
+  }
+  & + .a_btn_sky {
+    width: 840px;
+    border-radius: 0;
+    margin: 90px 50px 200px;
   }
 }
 .major_wrap {
