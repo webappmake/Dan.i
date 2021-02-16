@@ -87,7 +87,8 @@ body {
   margin-right: auto;
   word-break: keep-all;
   -ms-word-break: keep-all;
-  letter-spacing: -0.09766vw; }
+  letter-spacing: -0.09766vw;
+  word-spacing: -0.19531vw; }
 
 * {
   box-sizing: border-box; }
@@ -1243,6 +1244,8 @@ em, strong {
     margin: 0.97656vw 3.90625vw;
     padding: 0 3.90625vw !important;
     border: 1px solid #d4d4d4 !important; }
+    .accordion .list_view .topic_box .tag_btn_list a {
+      padding: 2.34375vw 27px !important; }
     .accordion .list_view .topic_box .tit {
       font-size: 44px; }
   .accordion .list_view .topic_btn_wrap {
@@ -1264,7 +1267,7 @@ em, strong {
   height: 150px;
   justify-content: center;
   align-items: center;
-  margin: 0 -40px;
+  margin: 50px -40px 0;
   background-color: #fafafa; }
   .major_wrap .ic {
     width: 66px;
@@ -1274,6 +1277,39 @@ em, strong {
     font-family: "Gong Gothic", sans-serif !important;
     font-size: 52px;
     color: #222; }
+
+.topic_list_wrap {
+  display: none;
+  padding: 50px 3.90625vw 3.90625vw;
+  background-color: #f5f5f5; }
+  .topic_list_wrap .topic_list {
+    display: block !important;
+    padding: 0 !important;
+    border: 0 !important; }
+  .topic_list_wrap .tab_wrap > .nav > li a {
+    font-size: 36px; }
+
+.feedback_form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.97656vw 0 3.90625vw; }
+  .feedback_form input {
+    flex-grow: 1;
+    height: 100px;
+    border: 1px solid #d4d4d4;
+    border-right: none;
+    font-size: 36px;
+    padding: 0 30px; }
+  .feedback_form .btn_submit {
+    width: 140px;
+    height: 100px;
+    font-size: 36px;
+    font-weight: 500;
+    background-color: #0054a3;
+    border: 1px solid #d4d4d4;
+    color: #fff; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
@@ -1518,6 +1554,8 @@ em, strong {
     font-weight: 400;
     line-height: 1.5;
     margin: 3.90625vw 0 1.95313vw; }
+    .cont_hd > .tit + button {
+      margin-top: 1.95313vw; }
   .list_hd .tit {
     font-family: "Gong Gothic", sans-serif !important;
     font-size: 5.07813vw;
@@ -1563,7 +1601,7 @@ em, strong {
     .inline_wrap.topic_btn_wrap .topic_btn {
       padding: 0 !important;
       border: none !important; }
-    .inline_wrap.topic_btn_wrap + .topic_list {
+    .inline_wrap.topic_btn_wrap + .topic_list_wrap {
       margin: 0 3.90625vw;
       border: 0.09766vw solid #d4d4d4;
       border-top: none; }

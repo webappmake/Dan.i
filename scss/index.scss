@@ -190,7 +190,8 @@
   @at-root .cont_hd > .tit { 
     font-weight: 400;
     line-height: 1.5; 
-    margin: $gutter_md 0 $gutter_sm;
+    margin: $gutter_md 0 $gutter_sm; 
+    & + button { margin-top: $gutter_sm; }
   }
   @at-root .list_hd .tit {
     font-family: $sub_font_family;
@@ -241,7 +242,7 @@
       padding: 0 !important;
       border: none !important;
     }
-    & + .topic_list {
+    & + .topic_list_wrap {
       margin: 0 $gutter_md;
       border: 0.09766vw solid $border;
       border-top: none;
