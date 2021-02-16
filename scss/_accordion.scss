@@ -1,31 +1,31 @@
 ﻿.accordion {
-  margin: 0 -40px;
+  margin: 0 -3.90625vw;
   .card { 
     @include shadow_accodion;
     margin: $gutter_sm 0; 
-    // border-bottom: 1px solid $border !important;
+    // border-bottom: 0.09766vw solid $border !important;
     &:first-child { margin: 0; }
     .card-header {
       @include shadow_accodion;
       background-color: #fff;
       padding: 0;
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
+      border-top: 0.09766vw solid $border;
+      border-bottom: 0.09766vw solid $border;
       .btn_collapse {
         @include flex; 
         width: 100%;
         justify-content: space-between;
         align-items: center;
         background: transparent;
-        padding: 54px $gutter_md;
-        border-bottom: 1px solid $border !important;
+        padding: 5.27344vw $gutter_md;
+        border-bottom: 0.09766vw solid $border !important;
         .tit {
-          font-size: 52px;
+          font-size: 5.07813vw;
           font-family: $sub_font_family;
           font-weight: 400;
           small {
             display: inline-block;
-            font-size: 32px;
+            font-size: 3.12500vw;
             color: #555;
             font-weight: 300;
             strong { 
@@ -35,8 +35,8 @@
           }
         }
         .ic {
-          width: 55px;
-          height: 55px;
+          width: 5.37109vw;
+          height: 5.37109vw;
         }
         &.collapsed {
           .ic { background-position: -37.50000vw -24.02344vw; }
@@ -48,47 +48,48 @@
     .topic_box { 
       margin: $gutter_xs $gutter_md;
       padding: 0 $gutter_md !important;
-      border: 1px solid $border !important;
-      .tag_btn_list a { padding: 2.34375vw 27px !important; }
-      .tit { font-size: 44px; }
+      border: 0.09766vw solid $border !important;
+      .tag_btn_list a { padding: 2.34375vw 2.63672vw !important; }
+      .tit { font-size: 4.29688vw; }
     }
     .topic_btn_wrap {
-      border: 1px solid $border !important; 
+      border: 0.09766vw solid $border !important; 
       .tit { padding-bottom: 0 !important; }
     }
     .topic_box + .topic_btn_wrap { border-top: none !important; }
     & > .list_cont .list > li { 
       border: 0 !important; 
-      &:last-child { margin-bottom: 90px !important; }
+      &:last-child { margin-bottom: 8.78906vw !important; }
     }
   }
   & + .a_btn_sky {
-    width: 840px;
+    width: 82.03125vw;
     border-radius: 0;
-    margin: 90px 50px 200px;
+    margin: 8.78906vw 4.88281vw 19.53125vw;
+    font-size: 4.68750vw;
   }
 }
 .major_wrap {
   @include flex;
-  height: 150px;
+  height: 14.64844vw;
   justify-content: center;
   align-items: center;
-  margin: 50px -40px 0;
+  margin: 4.88281vw -3.90625vw 0;
   background-color: #fafafa;
   .ic {
-    width: 66px;
-    height: 66px;
+    width: 6.44531vw;
+    height: 6.44531vw;
     margin-right: $gutter_xs;
   }
   span {
     font-family: $sub_font_family;
-    font-size: 52px;
+    font-size: 5.07813vw;
     color: #222;
   }
 }
 .topic_list_wrap {
   display: none;
-  padding: 50px $gutter_md $gutter_md;
+  padding: 4.88281vw $gutter_md $gutter_md;
   background-color: #f5f5f5;
   .topic_list {
     display: block !important;
@@ -96,13 +97,13 @@
     border: 0 !important;
     & + .a_btn_white {
       width: 100%;
-      font-size: 40px;
+      font-size: 3.90625vw;
       border-radius: 0;
-      margin-top: 60px;
+      margin-top: 5.85938vw;
     }
   }
   .tab_wrap > .nav > li > a {
-    font-size: 36px;
+    font-size: 3.51563vw;
   }
 }
 .feedback_form {
@@ -110,19 +111,19 @@
   margin: $gutter_xs 0 $gutter_md; 
   input {
     flex-grow: 1;
-    height: 100px;
-    border: 1px solid $border;
+    height: 9.76563vw;
+    border: 0.09766vw solid $border;
     border-right: none;
-    font-size: 36px;
-    padding: 0 30px;
+    font-size: 3.51563vw;
+    padding: 0 2.92969vw;
   }
   .btn_submit {
-    width: 140px;
-    height: 100px;
-    font-size: 36px;
+    width: 13.67188vw;
+    height: 9.76563vw;
+    font-size: 3.51563vw;
     font-weight: 500;
     background-color: $color_primary;
-    border: 1px solid $border;
+    border: 0.09766vw solid $border;
     color: #fff;
   }
 }
