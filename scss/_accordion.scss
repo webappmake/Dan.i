@@ -13,7 +13,6 @@
       border-bottom: 1px solid $border;
       .btn_collapse {
         @include flex; 
-        @include shadow_accodion;
         width: 100%;
         justify-content: space-between;
         align-items: center;
@@ -106,21 +105,6 @@
     font-size: 36px;
   }
 }
-
-// .btn {
-//   height: 60px;
-//   display: inline-block;
-//   font-size: 18px;
-//   font-weight: 600;
-//   border-radius: 3px;
-//   flex-grow: 1;
-//   margin: 0 5px;
-//   &.btn_submit {
-//     border: 1px solid #0054a3;
-//     background-color: #0054a3;
-//     color: #fff;
-//   }
-// }
 .feedback_form {
   @include flex;
   margin: $gutter_xs 0 $gutter_md; 

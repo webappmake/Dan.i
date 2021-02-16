@@ -99,8 +99,8 @@
             $(this).find("strong").text("토픽보기").removeClass('active');
         }
         else {
-            $(".topic_list").hide();
-            $(".topic_list_wrap").hide();
+            // $(".topic_list").hide();
+            // $(".topic_list_wrap").hide();
             $(this).find("strong").text("토픽보기").removeClass('active');
             $(this).parent().next().show();
             $(this).find("strong").text("토픽접기").addClass('active');
