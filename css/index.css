@@ -1327,6 +1327,55 @@ em, strong {
     border: 0.09766vw solid #d4d4d4;
     color: #fff; }
 
+.major_select_swiper {
+  margin: 4.88281vw 0 6.15234vw; }
+  .major_select_swiper .swiper-wrapper .swiper-slide {
+    width: auto !important;
+    height: 44.04297vw;
+    border: 0.19531vw solid #d4d4d4;
+    border-radius: 0.97656vw;
+    display: inline-block;
+    margin: 0.97656vw; }
+    .major_select_swiper .swiper-wrapper .swiper-slide:first-child {
+      margin-left: 0; }
+    .major_select_swiper .swiper-wrapper .swiper-slide > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 10.25391vw 2.73438vw 2.73438vw; }
+    .major_select_swiper .swiper-wrapper .swiper-slide .label_round {
+      width: 16.50391vw;
+      height: 6.34766vw;
+      display: inline-block;
+      line-height: 6.34766vw;
+      text-align: center;
+      font-size: 3.22266vw;
+      font-weight: 600;
+      color: #555;
+      border: 0.09766vw solid #555;
+      border-radius: 6.34766vw;
+      margin-bottom: 4.88281vw; }
+    .major_select_swiper .swiper-wrapper .swiper-slide ul li {
+      font-size: 3.51563vw;
+      font-weight: 600;
+      line-height: 1.28; }
+    .major_select_swiper .swiper-wrapper .swiper-slide.all {
+      width: 23.04688vw !important;
+      background: #ccdded; }
+      .major_select_swiper .swiper-wrapper .swiper-slide.all > a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        font-size: 4.49219vw;
+        font-family: "Gong Gothic", sans-serif !important; }
+        .major_select_swiper .swiper-wrapper .swiper-slide.all > a .ic {
+          width: 5.76172vw;
+          height: 5.76172vw; }
+
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
@@ -1355,6 +1404,8 @@ em, strong {
     height: 5.66406vw;
     margin-right: 1.46484vw;
     background-position: -25.19531vw 0; }
+  .ic.major {
+    background-position: -26.66016vw -40.62500vw; }
   .ic.major_lg {
     background-position: -20.21484vw -40.62500vw; }
   .ic.toggle_open {

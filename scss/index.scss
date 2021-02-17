@@ -17,6 +17,7 @@
   &.pagination_next { background-position: -8.78906vw -24.02344vw; }
   &.ic_pop_close {width: $gutter_md; height: $gutter_md; background-position: 0 -32.81250vw;}
   &.ic_info{width:5.66406vw; height:5.66406vw; margin-right:1.46484vw; background-position:-25.19531vw 0;}
+  &.major { background-position: -26.66016vw -40.62500vw; }
   &.major_lg { background-position: -20.21484vw -40.62500vw; }
   &.toggle_open { background-position: -37.50000vw -24.02344vw; }
   &.toggle_close { background-position: -42.87109vw -24.02344vw; }
@@ -211,7 +212,7 @@
   }
   @at-root .list_hd .desc, .total {
     font-family: $sub_font_family;
-    font-size: 3.51563vw; //36px;
+    font-size: 3.51563vw;
     color: #000;
     font-weight: 400;
   }
@@ -403,7 +404,7 @@
 }
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {
-  margin: 5.27344vw 0 7.22656vw; //54px 0 74px 기준으로 우선 잡고 나중에 공통 찾기 
+  margin: 5.27344vw 0 7.22656vw; 
   .search_form {
     display: flex; 
     border-bottom: 0.58594vw solid #222;
