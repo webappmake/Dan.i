@@ -1339,7 +1339,7 @@ button {
     color: #fff; }
 
 .major_select_swiper {
-  margin: 4.88281vw 0 6.15234vw; }
+  margin: 4.88281vw 0; }
   .major_select_swiper .swiper-wrapper .swiper-slide {
     width: auto !important;
     height: 44.04297vw;
@@ -1501,38 +1501,6 @@ button {
       background-position: -45.89844vw -5.66406vw; }
     .icon_chk_wrap .icon_chk.icon_chk_use:checked + label:before {
       background-position: -45.89844vw -12.10938vw; }
-
-select.form-control {
-  width: 25.39063vw;
-  height: 9.76563vw;
-  font-size: 3.51563vw;
-  color: #222;
-  padding: 2.34375vw 7.81250vw 2.34375vw 2.92969vw;
-  background-image: url(../images/select.png);
-  background-repeat: no-repeat;
-  background-position: right 2.73438vw center;
-  background-size: 2.14844vw 1.36719vw;
-  background-color: #fff;
-  border: 0.09766vw solid #d4d4d4;
-  border-radius: 0.29297vw;
-  -moz-appearance: none;
-  /* Firefox */
-  -webkit-appearance: none;
-  /* Safari and Chrome */
-  appearance: none; }
-  select.form-control::-ms-expand {
-    display: none; }
-
-.control_wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center; }
-  .btn_select, .btn {
-    border-radius: 0.29297vw; }
-  .control_wrap .sel_area + .btn {
-    margin-left: 0.97656vw; }
 
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .header {
@@ -1698,6 +1666,99 @@ select.form-control {
 .text_darkgray {
   color: #555 !important; }
 
+/* ------------------------------------------------------- COMMON > FORM 관련 ------------------------------------------------------- */
+.btn {
+  background-color: transparent;
+  border: 0.09766vw solid transparent; }
+  .btn.btn_primary {
+    color: #fff; }
+  .btn.btn_primary01 {
+    background-color: #0054a3;
+    border-color: #0054a3; }
+  .btn.btn_tertiary {
+    color: #888;
+    background-color: #ccc;
+    border-color: #ccc; }
+  .btn.btn_select {
+    width: 9.76563vw;
+    height: 9.76563vw;
+    padding: 0.48828vw;
+    display: inline-block;
+    border: 0.09766vw solid #d4d4d4;
+    border-radius: 0.29297vw; }
+
+.a_btn {
+  background-color: transparent;
+  border: 0.09766vw solid transparent;
+  font-size: 3.51563vw;
+  font-weight: 600;
+  padding: 2.92969vw 6.83594vw;
+  border-radius: 0.97656vw; }
+  .a_btn span, .a_btn i {
+    vertical-align: middle; }
+  .a_btn.a_btn_white {
+    color: #555;
+    background-color: #fff;
+    border-color: #d4d4d4; }
+  .a_btn.a_btn_gray {
+    color: #fff;
+    background-color: #555;
+    border-color: #555; }
+  .a_btn.a_btn_sky_line {
+    color: #48b9e1;
+    background-color: #fff;
+    border-color: #48b9e1; }
+  .a_btn.a_btn_red {
+    color: #fff;
+    background-color: #b70000;
+    border-color: #b70000; }
+  .a_btn.a_btn_pink {
+    color: #fff;
+    background-color: #da97ab;
+    border-color: #da97ab; }
+  .a_btn.a_btn_sky {
+    color: #fff;
+    background-color: #48b9e1;
+    border-color: #48b9e1; }
+
+.btn_icon {
+  font-size: 0;
+  background-color: transparent;
+  border: none; }
+
+select.form-control {
+  width: 25.39063vw;
+  height: 9.76563vw;
+  font-size: 3.51563vw;
+  color: #222;
+  padding: 2.34375vw 7.81250vw 2.34375vw 2.92969vw;
+  background-image: url(../images/select.png);
+  background-repeat: no-repeat;
+  background-position: right 2.73438vw center;
+  background-size: 2.14844vw 1.36719vw;
+  background-color: #fff;
+  border: 0.09766vw solid #d4d4d4;
+  border-radius: 0.29297vw;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none; }
+  select.form-control::-ms-expand {
+    display: none; }
+
+.control_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; }
+  .control_wrap .sel_area + .btn {
+    margin-left: 0.97656vw; }
+  .control_wrap.only {
+    justify-content: flex-end;
+    margin: 1.95313vw 0; }
+
 /* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
 .inline_wrap {
   display: -webkit-box;
@@ -1747,14 +1808,6 @@ select.form-control {
       display: inline-block; }
     .list_view .list_hd > div .tit {
       margin-right: 1.56250vw; }
-    .list_view .list_hd > div .btn {
-      width: 9.76563vw;
-      height: 9.76563vw;
-      padding: 0.48828vw;
-      display: inline-block;
-      border: 0.09766vw solid #d4d4d4; }
-      .list_view .list_hd > div .btn.active .ic.selectbox {
-        background-position: 0 -47.07031vw; }
   .list_view .list_cont .list > li {
     padding: 3.90625vw 0;
     border-bottom: 0.09766vw solid #d4d4d4; }
@@ -1866,59 +1919,6 @@ select.form-control {
     .filter_list > li.active > a {
       background-color: #000;
       color: #fff; }
-
-/* ------------------------------------------------------- COMMON > BUTTON ------------------------------------------------------- */
-.btn {
-  background-color: transparent;
-  border: 0.09766vw solid transparent; }
-  .btn.btn_primary {
-    color: #fff; }
-  .btn.btn_primary01 {
-    background-color: #0054a3;
-    border-color: #0054a3; }
-  .btn.btn_tertiary {
-    color: #888;
-    background-color: #ccc;
-    border-color: #ccc; }
-
-.a_btn {
-  background-color: transparent;
-  border: 0.09766vw solid transparent;
-  font-size: 3.51563vw;
-  font-weight: 600;
-  padding: 2.92969vw 6.83594vw;
-  border-radius: 0.97656vw; }
-  .a_btn span, .a_btn i {
-    vertical-align: middle; }
-  .a_btn.a_btn_white {
-    color: #555;
-    background-color: #fff;
-    border-color: #d4d4d4; }
-  .a_btn.a_btn_gray {
-    color: #fff;
-    background-color: #555;
-    border-color: #555; }
-  .a_btn.a_btn_sky_line {
-    color: #48b9e1;
-    background-color: #fff;
-    border-color: #48b9e1; }
-  .a_btn.a_btn_red {
-    color: #fff;
-    background-color: #b70000;
-    border-color: #b70000; }
-  .a_btn.a_btn_pink {
-    color: #fff;
-    background-color: #da97ab;
-    border-color: #da97ab; }
-  .a_btn.a_btn_sky {
-    color: #fff;
-    background-color: #48b9e1;
-    border-color: #48b9e1; }
-
-.btn_icon {
-  font-size: 0;
-  background-color: transparent;
-  border: none; }
 
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {

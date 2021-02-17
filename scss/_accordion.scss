@@ -128,7 +128,8 @@
 }
 
 .major_select_swiper {
-  margin: 4.88281vw 0 6.15234vw;
+  //margin: 4.88281vw 0 6.15234vw; 필터링 추가되서 여백 변경
+  margin: 4.88281vw 0;
   .swiper-wrapper {
     .swiper-slide {
       width: auto !important;
