@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>수강이력</title>
+	<title>수강이력_단일전공</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
 	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
@@ -114,6 +114,14 @@
 				<p class="major_wrap">
 					<i class="ic major_lg"></i><span>문과대학 국어국문학과</span>
 				</p>
+				<div class="control_wrap only">
+					<p class="sel_area">
+						<select class="form-control" id="select_01" name="budget">
+							<option value="#">전체</option>
+						</select>
+					</p>
+					<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+				</div>
 				<div class="accordion" id="myAccordion">
 					<div class="card">
 						<div class="card-header" id="headingOne">
@@ -631,13 +639,13 @@
 							<div>
 								<p class="desc">총 <span class="text_blue">N</span>개</p>
 							</div>
-							<div>
+							<div class="control_wrap">
 								<p class="sel_area">
 									<select class="form-control" id="select_01" name="budget">
 										<option value="#">전체</option>
 									</select>
 								</p>
-								<button type="button" class="btn" onclick="fn_ListSequence(this)"><i class="ic selectbox">목록선택</i></button>
+								<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
 							</div>
 						</div><!--//.list_hd-->
 						<div class="list_cont list_cont_box">
