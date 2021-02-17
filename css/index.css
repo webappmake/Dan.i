@@ -1529,8 +1529,7 @@ select.form-control {
   display: -ms-flexbox;
   display: flex;
   align-items: center; }
-  .control_wrap select.form-control,
-  .control_wrap .btn {
+  .btn_select, .btn {
     border-radius: 0.29297vw; }
   .control_wrap .sel_area + .btn {
     margin-left: 0.97656vw; }

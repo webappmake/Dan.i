@@ -76,8 +76,7 @@ select.form-control {
 .control_wrap {
   @include flex;
   align-items: center;
-  select.form-control,
-  .btn { border-radius: $radius_xs; }
+  @at-root .btn_select, .btn { border-radius: $radius_xs; }
   .sel_area + .btn { margin-left: $gutter_xs; }
 }
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
