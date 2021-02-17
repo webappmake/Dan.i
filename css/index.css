@@ -1875,6 +1875,8 @@ em, strong {
       height: 8.20313vw;
       display: inline-block;
       padding: 0.97656vw; }
+    .search_form_wrap .search_form + .desc {
+      margin-top: 0.97656vw; }
 
 /* ------------------------------------------------------- TOPIC ------------------------------------------------------- */
 .topic_area .topic_box {

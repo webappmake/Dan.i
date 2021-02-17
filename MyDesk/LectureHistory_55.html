@@ -182,9 +182,9 @@
 												</div>
 												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
 												<ul class="tag_btn_list">
-													<li><a href="#" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#" data-toggle="modal">교과개요</a></li>
-													<li><a href="#" data-toggle="modal">선행/연계</a></li>
+													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
+													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
 													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
 												</ul>
 											</div>
@@ -286,9 +286,9 @@
 												</div>
 												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
 												<ul class="tag_btn_list">
-													<li><a href="#" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#" data-toggle="modal">교과개요</a></li>
-													<li><a href="#" data-toggle="modal">선행/연계</a></li>
+													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
+													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
 													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
 												</ul>
 											</div>
@@ -390,9 +390,9 @@
 												</div>
 												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
 												<ul class="tag_btn_list">
-													<li><a href="#" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#" data-toggle="modal">교과개요</a></li>
-													<li><a href="#" data-toggle="modal">선행/연계</a></li>
+													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
+													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
 													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
 												</ul>
 											</div>
@@ -494,9 +494,9 @@
 												</div>
 												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
 												<ul class="tag_btn_list">
-													<li><a href="#" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#" data-toggle="modal">교과개요</a></li>
-													<li><a href="#" data-toggle="modal">선행/연계</a></li>
+													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
+													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
 													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
 												</ul>
 											</div>
@@ -591,6 +591,102 @@
 			</ul>
 		</nav>
 	</footer><!--//.footer-->
+
+	<!-- 교과목 추천 팝업 -->
+	<div class="modal fade full_modal" id="Pop_SubjectRecommend" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h3 class="pop_title">교과목 추천</h3>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+				</div>
+				<div class="modal_body">
+					<h4 class="pop_sub_title">언어학의이해</h4>
+					<div class="search_form_wrap">
+						<div class="search_form">
+							<input type="text" placeholder="교과목명을 입력하세요." />
+							<button type="submit" class="btn"><i class="ic search">검색</i></button>
+						</div>
+						<p class="desc center">이미 수강한 교과목은 제외하고 추천해 드려요.</p>
+					</div>
+					<section class="list_view">
+						<div class="list_hd">
+							<div>
+								<p class="desc">총 <span class="text_blue">N</span>개</p>
+							</div>
+							<div>
+								<p class="sel_area">
+									<label for="select_01">전체</label>
+									<select class="form-control" id="select_01" name="budget">
+										<option value="#">전체</option>
+									</select>
+								</p>
+								<button type="button" class="btn" onclick="fn_ListSequence(this)"><i class="ic selectbox">목록선택</i></button>
+							</div>
+						</div><!--//.list_hd-->
+						<div class="list_cont list_cont_box">
+							<ul class="list">
+								<li>
+									<div class="topic_box">
+										<div class="inline_wrap">
+											<h4 class="tit">국문학개론</h4>
+											<p class="icon_chk_wrap">
+												<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+												<label for="r2">On/Off</label>
+											</p>
+										</div>
+										<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
+										<p class="topic_btn">
+											<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
+										</p>
+									</div>
+									<ul class="topic_list">
+										<li>
+											<div class="inline_wrap">
+												<h4 class="tit">국어학개론</h4>
+												<p class="icon_chk_wrap">
+													<input id="r3" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+													<label for="r3">On/Off</label>
+												</p>
+											</div>
+											<div class="inline_wrap justify_start">
+												<ul class="tag_list">
+													<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
+													<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
+													<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
+												</ul>
+												<span class="desc">빈도수 121</span>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div><!--//.list_cont-->
+						<div class="list_ft">
+							<ul class="paging">
+								<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+								<li class="active"><a href="#none">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+							</ul>
+						</div><!--//.list_ft-->
+					</section><!--//.list_view-->
+					<!-- null 값일 경우 -->
+					<!--<div class="pag_info_none pag_sm_info_none">
+						<span class="ic_before ic_info_lg">
+							선택한 교과의 선행교과는 아직 분석되지 않았어요.<br />
+							추후에 반영될 예정입니다.
+						</span>
+					</div>-->
+					<!-- // null 값일 경우 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//교과목 추천 팝업-->
 </body>
 </html>
 

@@ -420,6 +420,7 @@
       display: inline-block;
       padding: $gutter_xs
     }
+    & + .desc { margin-top: $gutter_xs; }
   }
   .desc { }
 }
