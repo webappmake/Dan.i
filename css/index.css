@@ -158,6 +158,92 @@ button {
   padding: 0 !important; }
 
 /* common */
+.text_red {
+  color: #b70000 !important; }
+
+.container-wrap .container > .contents.contents01 {
+  padding: 0; }
+  .container-wrap .container > .contents.contents01 .cont_hd {
+    padding: 0 3.90625vw; }
+    .container-wrap .container > .contents.contents01 .cont_hd > .tit {
+      margin-top: 75px;
+      margin-bottom: 55px; }
+
+.favorite_view .favorite_area > dt {
+  -webkit-box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
+  box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
+  height: 120px;
+  font-family: "Gong Gothic", sans-serif !important;
+  font-size: 40px;
+  line-height: 50px;
+  padding: 34px 3.90625vw;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4; }
+  .favorite_view .favorite_area > dt > strong {
+    line-height: 40px; }
+  .favorite_view .favorite_area > dt .a_txt_btn {
+    font-family: "NanumGothic", "NanumGothic", sans-serif !important;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    padding-bottom: 10px; }
+    .favorite_view .favorite_area > dt .a_txt_btn.text_blue {
+      border-bottom: 3px solid #0054a3; }
+    .favorite_view .favorite_area > dt .a_txt_btn.text_red {
+      border-bottom: 3px solid #b70000; }
+
+.favorite_view .favorite_area > dd {
+  padding: 30px 1.95313vw; }
+  .favorite_view .favorite_area > dd .app_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 42px;
+    margin-bottom: 20px; }
+    .favorite_view .favorite_area > dd .app_list > li {
+      flex: 0 0 33.33%;
+      width: 33.33%;
+      margin-left: 7px;
+      margin-bottom: 50px;
+      text-align: center; }
+      .favorite_view .favorite_area > dd .app_list > li:nth-child(3n+1) {
+        clear: both;
+        margin-left: -42px; }
+      .favorite_view .favorite_area > dd .app_list > li > a {
+        display: block;
+        width: 193px;
+        margin: 0 auto; }
+      .favorite_view .favorite_area > dd .app_list > li > a img {
+        display: block;
+        width: 193px;
+        height: 193px;
+        border: 1px solid #d4d4d4;
+        border-radius: 20px; }
+      .favorite_view .favorite_area > dd .app_list > li > a span {
+        display: block;
+        font-size: 36px;
+        line-height: 55px;
+        margin: 20px 0; }
+      .favorite_view .favorite_area > dd .app_list > li.icon_add > a {
+        position: relative;
+        padding-bottom: 0; }
+      .favorite_view .favorite_area > dd .app_list > li.icon_add > a {
+        width: 193px;
+        height: 193px;
+        border: 1px solid #d4d4d4;
+        border-radius: 20px; }
+      .favorite_view .favorite_area > dd .app_list > li.icon_add > a span {
+        width: 50px;
+        height: 50px;
+        background-position: -334px -246px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -25px 0 0 -25px; }
+
 /* modal */
 .modal {
   overflow-y: auto;

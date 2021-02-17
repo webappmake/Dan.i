@@ -1,6 +1,69 @@
 ﻿/* common */
 
+.text_red{color:$color_red !important;}
 
+.container-wrap {
+  .container {
+    & > .contents {
+        &.contents01{
+            padding:0;
+            & .cont_hd {
+                padding:0 $gutter_md;
+                & > .tit{
+                    margin-top:75px; margin-bottom:55px;
+                }
+            }
+                
+        }
+    }
+  }
+}
+
+.favorite_view {
+    & .favorite_area {
+
+        & > dt {
+            @include shadow_gnb; 
+
+            height:120px; font-family:$sub_font_family; font-size:40px; line-height:50px; padding:34px $gutter_md; border-top:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4;
+            & > strong{line-height:40px;}
+            & .a_txt_btn{
+                font-family:$base_font_family; font-size:36px; line-height:36px; font-weight:500; padding-bottom:10px;
+                &.text_blue{
+                    border-bottom:3px solid $color_primary;
+                }
+                &.text_red{
+                    border-bottom:3px solid $color_red;
+                }
+            }
+        }
+
+        & > dd {             
+            padding:30px $gutter_sm; 
+            & .app_list{
+                @include flex;
+                flex-wrap:wrap; padding-left:42px; margin-bottom:20px;
+                & > li{
+                    flex:0 0 33.33%; width:33.33%; margin-left:7px; margin-bottom:50px; text-align:center; 
+                    &:nth-child(3n+1){clear:both; margin-left:-42px;}
+                    & > a{display:block; width:193px; margin:0 auto;}
+                    & > a img{display:block; width:193px; height:193px; border:1px solid #d4d4d4; border-radius:20px;}
+                    & > a span{display:block; font-size:36px; line-height:55px; margin:20px 0;}
+
+                     &.icon_add{
+                        
+                        & > a{position:relative; padding-bottom:0;}
+                        & > a{width:193px; height:193px; border:1px solid #d4d4d4; border-radius:20px;}
+                        & > a span{width:50px; height:50px; background-position:-334px -246px; background-color:#fff; position:absolute; left:50%; top:50%; margin:-25px 0 0 -25px;}
+                    }
+                }
+               
+
+            }
+
+        }
+    }
+}
 
 /* modal */
 .modal{
