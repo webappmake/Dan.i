@@ -1756,6 +1756,7 @@ select.form-control {
   .control_wrap .sel_area + .btn {
     margin-left: 0.97656vw; }
   .control_wrap.only {
+    width: 100%;
     justify-content: flex-end;
     margin: 1.95313vw 0; }
 
