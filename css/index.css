@@ -1505,7 +1505,7 @@ button {
 select.form-control {
   width: 25.39063vw;
   height: 9.76563vw;
-  font-size: 2.92969vw;
+  font-size: 3.51563vw;
   color: #222;
   padding: 2.34375vw 7.81250vw 2.34375vw 2.92969vw;
   background-image: url(../images/select.png);
@@ -1514,7 +1514,7 @@ select.form-control {
   background-size: 2.14844vw 1.36719vw;
   background-color: #fff;
   border: 0.09766vw solid #d4d4d4;
-  border-radius: 0.19531vw;
+  border-radius: 0.29297vw;
   -moz-appearance: none;
   /* Firefox */
   -webkit-appearance: none;
@@ -1522,6 +1522,18 @@ select.form-control {
   appearance: none; }
   select.form-control::-ms-expand {
     display: none; }
+
+.control_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; }
+  .control_wrap select.form-control,
+  .control_wrap .btn {
+    border-radius: 0.29297vw; }
+  .control_wrap .sel_area + .btn {
+    margin-left: 0.97656vw; }
 
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .header {
