@@ -1648,6 +1648,9 @@ em, strong {
 .text_blue {
   color: #0054a3 !important; }
 
+.text_darkgray {
+  color: #555 !important; }
+
 /* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
 .inline_wrap {
   display: -webkit-box;
@@ -1747,6 +1750,7 @@ em, strong {
     .list_view .list_cont.list_cont_box .list > li .tit_info {
       margin-top: 0; }
       .topic_box .tit_info {
+        font-size: 3.51563vw;
         color: #888;
         padding: 0 0.97656vw 3.90625vw 0.97656vw; }
       .list_view .list_cont.list_cont_box .list > li .tit_info + .tag_btn_list {
