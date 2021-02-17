@@ -23,6 +23,8 @@
   &.toggle_close { background-position: -42.87109vw -24.02344vw; }
   &.arrow_shortcut { background-position: -3.90625vw -32.81250vw; }
   &.arrow_shortcut_white { background-position: -3.90625vw -36.71875vw; }
+  &.circle_delete { background-position: -66.50391vw -18.55469vw; }
+  &.circle_add { background-position: -57.71484vw -18.55469vw; }
 }
 .ic_before{
   position:relative;
@@ -224,19 +226,13 @@
   @include flex;
 	align-items: center;
 	justify-content: space-between;
-  &.justify_start {
-    justify-content: start;
-  }
-	.form-group { 
-		flex-grow: 1;
-  }
+  .form-group { flex-grow: 1; }
 	button { 
 		flex: 0 0 auto;
 		margin-left: .75rem;
   }
-  &.align_top {
-    align-items: flex-start;
-  }
+  &.justify_start { justify-content: start; }	
+  &.align_top { align-items: flex-start; }
   &.topic_btn_wrap {
     padding: $gutter_md;
     margin: 0 $gutter_md !important;
@@ -308,51 +304,78 @@
         & + .desc { margin-left: 2.44141vw; }
       }
     }
-
-    &.list_cont_box{
-      .list{
-        & > li{
-          padding: 0 ; margin-bottom:5.37109vw;
-          &:last-child{
-              margin-bottom:0;
-          }
-          & .tit{
-            padding-bottom:$gutter_sm;
-          }
-          & .tit_info{
-            margin-top:0;
-            @at-root .topic_box .tit_info{ font-size:3.51563vw; color:#888; padding:0 $gutter_xs $gutter_md $gutter_xs;}
-            & + .tag_btn_list { margin-top: 0; margin-bottom: $gutter_md; }
-          }
-            .topic_box{
-                padding:0 $gutter_sm; margin-bottom:0;
-                & > .inline_wrap{
-                  padding:5.85938vw $gutter_xs 0 $gutter_xs;
-                }
+    &.list_cont_box {
+      .list {
+        & > li {
+          padding: 0;
+          margin-bottom: 5.37109vw;
+          &:last-child { margin-bottom: 0; }
+          & .tit_info {           
+            margin-top: 0;
+            @at-root .topic_box .tit_info {
+              font-size: 3.51563vw;
+              color: #888;
+              padding: 0 $gutter_xs $gutter_md $gutter_xs;
             }
-            .topic_btn{
-              padding:$gutter_md $gutter_xs 4.39453vw $gutter_xs; border-top:0.09766vw solid $border;
-                & strong{
-                  display:inline-block; font-size: 3.90625vw; padding-bottom:0.48828vw; border-bottom:0.29297vw solid $color_primary;
-                }
+            & + .tag_btn_list {
+              margin-top: 0;
+              margin-bottom: $gutter_md;
             }
-            .topic_list {
-              padding:4.88281vw $gutter_md; background-color:#f5f5f5; border-top:0.09766vw solid $border_light; /*border-bottom:0.09766vw solid $border_light; */display:none;
-                & > li{
-                  padding:$gutter_md 4.88281vw; margin-bottom:$gutter_xs; background-color:#fff; border:0.09766vw solid $border;
-                    &:last-child{
-                      margin-bottom:0;
-                    }
-                    & .tag_list > li > a{
-                        padding-top:$gutter_xs; padding-bottom:$gutter_xs;
-                    }
-                }
+          }
+          .topic_box {
+            padding: 0 $gutter_sm;
+            margin-bottom: 0;
+            & > .inline_wrap { padding: 5.85938vw $gutter_xs 0 $gutter_xs; }
+          }
+          .topic_btn {
+            padding: $gutter_md $gutter_xs 4.39453vw $gutter_xs;
+            border-top: 0.09766vw solid $border;
+            & strong {
+              display: inline-block;
+              font-size: 3.90625vw;
+              padding-bottom: 0.48828vw;
+              border-bottom: 0.29297vw solid $color_primary;
             }
+          }
+          .topic_list {
+            padding: 4.88281vw $gutter_md;
+            background-color: #f5f5f5;
+            border-top: 0.09766vw solid $border_light;
+            display: none;
+            & > li {
+              padding: $gutter_md 4.88281vw;
+              margin-bottom: $gutter_xs;
+              background-color: #fff;
+              border: 0.09766vw solid $border;
+              &:last-child { margin-bottom: 0; }
+              & .tag_list > li > a {
+                padding-top: $gutter_xs;
+                padding-bottom: $gutter_xs;
+              }
+            }
+          }
         }
       }
     }
   }
-  .list_ft {
+}
+//토픽 삭제 시 공통으로 사용
+.list_modify { 
+  & > li {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: 0.09766vw solid $border !important;
+    background-color: #fff;
+    &:first-child { border-top: 0.19531vw solid $border !important; }
+    .inline_wrap {
+      min-height: 11.71875vw;
+      padding: $gutter_sm 2.44141vw !important;
+    }
+    .btn_delete {
+      width: 8.78906vw;
+      height: 8.78906vw;
+      display: inline-block;
+    }
   }
 }
 .filter_list {
