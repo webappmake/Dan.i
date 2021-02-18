@@ -145,20 +145,8 @@
         display: block;
         padding: 10.25391vw 2.73438vw 2.73438vw;
       }
-      .label_round {
-        width: 16.50391vw;
-        height: 6.34766vw;
-        display: inline-block;
-        line-height: 6.34766vw;
-        text-align: center;
-        font-size: 3.22266vw;
-        font-weight: 600;
-        color: #555;
-        border: 0.09766vw solid #555;
-        border-radius: 6.34766vw;
-        margin-bottom: 4.88281vw;
-      }
       ul {
+        margin-top: 4.88281vw;
         li {
           font-size: 3.51563vw;
           font-weight: 600;
@@ -181,3 +169,18 @@
     }
   }
 }
+.label_round {
+  width: 16.50391vw;
+  height: 6.34766vw;
+  display: inline-block;
+  line-height: 6.34766vw;
+  text-align: center;
+  font-size: 3.22266vw;
+  font-weight: 600;
+  color: #555;
+  border: 0.09766vw solid #555;
+  border-radius: 6.34766vw;
+  background-color: #fff;
+  & + .desc { margin-left: 24px; }
+}
+.bg_gray { background-color: #f5f5f5; }

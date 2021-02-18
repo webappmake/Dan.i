@@ -224,9 +224,9 @@
 .btn {
   background-color: transparent;
   border: 0.09766vw solid transparent;
-    &.btn_primary{color:$color_white;}
-    &.btn_primary01{background-color: $color_primary; border-color: $color_primary;}
-    &.btn_tertiary{color:$font_gray; background-color: $color_tertiary; border-color: $color_tertiary;}
+    &.btn_primary{ color: $color_white; }
+    &.btn_primary01 { background-color: $color_primary; border-color: $color_primary; }
+    &.btn_tertiary { color: $font_gray; background-color: $color_tertiary; border-color: $color_tertiary; }
     &.btn_select {
       width: 9.76563vw;
       height: 9.76563vw;
@@ -235,6 +235,11 @@
       border: 0.09766vw solid $border;
       border-radius: $radius_xs;
     }
+}
+.btn_delete {
+  width: 8.78906vw;
+  height: 8.78906vw;
+  display: inline-block;
 }
 .a_btn {
   background-color: transparent;
@@ -329,7 +334,7 @@ select.form-control {
     } 
   }
   .list_cont {
-    .list {   
+    .list {
       & > li {
         padding: $gutter_md 0;
         border-bottom: 0.09766vw solid $border;
@@ -425,11 +430,6 @@ select.form-control {
     .inline_wrap {
       min-height: 11.71875vw;
       padding: $gutter_sm 2.44141vw !important;
-    }
-    .btn_delete {
-      width: 8.78906vw;
-      height: 8.78906vw;
-      display: inline-block;
     }
   }
 }
