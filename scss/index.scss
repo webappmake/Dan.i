@@ -291,7 +291,7 @@ select.form-control {
     margin: $gutter_sm 0;
   }
 }
-/* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
+/* ------------------------------------------------------- COMMON > CLASS > .inline_wrap ------------------------------------------------------- */
 .inline_wrap {
   @include flex;
 	align-items: center;
@@ -318,6 +318,8 @@ select.form-control {
     }
   }
 }
+/* ------------------------------------------------------- COMMON > CLASS > .list_view ------------------------------------------------------- */
+//리스트 기본디자인
 .list_view {
   @include flex;
   flex-direction: column;   
@@ -364,7 +366,7 @@ select.form-control {
         & + .desc { margin-left: 2.44141vw; }
       }
     }
-    &.list_cont_box {
+    &.list_cont_box { 
       .list {
         & > li {
           padding: 0;
@@ -419,7 +421,45 @@ select.form-control {
     }
   }
 }
-//토픽 삭제 시 공통으로 사용
+//리스트 디자인 하단분리형
+.list_view.list_view_type01 {
+  .list_hd { border-bottom: transparent; }
+  .list {
+    & > li { 
+      border: 0.09766vw solid $border !important;
+      padding: 0.09766vw !important;
+      margin: $gutter_sm 0 !important;
+      &:first-child { margin-top: 0 !important; }
+      .topic_box { 
+        padding: $gutter_md 0 !important;
+        & > .tit_info { padding: 0 $gutter_md !important; }
+        a { display: block; padding: 0 $gutter_md; } 
+        .date { font-size: 3.51563vw; color: #333; }
+        .tit { margin: $gutter-sm 0 $gutter-xs; }
+        .desc { font-size: 3.51563vw; color: #888; }        
+        .btn_delete { margin: -0.97656vw -0.97656vw 0 0; }
+        .inline_wrap { padding: 0 $gutter_md !important; }
+      }
+      .topic_box + .topic_btn_wrap { margin: 0 !important; }
+      .topic_ft { 
+        @include flex;
+        align-items: center;
+        padding: $gutter_sm $gutter_md;
+        background-color: #fff;
+        &.bg_gray { background-color: #f5f5f5; }
+        .desc { font-size: 3.51563vw; color: #555; }
+      }
+    }
+  }
+  .pag_info_none {
+    min-height: calc(100vh - #{$header_height} - #{$footer_height} - #{$nav_height});
+    // 추가로 상단 높이를 빼야하는데 상단에 '.filter_list' 높이가 유동적이라 계산식이 안됨.
+    // 협의 후 최소 높잉를 지정 필요.    
+    background-color: #fafafa;
+    border: 0.09766vw solid $border;
+  }
+}
+//리스트 디자인 중 토픽 삭제 버튼 리스트
 .list_modify { 
   & > li {
     padding: 0 !important;
@@ -433,44 +473,7 @@ select.form-control {
     }
   }
 }
-.list_view.scrap {
-  .list_hd { border-bottom: transparent; }
-  .list {
-    & > li { 
-      border: 0.09766vw solid $border !important;
-      padding: 0.09766vw !important;
-      margin: $gutter_sm 0 !important;
-      &:first-child { margin-top: 0 !important; }
-      .topic_box { 
-        padding: $gutter_md 0 !important;
-        .inline_wrap { padding: 0 $gutter_md !important; }
-        .btn_delete { margin: -0.97656vw -0.97656vw 0 0; }
-        a {
-          display: block;
-          padding: 0 $gutter_md;
-        } 
-        .date { font-size: 3.51563vw; color: #333; }
-        .tit { margin: $gutter-sm 0 $gutter-xs; }
-        .desc { font-size: 3.51563vw; color: #888; }
-      }
-      .topic_ft { 
-        @include flex;
-        align-items: center;
-        padding: $gutter_sm $gutter_md;
-        background-color: #f5f5f5;
-        .desc { font-size: 3.51563vw; color: #555; }
-      }
-    }
-  }
-  .pag_info_none {
-    min-height: calc(100vh - #{$header_height} - #{$footer_height} - #{$nav_height});
-    // 추가로 상단 높이를 빼야하는데 상단에 '.filter_list' 높이가 유동적이라 계산식이 안됨.
-    // 협의 후 최소 높잉를 지정 필요.    
-    background-color: #fafafa;
-    border: 0.09766vw solid $border;
-  }
-}
-//popup에서 가져옴
+/* ------------------------------------------------------- COMMON > CLASS > .pag_info_none ------------------------------------------------------- */
 .pag_info_none {
   @include flex;
   justify-content: center;
@@ -480,6 +483,7 @@ select.form-control {
     &:before { position:absolute; top:0; left:50%; margin-left:-5.37109vw; }
   }
 }
+/* ------------------------------------------------------- COMMON > CLASS > .filter_list ------------------------------------------------------- */
 .filter_list {
   margin: 2.92969vw -0.48828vw;
   @at-root .pop_sub_title + .filter_list{margin-top:6.83594vw; margin-bottom:1.56250vw;}
@@ -526,7 +530,7 @@ select.form-control {
   }
   .desc { }
 }
-/* ------------------------------------------------------- TOPIC ------------------------------------------------------- */
+/* ------------------------------------------------------- COMMON > TOPIC ------------------------------------------------------- */
 .topic_area {
   .topic_box {
     height: 45.89844vw;
@@ -571,7 +575,7 @@ select.form-control {
       color: #555555;
     }
   }
-  & + .search_form_wrap { margin-top: 5.27344vw; } //공통미지정
+  & + .search_form_wrap { margin-top: 5.27344vw; }
 }
 .topic_state {
   text-align: right;
@@ -621,6 +625,7 @@ select.form-control {
 	}
 }
 /* ------------------------------------------------------- COMMON > TAB ------------------------------------------------------- */
+//COMMON > TAB > 파란색 라운드 디자인
 .tab_wrap {
   @at-root .cont_hd + .tab_wrap { margin-top: 7.81250vw; }
   & > .nav {
@@ -641,7 +646,7 @@ select.form-control {
         font-weight: 300;
         color: rgba(51, 51, 51, .5);
         background-color: #e3e3e3;
-        padding: 0 45px;
+        padding: 0 4.39453vw;
         span { color: rgba(51, 51, 51, .8); }
         &.active {
           background-color: $color_primary; 
@@ -658,6 +663,7 @@ select.form-control {
     .total { padding: $gutter_md 0; }
   }
 }
+//COMMON > TAB > 흰색 보더 디자인
 .tab_wrap.tab_type01 {
   & > .nav {
     position: relative;
@@ -665,15 +671,15 @@ select.form-control {
       overflow: visible;
       a {
         background: #f2f2f2;
-        border: 1px solid transparent;
-        border-top: 6px solid #f2f2f2;
-        border-bottom: 1px solid $border;
+        border: 0.09766vw solid transparent;
+        border-top: 0.58594vw solid #f2f2f2;
+        border-bottom: 0.09766vw solid $border;
         &.active { 
           color: $color_primary;
           background-color: #fff;
-          border: 1px solid $border;
-          border-top: 6px solid $color_primary;
-          border-bottom: 1px solid #fff;
+          border: 0.09766vw solid $border;
+          border-top: 0.58594vw solid $color_primary;
+          border-bottom: 0.09766vw solid #fff;
         }
       }
       &:first-child,
@@ -682,10 +688,10 @@ select.form-control {
     &::before, &::after {
       content: '';
       width: $gutter_md;
-      height: 1px;
+      height: 0.09766vw;
       display: inline-block;
       background: $border;
-      position: absolute; bottom: -7px; left: -#{$gutter_md};
+      position: absolute; bottom: -0.68359vw; left: -#{$gutter_md};
     }
     &::after { left: unset; right: -#{$gutter_md}; }
   }
@@ -741,7 +747,7 @@ select.form-control {
     }
   }
 }
-//_popup.scss 에서 이동 공통으로 사용
+/* ------------------------------------------------------- tag_btn_list ------------------------------------------------------- */
 .tag_btn_list {
   margin-top:3.41797vw;
   margin-bottom:0;
