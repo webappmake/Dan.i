@@ -659,21 +659,35 @@ select.form-control {
   }
 }
 .tab_wrap.tab_type01 {
-  border: 1px solid red; 
   & > .nav {
+    position: relative;
     & > li {
+      overflow: visible;
       a {
         background: #f2f2f2;
         border: 1px solid transparent;
         border-top: 6px solid #f2f2f2;
+        border-bottom: 1px solid $border;
         &.active { 
           color: $color_primary;
           background-color: #fff;
           border: 1px solid $border;
-          border-top: 6px solid $color_primary; 
+          border-top: 6px solid $color_primary;
+          border-bottom: 1px solid #fff;
         }
       }
+      &:first-child,
+      &:last-child { border-radius: 0; }
     }
+    &::before, &::after {
+      content: '';
+      width: $gutter_md;
+      height: 1px;
+      display: inline-block;
+      background: $border;
+      position: absolute; bottom: -7px; left: -#{$gutter_md};
+    }
+    &::after { left: unset; right: -#{$gutter_md}; }
   }
 }
 /* ------------------------------------------------------- Reactive_box_wrap ------------------------------------------------------- */
