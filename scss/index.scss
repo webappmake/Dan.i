@@ -632,6 +632,7 @@ select.form-control {
       line-height: 9.76563vw;
       text-align: center;
       overflow: hidden;
+      flex-grow: 1;
       @at-root .nav_03 li { width: 33.33333%; }
       a { 
         display: block;
@@ -640,8 +641,8 @@ select.form-control {
         font-weight: 300;
         color: rgba(51, 51, 51, .5);
         background-color: #e3e3e3;
+        padding: 0 45px;
         span { color: rgba(51, 51, 51, .8); }
-
         &.active {
           background-color: $color_primary; 
           color: rgba(255, 255, 255, .8); 
@@ -655,6 +656,24 @@ select.form-control {
   & > .tab-content {
     padding: $gutter_sm 0;
     .total { padding: $gutter_md 0; }
+  }
+}
+.tab_wrap.tab_type01 {
+  border: 1px solid red; 
+  & > .nav {
+    & > li {
+      a {
+        background: #f2f2f2;
+        border: 1px solid transparent;
+        border-top: 6px solid #f2f2f2;
+        &.active { 
+          color: $color_primary;
+          background-color: #fff;
+          border: 1px solid $border;
+          border-top: 6px solid $color_primary; 
+        }
+      }
+    }
   }
 }
 /* ------------------------------------------------------- Reactive_box_wrap ------------------------------------------------------- */
