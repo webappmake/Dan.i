@@ -1488,7 +1488,7 @@ button {
   border-radius: 6.34766vw;
   background-color: #fff; }
   .label_round + .desc {
-    margin-left: 24px; }
+    margin-left: 2.34375vw; }
 
 .bg_gray {
   background-color: #f5f5f5; }
@@ -2010,8 +2010,8 @@ select.form-control {
   border-bottom: transparent; }
 
 .list_view.scrap .list > li {
-  border: 1px solid #d4d4d4 !important;
-  padding: 1px !important;
+  border: 0.09766vw solid #d4d4d4 !important;
+  padding: 0.09766vw !important;
   margin: 1.95313vw 0 !important; }
   .list_view.scrap .list > li:first-child {
     margin-top: 0 !important; }
@@ -2020,17 +2020,17 @@ select.form-control {
     .list_view.scrap .list > li .topic_box .inline_wrap {
       padding: 0 3.90625vw !important; }
     .list_view.scrap .list > li .topic_box .btn_delete {
-      margin: -10px -10px 0 0; }
+      margin: -0.97656vw -0.97656vw 0 0; }
     .list_view.scrap .list > li .topic_box a {
       display: block;
       padding: 0 3.90625vw; }
     .list_view.scrap .list > li .topic_box .date {
-      font-size: 36px;
+      font-size: 3.51563vw;
       color: #333; }
     .list_view.scrap .list > li .topic_box .tit {
       margin: 1.95313vw 0 0.97656vw; }
     .list_view.scrap .list > li .topic_box .desc {
-      font-size: 36px;
+      font-size: 3.51563vw;
       color: #888; }
   .list_view.scrap .list > li .topic_ft {
     display: -webkit-box;
@@ -2041,13 +2041,13 @@ select.form-control {
     padding: 1.95313vw 3.90625vw;
     background-color: #f5f5f5; }
     .list_view.scrap .list > li .topic_ft .desc {
-      font-size: 36px;
+      font-size: 3.51563vw;
       color: #555; }
 
 .list_view.scrap .pag_info_none {
   min-height: calc(100vh - 11.71875vw - 18.55469vw - 11.71875vw);
   background-color: #fafafa;
-  border: 1px solid #d4d4d4; }
+  border: 0.09766vw solid #d4d4d4; }
 
 .pag_info_none {
   display: -webkit-box;

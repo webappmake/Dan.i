@@ -437,28 +437,28 @@ select.form-control {
   .list_hd { border-bottom: transparent; }
   .list {
     & > li { 
-      border: 1px solid $border !important;
-      padding: 1px !important;
+      border: 0.09766vw solid $border !important;
+      padding: 0.09766vw !important;
       margin: $gutter_sm 0 !important;
       &:first-child { margin-top: 0 !important; }
       .topic_box { 
         padding: $gutter_md 0 !important;
         .inline_wrap { padding: 0 $gutter_md !important; }
-        .btn_delete { margin: -10px -10px 0 0; }
+        .btn_delete { margin: -0.97656vw -0.97656vw 0 0; }
         a {
           display: block;
           padding: 0 $gutter_md;
         } 
-        .date { font-size: 36px; color: #333; }
+        .date { font-size: 3.51563vw; color: #333; }
         .tit { margin: $gutter-sm 0 $gutter-xs; }
-        .desc { font-size: 36px; color: #888; }
+        .desc { font-size: 3.51563vw; color: #888; }
       }
       .topic_ft { 
         @include flex;
         align-items: center;
         padding: $gutter_sm $gutter_md;
         background-color: #f5f5f5;
-        .desc { font-size: 36px; color: #555; }
+        .desc { font-size: 3.51563vw; color: #555; }
       }
     }
   }
@@ -467,7 +467,7 @@ select.form-control {
     // 추가로 상단 높이를 빼야하는데 상단에 '.filter_list' 높이가 유동적이라 계산식이 안됨.
     // 협의 후 최소 높잉를 지정 필요.    
     background-color: #fafafa;
-    border: 1px solid $border;
+    border: 0.09766vw solid $border;
   }
 }
 //popup에서 가져옴
