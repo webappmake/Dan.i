@@ -158,6 +158,93 @@ button {
   padding: 0 !important; }
 
 /* common */
+.text_red {
+  color: #b70000 !important; }
+
+/* favorite - padding */
+.container-wrap .container > .contents.contents01 {
+  padding: 0; }
+  .container-wrap .container > .contents.contents01 .cont_hd {
+    padding: 0 3.90625vw; }
+    .container-wrap .container > .contents.contents01 .cont_hd > .tit {
+      margin-top: 7.32422vw;
+      margin-bottom: 5.37109vw; }
+
+/* favorite */
+.favorite_view .favorite_area {
+  padding-bottom: 9.76563vw; }
+  .favorite_view .favorite_area > dt {
+    -webkit-box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
+    box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
+    height: 11.71875vw;
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 3.90625vw;
+    line-height: 4.88281vw;
+    padding: 3.32031vw 3.90625vw;
+    border-top: 0.09766vw solid #d4d4d4;
+    border-bottom: 0.09766vw solid #d4d4d4; }
+    .favorite_view .favorite_area > dt > strong {
+      line-height: 3.90625vw;
+      font-weight: 400; }
+    .favorite_view .favorite_area > dt .a_txt_btn {
+      font-family: "NanumGothic", "NanumGothic", sans-serif !important;
+      font-size: 3.51563vw;
+      line-height: 3.51563vw;
+      font-weight: 500;
+      padding-bottom: 0.97656vw; }
+      .favorite_view .favorite_area > dt .a_txt_btn.text_blue {
+        border-bottom: 0.29297vw solid #0054a3; }
+      .favorite_view .favorite_area > dt .a_txt_btn.text_red {
+        border-bottom: 0.29297vw solid #b70000; }
+  .favorite_view .favorite_area > dd {
+    padding: 2.92969vw 1.95313vw; }
+    .favorite_view .favorite_area > dd .app_list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1.95313vw; }
+      .favorite_view .favorite_area > dd .app_list > li {
+        flex: 0 0 33.33%;
+        width: 33.33%;
+        margin-bottom: 4.88281vw;
+        text-align: center; }
+        .favorite_view .favorite_area > dd .app_list > li:nth-child(3n+1) {
+          clear: both; }
+        .favorite_view .favorite_area > dd .app_list > li > a {
+          display: block;
+          width: 18.84766vw;
+          margin: 0 auto; }
+        .favorite_view .favorite_area > dd .app_list > li > a img {
+          display: block;
+          width: 18.84766vw;
+          height: 18.84766vw;
+          border: 0.09766vw solid #d4d4d4;
+          border-radius: 20px; }
+        .favorite_view .favorite_area > dd .app_list > li > a span {
+          display: block;
+          font-size: 3.51563vw;
+          line-height: 5.37109vw;
+          margin: 1.95313vw 0; }
+        .favorite_view .favorite_area > dd .app_list > li.icon_add > a {
+          position: relative;
+          padding-bottom: 0; }
+        .favorite_view .favorite_area > dd .app_list > li.icon_add > a {
+          width: 18.84766vw;
+          height: 18.84766vw;
+          border: 0.09766vw solid #d4d4d4;
+          border-radius: 1.95313vw; }
+        .favorite_view .favorite_area > dd .app_list > li.icon_add > a span {
+          width: 4.88281vw;
+          height: 4.88281vw;
+          background-position: -32.61719vw -24.02344vw;
+          background-color: #fff;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: -2.44141vw 0 0 -2.44141vw; }
+
 /* modal */
 .modal {
   overflow-y: auto;
@@ -177,6 +264,16 @@ button {
     text-align: left;
     vertical-align: middle;
     border-radius: 0.48828vw; }
+  .modal .list_cont_box .list li {
+    border: 0.09766vw solid #d4d4d4; }
+    .modal .list_cont_box .list li:first-child {
+      border-top: none; }
+    .modal .list_cont_box .list li .topic_box {
+      padding: 0 3.90625vw !important; }
+      .modal .list_cont_box .list li .topic_box .tit {
+        padding-bottom: 2.44141vw; }
+      .modal .list_cont_box .list li .topic_box .tit_info {
+        padding-bottom: 4.88281vw; }
 
 /* full modal */
 .full_modal .modal-dialog {
@@ -270,7 +367,8 @@ button {
     color: #000; }
 
 .summary_tit .pag_info {
-  margin-top: 4.88281vw; }
+  margin-top: 4.88281vw;
+  justify-content: normal; }
 
 .modal_body .pag_info span {
   font-size: 3.90625vw;

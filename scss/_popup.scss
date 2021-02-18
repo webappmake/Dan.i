@@ -1,6 +1,71 @@
 ﻿/* common */
 
+.text_red{color:$color_red !important;}
 
+/* favorite - padding */
+.container-wrap {
+  .container {
+    & > .contents {
+        &.contents01{
+            padding:0;
+            & .cont_hd {
+                padding:0 $gutter_md;
+                & > .tit{
+                    margin-top:7.32422vw; margin-bottom:5.37109vw;
+                }
+            }
+                
+        }
+    }
+  }
+}
+
+/* favorite */
+.favorite_view {
+    & .favorite_area {
+        padding-bottom:9.76563vw;
+        & > dt {
+            @include shadow_gnb(); 
+
+            height:11.71875vw; font-family:$sub_font_family; font-size:3.90625vw; line-height:4.88281vw; padding:3.32031vw $gutter_md; border-top:0.09766vw solid $border; border-bottom:0.09766vw solid $border;
+            & > strong{line-height:3.90625vw; font-weight:400;}
+            & .a_txt_btn{
+                font-family:$base_font_family; font-size:3.51563vw; line-height:3.51563vw; font-weight:500; padding-bottom:0.97656vw;
+                &.text_blue{
+                    border-bottom:0.29297vw solid $color_primary;
+                }
+                &.text_red{
+                    border-bottom:0.29297vw solid $color_red;
+                }
+            }
+        }
+
+        & > dd {             
+            padding:2.92969vw $gutter_sm; 
+            & .app_list{
+                @include flex;
+                flex-wrap:wrap; margin-bottom:$gutter_sm;
+                & > li{
+                    flex:0 0 33.33%; width:33.33%; margin-bottom:4.88281vw; text-align:center; 
+                    &:nth-child(3n+1){clear:both; }
+                    & > a{display:block; width:18.84766vw; margin:0 auto;}
+                    & > a img{display:block; width:18.84766vw; height:18.84766vw; border:0.09766vw solid $border; border-radius:20px;}
+                    & > a span{display:block; font-size:3.51563vw; line-height:5.37109vw; margin:$gutter_sm 0;}
+
+                     &.icon_add{
+                        
+                        & > a{position:relative; padding-bottom:0;}
+                        & > a{width:18.84766vw; height:18.84766vw; border:0.09766vw solid $border; border-radius:1.95313vw;}
+                        & > a span{width:4.88281vw; height:4.88281vw; background-position:-32.61719vw -24.02344vw; background-color:#fff; position:absolute; left:50%; top:50%; margin:-2.44141vw 0 0 -2.44141vw;}
+                    }
+                }
+               
+
+            }
+
+        }
+    }
+}
 
 /* modal */
 .modal{
@@ -16,6 +81,16 @@
     }
     &:not(.full_modal) modal-dialog{
         display: inline-block; text-align: left; vertical-align: middle; border-radius:0.48828vw;
+    }
+    // 선행/연계 과목 영역
+    & .list_cont_box .list li{
+        border:0.09766vw solid $border; 
+        &:first-child{border-top:none;}
+        & .topic_box{
+            padding:0 $gutter_md !important;
+            & .tit{padding-bottom:2.44141vw;}
+            & .tit_info{padding-bottom:4.88281vw;}
+        }
     }
 }
 
@@ -90,6 +165,7 @@
 .modal_body .pag_info {
     @at-root .summary_tit .pag_info{
         margin-top:4.88281vw;
+        justify-content:normal;
     }
     & span {
         font-size: 3.90625vw;
