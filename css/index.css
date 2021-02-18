@@ -264,16 +264,6 @@ button {
     text-align: left;
     vertical-align: middle;
     border-radius: 0.48828vw; }
-  .modal .list_cont_box .list li {
-    border: 0.09766vw solid #d4d4d4; }
-    .modal .list_cont_box .list li:first-child {
-      border-top: none; }
-    .modal .list_cont_box .list li .topic_box {
-      padding: 0 3.90625vw !important; }
-      .modal .list_cont_box .list li .topic_box .tit {
-        padding-bottom: 2.44141vw; }
-      .modal .list_cont_box .list li .topic_box .tit_info {
-        padding-bottom: 4.88281vw; }
 
 /* full modal */
 .full_modal .modal-dialog {
