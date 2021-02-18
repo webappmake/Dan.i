@@ -433,24 +433,76 @@ select.form-control {
     }
   }
 }
-.filter_list {
-    margin:2.92969vw 0;
-    @at-root .pop_sub_title + .filter_list{margin-top:6.83594vw; margin-bottom:1.56250vw;}
-    & > li {
-        display: inline-block;
-        margin: 0 0.48828vw;
-        &:first-child { margin-left: 0; }
-        & > a {
-        padding: 2.14844vw 5.27344vw;
-        border-radius: 9.76563vw;
-        font-size: 3.90625vw;
-        font-weight: 600;
-        color:#999;
-        display: block;
-        background-color:#e3e3e3;            
-        }
-        &.active > a{ background-color: $color_black; color: $color_white; }
+.list_view.scrap {
+  .list_hd { border-bottom: transparent; }
+  .list {
+    & > li { 
+      border: 1px solid $border !important;
+      padding: 1px !important;
+      margin: $gutter_sm 0 !important;
+      &:first-child { margin-top: 0 !important; }
+      .topic_box { 
+        padding: $gutter_md 0 !important;
+        .inline_wrap { padding: 0 $gutter_md !important; }
+        .btn_delete { margin: -10px -10px 0 0; }
+        a {
+          display: block;
+          padding: 0 $gutter_md;
+        } 
+        .date { font-size: 36px; color: #333; }
+        .tit { margin: $gutter-sm 0 $gutter-xs; }
+        .desc { font-size: 36px; color: #888; }
+      }
+      .topic_ft { 
+        @include flex;
+        align-items: center;
+        padding: $gutter_sm $gutter_md;
+        background-color: #f5f5f5;
+        .desc { font-size: 36px; color: #555; }
+      }
     }
+  }
+  .pag_info_none {
+    min-height: calc(100vh - #{$header_height} - #{$footer_height} - #{$nav_height});
+    // 추가로 상단 높이를 빼야하는데 상단에 '.filter_list' 높이가 유동적이라 계산식이 안됨.
+    // 협의 후 최소 높잉를 지정 필요.    
+    background-color: #fafafa;
+    border: 1px solid $border;
+  }
+}
+//popup에서 가져옴
+.pag_info_none {
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  & > span {
+    display:block; line-height:6.25000vw; font-family: $sub_font_family; font-weight: 300; font-size:4.29688vw; color:#999; padding-top:15.62500vw; text-align:center;
+    &:before { position:absolute; top:0; left:50%; margin-left:-5.37109vw; }
+  }
+}
+.filter_list {
+  margin: 2.92969vw -0.48828vw;
+  @at-root .pop_sub_title + .filter_list{margin-top:6.83594vw; margin-bottom:1.56250vw;}
+  & > li {
+      display: inline-block;
+      margin: $gutter-xs 0.48828vw;
+      & > a {
+      padding: 2.14844vw 5.27344vw;
+      border-radius: 9.76563vw;
+      font-size: 3.90625vw;
+      font-weight: 600;
+      color:#999;
+      display: block;
+      background-color:#e3e3e3;            
+      }
+      &.active > a { background-color: $color_black; color: $color_white; }
+  }
+  &.with_bg {
+    background-color: #fafafa;
+    padding: $gutter-sm $gutter_md;
+    margin: $gutter_md -#{$gutter_md};
+  }
+  & + .search_form { margin-bottom: 0; }
 }
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {
