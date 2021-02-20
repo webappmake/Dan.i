@@ -106,18 +106,18 @@
 					});
 				</script>
 			</nav>
-			<div class="contents">
+			<div class="contents contents01">
 				<div class="set_wrap">
 					<p class="user_info">
 						<strong>#김단국# (학부-재학생)</strong>
 						<span>죽전캠퍼스 | 문과대학 국어국문학과</span>
-						<a href="#" class="logout">로그아웃</a>
+						<a href="#" class="a_btn a_btn_gray logout">로그아웃</a>
 					</p>
 					<ul class="set_list">
-						<li><a href="#Pop_PushSetting" data-toggle="modal" class="icon_after"><span class="icon_before icon_push">Push 설정</span></a></li>
-						<li><a href="#Pop_Inquiry" data-toggle="modal" class="icon_after"><span class="icon_before icon_inquiry">1:1 문의</span></a></li>
-						<li><a href="#Pop_Help" data-toggle="modal" class="icon_after"><span class="icon_before icon_help">도움말</span></a></li>
-						<li class="version_area"><span class="icon_before icon_version">버전정보</span><span class="version">0.0.0</span></li>
+						<li><a href="#Pop_PushSetting" data-toggle="modal"><i class="ic ic_push"></i><span>Push 설정</span></a></li>
+						<li><a href="#Pop_Inquiry" data-toggle="modal"><i class="ic ic_inquiry"></i><span>1:1 문의</span></a></li>
+						<li><a href="#Pop_Help" data-toggle="modal"><i class="ic ic_help"></i><span class="icon_before icon_help">도움말</span></a></li>
+						<li class="version_area"><i class="ic ic_version"></i><span>버전정보</span><span class="version">0.0.0</span></li>
 					</ul>
 				</div>
 			</div><!--//.contents-->
@@ -136,364 +136,352 @@
 		</nav>
 	</footer><!--//.footer-->
 	<!-- Modal -->
-	<!-- 토픽 출처 정보 - 교과 팝업 -->
-	<div class="modal fade full_modal" id="Pop_Subject" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
+	<!-- Push 설정 팝업 -->
+	<div class="modal full_modal fade" id="Pop_PushSetting" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal_type_03">
 			<div class="modal-content">
 				<div class="modal_header">
-					<h3 class="pop_title">토픽 출처 정보 - 교과</h3>
+					<h5 class="pop_title">Push 설정</h5>
 					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
 				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">르네상스문화와 인문주의</h4>
-					<div class="search_form_wrap">
-						<div class="search_form">
-							<input type="text" placeholder="교과목명을 입력하세요." />
-							<button type="submit" class="btn"><i class="ic search">검색</i></button>
-						</div>
-					</div>
-					<section class="list_view">
-						<div class="list_hd">
-							<div>
-								<p class="desc">총 <span class="text_blue">12</span>개</p>
-							</div>
-							<div>
-								<p class="">
-									<label for="select_01">선택</label>
-									<select class="" id="select_01" name="budget">
-										<option value="hide">-- 전체 --</option>
-										<option value="전체">전체</option>
-									</select>
-								</p>
-								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
-							</div>
-						</div><!--//.list_hd-->
-						<div class="list_cont">
-							<ul class="list">
-								<li>
-									<h4 class="tit">국어학개론</h4>
-									<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
-									<div class="inline_wrap">
-										<ul class="tag_btn_list">
-											<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
-											<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<h4 class="tit">조선시가론</h4>
-									<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
-									<div class="inline_wrap">
-										<ul class="tag_btn_list">
-											<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
-											<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div><!--//.list_cont-->
-						<div class="list_ft">
-							<ul class="paging">
-								<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-								<li class="active"><a href="#none">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-							</ul>
-						</div><!--//.list_ft-->
-					</section><!--//.list_view-->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 토픽 출처 정보 - 교과 팝업 -->
-	<!-- 토픽 출처 정보 - 비교과 팝업 -->
-	<div class="modal fade full_modal" id="Pop_NonSubject" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">토픽 출처 정보 - 비교과</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">르네상스문화와 인문주의</h4>
-					<div class="search_form_wrap">
-						<div class="search_form">
-							<input type="text" placeholder="프로그램명을 입력하세요." />
-							<button type="submit" class="btn"><i class="ic search">검색</i></button>
-						</div>
-					</div>
-					<section class="list_view">
-						<div class="list_hd">
-							<div>
-								<p class="desc">총 <span class="text_blue">12</span>개</p>
-							</div>
-							<div>
-								<p class="">
-									<label for="select_01">선택</label>
-									<select class="" id="select_01" name="budget">
-										<option value="hide">-- 전체 --</option>
-										<option value="전체">전체</option>
-									</select>
-								</p>
-								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
-							</div>
-						</div><!--//.list_hd-->
-						<div class="list_cont">
-							<ul class="list">
-								<li>
-									<a href="#" target="_blank" class="tit">창의적아이디어설계경진대회 1</a>
-									<p class="tit_info">죽전 | 학습역량지원 | ~01.12</p>
-								</li>
-								<li>
-									<a href="#" target="_blank" class="tit">2020년 하반기 NCS 공기업 설명회</a>
-									<p class="tit_info">전체 | 취업지원 | ~01.05</p>
-								</li>
-							</ul>
-						</div><!--//.list_cont-->
-						<div class="list_ft">
-							<ul class="paging">
-								<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-								<li class="active"><a href="#none">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-							</ul>
-						</div><!--//.list_ft-->
-					</section><!--//.list_view-->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 토픽 출처 정보 - 비교과 팝업 -->
-	<!-- 토픽 출처 정보 - 채용 팝업 -->
-	<div class="modal fade full_modal" id="Pop_Recruit" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">토픽 출처 정보 - 채용</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">르네상스문화와 인문주의</h4>
-					<div class="search_form_wrap">
-						<div class="search_form">
-							<input type="text" placeholder="기업명 또는 채용 공고명을 입력하세요." />
-							<button type="submit" class="btn"><i class="ic search">검색</i></button>
-						</div>
-					</div>
-					<section class="list_view">
-						<div class="list_hd">
-							<div>
-								<p class="desc">총 <span class="text_blue">12</span>개</p>
-							</div>
-							<div>
-								<p class="">
-									<label for="select_01">선택</label>
-									<select class="" id="select_01" name="budget">
-										<option value="hide">-- 전체 --</option>
-										<option value="전체">전체</option>
-									</select>
-								</p>
-								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
-							</div>
-						</div><!--//.list_hd-->
-						<div class="list_cont">
-							<ul class="list">
-								<li>
-									<a href="#" target="_blank" class="tit">[블렌딩] KPOP 영상서비스 해외마케팅 모집</a>
-									<p class="tit_info">죽전 | 서울 | 블렌딩 | ~11.29</p>
-								</li>
-								<li>
-									<a href="#" target="_blank" class="tit">㈜이카운트 신입사원 채용공고</a>
-									<p class="tit_info">공통 | 서울 | ㈜이카운트 | ~11.29</p>
-								</li>
-							</ul>
-						</div><!--//.list_cont-->
-						<div class="list_ft">
-							<ul class="paging">
-								<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-								<li class="active"><a href="#none">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-							</ul>
-						</div><!--//.list_ft-->
-					</section><!--//.list_view-->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 토픽 출처 정보 - 채용 팝업 -->
-	<!-- 교과목 교과개요 팝업 -->
-	<div class="modal fade full_modal" id="Pop_SubjectSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">교과목 교과 개요</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">국문학개론</h4>
-					<div class="summary_tit">
-						<p class="desc">전체분반 <span class="text_blue">3</span>개</p>
-						<p class="pag_info inline_wrap">
-							<i class="ic ic_info"></i><span>분반이 있는 경우 01반 기준으로 정보를 제공합니다.</span>
+				<div class="modal_body modal_body02">
+					<div class="push_wrap">
+						<p class="icon_chk_wrap push_all">
+							<input type="checkbox" class="icon_chk icon_chk_use" id="PushAll" />
+							<label for="PushAll">전체 Push 알림 받기</label>
 						</p>
-					</div>
-					<dl class="summary_info">
-						<dt>교수자</dt>
-						<dd>윤재환</dd>
-						<dt>교과목 개요</dt>
-						<dd>&lt;국문학개론&gt;은 각 장르의 생성과 발전, 소멸과정을 살피면서 장르간의 영향관계와 특색을 파악하는 것이 중요하다. 각 장르의 주요 작가와 작품을 중심으로 분석, 비판하는 능력을 기른다.</dd>
-						<dt>학습목표</dt>
-						<dd>국문학 각 장르의 생성배경과 장르간의 상호 영향관계를 살핀다. 주요 작가와 작품 분석을 통해 장르의 특성을 이해한다.</dd>
-						<dt>학습효과</dt>
-						<dd>전공을 심화하기 전에 국문학 각 장르의 특색을 살피고, 주요 작품 분석 및 작가 연구를 통해 국문학 이해의 폭을 넓힌다.</dd>
-						<dt>전공역량</dt>
-						<dd>
-							<ul class="ability_list">
-								<li class="inline_wrap justify_start">
-									<strong>주역량</strong>
-									<span>지식활용 <strong>40%</strong></span>
-								</li>
-								<li class="inline_wrap justify_start">
-									<strong>부역량</strong>
-									<span>
-										창의적 문제해결 <strong>30%</strong><br>
-										의사소통 <strong>30%</strong>
-									</span>
-								</li>
-							</ul>
-						</dd>
-
-					</dl>
-					<!-- null 값일 경우 -->
-					<div class="pag_info_none">
-						<span class="ic_before ic_info_lg">
-							선택한 교과의 교과개요는 아직 분석되지 않았어요.<br />
-							추후에 반영될 예정입니다.
-						</span>
-					</div>
-					<!-- // null 값일 경우 -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 교과목 교과개요 팝업 -->
-	<!-- 교과목 선행/연계 팝업 -->
-	<div class="modal fade full_modal" id="Pop_RelationSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">교과목 선행/연계 과목</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">국문학개론</h4>
-					<ul class="filter_list">
-						<li class="active"><a href="#">#선행교과</a></li>
-						<li><a href="#">#연계교과</a></li>
-					</ul>
-					<div class="search_form_wrap">
-						<div class="search_form">
-							<input type="text" placeholder="토픽명을 입력하세요." />
-							<button type="submit" class="btn"><i class="ic search">검색</i></button>
-						</div>
-					</div>
-					<section class="list_view list_view_type01">
-						<div class="list_hd">
-							<div>
-								<p class="desc">총 <span class="text_blue">12</span>개</p>
-							</div>
-							<div>
-								<p class="">
-									<label for="select_01">선택</label>
-									<select class="" id="select_01" name="budget">
-										<option value="hide">-- 전체 --</option>
-										<option value="전체">전체</option>
-									</select>
-								</p>
-								<button type="button" class="btn"><i class="ic selectbox">목록선택</i></button>
-							</div>
-						</div><!--//.list_hd-->
-						<div class="list_cont list_cont_box">
-							<ul class="list">
+						<div class="push_area">
+							<ul class="topic_list push_list">
 								<li>
-									<div class="topic_box">
-										<div class="inline_wrap">
-											<h4 class="tit">언어학의이해</h4>
-											<p class="icon_chk_wrap">
-												<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-												<label for="r1">On/Off</label>
-											</p>
-										</div>
-										<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>										
-									</div>
-									<div class="inline_wrap topic_btn_wrap">
-										<p class="topic_btn">
-											<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">주간브리핑</strong>
+										<span class="p_sub_title">지난 주 활동한 정보들을 정리해 알려드려요.</span>
+										<p class="icon_chk_wrap">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="WeekBriefing">
+											<label for="WeekBriefing">주간브리핑 알림 받기</label>
 										</p>
 									</div>
-									<ul class="topic_list">
+									<ul class="rel_topic_list push_sub_list">
 										<li>
-											<div class="inline_wrap">
-												<h4 class="tit">국어학개론</h4>
-												<p class="icon_chk_wrap">
-													<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-													<label for="r1">On/Off</label>
-												</p>
-											</div>
-											<div class="inline_wrap justify_start">
-												<ul class="tag_list">
-													<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
-													<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
-													<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
-												</ul>
-												<span class="desc">빈도수 121</span>
-											</div>
+											<strong>지난주 출결 현황</strong>
+											<span class="p_sub_title only">지난주 출결 현황을 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="LastAttendanceStatus">
+												<label for="LastAttendanceStatus">지난 주 출결 현황 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>지난주 지식 토픽</strong>
+											<span class="p_sub_title only">지난주 지식 토픽을 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="KnowledgeTopic">
+												<label for="KnowledgeTopic">지난 주 지식 토픽 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>지난주 신규 비교과 정보</strong>
+											<span class="p_sub_title only">지난주 신규 비교과 정보를 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="NewNonSubject">
+												<label for="NewNonSubject">지난 주 신규 비교과 정보 알림 받기</label>
+											</p>
 										</li>
 									</ul>
 								</li>
+								<li>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">오늘의 일정</strong>
+										<span class="p_sub_title">오늘의 일정을 정리해 알려드려요.</span>
+										<p class="rel_chk">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="TodaySchedule">
+											<label for="TodaySchedule">오늘의 일정 알림 받기</label>
+										</p>
+									</div>
+									<ul class="rel_topic_list push_sub_list">
+										<li>
+											<strong>학사일정</strong>
+											<span class="p_sub_title only">오늘 예정된 학사 일정을 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="GraduateSchedule">
+												<label for="GraduateSchedule">학사일정 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>학과 공지사항</strong>
+											<span class="p_sub_title only">오늘 새롭게 올라온 학과 공지사항을 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="GraduateNotice">
+												<label for="GraduateNotice">학과 공지사항 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>수업 공지사항</strong>
+											<span class="p_sub_title only">오늘 새롭게 올라온 수업 공지사항을 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="ClassNotice">
+												<label for="ClassNotice">수업 공지사항 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>오늘의 시간표</strong>
+											<span class="p_sub_title only">오늘의 수업 시간표을 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="TodayTimeTable">
+												<label for="TodayTimeTable">오늘의 시간표 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>관심 토픽 관련 채용 정보</strong>
+											<span class="p_sub_title only">관심 토픽 관련 실시간 채용 정보를 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="InterestTopic">
+												<label for="InterestTopic">관심 토픽 관련 채용 정보 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>날씨 정보</strong>
+											<span class="p_sub_title only">오늘 캠퍼스 날씨 정보를 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="WeatherInfomation">
+												<label for="WeatherInfomation">날씨 정보 알림 받기</label>
+											</p>
+										</li>
+										<li>
+											<strong>식단 정보</strong>
+											<span class="p_sub_title only">오늘 캠퍼스 식단 정보를 알려드려요.</span>
+											<p class="icon_chk_wrap">
+												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="MenuInformation">
+												<label for="MenuInformation">식단 정보 알림 받기</label>
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">수업시간 안내</strong>
+										<span class="p_sub_title">수업 시간을 시작 시간 30분 전에 알려드려요.</span>
+										<p class="rel_chk">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="SchoolHour" id="SchoolHour">
+											<label for="SchoolHour">수업시간 안내 알림 받기</label>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">출결현황</strong>
+										<span class="p_sub_title">수강하고 있는 강의의 출결 현황을 알려드려요.</span>
+										<p class="rel_chk">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="AttendanceStatus" id="AttendanceStatus">
+											<label for="AttendanceStatus">출결현황 알림 받기</label>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">수업종료</strong>
+										<span class="p_sub_title">수업 종료 후 해당 수업의 토픽 정보를 알려드려요.</span>
+										<p class="rel_chk">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="FinishSchool" id="FinishSchool">
+											<label for="FinishSchool">수업종료 알림 받기</label>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">문의답변</strong>
+										<span class="p_sub_title">문의하신 내용에 답변이 등록되면 알려드려요.</span>
+										<p class="rel_chk">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="InquiryAnswer" id="InquiryAnswer">
+											<label for="InquiryAnswer">문의답변 알림 받기</label>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="relation_box push_box">
+										<strong class="p_main_title">관심 비교과 프로그램 안내</strong>
+										<span class="p_sub_title">관심 있는 비교과 프로그램을 안내해 드려요.</span>
+										<p class="rel_chk">
+											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="NonSubjectProgram" id="NonSubjectProgram">
+											<label for="NonSubjectProgram">관심 비교과 프로그램 안내 알림 받기</label>
+										</p>
+									</div>
+								</li>
 							</ul>
-						</div><!--//.list_cont-->
-						<div class="list_ft">
-							<ul class="paging">
-								<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-								<li class="active"><a href="#none">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-							</ul>
-						</div><!--//.list_ft-->
-					</section><!--//.list_view-->
-					<!-- null 값일 경우 -->
-					<!--<div class="pag_info_none pag_sm_info_none">
-						<span class="ic_before ic_info_lg">
-							선택한 교과의 선행교과는 아직 분석되지 않았어요.<br />
-							추후에 반영될 예정입니다.
-						</span>
-					</div>-->
-					<!--<div class="pag_info_none pag_sm_info_none">
-						<span class="ic_before ic_info_lg">
-							선택한 교과의 연계교과는 아직 분석되지 않았어요.<br />
-							추후에 반영될 예정입니다.
-						</span>
-					</div>-->
-					<!-- // null 값일 경우 -->
+						</div>
+					</div>
+				</div>
+				<div class="modal_footer">
+					<button type="button" class="btn btn_tertiary">취소</button>
+					<button type="button" class="btn btn_primary btn_primary01">저장</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- // 교과목 선행/연계 팝업 -->
+	<!-- // Push 설정 팝업 -->
+	<!-- 1 : 1 문의 팝업 -->
+	<div class="modal full_modal fade" id="Pop_Inquiry" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal_type_03">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h5 class="pop_title">1 : 1 문의</h5>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+				</div>
+				<div class="modal_body">
+					<div class="modal_tab_area">
+						<ul class="modal_tab modal_tab2">
+							<li class="active" rel="modal_tab_box1">1 : 1 문의 목록</li>
+							<li rel="modal_tab_box2">1 : 1 문의 등록</li>
+						</ul>
+						<div class="modal_tab_con_area">
+							<form>
+								<!-- 1 : 1 문의 목록 -->
+								<div class="modal_tab_box active" id="modal_tab_box1">
+									<div class="tbl_wrap inquiry_tbl_wrap">
+										<div class="tbl_title_area">
+											<p class="tbl_count">총 <strong>12</strong>개</p>
+											<p class="tbl_btn">
+												<button type="button" class="btn btn_secondary">삭제</button>
+											</p>
+										</div>
+										<div class="tbl_area pop_tbl_area">
+											<table class="tbl tbl_list">
+												<colgroup>
+													<col style="width:60px" />
+													<col style="width:auto">
+													<col style="width:120px">
+												</colgroup>
+												<tbody>
+													<tr onclick="fn_InquiryOpen(this);">
+														<td onclick='event.cancelBubble=true;'>
+															<input type="checkbox" class="icon_chk icon_chk_notxt" id="tr1" />
+															<label for="tr1">1:1문의 선택</label>
+														</td>
+														<td class="ta_l">
+															<span class="p_sub_title">2020.10.09 12:23:11</span>
+															<strong class="p_main_title ellipsis" title="시간표 공유 방법 알고 싶어요">시간표 공유 방법 알고 싶어요</strong>
+														</td>
+														<td>
+															<!-- 답변 완료일 때 ft_gray 클래스 추가 -->
+															<span>답변준비중</span>
+														</td>
+													</tr>
+													<!-- 문의 & 답변 영역 -->
+													<tr class="tbl_answer_area">
+														<td colspan="3" class="answer_area">
+															<dl class="answer_box">
+																<dt>문의내용</dt>
+																<dd>
+																	<textarea class="form-control">다른 정보 불러오고 싶어요
+빠른 답변 부탁드립니다.</textarea>
+																</dd>
+															</dl>
+															<p class="inquiry_btn">
+																<button type="button" class="btn btn_secondary">삭제</button>
+																<button type="button" class="btn btn_tertiary btn_tertiary02">수정</button>
+															</p>
+															<button type="button" class="btn_icon btn_delete" onclick="fn_InquiryClose(this);"><span>문의 내용 닫기</span></button>
+														</td>
+													</tr>
+													<!-- // 문의 & 답변 영역 -->
+													<tr onclick="fn_InquiryOpen(this);">
+														<td onclick='event.cancelBubble=true;'>
+															<input type="checkbox" class="icon_chk icon_chk_notxt" id="tr1" />
+															<label for="tr1">1:1문의 선택</label>
+														</td>
+														<td class="ta_l">
+															<span class="p_sub_title">2020.10.09 12:23:11</span>
+															<strong class="p_main_title ellipsis" title="시간표 공유 방법 알고 싶어요">시간표 공유 방법 알고 싶어요</strong>
+														</td>
+														<td>
+															<!-- 답변 완료일 때 ft_gray 클래스 추가 -->
+															<span class="ft_gray">답변완료</span>
+														</td>
+													</tr>
+													<!-- 문의 & 답변 영역 -->
+													<tr class="tbl_answer_area">
+														<td colspan="3" class="answer_area">
+															<dl class="answer_box">
+																<dt>문의내용</dt>
+																<dd>
+																	<textarea class="form-control" readonly="readonly">다른 정보 불러오고 싶어요
+빠른 답변 부탁드립니다.</textarea>
+																</dd>
+																<dt>답변내용</dt>
+																<dd>
+																	<textarea class="form-control" readonly="readonly">빠른 시일 내 반영하도록 하겠습니다.</textarea>
+																</dd>
+															</dl>
+															<button type="button" class="btn_icon btn_delete" onclick="fn_InquiryClose(this);"><span>문의 내용 닫기</span></button>
+														</td>
+													</tr>
+													<!-- // 문의 & 답변 영역 -->
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="paging_area">
+										<ul class="paging">
+											<li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+											<li class="active"><a href="#none">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+										</ul>
+									</div>
+									<!-- 등록된 문의가 없을 경우 -->
+									<!--<p class="sub_tab_none sub_tab_none02">
+										<span>
+											등록된 문의가 없어요.<br />
+											단아이(Dan.i)에게 문의하고 싶다면,‘1:1 문의 등록’ 에서 문의를 작성해 주세요!
+
+										</span>
+									</p>-->
+									<!-- // 등록된 문의가 없을 경우 -->
+								</div>
+								<!-- // 1 : 1 문의 목록 -->
+								<!-- 1 : 1 문의 등록 -->
+								<div class="modal_tab_box" id="modal_tab_box2">
+									<div class="tbl_wrap inquiry_tbl_wrap">
+										<h6 class="pop_sub_info pop_sub_info01">
+											단아이(Dan.i) 이용 중 궁금하신 부분이 있다면 내용을 남겨주세요.<br />
+											검토 후에 답변 드리도록 하겠습니다.
+										</h6>
+										<p class="inquiry_box">
+											<textarea class="form-control" placeholder="내용을 입력하세요. (최대 1,000자 작성 가능)" maxlength="1000"></textarea>
+										</p>
+									</div>
+									<div class="modal-footer only">
+										<!-- 내용 미등록시 등록 버튼 비활성화 -->
+										<!--<button type="button" class="btn btn_primary btn_primary01" disabled="disabled">등록</button>-->
+										<button type="button" class="btn btn_primary btn_primary01">등록</button>
+									</div>
+								</div>
+								<!-- // 1 : 1 문의 등록 -->
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 1 : 1 문의 팝업 -->
+	<!-- 도움말 팝업 -->
+	<div class="modal full_modal fade" id="Pop_Help" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal_type_03">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h5 class="pop_title">도움말</h5>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+				</div>
+				<div class="modal-body">
+					TBD
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 도움말 팝업 -->
 	<!-- // modal -->
 </body>
 </html>
