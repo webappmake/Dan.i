@@ -433,12 +433,13 @@ select.form-control {
       .topic_box { 
         padding: $gutter_md 0 !important;
         & > .tit_info { padding: 0 $gutter_md !important; }
-        a { display: block; padding: 0 $gutter_md; } 
+        & > a { display: block; padding: 0 $gutter_md; } 
         .date { font-size: 3.51563vw; color: #333; }
         .tit { margin: $gutter-sm 0 $gutter-xs; }
         .desc { font-size: 3.51563vw; color: #888; }        
         .btn_delete { margin: -0.97656vw -0.97656vw 0 0; }
         .inline_wrap { padding: 0 $gutter_md !important; }
+        .tag_btn_list { padding: $gutter_md $gutter_md 0; margin: 0 -0.48828vw; }
       }
       .topic_box + .topic_btn_wrap { margin: 0 !important; }
       .topic_ft { 
@@ -642,11 +643,11 @@ select.form-control {
       a { 
         display: block;
         font-family: $sub_font_family;
-        font-size: 3.90625vw;
+        font-size: $font_size;
         font-weight: 300;
         color: rgba(51, 51, 51, .5);
         background-color: #e3e3e3;
-        padding: 0 4.39453vw;
+        //padding: 0 4.39453vw;
         span { color: rgba(51, 51, 51, .8); }
         &.active {
           background-color: $color_primary; 
@@ -749,14 +750,14 @@ select.form-control {
 }
 /* ------------------------------------------------------- tag_btn_list ------------------------------------------------------- */
 .tag_btn_list {
-  margin-top:3.41797vw;
-  margin-bottom:0;
+  margin-top: 3.41797vw;
+  margin-bottom: 0;
   & > li {
       display: inline-block;
       margin: 0 0.48828vw;
       & > a {
           display: block;
-          padding: 2.34375vw 2.92969vw;
+          padding: 2.34375vw 2.63672vw;
           border: 0.09766vw solid $border;
           border-radius: 1.95313vw;
           font-size: 3.51563vw;

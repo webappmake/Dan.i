@@ -599,6 +599,26 @@ button {
   padding: 2.73438vw 3.90625vw;
   margin-bottom: 1.95313vw; }
 
+<<<<<<< HEAD
+=======
+.site_add_wrap > .pop_btn_area {
+  margin-top: 5.85938vw;
+  text-align: right; }
+  .site_add_wrap > .pop_btn_area > button {
+    width: 18.55469vw;
+    height: 9.76563vw;
+    font-size: 3.51563vw;
+    font-weight: 500;
+    margin-left: 0.97656vw;
+    border-radius: 1.95313vw; }
+    .site_add_wrap > .pop_btn_area > button.btn_tertiary {
+      background-color: #eee;
+      border-color: #d4d4d4;
+      color: #333; }
+    .site_add_wrap > .pop_btn_area > button.btn_primary01 {
+      border-color: #d4d4d4; }
+
+>>>>>>> 210274ad401c27964486d18a21d05f60d44d7c7f
 /* push 설정 */
 .push_wrap .push_all {
   padding: 65px 90px 55px 90px;
@@ -1525,8 +1545,6 @@ button {
     margin: 0.97656vw 3.90625vw;
     padding: 0 3.90625vw !important;
     border: 0.09766vw solid #d4d4d4 !important; }
-    .accordion .list_view .topic_box .tag_btn_list a {
-      padding: 2.34375vw 2.63672vw !important; }
     .accordion .list_view .topic_box .tit {
       font-size: 4.29688vw; }
   .accordion .list_view .topic_btn_wrap {
@@ -2179,7 +2197,7 @@ select.form-control {
     padding: 3.90625vw 0 !important; }
     .list_view.list_view_type01 .list > li .topic_box > .tit_info {
       padding: 0 3.90625vw !important; }
-    .list_view.list_view_type01 .list > li .topic_box a {
+    .list_view.list_view_type01 .list > li .topic_box > a {
       display: block;
       padding: 0 3.90625vw; }
     .list_view.list_view_type01 .list > li .topic_box .date {
@@ -2194,6 +2212,9 @@ select.form-control {
       margin: -0.97656vw -0.97656vw 0 0; }
     .list_view.list_view_type01 .list > li .topic_box .inline_wrap {
       padding: 0 3.90625vw !important; }
+    .list_view.list_view_type01 .list > li .topic_box .tag_btn_list {
+      padding: 3.90625vw 3.90625vw 0;
+      margin: 0 -0.48828vw; }
   .list_view.list_view_type01 .list > li .topic_box + .topic_btn_wrap {
     margin: 0 !important; }
   .list_view.list_view_type01 .list > li .topic_ft {
@@ -2406,11 +2427,10 @@ select.form-control {
     .tab_wrap > .nav > li a {
       display: block;
       font-family: "Gong Gothic", sans-serif !important;
-      font-size: 3.90625vw;
+      font-size: 3.51563vw;
       font-weight: 300;
       color: rgba(51, 51, 51, 0.5);
-      background-color: #e3e3e3;
-      padding: 0 4.39453vw; }
+      background-color: #e3e3e3; }
       .tab_wrap > .nav > li a span {
         color: rgba(51, 51, 51, 0.8); }
       .tab_wrap > .nav > li a.active {
@@ -2530,7 +2550,7 @@ select.form-control {
     margin: 0 0.48828vw; }
     .tag_btn_list > li > a {
       display: block;
-      padding: 2.34375vw 2.92969vw;
+      padding: 2.34375vw 2.63672vw;
       border: 0.09766vw solid #d4d4d4;
       border-radius: 1.95313vw;
       font-size: 3.51563vw;
