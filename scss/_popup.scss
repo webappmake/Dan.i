@@ -1,4 +1,7 @@
 ﻿/* common */
+.ic{
+    &.circle_delete { background-color:#fff; border-radius:50%;}
+}
 
 .text_red{color:$color_red !important;}
 
@@ -46,23 +49,39 @@
                 @include flex;
                 flex-wrap:wrap; margin-bottom:$gutter_sm;
                 & > li{
-                    flex:0 0 33.33%; width:33.33%; margin-bottom:4.88281vw; text-align:center; 
+                    flex:0 0 33.33%; width:33.33%; margin-bottom:4.88281vw; text-align:center; position:relative;
                     &:nth-child(3n+1){clear:both; }
-                    & > a{display:block; width:18.84766vw; margin:0 auto;}
-                    & > a img{display:block; width:18.84766vw; height:18.84766vw; border:0.09766vw solid $border; border-radius:20px;}
-                    & > a span{display:block; font-size:3.51563vw; line-height:5.37109vw; margin:$gutter_sm 0;}
-
-                     &.icon_add{
-                        
-                        & > a{position:relative; padding-bottom:0;}
-                        & > a{width:18.84766vw; height:18.84766vw; border:0.09766vw solid $border; border-radius:1.95313vw;}
-                        & > a span{width:4.88281vw; height:4.88281vw; background-position:-32.61719vw -24.02344vw; background-color:#fff; position:absolute; left:50%; top:50%; margin:-2.44141vw 0 0 -2.44141vw;}
+                    & > .btn_delete{width:8.78906vw; height:8.78906vw; position:absolute; top:0; right:1.46484vw;}
+                    & > a{
+                        display:block; /*width:18.84766vw;*/ margin:0 auto; 
+                        & > .favicon{display:block; width:18.84766vw; height:18.84766vw; margin:0 auto; border:0.09766vw solid $border; border-radius:50%; overflow:hidden;}
+                        & > img{display:block; width:18.84766vw; height:18.84766vw; margin:0 auto;}
+                        & > .site_name{
+                            display:block; font-size:3.51563vw; line-height:5.37109vw; margin:$gutter_sm 0;
+                            @at-root .modal .site_name{color:#222;}
+                        }
+                    }                    
+                    &.icon_add{                        
+                        &.icon_circle_add > a{border-radius:50%;}
+                        & > a{
+                            position:relative; padding-bottom:0; width:18.84766vw; height:18.84766vw; border:0.09766vw solid $border; border-radius:1.95313vw;
+                            & > .ic_add{width:4.88281vw; height:4.88281vw; background-position:-32.61719vw -24.02344vw; background-color:#fff; position:absolute; left:50%; top:50%; margin:-2.44141vw 0 0 -2.44141vw;}
+                        }                        
+                    }
+                }  
+                
+            }
+            & .site_list{
+                & > li{
+                    
+                    & > a{
+                        display:flex; width:760px; margin:0 auto 20px auto; border:1px solid #d4d4d4;
+                        & > img{width:300px;}
+                        & > span{display:block; width:460px; height:100px; line-height:100px; font-size:36px; font-weight:500; color:#fff; padding:0 30px; background-color:#888; border-left:1px solid #d4d4d4;}
                     }
                 }
-               
 
             }
-
         }
     }
 }
@@ -133,14 +152,27 @@
 
 .modal_body{
     padding:7.81250vw $gutter_md;
+    &.modal_body01{padding:80px 0;}
+
     & .pop_sub_title{
         font-family: $sub_font_family; font-size:5.07813vw; color:#222;
+    }
+    & .pop_sub_info{
+        font-size:40px; padding-bottom:50px;
     }
     & .pop_sub_title + .search_form_wrap{
         margin-top:4.39453vw;
     }
     & .tit{
         font-size:3.51563vw;
+        @at-root .list_app .tit{
+            display:flex; width:calc(100% - 90px);
+            & > .favicon{
+                display:block; width:82px; height:82px; margin-right:20px; background-color:#eee; border:1px solid $font_black; border-radius:50%; overflow:hidden;
+                & > img{display:block; width:100%; height:100%;}
+            }
+            & > strong{display:block; max-width:calc(100% - 102px); font-size:40px; font-weight:500; line-height:58px; padding:12px 0; word-break:break-all;}
+        }
     }
     & .tit_info{
         font-size:3.51563vw; line-height:4.88281vw; color:$font_darkgray; margin-top:$gutter_sm;
@@ -225,6 +257,39 @@
         
     }
 }
+
+/* 즐겨찾기 팝업 */
+.modal_body .list_app{
+
+}
+
+.site_add_wrap{
+    
+    & .search_box{
+        & .form-control{width:100%; height:100px; font-size:36px; color:#333; padding:28px 40px; margin-bottom:20px;}
+    }
+    & > .pop_btn_area{
+        margin-top:60px; text-align:right;
+        & > button{
+            width:190px; height:100px; font-size:36px; font-weight:500; margin-left:10px; border-radius:20px;
+            &.btn_tertiary{background-color:#eee; border-color:#d4d4d4; color:#333;}
+            &.btn_primary01{border-color:#d4d4d4;}
+        }
+        
+    }
+}
+
+
+/*.site_add_wrap{margin-bottom:95px;}
+.site_add_wrap .search_box{margin-right:0;}
+.site_add_wrap .search_box input{margin-bottom:10px;}*/
+
+
+.keyword_area01{}
+.keyword_area01 .keyword_box{height:350px;}
+.keyword_area01 .keyword_box > dt{margin-bottom:25px;}
+.keyword_area01 > button{position:absolute; right:10px; top:10px; width:80px; height:40px; font-size:14px; color:#000;}
+.keyword_area01 .keyword_list > li .btn_delete > span{width:10px; height:10px; margin-left:18px; background-position:-220px -160px;}
 
 .modal_footer{}
 
@@ -404,18 +469,7 @@
 
 /* 채용 관심 키워드 */
 .pop_sub_info01{padding:20px 0;}
-.keyword_search_wrap{display:flex;}
-.keyword_search_wrap .search_box{flex-grow:1; margin-right:10px;}
-.keyword_search_wrap .search_box select, .keyword_search_wrap .search_box input{width:100%; height:40px; border-radius:2px;}
-.keyword_search_wrap .search_box select{margin-bottom:10px;}
-.keyword_search_wrap .search_box input{}
-.keyword_search_wrap > button{flex-basis:90px; flex-shrink:1; width:90px; height:90px; font-size:14px; border-radius:10px;}
 
-.keyword_area01{}
-.keyword_area01 .keyword_box{height:350px;}
-.keyword_area01 .keyword_box > dt{margin-bottom:25px;}
-.keyword_area01 > button{position:absolute; right:10px; top:10px; width:80px; height:40px; font-size:14px; color:#000;}
-.keyword_area01 .keyword_list > li .btn_delete > span{width:10px; height:10px; margin-left:18px; background-position:-220px -160px;}
 
 /* 캠퍼스 라이프 팝업 */
 .search_result_area{}
