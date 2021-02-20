@@ -1506,7 +1506,7 @@ button {
     width: auto !important;
     height: 44.04297vw;
     border: 0.19531vw solid #d4d4d4;
-    border-radius: 0.97656vw;
+    border-radius: 1.95313vw;
     display: inline-block;
     margin: 0.97656vw; }
     .major_select_swiper .swiper-wrapper .swiper-slide:first-child {
@@ -1868,7 +1868,7 @@ button {
   font-size: 3.51563vw;
   font-weight: 600;
   padding: 2.92969vw 6.83594vw;
-  border-radius: 0.97656vw; }
+  border-radius: 1.95313vw; }
   .a_btn span, .a_btn i {
     vertical-align: middle; }
   .a_btn.a_btn_white {
@@ -2206,7 +2206,7 @@ select.form-control {
 
 .topic_info {
   border: 0.09766vw solid #d4d4d4;
-  border-radius: 0.97656vw;
+  border-radius: 1.95313vw;
   padding: 2.92969vw 3.90625vw;
   margin: 1.95313vw 0; }
   .topic_info li {
@@ -2314,11 +2314,11 @@ select.form-control {
           color: white;
           font-weight: 400; }
     .tab_wrap > .nav > li:first-child {
-      border-top-left-radius: 0.97656vw;
-      border-bottom-left-radius: 0.97656vw; }
+      border-top-left-radius: 1.95313vw;
+      border-bottom-left-radius: 1.95313vw; }
     .tab_wrap > .nav > li:last-child {
-      border-top-right-radius: 0.97656vw;
-      border-bottom-right-radius: 0.97656vw; }
+      border-top-right-radius: 1.95313vw;
+      border-bottom-right-radius: 1.95313vw; }
 
 .tab_wrap > .tab-content {
   padding: 1.95313vw 0; }
