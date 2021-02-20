@@ -24,64 +24,7 @@
 		</h1>
 		<div class="location">
 			<!-- 알림이 있을 경우 on 클래스 추가 -->
-			<a href="#" class="ico_noti" onclick="fn_MoreToggle(this)"><i class="ic alert">알림</i></a>
-			<div class="noti_pop_area" style="display: none;">
-				<div class="noti_pop_hd">
-					<h4 class="ft_gong_400">알림</h4>
-					<button type="button" class="btn_icon btn_noti_colse" onclick="fn_NotiClose();"><span>알림 팝업 닫기</span></button>
-				</div>
-				<ul class="noti_pop_list">
-					<!-- 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
-					<li>
-						<p>
-							<strong>[주간브리핑]</strong>
-							<!-- 알림 내용이 길 경우 미리보기 되므로 title 필요 -->
-							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
-						</p>
-						<span class="date">2020.12.13 09:0:00</span>
-						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
-					</li>
-					<li>
-						<p>
-							<strong>[주간브리핑]</strong>
-							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
-						</p>
-						<span class="date">2020.12.13 09:0:00</span>
-						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
-					</li>
-					<li>
-						<p>
-							<strong>[주간브리핑]</strong>
-							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
-						</p>
-						<span class="date">2020.12.13 09:0:00</span>
-						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
-					</li>
-					<li>
-						<p>
-							<strong>[주간브리핑]</strong>
-							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
-						</p>
-						<span class="date">2020.12.13 09:0:00</span>
-						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
-					</li>
-					<li>
-						<p>
-							<strong>[주간브리핑]</strong>
-							<span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
-						</p>
-						<span class="date">2020.12.13 09:0:00</span>
-						<span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
-					</li>
-					<!-- // 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
-					<!-- 알림이 없을 경우 -->
-					<!--<li class="none">도착한 알림이 없어요!</li>-->
-					<!-- // 알림이 없을 경우 -->
-				</ul>
-				<div class="noti_pop_ft">
-					<p class="more"><a href="../Common/Notification.html"><span class="icon_after">더보기</span></a></p>
-				</div>
-			</div>
+			<a href="#" class="ico_noti"><i class="ic alert">알림</i></a>
 		</div>
 	</header><!--//.header-->
 
@@ -90,13 +33,13 @@
 			<nav class="nav_select_swiper">
 				<h2 class="skip">2차메뉴</h2>
 				<ul class="sub_menu swiper-wrapper">
-					<li class="swiper-slide"><a href="AnalysisTopic_44.html">분석토픽</a></li>
-					<li class="swiper-slide"><a href="InterestTopic_49.html">관심토픽</a></li>
-					<li class="swiper-slide active"><a href="#">수강이력</a></li><!--신입은 노출안됨-->
-					<li class="swiper-slide"><a href="#">교과과정</a></li>
-					<li class="swiper-slide"><a href="#">스크랩</a></li>
-					<li class="swiper-slide"><a href="Favorite_68.html">즐겨찾기</a></li>
-					<li class="swiper-slide"><a href="Setting_77.html">설정</a></li>
+					<li class="swiper-slide"><a href="AnalysisTopic.html">분석토픽</a></li>
+					<li class="swiper-slide"><a href="InterestTopic.html">관심토픽</a></li>
+					<li class="swiper-slide active"><a href="LectureHistory_plural.html">수강이력</a></li><!--신입은 노출안됨-->
+					<li class="swiper-slide"><a href="Curriculum_plural.html">교과과정</a></li>
+					<li class="swiper-slide"><a href="Scrap.html">스크랩</a></li>
+					<li class="swiper-slide"><a href="Favorite.html">즐겨찾기</a></li>
+					<li class="swiper-slide"><a href="Setting.html">설정</a></li>
 				</ul>
 				<script>
 					var swiper = new Swiper('.nav_select_swiper', {
@@ -600,7 +543,7 @@
 						</div>
 					</div>
 				</div><!--//.accordion-->
-				<button type="button" class="a_btn a_btn_sky"><span>교과 추천 교과목 정보</span>&nbsp;<i class="ic arrow_shortcut_white"></i></button>  
+				<button type="button" class="a_btn a_btn_sky"><span>교과 추천 교과목 </span>&nbsp;<i class="ic arrow_shortcut_white"></i></button>  
 			</div><!--//.contents-->
 		</div><!--//.container-->
 	</div><!--//.container-wrap-->
