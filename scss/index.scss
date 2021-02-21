@@ -483,6 +483,7 @@ select.form-control {
       padding: $gutter_sm 2.44141vw !important;
     }
   }
+  @at-root .list_view .list_cont.list_cont_box .list.list_modify > li { margin: 0 !important; }
 }
 //리스트 내 공통 전체보기 버튼
 .list_view {

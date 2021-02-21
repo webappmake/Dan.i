@@ -2268,6 +2268,9 @@ select.form-control {
     min-height: 11.71875vw;
     padding: 1.95313vw 2.44141vw !important; }
 
+.list_view .list_cont.list_cont_box .list.list_modify > li {
+  margin: 0 !important; }
+
 .list_view .list + .a_btn_white,
 .list_view .a_btn_white {
   width: 100%;
