@@ -66,26 +66,6 @@
     .ic { width: 3.90625vw; height: 3.90625vw; }
   }
 }
-.major_wrap {
-  @include flex;
-  min-height: 14.64844vw;
-  justify-content: center;
-  align-items: center;
-  margin: 4.88281vw -3.90625vw 0;
-  padding: $gutter_sm $gutter_md;
-  background-color: #fafafa;
-  .ic {
-    width: 6.44531vw;
-    height: 6.44531vw;
-    margin-right: $gutter_xs;
-    flex-shrink: 0;
-  }
-  span {
-    font-family: $sub_font_family;
-    font-size: 5.07813vw;
-    color: #222;
-  }
-}
 .topic_list_wrap {
   display: none;
   padding: 4.88281vw $gutter_md $gutter_md;
@@ -114,7 +94,6 @@
     color: #fff;
   }
 }
-
 .major_select_swiper {
   //margin: 4.88281vw 0 6.15234vw; 필터링 추가되서 여백 변경
   margin: 4.88281vw 0;
@@ -163,4 +142,64 @@
   // 협의 후 최소 높잉를 지정 필요.    
   background-color: #fafafa;
   border: 0.09766vw solid $border;
+}
+.major_wrap {
+  @include flex;
+  min-height: 14.64844vw;
+  justify-content: center;
+  align-items: center;
+  margin: 4.88281vw -3.90625vw 0;
+  padding: $gutter_md $gutter_md;
+  background-color: #fafafa;
+  .ic {
+    width: 6.44531vw;
+    height: 6.44531vw;
+    margin-right: $gutter_xs;
+    flex-shrink: 0;
+  }
+  span {
+    font-family: $sub_font_family;
+    font-size: 5.07813vw;
+    color: #222;
+  }
+}
+.major_grade_box {
+  background-color: #fafafa;
+  margin: 4.88281vw -3.90625vw 0;
+  padding: $gutter_md 0;
+  .major_wrap { margin: 0; padding-top: 0; background-color: transparent; }
+  .grade_box {
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    margin: 0 $gutter_md;
+    & > .grade_box_list {
+      @include flex;
+      width: 100%;
+      height: 200px;
+      &.list_01 > li { width: 100%; }
+      &.list_03 > li { width: 33.3333%; }
+      & > li {
+        position: relative;
+        font-family: $sub_font_family;
+        &::before {
+          content: '';
+          width: 1px;
+          height: 120px;
+          background-color: $border;
+          position: absolute; right: 0; top: $gutter_md; 
+        }
+        &:last-child::before { background-color: transparent; }
+        & > a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          text-align: center;
+          padding: $gutter_md;
+          cursor: unset; //나중에 링크 널어달라고 하면 스타일만 삭제하면 됨         
+          & > span { display: block; font-weight: 300; font-size: 40px; }
+          & > strong { font-size: 48px; font-weight: 400; }
+        }
+      }
+    }
+  }
 }
