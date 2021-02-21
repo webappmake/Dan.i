@@ -192,7 +192,6 @@
 //스크랩 하단 배치 리스트 공통
 .tit_lg { font-size: 4.29688vw !important; }
 .list_scrap {
-  border: 0.09766vw solid $border;
   padding: $gutter_md;
   & > a {
     display: block;
@@ -201,13 +200,14 @@
   & > .btn_like { margin: 2.92969vw 0 $gutter_md 0; }
   & > .btn_scrap_wrap {
     border-top: 0.09766vw solid $border;
-    margin: 0 -#{$gutter_md};
-    padding: $gutter_md $gutter_md 0;
+    margin: 0 -#{$gutter_md} -#{$gutter_sm};
+    padding: $gutter_sm $gutter_sm 0;
     & > .btn_scrap {
       @include flex;
       justify-content: center;
       align-items: center;
-      & > .ic { width: 5.46875vw; height: 5.46875vw; margin-top: -0.97656vw; }
+      padding: 20px; //눌렀을 때 모양때문에 추가
+      & > .ic { width: 5.46875vw; height: 5.46875vw; margin-top: -#{$gutter_xs}; }
       & > span { font-size: 3.90625vw; font-weight: 600; margin-left: $gutter_sm; }
     }
   }
