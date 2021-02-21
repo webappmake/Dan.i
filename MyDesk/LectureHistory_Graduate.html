@@ -57,493 +57,135 @@
 				<p class="major_wrap">
 					<i class="ic major_lg"></i><span>일반대학원 인문·사회계열 국어국문학과 국어학</span>
 				</p>
-				<!-- <div class="control_wrap only">
-					<p class="sel_area">
-						<select class="form-control" id="select_01" name="budget">
-							<option value="#">전체</option>
-						</select>
-					</p>
-					<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
-				</div> -->
-				<div class="accordion" id="myAccordion">
-					<div class="card">
-						<div class="card-header" id="headingOne">
-							<button type="button" class="btn_collapse" data-toggle="collapse" data-target="#collapseOne">
-								<h3 class="tit">
-									학과기초
-									<small>이수학점 <strong>21</strong></small>
-								</h3>
-								<i class="ic toggle_close">열림/닫힘</i>
-							</button>
+				<section class="list_view list_view_type01">
+					<div class="list_hd">
+						<div class="control_wrap only m0">
+							<p class="sel_area">
+								<select class="form-control" id="select_01" name="budget">
+									<option value="#">전체</option>
+								</select>
+							</p>
+							<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
 						</div>
-						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#myAccordion">
-							<section class="list_view">
-								<div class="list_cont list_cont_box">
-									<ul class="list">
-										<li>
-											<div class="topic_box">
-												<div class="inline_wrap">
-													<h3 class="tit">언어학의이해</h3>
-													<p class="icon_chk_wrap">
-														<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-														<label for="r1">On/Off</label>
-													</p>
-												</div>
-												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
-												<ul class="tag_btn_list">
-													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
-													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
-													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
-												</ul>
-											</div>
-											<div class="inline_wrap topic_btn_wrap">
-												<h4 class="tit">
-													연관토픽
-													<span class="total">총 <span class="text_blue">N</span>개</span>
-												</h4>
-												<p class="topic_btn">
-													<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
-												</p>
-											</div>
-											<div class="topic_list_wrap">
-												<div class="tab_wrap" role="tabpanel">
-													<!-- Nav tabs -->
-													<ul class="nav nav_03" role="tablist">
-														<li role="presentation"><a class="active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">자동 추출 <span>10</span></a></li>
-														<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>
-														<li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">교수자 등록 <span>08</span></a></li>
-													</ul>
-													<!-- Tab panes -->
-													<div class="tab-content">
-														<div role="tabpanel" class="tab-pane active" id="tab1">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="topic_list">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">국어학개론</h4>
-																		<p class="icon_chk_wrap">
-																			<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-																			<label for="r1">On/Off</label>
-																		</p>
-																	</div>
-																	<div class="inline_wrap justify_start">
-																		<ul class="tag_list">
-																			<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
-																			<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
-																			<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
-																		</ul>
-																		<span class="desc">빈도수 121</span>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab2">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																		<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
-																	</div>
-																</li>
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab3">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</li>
+					</div><!--//.list_hd-->
+					<div class="list_cont list_cont_box">
+						<ul class="list">
+							<li>
+								<div class="topic_box">
+									<div class="inline_wrap">
+										<a href="#Pop_SubjectGraduate" data-toggle="modal">
+											<h3 class="tit">국어연구방법론</h3>
+											<p class="tit_info pb0">2020학년도 1학기 | 학점 3</p>
+										</a>
+										<p class="icon_chk_wrap">
+											<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+											<label for="r1">On/Off</label>
+										</p>
+									</div>
+									<ul class="tag_btn_list m0">
+										<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
+										<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
+										<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
+										<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
 									</ul>
-								</div><!--//.list_cont-->
-							</section><!--//.list_view-->
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header" id="headingTwo">
-							<button type="button" class="btn_collapse collapsed" data-toggle="collapse" data-target="#collapseTwo">
-								<h3 class="tit">
-									학부기초
-									<small>이수학점 <strong>03</strong></small>
-								</h3>
-								<i class="ic toggle_close">열림/닫힘</i>
-							</button>
-						</div>
-						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#myAccordion">
-							<section class="list_view">
-								<div class="list_cont list_cont_box">
-									<ul class="list">
-										<li>
-											<div class="topic_box">
-												<div class="inline_wrap">
-													<h3 class="tit">언어학의이해</h3>
-													<p class="icon_chk_wrap">
-														<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-														<label for="r1">On/Off</label>
-													</p>
+								</div>
+								<div class="inline_wrap topic_btn_wrap">
+									<h4 class="tit">
+										연관토픽
+										<span class="total">총 <span class="text_blue">N</span>개</span>
+									</h4>
+									<p class="topic_btn">
+										<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
+									</p>
+								</div>
+								<div class="topic_list">
+									<div class="tab_wrap" role="tabpanel">
+										<!-- Nav tabs -->
+										<ul class="nav nav_03" role="tablist">
+											<li role="presentation"><a class="active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">자동 추출 <span>10</span></a></li>
+											<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>
+											<li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">교수자 등록 <span>08</span></a></li>
+										</ul>
+										<!-- Tab panes -->
+										<div class="tab-content">
+											<div role="tabpanel" class="tab-pane active" id="tab1">
+												<div class="feedback_form">
+													<input type="text" placeholder="Topic을 추가할 수 있어요."/>
+													<button type="submit" class="btn_submit">등록</button>
 												</div>
-												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
-												<ul class="tag_btn_list">
-													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
-													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
-													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
+												<ul class="topic_list">
+													<li>
+														<div class="inline_wrap">
+															<h4 class="tit">국어학개론</h4>
+															<p class="icon_chk_wrap">
+																<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+																<label for="r1">On/Off</label>
+															</p>
+														</div>
+														<div class="inline_wrap justify_start">
+															<ul class="tag_list">
+																<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
+																<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
+																<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
+															</ul>
+															<span class="desc">빈도수 121</span>
+														</div>
+													</li>
 												</ul>
+												<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
 											</div>
-											<div class="inline_wrap topic_btn_wrap">
-												<h4 class="tit">
-													연관토픽
-													<span class="total">총 <span class="text_blue">N</span>개</span>
-												</h4>
-												<p class="topic_btn">
-													<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
-												</p>
-											</div>
-											<div class="topic_list_wrap">
-												<div class="tab_wrap" role="tabpanel">
-													<!-- Nav tabs -->
-													<ul class="nav nav_03" role="tablist">
-														<li role="presentation"><a class="active" href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">자동 추출 <span>10</span></a></li>
-														<li role="presentation"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>
-														<li role="presentation"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab">교수자 등록 <span>08</span></a></li>
-													</ul>
-													<!-- Tab panes -->
-													<div class="tab-content">
-														<div role="tabpanel" class="tab-pane active" id="tab4">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="topic_list">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">국어학개론</h4>
-																		<p class="icon_chk_wrap">
-																			<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-																			<label for="r1">On/Off</label>
-																		</p>
-																	</div>
-																	<div class="inline_wrap justify_start">
-																		<ul class="tag_list">
-																			<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
-																			<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
-																			<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
-																		</ul>
-																		<span class="desc">빈도수 121</span>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab5">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																		<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
-																	</div>
-																</li>
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab6">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-													</div>
+											<div role="tabpanel" class="tab-pane" id="tab2">
+												<div class="feedback_form">
+													<input type="text" placeholder="Topic을 추가할 수 있어요."/>
+													<button type="submit" class="btn_submit">등록</button>
 												</div>
-											</div>
-										</li>
-									</ul>
-								</div><!--//.list_cont-->
-							</section><!--//.list_view-->
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header" id="headingThree">
-							<button type="button" class="btn_collapse collapsed" data-toggle="collapse" data-target="#collapseThree">
-								<h3 class="tit">
-									학부기초
-									<small>이수학점 <strong>03</strong></small>
-								</h3>
-								<i class="ic toggle_close">열림/닫힘</i>
-							</button>
-						</div>
-						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#myAccordion">
-							<section class="list_view">
-								<div class="list_cont list_cont_box">
-									<ul class="list">
-										<li>
-											<div class="topic_box">
-												<div class="inline_wrap">
-													<h3 class="tit">언어학의이해</h3>
-													<p class="icon_chk_wrap">
-														<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-														<label for="r1">On/Off</label>
-													</p>
-												</div>
-												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
-												<ul class="tag_btn_list">
-													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
-													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
-													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
+												<ul class="list list_modify">
+													<li>
+														<div class="inline_wrap">
+															<h4 class="tit">Topic Name</h4>
+															<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
+														</div>
+													</li>
+													<li>
+														<div class="inline_wrap">
+															<h4 class="tit">Topic Name</h4>
+														</div>
+													</li>
 												</ul>
+												<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
 											</div>
-											<div class="inline_wrap topic_btn_wrap">
-												<h4 class="tit">
-													연관토픽
-													<span class="total">총 <span class="text_blue">N</span>개</span>
-												</h4>
-												<p class="topic_btn">
-													<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
-												</p>
-											</div>
-											<div class="topic_list_wrap">
-												<div class="tab_wrap" role="tabpanel">
-													<!-- Nav tabs -->
-													<ul class="nav nav_03" role="tablist">
-														<li role="presentation"><a class="active" href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab">자동 추출 <span>10</span></a></li>
-														<li role="presentation"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>
-														<li role="presentation"><a href="#tab9" aria-controls="tab9" role="tab" data-toggle="tab">교수자 등록 <span>08</span></a></li>
-													</ul>
-													<!-- Tab panes -->
-													<div class="tab-content">
-														<div role="tabpanel" class="tab-pane active" id="tab7">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="topic_list">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">국어학개론</h4>
-																		<p class="icon_chk_wrap">
-																			<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-																			<label for="r1">On/Off</label>
-																		</p>
-																	</div>
-																	<div class="inline_wrap justify_start">
-																		<ul class="tag_list">
-																			<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
-																			<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
-																			<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
-																		</ul>
-																		<span class="desc">빈도수 121</span>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab8">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																		<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
-																	</div>
-																</li>
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab9">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-													</div>
+											<div role="tabpanel" class="tab-pane" id="tab3">
+												<div class="feedback_form">
+													<input type="text" placeholder="Topic을 추가할 수 있어요."/>
+													<button type="submit" class="btn_submit">등록</button>
 												</div>
-											</div>
-										</li>
-									</ul>
-								</div><!--//.list_cont-->
-							</section><!--//.list_view-->
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-header" id="headingFour">
-							<button type="button" class="btn_collapse collapsed" data-toggle="collapse" data-target="#collapseFour">
-								<h3 class="tit">
-									학부기초
-									<small>이수학점 <strong>03</strong></small>
-								</h3>
-								<i class="ic toggle_close">열림/닫힘</i>
-							</button>
-						</div>
-						<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#myAccordion">
-							<section class="list_view">
-								<div class="list_cont list_cont_box">
-									<ul class="list">
-										<li>
-											<div class="topic_box">
-												<div class="inline_wrap">
-													<h3 class="tit">언어학의이해</h3>
-													<p class="icon_chk_wrap">
-														<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-														<label for="r1">On/Off</label>
-													</p>
-												</div>
-												<p class="tit_info">2020학년도 1학기 | 학점 3</p>
-												<ul class="tag_btn_list">
-													<li><a href="#Pop_SubjectRecommend" data-toggle="modal">교과목 추천</a></li>
-													<li><a href="#Pop_SubjectSummary" data-toggle="modal">교과개요</a></li>
-													<li><a href="#Pop_RelationSummary" data-toggle="modal">선행/연계</a></li>
-													<li><a href="#" data-toggle="modal" class="a_btn a_btn_gray">성적조회</a></li>
+												<ul class="list list_modify">
+													<li>
+														<div class="inline_wrap">
+															<h4 class="tit">Topic Name</h4>
+														</div>
+													</li>
 												</ul>
+												<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
 											</div>
-											<div class="inline_wrap topic_btn_wrap">
-												<h4 class="tit">
-													연관토픽
-													<span class="total">총 <span class="text_blue">N</span>개</span>
-												</h4>
-												<p class="topic_btn">
-													<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
-												</p>
-											</div>
-											<div class="topic_list_wrap">
-												<div class="tab_wrap" role="tabpanel">
-													<!-- Nav tabs -->
-													<ul class="nav nav_03" role="tablist">
-														<li role="presentation"><a class="active" href="#tab10" aria-controls="tab10" role="tab" data-toggle="tab">자동 추출 <span>10</span></a></li>
-														<li role="presentation"><a href="#tab11" aria-controls="tab11" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>
-														<li role="presentation"><a href="#tab12" aria-controls="tab12" role="tab" data-toggle="tab">교수자 등록 <span>08</span></a></li>
-													</ul>
-													<!-- Tab panes -->
-													<div class="tab-content">
-														<div role="tabpanel" class="tab-pane active" id="tab10">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="topic_list">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">국어학개론</h4>
-																		<p class="icon_chk_wrap">
-																			<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-																			<label for="r1">On/Off</label>
-																		</p>
-																	</div>
-																	<div class="inline_wrap justify_start">
-																		<ul class="tag_list">
-																			<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
-																			<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
-																			<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
-																		</ul>
-																		<span class="desc">빈도수 121</span>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab11">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																		<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
-																	</div>
-																</li>
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-														<div role="tabpanel" class="tab-pane" id="tab12">
-															<div class="feedback_form">
-																<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-																<button type="submit" class="btn_submit">등록</button>
-															</div>
-															<ul class="list list_modify">
-																<li>
-																	<div class="inline_wrap">
-																		<h4 class="tit">Topic Name</h4>
-																	</div>
-																</li>
-															</ul>
-															<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div><!--//.list_cont-->
-							</section><!--//.list_view-->
-						</div>
-					</div>
-				</div><!--//.accordion-->
-				<button type="button" class="a_btn a_btn_sky"><span>교과 추천 교과목 </span>&nbsp;<i class="ic arrow_shortcut_white"></i></button>  
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+					<div class="list_ft">
+						<ul class="paging">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
+					</div><!--//.list_ft-->
+				</section><!--//.list_view-->
 			</div><!--//.contents-->
 		</div><!--//.container-->
 	</div><!--//.container-wrap-->
@@ -591,7 +233,6 @@
 							<input type="text" placeholder="교과목명을 입력하세요." />
 							<button type="submit" class="btn"><i class="ic search">검색</i></button>
 						</div>
-						<p class="desc center">이미 수강한 교과목은 제외하고 추천해 드려요.</p>
 					</div>
 					<section class="list_view list_view_type01">
 						<div class="list_hd">
@@ -599,11 +240,11 @@
 								<p class="desc">총 <span class="text_blue">N</span>개</p>
 							</div>
 							<div class="control_wrap">
-								<p class="sel_area">
+								<!-- <p class="sel_area">
 									<select class="form-control" id="select_01" name="budget">
 										<option value="#">전체</option>
 									</select>
-								</p>
+								</p> -->
 								<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
 							</div>
 						</div><!--//.list_hd-->
@@ -672,6 +313,184 @@
 		</div>
 	</div>
 	<!--//교과목 추천 팝업-->
+
+
+	<!-- 교과 연관 정보 팝업 -->
+	<div class="modal fade full_modal" id="Pop_SubjectGraduate" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h3 class="pop_title">교과 연관 정보</h3>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+				</div>
+				<div class="modal_body">
+					<h4 class="pop_sub_title">국어연구방법론</h4>
+					<div class="tab_wrap tab_type01" role="tabpanel">
+						<!-- Nav tabs -->
+						<ul class="nav" role="tablist">
+							<li role="presentation"><a class="active" href="#popTab1" aria-controls="popTab1" role="tab" data-toggle="tab">교재/참고문헌 정보</a></li>
+							<li role="presentation"><a href="#popTab2" aria-controls="popTab2" role="tab" data-toggle="tab">논문/연구 정보</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="popTab1">
+								<div class="search_form_wrap">
+									<div class="search_form">
+										<input type="text" placeholder="교재 또는 참고문헌명을 입력해주세요." />
+										<button type="submit" class="btn"><i class="ic search">검색</i></button>
+									</div>
+								</div>
+								<section class="list_view">
+									<div class="list_hd">
+										<div>
+											<p class="desc">총 <span class="text_blue">N</span>개</p>
+										</div>
+										<div class="control_wrap">
+											<p class="sel_area">
+												<select class="form-control" id="select_01" name="budget">
+													<option value="#">전체</option>
+												</select>
+											</p>
+											<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+										</div>
+									</div><!--//.list_hd-->
+									<div class="list_cont">
+										<ul class="list"><!--like 오른쪽 배치 리스트-->
+											<li>
+												<div class="inline_wrap like_btn_list">
+													<a href="#">
+														<span class="label_round">주교재</span>
+														<h4 class="tit">창조경제에서의 경영전략</h4>
+														<span class="tit_info">이장우 | 법문사</span>
+													</a>
+													<button class="like_btn">
+														<i class="ic like"></i> <span class="num">100</span>
+													</button>
+												</div>
+											</li>
+										</ul>
+									</div><!--//.list_cont-->
+									<div class="list_ft">
+										<ul class="paging">
+											<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+											<li class="active"><a href="#none">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+										</ul>
+									</div><!--//.list_ft-->
+								</section><!--//.list_view-->
+							</div>
+							<div role="tabpanel" class="tab-pane" id="popTab2">
+								<ul class="filter_list with_bg">
+									<li class="active"><a href="#">#RISS</a></li>
+									<li><a href="#">#NTIS</a></li>
+									<li><a href="#">#NDSL</a></li>
+								</ul>
+								<div class="feedback_form">
+									<input type="text" placeholder="논문/연구명을 입력하세요."/>
+									<button type="submit" class="btn_submit">등록</button>
+								</div>
+								<section class="list_view list_view_type01">
+									<div class="list_hd">
+										<p class="desc">총 <span class="text_blue">N</span>개</p>
+										<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+									</div><!--//.list_hd-->
+									<div class="list_cont">
+										<ul class="list">
+											<li>
+												<div class="list_scrap"><!--스크랩 하단 배치 리스트 스타일 생성-->
+													<a href="#">
+														<h4 class="tit">빅데이터 분석을 활용한 관광기반형 연구</h4>
+														<span class="tit_info">학위논문 | 전소라 | 2020</span>
+													</a>
+													<button class="like_btn">
+														<i class="ic like"></i> <span class="num">100</span>
+													</button>
+													<div class="border_top">
+														<p>스크랩</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div><!--//.list_cont-->
+									<div class="list_ft">
+										<ul class="paging">
+											<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+											<li class="active"><a href="#none">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+										</ul>
+									</div><!--//.list_ft-->
+								</section><!--//.list_view-->
+
+
+
+
+								<ul class="list list_modify">
+									<li>
+										<div class="inline_wrap">
+											<h4 class="tit">Topic Name</h4>
+											<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
+										</div>
+									</li>
+									<li>
+										<div class="inline_wrap">
+											<h4 class="tit">Topic Name</h4>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="tab1">
+								<div class="feedback_form">
+									<input type="text" placeholder="Topic을 추가할 수 있어요."/>
+									<button type="submit" class="btn_submit">등록</button>
+								</div>
+								<ul class="list list_modify">
+									<li>
+										<div class="inline_wrap">
+											<h4 class="tit">Topic Name</h4>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+					<!-- null 값일 경우 -->
+					<!--<div class="pag_info_none pag_sm_info_none">
+						<span class="ic_before ic_info_lg">
+							선택한 교과의 선행교과는 아직 분석되지 않았어요.<br />
+							추후에 반영될 예정입니다.
+						</span>
+					</div>-->
+					<!-- // null 값일 경우 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//교과 연관 정보 팝업-->
 </body>
 </html>
 

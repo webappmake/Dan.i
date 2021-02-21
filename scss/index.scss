@@ -18,13 +18,16 @@
   &.ic_pop_close {width: $gutter_md; height: $gutter_md; background-position: 0 -32.81250vw;}
   &.ic_info{width:5.66406vw; height:5.66406vw; margin-right:1.46484vw; background-position:-25.19531vw 0;}
   &.major { background-position: -26.66016vw -40.62500vw; }
-  &.major_lg { background-position: -20.21484vw -40.62500vw; }
+  &.major_lg { background-position: -20.21484vw -40.62500vw; } 
   &.toggle_open { background-position: -37.50000vw -24.02344vw; }
   &.toggle_close { background-position: -42.87109vw -24.02344vw; }
   &.arrow_shortcut { background-position: -3.90625vw -32.81250vw; }
   &.arrow_shortcut_white { background-position: -3.90625vw -36.71875vw; }
   &.circle_delete { background-position: -66.50391vw -18.55469vw; }
   &.circle_add { background-position: -57.71484vw -18.55469vw; }
+  &.like { background-position: -27.24609vw -32.81250vw; }
+  &.unlike { background-position: -23.43750vw -32.81250vw; }
+
 }
 .ic_before{
   position:relative;
@@ -87,18 +90,20 @@
     padding: 0 !important;
     margin: 0 !important;
     & > .nav_select_swiper {
-      width: 100vw;
+      width: 100vw; 
       height: $nav_height;
       border-bottom: 0.09766vw solid $border;
       padding: 0 $gutter_md;
       z-index: 997;
       .sub_menu {
+        width: 123.63281vw;
         & > li {
           display: inline-block;
           position: relative;
           flex-shrink: 1;
           a {
-            display: inline-block;
+            max-width: 19.14063vw !important;
+            display: inline-block; 
             color: $font_lightgray;
             font-size: 3.90625vw;
             font-weight: 400;
@@ -415,6 +420,11 @@ select.form-control {
                 padding-bottom: $gutter_xs;
               }
             }
+            .topic_list {
+              display: block !important;
+              padding: 0 !important;
+              border: 0 !important;
+            }
           }
         }
       }
@@ -435,7 +445,7 @@ select.form-control {
         & > .tit_info { padding: 0 $gutter_md !important; }
         & > a { display: block; padding: 0 $gutter_md; } 
         .date { font-size: 3.51563vw; color: #333; }
-        .tit { margin: $gutter-sm 0 $gutter-xs; }
+        .tit { margin: $gutter_sm 0 $gutter_xs; }
         .desc { font-size: 3.51563vw; color: #888; }        
         .btn_delete { margin: -0.97656vw -0.97656vw 0 0; }
         .inline_wrap { padding: 0 $gutter_md !important; }
@@ -474,6 +484,16 @@ select.form-control {
     }
   }
 }
+//리스트 내 공통 전체보기 버튼
+.list_view {
+  .list + .a_btn_white,
+  .a_btn_white {
+    width: 100%;
+    font-size: 3.90625vw;
+    border-radius: 0;
+    margin-top: 5.85938vw;
+  }
+}
 /* ------------------------------------------------------- COMMON > CLASS > .pag_info_none ------------------------------------------------------- */
 .pag_info_none {
   @include flex;
@@ -490,7 +510,7 @@ select.form-control {
   @at-root .pop_sub_title + .filter_list{margin-top:6.83594vw; margin-bottom:1.56250vw;}
   & > li {
       display: inline-block;
-      margin: $gutter-xs 0.48828vw;
+      margin: $gutter_xs 0.48828vw;
       & > a {
       padding: 2.14844vw 5.27344vw;
       border-radius: 9.76563vw;
@@ -504,7 +524,7 @@ select.form-control {
   }
   &.with_bg {
     background-color: #fafafa;
-    padding: $gutter-sm $gutter_md;
+    padding: $gutter_sm $gutter_md;
     margin: $gutter_md -#{$gutter_md};
   }
   & + .search_form { margin-bottom: 0; }
@@ -629,6 +649,7 @@ select.form-control {
 //COMMON > TAB > 파란색 라운드 디자인
 .tab_wrap {
   @at-root .cont_hd + .tab_wrap { margin-top: 7.81250vw; }
+  @at-root .pop_sub_title + .tab_wrap { margin-top: 7.81250vw; }
   & > .nav {
     @include flex;
     justify-content: space-around;

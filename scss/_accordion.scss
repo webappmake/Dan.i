@@ -72,11 +72,13 @@
   justify-content: center;
   align-items: center;
   margin: 4.88281vw -3.90625vw 0;
+  padding: 0 $gutter_md;
   background-color: #fafafa;
   .ic {
     width: 6.44531vw;
     height: 6.44531vw;
     margin-right: $gutter_xs;
+    flex-shrink: 0;
   }
   span {
     font-family: $sub_font_family;
@@ -88,21 +90,8 @@
   display: none;
   padding: 4.88281vw $gutter_md $gutter_md;
   background-color: #f5f5f5;
-  .topic_list {
-    display: block !important;
-    padding: 0 !important;
-    border: 0 !important;
-    @at-root .list + .a_btn_white,
-    & + .a_btn_white {
-      width: 100%;
-      font-size: 3.90625vw;
-      border-radius: 0;
-      margin-top: 5.85938vw;
-    }
-  }
-  .tab_wrap > .nav > li > a {
-    font-size: 3.51563vw;
-  }
+  .tab_wrap > .nav > li > a { font-size: 3.51563vw; }
+  .topic_list { display: block !important; padding: 0 !important; }
 }
 .feedback_form {
   @include flex;
@@ -182,4 +171,25 @@
   background-color: #fff;
   & + .desc { margin-left: 2.34375vw; }
 }
+.like_btn_list {
+  padding: 0 $gutter_md;
+  .tit { margin: $gutter_sm 0 $gutter_xs; }
+}
+.like_btn {
+  @include flex;
+  min-width: 15.62500vw;
+  height: 6.34766vw;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 6.34766vw;
+  background-color: #fff;
+  .ic { width: 3.80859vw; height: 3.80859vw; }
+  .num { font-size: 3.41797vw; color: #333; margin-left: $gutter_xs; }
+  @at-root .topic_box .like_btn { margin: 30px 0 0 $gutter_md; }
+}
 .bg_gray { background-color: #f5f5f5; }
+//스크랩 하단 배치 리스트 스타일 생성 ul.list 의 li 안에 넣으면 됨
+.list_scrap {
+  border: 0.09766vw solid $border;
+}
