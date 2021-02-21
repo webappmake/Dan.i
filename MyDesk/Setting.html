@@ -58,7 +58,7 @@
                     </p>
                     <ul class="set_list">
                         <li><a href="#Pop_PushSetting" data-toggle="modal"><i class="ic ic_push"></i><span>Push 설정</span></a></li>
-                        <li><a href="#Pop_Inquiry" data-toggle="modal"><i class="ic ic_inquiry"></i><span>1:1 문의</span></a></li>
+                        <li><a href="#Pop_InquiryList" data-toggle="modal"><i class="ic ic_inquiry"></i><span>1:1 문의</span></a></li>
                         <li><a href="#Pop_Help" data-toggle="modal"><i class="ic ic_help"></i><span>도움말</span></a></li>
                         <li class="version_area"><i class="ic ic_version"></i><span>버전정보</span><span class="version">0.0.0</span></li>
                     </ul>
@@ -297,8 +297,8 @@
         </div>
     </div>
     <!-- // Push 설정 팝업 -->
-    <!-- 1 : 1 문의 팝업 -->
-    <div class="modal full_modal fade" id="Pop_Inquiry" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <!-- 1 : 1 문의 목록 팝업 -->
+    <div class="modal full_modal fade" id="Pop_InquiryList" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal_type_03">
             <div class="modal-content">
                 <div class="modal_header">
@@ -308,7 +308,7 @@
                 <div class="modal_body">
                     <div class="inquiry_wrap">
                         <p class="inquiry_btn">
-                            <a href="#" class="a_btn a_btn_gray">문의등록</a>
+                            <a href="#Pop_InquiryAdd" data-toggle="modal" class="a_btn a_btn_gray">문의등록</a>
                         </p>
                         <div class="list_view">
                             <div class="list_hd">
@@ -316,11 +316,12 @@
                                     <h3 class="tit">1:1 문의 목록</h3>
                                 </div>
                             </div>
+                            <!-- 리스트 영역 -->
                             <ul class="list inquiry_list">
                                 <li>
                                     <div class="inquiry_swiper">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide inline_wrap inquiry_tit">
                                                 <p class="tit">
                                                     <span>2020.10.09 12:23:11</span>
                                                     <strong>시간표 공유 방법 알고 싶어요</strong>
@@ -333,44 +334,78 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <script>
-                                        //var menuButton = document.querySelector('.inquiry_del_btn');
-                                        //var openMenu = function () {
-                                        //    swiper.slidePrev();
-                                        //};
-                                        //var swiper = new Swiper('.inquiry_swiper', {
-                                        //    slidesPerView: 'auto',
-                                        //    initialSlide: 1,
-                                        //    resistanceRatio: 0,
-                                        //    slideToClickedSlide: true,
-                                        //});
-                                    </script>
                                 </li>
-                                <!--<li>
-                                    <div class="swiper-container inqury_swiper">
+                                <li>
+                                    <div class="inquiry_swiper">
                                         <div class="swiper-wrapper">
-                                            <div class="inline_wrap swiper-slide">
+                                            <div class="swiper-slide inline_wrap inquiry_tit">
                                                 <p class="tit">
                                                     <span>2020.10.09 12:23:11</span>
                                                     <strong>개인정보 설정 바꾸고 싶어요</strong>
                                                 </p>
-                                                <p class="state">답변준비</p>
+                                                <p class="state">답변준비중</p>
                                             </div>
                                             <div class="swiper-slide inquiry_del_btn">
                                                 <button type="button" class="btn_delete"><i class="ic circle_delete">문의 삭제</i></button>
                                             </div>
                                         </div>
                                     </div>
-                                </li>-->
+                                </li>
                             </ul>
+                            <script>
+                                // 스와이프 답변 삭제
+                                // 팝업 오픈시 스와이프 실행
+                                $('#Pop_InquiryList').on('shown.bs.modal', function (e) {
+                                    modalSwiper = new Swiper('.inquiry_swiper', {
+                                        slidesPerView: 'auto'
+                                    });
+                                })
+                            </script>
+                            <!-- // 리스트 영역 -->
                         </div>
-                        
+                        <!-- 문의내역 없을 경우 -->
+                        <div class="pag_info_none pag_sm_info_none">
+                            <span class="ic_before ic_info_lg">
+                                <span>등록된 문의가 없어요.</span><br />
+                                단아이(Dan.i)에게 문의하고 싶다면,<br />
+                                위 ‘문의등록’ 버튼을 선택해 주세요!
+                            </span>
+                        </div>
+                        <!-- // 문의내역 없을 경우 -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- // 1 : 1 문의 팝업 -->
+    <!-- // 1 : 1 문의 목록 팝업 -->
+    <!-- 1 : 1 문의 등록 팝업 -->
+    <div class="modal full_modal fade" id="Pop_InquiryAdd" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <h5 class="pop_title">문의 등록</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
+                </div>
+                <div class="modal_body">
+                    <p class="pop_sub_info">
+                        단아이(Dan.i) 이용 중<br />
+                        궁금하신 부분이 있다면 내용을 남겨주세요.<br />
+                        검토 후에 답변 드리도록 하겠습니다.
+                    </p>
+                    <div class="site_add_wrap">
+                        <p class="search_box inquiry_box">
+                            <textarea class="form-control" placeholder="내용을 입력하세요." maxlength="1000"></textarea>
+                        </p>
+                    </div>
+                    <div class="modal_footer only">
+                        <!-- 임시로 Tosat 팝업 호출하도록 적용해두었습니다. -->
+                        <button type="button" class="btn btn_primary btn_primary01" id="AddToastBtn">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 1 : 1 문의 등록 팝업 -->
     <!-- 도움말 팝업 -->
     <div class="modal full_modal fade" id="Pop_Help" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal_type_03">
@@ -386,6 +421,23 @@
     </div>
     <!-- // 도움말 팝업 -->
     <!-- // modal -->
+    <!-- Toast -->
+    <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+        <div id="AddToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
+            <div class="toast-header">
+                <img src="..." class="rounded mr-2" alt="...">
+                <strong class="mr-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                내용을 입력해주세요
+            </div>
+        </div>
+    </div>
+    <!-- // Toast -->
 </body>
 </html>
 

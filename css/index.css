@@ -407,6 +407,12 @@ button {
     height: 100%; }
     .full_modal .modal_body .pag_info_none.pag_sm_info_none {
       max-height: calc(100% - 24.21875vw); }
+      .full_modal .modal_body .inquiry_wrap .pag_info_none {
+        width: calc(100% + 80px);
+        max-height: calc(100% - 7.8125vw);
+        margin-left: -40px;
+        background-color: #fafafa;
+        border-top: 1px solid #d4d4d4; }
     .full_modal .modal_body .pag_info_none > span {
       display: block;
       line-height: 6.25000vw;
@@ -421,6 +427,8 @@ button {
         top: 0;
         left: 50%;
         margin-left: -5.37109vw; }
+      .full_modal .modal_body .pag_info_none > span > span {
+        line-height: 84px; }
   .full_modal .modal_body > .pop_btn_area {
     margin-top: 5.85938vw;
     text-align: right; }
@@ -472,6 +480,7 @@ button {
     font-size: 5.07813vw;
     color: #222; }
   .modal_body .pop_sub_info {
+    line-height: 60px;
     font-size: 3.90625vw;
     padding-bottom: 4.88281vw; }
   .modal_body .pop_sub_title + .search_form_wrap {
@@ -509,6 +518,16 @@ button {
     margin-top: 1.95313vw; }
   .modal_body .paging {
     padding-bottom: 7.81250vw; }
+
+.modal_footer {
+  text-align: center;
+  margin-top: 3.90625vw; }
+  .modal_footer.only > button {
+    width: 420px; }
+  .modal_footer > button {
+    height: 120px;
+    font-size: 40px;
+    font-weight: 500; }
 
 /* 토픽 출처 */
 .modal_body .summary_tit {
@@ -598,27 +617,14 @@ button {
   color: #333;
   padding: 2.73438vw 3.90625vw;
   margin-bottom: 1.95313vw; }
+  .site_add_wrap .search_box .form-control:last-child {
+    margin-bottom: 0; }
 
-<<<<<<< HEAD
-=======
-.site_add_wrap > .pop_btn_area {
-  margin-top: 5.85938vw;
-  text-align: right; }
-  .site_add_wrap > .pop_btn_area > button {
-    width: 18.55469vw;
-    height: 9.76563vw;
-    font-size: 3.51563vw;
-    font-weight: 500;
-    margin-left: 0.97656vw;
-    border-radius: 1.95313vw; }
-    .site_add_wrap > .pop_btn_area > button.btn_tertiary {
-      background-color: #eee;
-      border-color: #d4d4d4;
-      color: #333; }
-    .site_add_wrap > .pop_btn_area > button.btn_primary01 {
-      border-color: #d4d4d4; }
+.site_add_wrap .search_box.inquiry_box textarea.form-control {
+  height: 1000px;
+  padding: 3.90625vw 50px;
+  border-color: #d4d4d4; }
 
->>>>>>> 210274ad401c27964486d18a21d05f60d44d7c7f
 /* push 설정 */
 .push_wrap .push_all {
   padding: 65px 90px 55px 90px;
@@ -667,6 +673,7 @@ button {
 
 /* inquiry */
 .inquiry_wrap {
+  height: 100%;
   padding-top: 80px; }
   .inquiry_wrap .inquiry_btn {
     margin-top: -80px;
@@ -677,24 +684,30 @@ button {
       width: 190px;
       height: 100px;
       line-height: 100px;
+      font-weight: 500;
       padding: 0;
       text-align: center; }
   .inquiry_wrap .list_view .list_hd {
     padding-top: 1.95313vw;
     padding-bottom: 50px;
-    border-bottom: 4px solid #222; }
+    border-bottom: none; }
   .inquiry_wrap .list_view .inquiry_list {
-    overflow: hidden; }
+    overflow: hidden;
+    border-top: 4px solid #222; }
     .inquiry_wrap .list_view .inquiry_list > li {
       border-bottom: 1px solid #d4d4d4; }
       .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper {
         align-items: center; }
-        .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper .inquiry_del_btn {
-          min-width: 160px;
-          width: 160px;
-          max-width: 160px;
-          background-color: #2C8DFB;
-          color: #fff; }
+        .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper .swiper-slide {
+          padding: 45px 20px; }
+          .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper .swiper-slide.inquiry_tit {
+            width: 100%; }
+            .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper .swiper-slide.inquiry_tit .tit > span {
+              font-weight: 400; }
+            .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper .swiper-slide.inquiry_tit .state {
+              text-align: center; }
+          .inquiry_wrap .list_view .inquiry_list > li .swiper-wrapper .swiper-slide.inquiry_del_btn {
+            width: 140px; }
       .inquiry_wrap .list_view .inquiry_list > li .inline_wrap {
         padding: 40px 20px; }
         .inquiry_wrap .list_view .inquiry_list > li .inline_wrap .tit > span, .inquiry_wrap .list_view .inquiry_list > li .inline_wrap .tit > strong {
@@ -1455,18 +1468,10 @@ button {
   color: #3b991a; }
 
 /* 자주 가는 웹 사이트 */
-.pop_sub_info02 {
-  padding: 25px 0; }
-
-.site_add_wrap {
-  margin-bottom: 95px; }
-
-.site_add_wrap .search_box {
-  margin-right: 0; }
-
-.site_add_wrap .search_box input {
-  margin-bottom: 10px; }
-
+/*.pop_sub_info02{padding:25px 0;}
+.site_add_wrap{margin-bottom:95px;}
+.site_add_wrap .search_box{margin-right:0;}
+.site_add_wrap .search_box input{margin-bottom:10px;}*/
 /* alert */
 .alert_modal_wrap {
   min-width: 350px;
