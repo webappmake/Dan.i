@@ -1557,11 +1557,11 @@ button {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 14.64844vw;
+  min-height: 14.64844vw;
   justify-content: center;
   align-items: center;
   margin: 4.88281vw -3.90625vw 0;
-  padding: 0 3.90625vw;
+  padding: 1.95313vw 3.90625vw;
   background-color: #fafafa; }
   .major_wrap .ic {
     width: 6.44531vw;
