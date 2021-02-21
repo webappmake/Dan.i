@@ -605,26 +605,6 @@ button {
   padding: 2.73438vw 3.90625vw;
   margin-bottom: 1.95313vw; }
 
-<<<<<<< HEAD
-=======
-.site_add_wrap > .pop_btn_area {
-  margin-top: 5.85938vw;
-  text-align: right; }
-  .site_add_wrap > .pop_btn_area > button {
-    width: 18.55469vw;
-    height: 9.76563vw;
-    font-size: 3.51563vw;
-    font-weight: 500;
-    margin-left: 0.97656vw;
-    border-radius: 1.95313vw; }
-    .site_add_wrap > .pop_btn_area > button.btn_tertiary {
-      background-color: #eee;
-      border-color: #d4d4d4;
-      color: #333; }
-    .site_add_wrap > .pop_btn_area > button.btn_primary01 {
-      border-color: #d4d4d4; }
-
->>>>>>> 210274ad401c27964486d18a21d05f60d44d7c7f
 /* push 설정 */
 .push_wrap .push_all {
   padding: 65px 90px 55px 90px;
