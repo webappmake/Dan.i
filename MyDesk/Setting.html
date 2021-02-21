@@ -287,10 +287,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="pop_btn_area">
-                        <button type="button" class="btn btn_tertiary" data-dismiss="modal" aria-hidden="true">취소</button>
-                        <button type="button" class="btn btn_primary btn_primary01">저장</button>
+                        <div class="pop_btn_area">
+                            <button type="button" class="btn btn_tertiary" data-dismiss="modal" aria-hidden="true">취소</button>
+                            <button type="button" class="btn btn_primary btn_primary01">저장</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -322,10 +322,10 @@
                                     <div class="inquiry_swiper">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide inline_wrap inquiry_tit">
-                                                <p class="tit">
+                                                <a href="#Pop_InquiryDetail" data-toggle="modal" class="tit">
                                                     <span>2020.10.09 12:23:11</span>
-                                                    <strong>시간표 공유 방법 알고 싶어요</strong>
-                                                </p>
+                                                    <strong>시간표 공유 방법 알고 싶어요(답변 X)</strong>
+                                                </a>
                                                 <!-- 답변 완료일 때 text_lightgray 클래스 추가 -->
                                                 <p class="state text_lightgray">답변완료</p>
                                             </div>
@@ -339,10 +339,10 @@
                                     <div class="inquiry_swiper">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide inline_wrap inquiry_tit">
-                                                <p class="tit">
+                                                <a href="#Pop_InquiryAnswer" data-toggle="modal" class="tit">
                                                     <span>2020.10.09 12:23:11</span>
-                                                    <strong>개인정보 설정 바꾸고 싶어요</strong>
-                                                </p>
+                                                    <strong>개인정보 설정 바꾸고 싶어요(답변 O)</strong>
+                                                </a>
                                                 <p class="state">답변준비중</p>
                                             </div>
                                             <div class="swiper-slide inquiry_del_btn">
@@ -382,7 +382,7 @@
     <div class="modal full_modal fade" id="Pop_InquiryAdd" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal_type_03">
             <div class="modal-content">
-                <div class="modal_header">
+                <div class="modal_header modal_header01">
                     <h5 class="pop_title">문의 등록</h5>
                     <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
                 </div>
@@ -394,24 +394,80 @@
                     </p>
                     <div class="site_add_wrap">
                         <p class="search_box inquiry_box">
-                            <textarea class="form-control" placeholder="내용을 입력하세요." maxlength="1000"></textarea>
+                            <textarea class="form-control text_box" placeholder="내용을 입력하세요." maxlength="1000"></textarea>
                         </p>
                     </div>
                     <div class="modal_footer only">
-                        <!-- 임시로 Tosat 팝업 호출하도록 적용해두었습니다. -->
-                        <button type="button" class="btn btn_primary btn_primary01" id="AddToastBtn">등록</button>
+                        <!-- Toast 호출 function -->
+                        <button type="button" class="btn btn_primary btn_primary01" onclick="fn_Toast()">등록</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- // 1 : 1 문의 등록 팝업 -->
+    <!-- 1 : 1 문의 상세(답변 없는 버전) 팝업 -->
+    <div class="modal full_modal fade" id="Pop_InquiryDetail" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal_header modal_header01">
+                    <h5 class="pop_title">문의상세</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
+                </div>
+                <div class="modal_body modal_body02">
+                    <div class="answer_wrap">
+                        <dl class="answer_box">
+                            <dt>문의내용</dt>
+                            <dd>
+                                <textarea class="form-control text_box">#입력한 문의내용이 표기됩니다#</textarea>
+                            </dd>
+                        </dl>
+                        <div class="pop_btn_area">
+                            <button type="button" class="btn btn_tertiary btn_tertiary02">삭제</button>
+                            <button type="button" class="btn btn_tertiary btn_tertiary01">수정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 1 : 1 문의 상세(답변 없는 버전) 팝업 -->
+    <!-- 1 : 1 문의 상세(답변 있는 버전) 팝업 -->
+    <div class="modal full_modal fade" id="Pop_InquiryAnswer" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal_header modal_header01">
+                    <h5 class="pop_title">문의상세</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
+                </div>
+                <div class="modal_body modal_body02">
+                    <div class="answer_wrap">
+                        <dl class="answer_box">
+                            <dt>문의내용</dt>
+                            <dd>
+                                <textarea class="form-control text_box md" readonly="readonly">#입력한 문의내용이 표기됩니다#</textarea>
+                            </dd>
+                            <dt>답변내용</dt>
+                            <dd>
+                                <textarea class="form-control text_box md">#입력한 문의내용이 표기됩니다#</textarea>
+                            </dd>
+                        </dl>
+                        <div class="modal_footer only">
+                            <button type="button" class="btn btn_tertiary btn_tertiary01" data-dismiss="modal" aria-label="Close">목록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 1 : 1 문의 상세(답변 있는 버전) 팝업 -->
     <!-- 도움말 팝업 -->
     <div class="modal full_modal fade" id="Pop_Help" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal_type_03">
             <div class="modal-content">
                 <div class="modal_header">
                     <h5 class="pop_title">도움말</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
                 </div>
                 <div class="modal_body">
                     TBD
@@ -422,20 +478,8 @@
     <!-- // 도움말 팝업 -->
     <!-- // modal -->
     <!-- Toast -->
-    <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
-        <div id="AddToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
-            <div class="toast-header">
-                <img src="..." class="rounded mr-2" alt="...">
-                <strong class="mr-auto">Bootstrap</strong>
-                <small>11 mins ago</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="toast-body">
-                내용을 입력해주세요
-            </div>
-        </div>
+    <div class="toast hide" data-delay="1000">
+        <div class="toast_txt">내용을 입력해주세요</div>
     </div>
     <!-- // Toast -->
 </body>

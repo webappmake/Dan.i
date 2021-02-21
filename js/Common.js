@@ -99,3 +99,7 @@ function scroll_top() {
         $(".btn_top").fadeIn("fast");
     }
 };
+
+function fn_Toast() {
+    $(".toast").toast('show')
+}
