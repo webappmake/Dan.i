@@ -1659,12 +1659,12 @@ button {
   .label_round + .desc {
     margin-left: 2.34375vw; }
 
-.like_btn_list {
+.btn_like_list {
   padding: 0 3.90625vw; }
-  .like_btn_list .tit {
+  .btn_like_list .tit {
     margin: 1.95313vw 0 0.97656vw; }
 
-.like_btn {
+.btn_like {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1673,23 +1673,51 @@ button {
   height: 6.34766vw;
   justify-content: center;
   align-items: center;
+  border: 0.09766vw solid #d5d5d5;
   border-radius: 6.34766vw;
   background-color: #fff; }
-  .like_btn .ic {
+  .btn_like .ic {
     width: 3.80859vw;
     height: 3.80859vw; }
-  .like_btn .num {
+  .btn_like .num {
     font-size: 3.41797vw;
     color: #333;
     margin-left: 0.97656vw; }
-  .topic_box .like_btn {
-    margin: 30px 0 0 3.90625vw; }
 
 .bg_gray {
   background-color: #f5f5f5; }
 
+.tit_lg {
+  font-size: 4.29688vw !important; }
+
 .list_scrap {
-  border: 0.09766vw solid #d4d4d4; }
+  border: 0.09766vw solid #d4d4d4;
+  padding: 3.90625vw; }
+  .list_scrap > a {
+    display: block; }
+    .list_scrap > a .tit {
+      margin-bottom: 1.95313vw; }
+  .list_scrap > .btn_like {
+    margin: 2.92969vw 0 3.90625vw 0; }
+  .list_scrap > .btn_scrap_wrap {
+    border-top: 0.09766vw solid #d4d4d4;
+    margin: 0 -3.90625vw;
+    padding: 3.90625vw 3.90625vw 0; }
+    .list_scrap > .btn_scrap_wrap > .btn_scrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .list_scrap > .btn_scrap_wrap > .btn_scrap > .ic {
+        width: 5.46875vw;
+        height: 5.46875vw;
+        margin-top: -0.97656vw; }
+      .list_scrap > .btn_scrap_wrap > .btn_scrap > span {
+        font-size: 3.90625vw;
+        font-weight: 600;
+        margin-left: 1.95313vw; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
@@ -1739,6 +1767,18 @@ button {
     background-position: -27.24609vw -32.81250vw; }
   .ic.unlike {
     background-position: -23.43750vw -32.81250vw; }
+  .ic.circle_delete {
+    border-radius: 50%; }
+  .ic.ic_push {
+    background-position: 0 -40.62500vw; }
+  .ic.ic_inquiry {
+    background-position: -5.07813vw -40.62500vw; }
+  .ic.ic_help {
+    background-position: -10.15625vw -40.62500vw; }
+  .ic.ic_version {
+    background-position: -15.23438vw -40.62500vw; }
+  .ic.ic_scrap {
+    background-position: -36.52344vw -32.81250vw; }
 
 .ic_before {
   position: relative; }
@@ -1973,6 +2013,12 @@ button {
 
 .text_blue {
   color: #0054a3 !important; }
+
+.text_red {
+  color: #b70000 !important; }
+
+.text_lightgray {
+  color: #888 !important; }
 
 .text_darkgray {
   color: #555 !important; }

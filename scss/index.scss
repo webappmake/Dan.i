@@ -27,7 +27,12 @@
   &.circle_add { background-position: -57.71484vw -18.55469vw; }
   &.like { background-position: -27.24609vw -32.81250vw; }
   &.unlike { background-position: -23.43750vw -32.81250vw; }
-
+  &.circle_delete {border-radius:50%;}
+  &.ic_push{background-position:0 -40.62500vw;}
+  &.ic_inquiry{background-position:-5.07813vw -40.62500vw;}
+  &.ic_help{background-position:-10.15625vw -40.62500vw;}
+  &.ic_version{background-position:-15.23438vw -40.62500vw;}
+  &.ic_scrap { background-position: -36.52344vw -32.81250vw; }
 }
 .ic_before{
   position:relative;
@@ -224,7 +229,10 @@
   }
 }
 .text_blue { color: $color_primary !important; }
+.text_red{color:$color_red !important;}
+.text_lightgray{color:$font_gray !important;}
 .text_darkgray { color: $font_darkgray !important; }
+
 /* ------------------------------------------------------- COMMON > FORM 관련 ------------------------------------------------------- */
 .btn {
   background-color: transparent;
