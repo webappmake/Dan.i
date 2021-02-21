@@ -510,12 +510,13 @@ select.form-control {
   }
 }
 //리스트 디자인 중 토픽 삭제 버튼 리스트
-.list_view {
+.list_view, .list_view_type01 {
   .list_cont, .list_cont_box {
     .list_modify { 
       & > li {
         padding: 0 !important;
         margin: 0 !important;
+        border: 0 !important;
         border-bottom: 0.09766vw solid $border !important;
         background-color: #fff;
         &:first-child { border-top: 0.19531vw solid $border !important; }
