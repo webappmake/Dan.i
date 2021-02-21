@@ -157,3 +157,10 @@
     }
   }
 }
+.pag_info_none.full_gray {
+  min-height: calc(100vh - #{$header_height} - #{$footer_height} - #{$nav_height});
+  // 추가로 상단 높이를 빼야하는데 상단에 '.filter_list' 높이가 유동적이라 계산식이 안됨.
+  // 협의 후 최소 높잉를 지정 필요.    
+  background-color: #fafafa;
+  border: 0.09766vw solid $border;
+}

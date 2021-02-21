@@ -1644,6 +1644,11 @@ button {
           width: 5.76172vw;
           height: 5.76172vw; }
 
+.pag_info_none.full_gray {
+  min-height: calc(100vh - 11.71875vw - 18.55469vw - 11.71875vw);
+  background-color: #fafafa;
+  border: 0.09766vw solid #d4d4d4; }
+
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
