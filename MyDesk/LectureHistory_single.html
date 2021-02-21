@@ -57,14 +57,6 @@
 				<p class="major_wrap">
 					<i class="ic major_lg"></i><span>문과대학 국어국문학과</span>
 				</p>
-				<!-- <div class="control_wrap only">
-					<p class="sel_area">
-						<select class="form-control" id="select_01" name="budget">
-							<option value="#">전체</option>
-						</select>
-					</p>
-					<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
-				</div> -->
 				<div class="accordion" id="myAccordion">
 					<div class="card">
 						<div class="card-header" id="headingOne">
@@ -604,7 +596,13 @@
 										<option value="#">전체</option>
 									</select>
 								</p>
-								<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter active" onclick="fn_Toggle(this);">교과목명</span>
+									</div>
+								</div>
 							</div>
 						</div><!--//.list_hd-->
 						<div class="list_cont list_cont_box">

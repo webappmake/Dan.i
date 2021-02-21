@@ -529,6 +529,26 @@ select.form-control {
     }
   }
 }
+.list_modify { 
+  & > li {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-bottom: 0.09766vw solid $border !important;
+    background-color: #fff;
+    &:first-child { border-top: 0.19531vw solid $border !important; }
+    .inline_wrap {
+      min-height: 11.71875vw;
+      padding: $gutter_sm 2.44141vw !important;
+    }
+  }
+  .a_btn_white {
+    width: 100%;
+    font-size: 3.90625vw;
+    border-radius: 0;
+    margin-top: 5.85938vw;
+  }
+}
 //리스트 내 공통 전체보기 버튼
 .list_view {
   .list + .a_btn_white,

@@ -1,4 +1,5 @@
-﻿.accordion {
+﻿.modal_body .list .tit { font-size: 3.90625vw; }
+.accordion {
   margin: 0 -3.90625vw;
   .card { 
     @include shadow_accodion;
