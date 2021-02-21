@@ -1644,81 +1644,6 @@ button {
           width: 5.76172vw;
           height: 5.76172vw; }
 
-.label_round {
-  width: 16.50391vw;
-  height: 6.34766vw;
-  display: inline-block;
-  line-height: 6.34766vw;
-  text-align: center;
-  font-size: 3.22266vw;
-  font-weight: 600;
-  color: #555;
-  border: 0.09766vw solid #555;
-  border-radius: 6.34766vw;
-  background-color: #fff; }
-  .label_round + .desc {
-    margin-left: 2.34375vw; }
-
-.btn_like_list {
-  padding: 0 3.90625vw; }
-  .btn_like_list .tit {
-    margin: 1.95313vw 0 0.97656vw; }
-
-.btn_like {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 15.62500vw;
-  height: 6.34766vw;
-  justify-content: center;
-  align-items: center;
-  border: 0.09766vw solid #d5d5d5;
-  border-radius: 6.34766vw;
-  background-color: #fff; }
-  .btn_like .ic {
-    width: 3.80859vw;
-    height: 3.80859vw; }
-  .btn_like .num {
-    font-size: 3.41797vw;
-    color: #333;
-    margin-left: 0.97656vw; }
-
-.bg_gray {
-  background-color: #f5f5f5; }
-
-.tit_lg {
-  font-size: 4.29688vw !important; }
-
-.list_scrap {
-  padding: 3.90625vw; }
-  .list_scrap > a {
-    display: block; }
-    .list_scrap > a .tit {
-      margin-bottom: 1.95313vw; }
-  .list_scrap > .btn_like {
-    margin: 2.92969vw 0 3.90625vw 0; }
-  .list_scrap > .btn_scrap_wrap {
-    border-top: 0.09766vw solid #d4d4d4;
-    margin: 0 -3.90625vw -1.95313vw;
-    padding: 1.95313vw 1.95313vw 0; }
-    .list_scrap > .btn_scrap_wrap > .btn_scrap {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px; }
-      .list_scrap > .btn_scrap_wrap > .btn_scrap > .ic {
-        width: 5.46875vw;
-        height: 5.46875vw;
-        margin-top: -0.97656vw; }
-      .list_scrap > .btn_scrap_wrap > .btn_scrap > span {
-        font-size: 3.90625vw;
-        font-weight: 600;
-        margin-left: 1.95313vw; }
-
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
@@ -1987,6 +1912,8 @@ button {
   font-size: 3.90625vw;
   font-weight: 500;
   line-height: 1.25; }
+  .tit .tit_lg {
+    font-size: 4.29688vw !important; }
   .cont_hd > .tit {
     font-weight: 400;
     line-height: 1.5;
@@ -2022,6 +1949,9 @@ button {
 
 .text_darkgray {
   color: #555 !important; }
+
+.bg_gray {
+  background-color: #f5f5f5; }
 
 /* ------------------------------------------------------- COMMON > FORM 관련 ------------------------------------------------------- */
 .btn {
@@ -2121,6 +2051,46 @@ select.form-control {
     width: 100%;
     justify-content: flex-end;
     margin: 1.95313vw 0; }
+
+.label_round {
+  width: 16.50391vw;
+  height: 6.34766vw;
+  display: inline-block;
+  line-height: 6.34766vw;
+  text-align: center;
+  font-size: 3.22266vw;
+  font-weight: 600;
+  color: #555;
+  border: 0.09766vw solid #555;
+  border-radius: 6.34766vw;
+  background-color: #fff; }
+  .label_round + .desc {
+    margin-left: 2.34375vw; }
+
+.btn_like_list {
+  padding: 0 3.90625vw; }
+  .btn_like_list .tit {
+    margin: 1.95313vw 0 0.97656vw; }
+
+.btn_like {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 15.62500vw;
+  height: 6.34766vw;
+  justify-content: center;
+  align-items: center;
+  border: 0.09766vw solid #d5d5d5;
+  border-radius: 6.34766vw;
+  background-color: #fff; }
+  .btn_like .ic {
+    width: 3.80859vw;
+    height: 3.80859vw; }
+  .btn_like .num {
+    font-size: 3.41797vw;
+    color: #333;
+    margin-left: 0.97656vw; }
 
 /* ------------------------------------------------------- COMMON > CLASS > .inline_wrap ------------------------------------------------------- */
 .inline_wrap {
@@ -2320,6 +2290,35 @@ select.form-control {
   font-size: 3.90625vw;
   border-radius: 0;
   margin-top: 5.85938vw; }
+
+.list_scrap {
+  padding: 3.90625vw; }
+  .list_scrap > a {
+    display: block; }
+    .list_scrap > a .tit {
+      margin-bottom: 1.95313vw; }
+  .list_scrap > .btn_like {
+    margin: 2.92969vw 0 3.90625vw 0; }
+  .list_scrap > .btn_scrap_wrap {
+    border-top: 0.09766vw solid #d4d4d4;
+    margin: 0 -3.90625vw -1.95313vw;
+    padding: 1.95313vw 1.95313vw 0; }
+    .list_scrap > .btn_scrap_wrap > .btn_scrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; }
+      .list_scrap > .btn_scrap_wrap > .btn_scrap > .ic {
+        width: 5.46875vw;
+        height: 5.46875vw;
+        margin-top: -0.97656vw; }
+      .list_scrap > .btn_scrap_wrap > .btn_scrap > span {
+        font-size: 3.90625vw;
+        font-weight: 600;
+        margin-left: 1.95313vw; }
 
 /* ------------------------------------------------------- COMMON > CLASS > .pag_info_none ------------------------------------------------------- */
 .pag_info_none {

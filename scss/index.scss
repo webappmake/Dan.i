@@ -201,6 +201,7 @@
   font-size: 3.90625vw;
   font-weight: 500;
   line-height: 1.25;
+  .tit_lg { font-size: 4.29688vw !important; }
   @at-root .cont_hd > .tit { 
     font-weight: 400;
     line-height: 1.5; 
@@ -232,7 +233,7 @@
 .text_red{color:$color_red !important;}
 .text_lightgray{color:$font_gray !important;}
 .text_darkgray { color: $font_darkgray !important; }
-
+.bg_gray { background-color: #f5f5f5; }
 /* ------------------------------------------------------- COMMON > FORM 관련 ------------------------------------------------------- */
 .btn {
   background-color: transparent;
@@ -303,6 +304,36 @@ select.form-control {
     justify-content: flex-end; 
     margin: $gutter_sm 0;
   }
+}
+.label_round {
+  width: 16.50391vw;
+  height: 6.34766vw;
+  display: inline-block;
+  line-height: 6.34766vw;
+  text-align: center;
+  font-size: 3.22266vw;
+  font-weight: 600;
+  color: #555;
+  border: 0.09766vw solid #555;
+  border-radius: 6.34766vw;
+  background-color: #fff;
+  & + .desc { margin-left: 2.34375vw; }
+}
+.btn_like_list {
+  padding: 0 $gutter_md;
+  .tit { margin: $gutter_sm 0 $gutter_xs; }
+}
+.btn_like {
+  @include flex;
+  min-width: 15.62500vw;
+  height: 6.34766vw;
+  justify-content: center;
+  align-items: center;
+  border: 0.09766vw solid #d5d5d5;
+  border-radius: 6.34766vw;
+  background-color: #fff;
+  .ic { width: 3.80859vw; height: 3.80859vw; }
+  .num { font-size: 3.41797vw; color: #333; margin-left: $gutter_xs; }
 }
 /* ------------------------------------------------------- COMMON > CLASS > .inline_wrap ------------------------------------------------------- */
 .inline_wrap {
@@ -504,6 +535,28 @@ select.form-control {
     font-size: 3.90625vw;
     border-radius: 0;
     margin-top: 5.85938vw;
+  }
+}
+//리스트 스크랩버튼 하단 배치
+.list_scrap {
+  padding: $gutter_md;
+  & > a {
+    display: block;
+    .tit { margin-bottom: $gutter_sm; }
+  }
+  & > .btn_like { margin: 2.92969vw 0 $gutter_md 0; }
+  & > .btn_scrap_wrap {
+    border-top: 0.09766vw solid $border;
+    margin: 0 -#{$gutter_md} -#{$gutter_sm};
+    padding: $gutter_sm $gutter_sm 0;
+    & > .btn_scrap {
+      @include flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; //눌렀을 때 모양때문에 추가
+      & > .ic { width: 5.46875vw; height: 5.46875vw; margin-top: -#{$gutter_xs}; }
+      & > span { font-size: 3.90625vw; font-weight: 600; margin-left: $gutter_sm; }
+    }
   }
 }
 /* ------------------------------------------------------- COMMON > CLASS > .pag_info_none ------------------------------------------------------- */
