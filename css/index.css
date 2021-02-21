@@ -2196,6 +2196,8 @@ select.form-control {
     padding: 1.17188vw 0; }
     .list_view .list_hd > div * {
       display: inline-block; }
+    .list_view .list_hd > div .filter_pop_list {
+      display: none; }
     .list_view .list_hd > div .tit {
       margin-right: 1.56250vw; }
   .list_view .list_cont .list > li {

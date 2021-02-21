@@ -376,6 +376,7 @@ select.form-control {
     padding: 1.17188vw 0;
     & > div {      
       * { display: inline-block; }
+      .filter_pop_list { display: none; }
       .tit{ margin-right: 1.56250vw; }
     } 
   }
