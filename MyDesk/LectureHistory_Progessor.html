@@ -71,9 +71,18 @@
 							<p class="sel_area">
 								<select class="form-control" id="select_01" name="budget">
 									<option value="#">전체</option>
+									<option value="#">2020학년도 1학기</option>
+									<option value="#">2019학년도 2학기</option>
+									<option value="#">2019학년도 1학기</option>
 								</select>
 							</p>
-							<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list">
+									<strong>정렬</strong>
+									<span class="toggle_filter" onclick="fn_Toggle(this);">연도/학기</span>
+								</div>
+							</div>
 						</div>
 					</div><!--//.list_hd-->
 					<div class="list_cont list_cont_box">
@@ -252,7 +261,13 @@
 										<option value="#">전체</option>
 									</select>
 								</p>
-								<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter active" onclick="fn_Toggle(this);">교과목명</span>
+									</div>
+								</div>
 							</div>
 						</div><!--//.list_hd-->
 						<div class="list_cont list_cont_box">
@@ -342,7 +357,7 @@
 						<ul class="nav nav_03" role="tablist">
 							<li role="presentation"><a class="active" href="#tab13" aria-controls="tab13" role="tab" data-toggle="tab">자동 추출 <span>10</span></a></li>
 							<li role="presentation"><a href="#tab15" aria-controls="tab15" role="tab" data-toggle="tab">교수자 등록 <span>08</span></a></li>
-							<li role="presentation"><a href="#tab14" aria-controls="tab14" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>	
+							<li role="presentation"><a href="#tab14" aria-controls="tab14" role="tab" data-toggle="tab">학생 등록 <span>02</span></a></li>
 						</ul>
 						<!-- Tab panes -->
 						<div class="tab-content">
@@ -355,13 +370,19 @@
 													<option value="#">전체</option>
 												</select>
 											</p> -->
-											<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+											<div class="filter_wrap">
+												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+												<div class="filter_pop_list">
+													<strong>정렬</strong>
+													<span class="toggle_filter" onclick="fn_Toggle(this);">빈도수</span>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="list_cont">
 										<ul class="list">
 											<li>
-												<div class="inline_wrap">
+												<div class="inline_wrap m0">
 													<h4 class="tit">국어학개론</h4>
 													<p class="icon_chk_wrap">
 														<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
@@ -393,38 +414,70 @@
 								</section>
 							</div>
 							<div role="tabpanel" class="tab-pane" id="tab14">
-								<div class="feedback_form">
-									<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-									<button type="submit" class="btn_submit">등록</button>
-								</div>
-								<ul class="list list_modify"> 
-									<li>
-										<div class="inline_wrap">
-											<h4 class="tit">Topic Name</h4>
-											<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
+								<section class="list_view">
+									<div class="list_hd">
+										<div class="control_wrap only m0">
+											<!-- <p class="sel_area">
+												<select class="form-control" id="select_01" name="budget">
+													<option value="#">전체</option>
+												</select>
+											</p> -->
+											<div class="filter_wrap">
+												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+												<div class="filter_pop_list">
+													<strong>정렬</strong>
+													<span class="toggle_filter" onclick="fn_Toggle(this);">빈도수</span>
+												</div>
+											</div>
 										</div>
-									</li>
-									<li>
-										<div class="inline_wrap">
-											<h4 class="tit">Topic Name</h4>
-										</div>
-									</li>
-								</ul>
-								<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+									</div>
+									<div class="list_cont">
+										<ul class="list list_modify"> 
+											<li>
+												<div class="inline_wrap">
+													<h4 class="tit">Topic Name</h4>
+													<button type="button" class="btn_delete"><i class="ic circle_delete">삭제</i></button>
+												</div>
+											</li>
+											<li>
+												<div class="inline_wrap">
+													<h4 class="tit">Topic Name</h4>
+												</div>
+											</li>
+										</ul>
+										<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+									</div>
+								</section>
 							</div>
 							<div role="tabpanel" class="tab-pane" id="tab15">
-								<div class="feedback_form">
-									<input type="text" placeholder="Topic을 추가할 수 있어요."/>
-									<button type="submit" class="btn_submit">등록</button>
-								</div>
-								<ul class="list list_modify"> 
-									<li>
-										<div class="inline_wrap">
-											<h4 class="tit">Topic Name</h4>
+								<section class="list_view">
+									<div class="list_hd">
+										<div class="control_wrap only m0">
+											<!-- <p class="sel_area">
+												<select class="form-control" id="select_01" name="budget">
+													<option value="#">전체</option>
+												</select>
+											</p> -->
+											<div class="filter_wrap">
+												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+												<div class="filter_pop_list">
+													<strong>정렬</strong>
+													<span class="toggle_filter" onclick="fn_Toggle(this);">빈도수</span>
+												</div>
+											</div>
 										</div>
-									</li>
-								</ul>
-								<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+									</div>
+									<div class="list_cont">
+										<ul class="list list_modify"> 
+											<li>
+												<div class="inline_wrap">
+													<h4 class="tit">Topic Name</h4>
+												</div>
+											</li>
+										</ul>
+										<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+									</div>
+								</section>
 							</div>
 						</div>
 					</div>					

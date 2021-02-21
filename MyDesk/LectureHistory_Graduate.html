@@ -89,7 +89,13 @@
 									<option value="#">전체</option>
 								</select>
 							</p>
-							<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list">
+									<strong>정렬</strong>
+									<span class="toggle_filter" onclick="fn_Toggle(this);">연도/학기</span>
+								</div>
+							</div>
 						</div>
 					</div><!--//.list_hd-->
 					<div class="list_cont list_cont_box">
@@ -269,7 +275,13 @@
 										<option value="#">전체</option>
 									</select>
 								</p> -->
-								<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter active" onclick="fn_Toggle(this);">교과목명</span>
+									</div>
+								</div>
 							</div>
 						</div><!--//.list_hd-->
 						<div class="list_cont list_cont_box">
@@ -373,9 +385,18 @@
 											<p class="sel_area">
 												<select class="form-control" id="select_01" name="budget">
 													<option value="#">전체</option>
+													<option value="#">주교재</option>
+													<option value="#">부교재</option>
+													<option value="#">참고문헌</option>
 												</select>
 											</p>
-											<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+											<div class="filter_wrap">
+												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+												<div class="filter_pop_list">
+													<strong>정렬</strong>
+													<span class="toggle_filter active" onclick="fn_Toggle(this);">교재명</span>
+												</div>
+											</div>
 										</div>
 									</div><!--//.list_hd-->
 									<div class="list_cont">
@@ -442,7 +463,13 @@
 								<section class="list_view list_view_type01">
 									<div class="list_hd">
 										<p class="desc">총 <span class="text_blue">N</span>개</p>
-										<button type="button" class="btn btn_select"><i class="ic selectbox">목록선택</i></button>
+										<div class="filter_wrap">
+											<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+											<div class="filter_pop_list">
+												<strong>정렬</strong>
+												<span class="toggle_filter active" onclick="fn_Toggle(this);">논문/연구명</span>
+											</div>
+										</div>
 									</div><!--//.list_hd-->
 									<div class="list_cont">
 										<ul class="list">
