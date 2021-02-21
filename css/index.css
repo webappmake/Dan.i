@@ -480,13 +480,10 @@ button {
     .modal_header.modal_header01 .btn_pop_close {
       width: 3.90625vw;
       height: 3.90625vw;
-      margin-top: -3.90625vw;
+      margin-top: -1.95313vw;
       left: auto;
       right: 3.90625vw; }
       .modal_header.modal_header01 .btn_pop_close .ic_pop_close {
-        width: 3.90625vw;
-        height: 3.90625vw;
-        margin-top: -3.90625vw;
         background-position: -19.53125vw -32.81250vw; }
 
 .modal_body {

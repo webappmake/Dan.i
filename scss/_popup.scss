@@ -173,8 +173,8 @@
     &.modal_header01{
         padding:$gutter_md;
         & .btn_pop_close{
-            width:3.90625vw; height:3.90625vw; margin-top:- #{$gutter_md}; left:auto; right:3.90625vw;
-            & .ic_pop_close{width:3.90625vw; height:3.90625vw; margin-top:- #{$gutter_md}; background-position:-19.53125vw -32.81250vw;}
+            width:3.90625vw; height:3.90625vw; margin-top:- #{$gutter_sm}; left:auto; right:3.90625vw;
+            & .ic_pop_close{background-position:-19.53125vw -32.81250vw;}
         }
     }
 
