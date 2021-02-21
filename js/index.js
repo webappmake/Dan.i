@@ -4,19 +4,17 @@
         //alert("팝업 오픈");        
     })
 
-
-
     $('.modal').on('hidden.bs.modal', function (e) {
         //alert("팝업 닫힘");
     });
 
     // 스크롤 여부에 따라 top 버튼 생성
-    $(window).scroll(function () {
+    $(".contents").scroll(function () {
         setTimeout(scroll_top, 0);//화살표가 반응하여 생기는 시간
     });
 
     $(".btn_top").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 400);//화살표 클릭시 화면 스크롤 속도
+        $(".contents").animate({ scrollTop: 0 }, 400);//화살표 클릭시 화면 스크롤 속도
         return false;
     });
 
@@ -29,7 +27,7 @@
         });
     };
 
-    $(window).scrollStopped(function () {
+    $(".contents").scrollStopped(function () {
         $(".btn_top").fadeOut("slow");
     });
 

@@ -33,6 +33,12 @@
   &.ic_help{background-position:-10.15625vw -40.62500vw;}
   &.ic_version{background-position:-15.23438vw -40.62500vw;}
   &.ic_scrap { background-position: -36.52344vw -32.81250vw; }
+  &.ic_top{background-position:-70.89844vw -5.85938vw; }
+  &.circle_delete {border-radius:50%;}
+  &.ic_push{background-position:0 -40.62500vw;}
+  &.ic_inquiry{background-position:-5.07813vw -40.62500vw;}
+  &.ic_help{background-position:-10.15625vw -40.62500vw;}
+  &.ic_version{background-position:-15.23438vw -40.62500vw;}
 }
 .ic_before{
   position:relative;
@@ -141,6 +147,16 @@
       overflow-y: auto;
       background-color: #fff;
       padding: 0 $gutter_md;
+      &.contents01{
+            padding:0;
+            & .cont_hd {
+                padding:0 $gutter_md;
+                & > .tit{
+                    margin-top:7.32422vw; margin-bottom:5.37109vw;
+                }
+            }
+                
+        }
     }
   }
 }
@@ -249,6 +265,12 @@
       border: 0.09766vw solid $border;
       border-radius: $radius_xs;
     }
+    &.btn_tertiary{
+        background-color:#eee; border-color:$border; color:#333;
+        &.btn_tertiary01{background-color:$color_white; border-color:#333; color:#333;}
+        &.btn_tertiary02{background-color:$color_white; border-color:$color_red; color:$color_red;}
+    }
+    &.btn_primary01{border-color:$border;}
 }
 .btn_delete {
   width: 8.78906vw;
@@ -575,7 +597,7 @@ select.form-control {
       @include flex;
       justify-content: center;
       align-items: center;
-      padding: 20px; //눌렀을 때 모양때문에 추가
+      padding: $gutter_sm; //눌렀을 때 모양때문에 추가
       & > .ic { width: 5.46875vw; height: 5.46875vw; margin-top: -#{$gutter_xs}; }
       & > span { font-size: 3.90625vw; font-weight: 600; margin-left: $gutter_sm; }
     }
@@ -880,17 +902,17 @@ select.form-control {
   .filter_pop_list { 
     display: none; 
     @include shadow_filter_pop_list;
-    font-size: 36px;
+    font-size: $font_size;
     background-color: #fff; 
     border: 0.09766vw solid #d4d4d4; 
     border-radius: $radius_xs; 
-    position: absolute; right: 0; top: 110px; z-index: 9; 
+    position: absolute; right: 0; top: 10.74219vw; z-index: 9; // 110px
     min-width: 30vw;
     & > strong { 
       display: block;
       text-align: center;
       color: #555; 
-      font-size: 36px;
+      font-size: $font_size;
       font-weight: 500;
       padding: $gutter_xs 0;
       border-bottom: 0.09766vw solid #d4d4d4;
@@ -898,22 +920,27 @@ select.form-control {
     & > .toggle_filter { 
       display: block; 
       width: 100%;
-      height: 100px;
-      line-height: 100px;
+      height: 9.76563vw; // 100px
+      line-height: 9.76563vw; // 100px
       padding: 0 $gutter_md;
-      font-size: 36px;
+      font-size: $font_size;
       color: #333;
       cursor: pointer;
       position: relative;
       &::before {
         content: '';
-        width: 40px;
-        height: 40px;
+        width: 3.90625vw;  // 40px
+        height: 3.90625vw; // 40px
         display: inline-block;
-        background: url(../images/icons_m.png) no-repeat -80px -336px / 97.65625vw auto;
-        position: absolute; top: 30px; right: 30px; 
+        background: url(../images/icons_m.png) no-repeat -7.81250vw -32.81250vw / 97.65625vw auto;// -80px -336px
+        position: absolute; top: 2.92969vw; right: 2.92969vw; // 30px
       }
       &.active::before { transform: rotate(-180deg); }
     }
   }
+}
+
+/* ------------------------------------------------------- top button ------------------------------------------------------- */
+.btn_top{
+    display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:1.95313vw; bottom:21.48438vw; z-index:999;
 }

@@ -47,6 +47,11 @@
                         centeredSlides: false,
                         grabCursor: true,
                     });
+
+					// 해당 function은 임시로 넣어두었습니다. (Common.js 하단)
+					// 페이지마다 메뉴 개수가 다르고 즐겨찾기, 설정과 같이 메뉴가 우측에 있어 잘려보이는 경우에 실행되도록 해주시면 됩니다.
+					// 디바이스 가로 크기보다 메뉴 가로 크기가 더 큰 경우 크기 구해서 페이지 로드시 위치 이동
+                    nav_position();
                 </script>
             </nav>
             <div class="contents contents01">
@@ -78,6 +83,8 @@
             </ul>
         </nav>
     </footer><!--//.footer-->
+    <button type="button" class="btn_icon btn_top"><i class="ic ic_top">상단으로 이동</i></button> <!-- top -->
+
     <!-- Modal -->
     <!-- Push 설정 팝업 -->
     <div class="modal full_modal fade" id="Pop_PushSetting" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
@@ -364,13 +371,13 @@
                             <!-- // 리스트 영역 -->
                         </div>
                         <!-- 문의내역 없을 경우 -->
-                        <div class="pag_info_none pag_sm_info_none">
+                        <!--<div class="pag_info_none pag_sm_info_none">
                             <span class="ic_before ic_info_lg">
                                 <span>등록된 문의가 없어요.</span><br />
                                 단아이(Dan.i)에게 문의하고 싶다면,<br />
                                 위 ‘문의등록’ 버튼을 선택해 주세요!
                             </span>
-                        </div>
+                        </div>-->
                         <!-- // 문의내역 없을 경우 -->
                     </div>
                 </div>

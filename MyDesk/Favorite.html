@@ -47,6 +47,11 @@
 						centeredSlides: false,
 						grabCursor: true,
 					});
+
+					// 해당 function은 임시로 넣어두었습니다. (Common.js 하단)
+					// 페이지마다 메뉴 개수가 다르고 즐겨찾기, 설정과 같이 메뉴가 우측에 있어 잘려보이는 경우에 실행되도록 해주시면 됩니다.
+					// 디바이스 가로 크기보다 메뉴 가로 크기가 더 큰 경우 크기 구해서 페이지 로드시 위치 이동
+					nav_position();
 				</script>
 			</nav>
 			<div class="contents contents01">
@@ -146,6 +151,7 @@
 			</ul>
 		</nav>
 	</footer><!--//.footer-->
+	<button type="button" class="btn_icon btn_top"><i class="ic ic_top">상단으로 이동</i></button> <!-- top -->
 	<!-- Modal -->
 	<!-- 자주 사용하는 App 팝업 -->
 	<div class="modal fade full_modal" id="Pop_FavoriteApp" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
