@@ -164,12 +164,18 @@
         width:100%; height:100%; overflow-y:auto;
         & .pag_info_none{
             display:flex; align-items:center; justify-content:center; width:100%; height:100%;
-            &.pag_sm_info_none{max-height:calc(100% - 24.21875vw);}
+            &.pag_sm_info_none{
+                max-height:calc(100% - 24.21875vw);
+                @at-root .full_modal .modal_body .inquiry_wrap .pag_info_none{
+                    width:calc(100% + 80px); max-height:calc(100% - 7.8125vw); margin-left:-40px; background-color:#fafafa; border-top:1px solid #d4d4d4;
+                }
+            }
             & > span{
             display:block; line-height:6.25000vw; font-family: $sub_font_family; font-weight: 300; font-size:4.29688vw; color:#999; padding-top:15.62500vw; text-align:center;
                 &:before{
                     position:absolute; top:0; left:50%; margin-left:-5.37109vw;
                 }
+                & > span{line-height:84px;}
             }
         }
         & > .pop_btn_area{
@@ -204,7 +210,7 @@
         font-family: $sub_font_family; font-size:5.07813vw; color:#222;
     }
     & .pop_sub_info{
-        font-size:3.90625vw; padding-bottom:4.88281vw;
+        line-height:60px; font-size:3.90625vw; padding-bottom:4.88281vw;
     }
     & .pop_sub_title + .search_form_wrap{
         margin-top:4.39453vw;
@@ -228,6 +234,19 @@
     }
 }
 
+.modal_footer{
+    text-align:center; margin-top:$gutter_md;
+    @at-root{
+        .modal_body .modal_footer{
+            
+        }
+    }
+    &.only{
+        & > button{width:420px;}
+    }
+    & > button{height:120px; font-size:40px; font-weight:500;}
+
+}
 
 /* 토픽 출처 */
 .modal_body .summary_tit {
@@ -312,7 +331,15 @@
 .site_add_wrap{
     
     & .search_box{
-        & .form-control{width:100%; height:9.76563vw; font-size:3.51563vw; color:#333; padding:2.73438vw $gutter_md; margin-bottom:$gutter_sm;}
+        & .form-control{
+            width:100%; height:9.76563vw; font-size:3.51563vw; color:#333; padding:2.73438vw $gutter_md; margin-bottom:$gutter_sm;
+            &:last-child{margin-bottom:0;}
+        }
+        &.inquiry_box{
+            & textarea.form-control{
+                height:1000px; padding:$gutter_md 50px; border-color:$border;
+            }
+        }
     }
 }
 
@@ -360,28 +387,34 @@
 
 /* inquiry */
 .inquiry_wrap{
-    padding-top:80px;
+    height:100%; padding-top:80px;
     & .inquiry_btn{
         margin-top:-80px; text-align:right;
-        & > a{display:inline-block; vertical-align:middle; width:190px; height:100px; line-height:100px; padding:0; text-align:center;}
+        & > a{display:inline-block; vertical-align:middle; width:190px; height:100px; line-height:100px; font-weight:500; padding:0; text-align:center;}
     }
     & .list_view{
         & .list_hd{
-            padding-top:$gutter_sm; padding-bottom:50px; border-bottom:4px solid $border_dark;
+            padding-top:$gutter_sm; padding-bottom:50px; border-bottom:none;
         }
         & .inquiry_list{
-            overflow:hidden;
+            overflow:hidden; border-top:4px solid $border_dark;
             & > li{
                 border-bottom:1px solid #d4d4d4;
                 & .swiper-wrapper{
                     align-items:center;
-                    & .inquiry_del_btn{
-                        	min-width: 160px;
-			width: 160px;
-			max-width: 160px;
+                    & .swiper-slide{
+                        padding:45px 20px;
+                        &.inquiry_tit{
+                            width:100%;
+                            & .tit{
+                                & > span{font-weight:400;}
+                            }
+                            & .state{text-align:center;}
 
-			background-color: #2C8DFB;
-			color: #fff;
+                        }
+                        &.inquiry_del_btn{
+                         width:140px;
+                        }
                     }
                 }
                 & .inline_wrap{
@@ -401,7 +434,6 @@
 
     }
     
-
     & .tbl_area{
         max-height:inherit;
         & .tbl{
@@ -658,10 +690,10 @@
 .search_result_area > dd .near_list > li .near_btn a strong{color:#3b991a;}
 
 /* 자주 가는 웹 사이트 */
-.pop_sub_info02{padding:25px 0;}
+/*.pop_sub_info02{padding:25px 0;}
 .site_add_wrap{margin-bottom:95px;}
 .site_add_wrap .search_box{margin-right:0;}
-.site_add_wrap .search_box input{margin-bottom:10px;}
+.site_add_wrap .search_box input{margin-bottom:10px;}*/
 
 
 
