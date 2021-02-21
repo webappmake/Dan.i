@@ -471,19 +471,22 @@ select.form-control {
   }
 }
 //리스트 디자인 중 토픽 삭제 버튼 리스트
-.list_modify { 
-  & > li {
-    padding: 0 !important;
-    margin: 0 !important;
-    border-bottom: 0.09766vw solid $border !important;
-    background-color: #fff;
-    &:first-child { border-top: 0.19531vw solid $border !important; }
-    .inline_wrap {
-      min-height: 11.71875vw;
-      padding: $gutter_sm 2.44141vw !important;
+.list_view {
+  .list_cont, .list_cont_box {
+    .list_modify { 
+      & > li {
+        padding: 0 !important;
+        margin: 0 !important;
+        border-bottom: 0.09766vw solid $border !important;
+        background-color: #fff;
+        &:first-child { border-top: 0.19531vw solid $border !important; }
+        .inline_wrap {
+          min-height: 11.71875vw;
+          padding: $gutter_sm 2.44141vw !important;
+        }
+      }
     }
   }
-  @at-root .list_view .list_cont.list_cont_box .list.list_modify > li { margin: 0 !important; }
 }
 //리스트 내 공통 전체보기 버튼
 .list_view {

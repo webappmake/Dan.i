@@ -2257,19 +2257,16 @@ select.form-control {
   background-color: #fafafa;
   border: 0.09766vw solid #d4d4d4; }
 
-.list_modify > li {
+.list_view .list_cont .list_modify > li, .list_view .list_cont_box .list_modify > li {
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: 0.09766vw solid #d4d4d4 !important;
   background-color: #fff; }
-  .list_modify > li:first-child {
+  .list_view .list_cont .list_modify > li:first-child, .list_view .list_cont_box .list_modify > li:first-child {
     border-top: 0.19531vw solid #d4d4d4 !important; }
-  .list_modify > li .inline_wrap {
+  .list_view .list_cont .list_modify > li .inline_wrap, .list_view .list_cont_box .list_modify > li .inline_wrap {
     min-height: 11.71875vw;
     padding: 1.95313vw 2.44141vw !important; }
-
-.list_view .list_cont.list_cont_box .list.list_modify > li {
-  margin: 0 !important; }
 
 .list_view .list + .a_btn_white,
 .list_view .a_btn_white {
