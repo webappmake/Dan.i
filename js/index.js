@@ -1,8 +1,18 @@
 ﻿$(document).ready(function () {
     // modal custom
-    $('.modal').on('show.bs.modal', function (e) {
+    $('#Pop_Inquiry').on('shown.bs.modal', function (e) {
         //alert("팝업 오픈");
+        modalSwiper = new Swiper('.inquiry_swiper', {
+            slidesPerView: 'auto',
+            initialSlide: 1,
+            resistanceRatio: 0,
+            slideToClickedSlide: true,
+        });
+
+        modalSwiper.update();
     })
+
+
 
     $('.modal').on('hidden.bs.modal', function (e) {
         //alert("팝업 닫힘");

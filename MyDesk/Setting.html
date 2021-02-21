@@ -1,473 +1,391 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>설정</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-	<!--lib-->
-	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
-	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/lib/swiper.css">
-	<script type="text/javascript" src="../js/common.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
-	<!--custom-->
-	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>설정</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <!--lib-->
+    <script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/lib/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lib/swiper.css">
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
 </head>
 <body>
-	<header class="header">
-		<h1 class="logo">
-			<a href="index.html"><i class="ic logo">Dan.i</i></a>
-		</h1>
-		<div class="location">
-			<!-- 알림이 있을 경우 on 클래스 추가 -->
-			<a href="#" class="ico_noti"><i class="ic alert">알림</i></a>
-		</div>
-	</header><!--//.header-->
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html"><i class="ic logo">Dan.i</i></a>
+        </h1>
+        <div class="location">
+            <!-- 알림이 있을 경우 on 클래스 추가 -->
+            <a href="#" class="ico_noti"><i class="ic alert">알림</i></a>
+        </div>
+    </header><!--//.header-->
 
-	<div class="container-wrap">
-		<div class="container">
-			<nav class="nav_select_swiper">
-				<h2 class="skip">2차메뉴</h2>
-				<ul class="sub_menu swiper-wrapper">
-					<li class="swiper-slide active"><a href="AnalysisTopic.html">분석토픽</a></li>
-					<li class="swiper-slide"><a href="InterestTopic.html">관심토픽</a></li>
-					<li class="swiper-slide"><a href="LectureHistory_plural.html">수강이력</a></li>
-					<li class="swiper-slide"><a href="Curriculum_plural.html">교과과정</a></li>
-					<li class="swiper-slide"><a href="Scrap.html">스크랩</a></li>
-					<li class="swiper-slide"><a href="Favorite.html">즐겨찾기</a></li>
-					<li class="swiper-slide active"><a href="Setting.html">설정</a></li>
-				</ul>
-				<script>
-					var swiper = new Swiper('.nav_select_swiper', {
-						slidesPerView: 4,
-						centeredSlides: false,
-						grabCursor: true,
-					});
-				</script>
-			</nav>
-			<div class="contents contents01">
-				<div class="set_wrap">
-					<p class="user_info">
-						<strong>#김단국# (학부-재학생)</strong>
-						<span>죽전캠퍼스 | 문과대학 국어국문학과</span>
-						<a href="#" class="a_btn a_btn_gray logout">로그아웃</a>
-					</p>
-					<ul class="set_list">
-						<li><a href="#Pop_PushSetting" data-toggle="modal"><i class="ic ic_push"></i><span>Push 설정</span></a></li>
-						<li><a href="#Pop_Inquiry" data-toggle="modal"><i class="ic ic_inquiry"></i><span>1:1 문의</span></a></li>
-						<li><a href="#Pop_Help" data-toggle="modal"><i class="ic ic_help"></i><span class="icon_before icon_help">도움말</span></a></li>
-						<li class="version_area"><i class="ic ic_version"></i><span>버전정보</span><span class="version">0.0.0</span></li>
-					</ul>
-				</div>
-			</div><!--//.contents-->
-		</div><!--//.container-->
-	</div><!--//.container-wrap-->
-	<footer class="footer">
-		<nav class="footer_nav">
-			<h2 class="skip">1차메뉴</h2>
-			<ul class="main_menu">
-				<li class="my_desk active"><a href="#">MY-Desk</a></li>
-				<li class="department_lounge"><a href="#">학과라운지</a></li>
-				<li class="subject"><a href="#">교과/비교과</a></li>
-				<li class="recruit"><a href="#">채용</a></li>
-				<li class="chatbot"><a href="#">챗봇</a></li>
-			</ul>
-		</nav>
-	</footer><!--//.footer-->
-	<!-- Modal -->
-	<!-- Push 설정 팝업 -->
-	<div class="modal full_modal fade" id="Pop_PushSetting" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal_type_03">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h5 class="pop_title">Push 설정</h5>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body modal_body02">
-					<div class="push_wrap">
-						<p class="icon_chk_wrap push_all">
-							<input type="checkbox" class="icon_chk icon_chk_use" id="PushAll" />
-							<label for="PushAll">전체 Push 알림 받기</label>
-						</p>
-						<div class="push_area">
-							<ul class="topic_list push_list">
-								<li>
-									<div class="relation_box push_box">
-										<strong class="p_main_title">주간브리핑</strong>
-										<span class="p_sub_title">지난 주 활동한 정보들을 정리해 알려드려요.</span>
-										<p class="icon_chk_wrap">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="WeekBriefing">
-											<label for="WeekBriefing">주간브리핑 알림 받기</label>
-										</p>
-									</div>
-									<ul class="rel_topic_list push_sub_list">
-										<li>
-											<strong>지난주 출결 현황</strong>
-											<span class="p_sub_title only">지난주 출결 현황을 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="LastAttendanceStatus">
-												<label for="LastAttendanceStatus">지난 주 출결 현황 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>지난주 지식 토픽</strong>
-											<span class="p_sub_title only">지난주 지식 토픽을 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="KnowledgeTopic">
-												<label for="KnowledgeTopic">지난 주 지식 토픽 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>지난주 신규 비교과 정보</strong>
-											<span class="p_sub_title only">지난주 신규 비교과 정보를 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="WeekBriefing" id="NewNonSubject">
-												<label for="NewNonSubject">지난 주 신규 비교과 정보 알림 받기</label>
-											</p>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<div class="relation_box push_box">
-										<strong class="p_main_title">오늘의 일정</strong>
-										<span class="p_sub_title">오늘의 일정을 정리해 알려드려요.</span>
-										<p class="rel_chk">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="TodaySchedule">
-											<label for="TodaySchedule">오늘의 일정 알림 받기</label>
-										</p>
-									</div>
-									<ul class="rel_topic_list push_sub_list">
-										<li>
-											<strong>학사일정</strong>
-											<span class="p_sub_title only">오늘 예정된 학사 일정을 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="GraduateSchedule">
-												<label for="GraduateSchedule">학사일정 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>학과 공지사항</strong>
-											<span class="p_sub_title only">오늘 새롭게 올라온 학과 공지사항을 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="GraduateNotice">
-												<label for="GraduateNotice">학과 공지사항 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>수업 공지사항</strong>
-											<span class="p_sub_title only">오늘 새롭게 올라온 수업 공지사항을 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="ClassNotice">
-												<label for="ClassNotice">수업 공지사항 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>오늘의 시간표</strong>
-											<span class="p_sub_title only">오늘의 수업 시간표을 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="TodayTimeTable">
-												<label for="TodayTimeTable">오늘의 시간표 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>관심 토픽 관련 채용 정보</strong>
-											<span class="p_sub_title only">관심 토픽 관련 실시간 채용 정보를 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="InterestTopic">
-												<label for="InterestTopic">관심 토픽 관련 채용 정보 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>날씨 정보</strong>
-											<span class="p_sub_title only">오늘 캠퍼스 날씨 정보를 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="WeatherInfomation">
-												<label for="WeatherInfomation">날씨 정보 알림 받기</label>
-											</p>
-										</li>
-										<li>
-											<strong>식단 정보</strong>
-											<span class="p_sub_title only">오늘 캠퍼스 식단 정보를 알려드려요.</span>
-											<p class="icon_chk_wrap">
-												<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="TodaySchedule" id="MenuInformation">
-												<label for="MenuInformation">식단 정보 알림 받기</label>
-											</p>
-										</li>
-									</ul>
-								</li>
-								<li>
-<<<<<<< HEAD
-									<div class="relation_box push_box">
-										<strong class="p_main_title">수업시간 안내</strong>
-										<span class="p_sub_title">수업 시간을 시작 시간 30분 전에 알려드려요.</span>
-										<p class="rel_chk">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="SchoolHour" id="SchoolHour">
-											<label for="SchoolHour">수업시간 안내 알림 받기</label>
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="relation_box push_box">
-										<strong class="p_main_title">출결현황</strong>
-										<span class="p_sub_title">수강하고 있는 강의의 출결 현황을 알려드려요.</span>
-										<p class="rel_chk">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="AttendanceStatus" id="AttendanceStatus">
-											<label for="AttendanceStatus">출결현황 알림 받기</label>
-										</p>
-									</div>
-=======
-									<a href="#" target="_blank" class="tit">창의적아이디어설계경진대회 1</a>
-									<p class="tit_info">죽전 | 학습역량지원 | 21.02.15</p>
-								</li>
-								<li>
-									<a href="#" target="_blank" class="tit">2020년 하반기 NCS 공기업 설명회</a>
-									<p class="tit_info">전체 | 취업지원 | 21.02.15</p>
->>>>>>> 2ce649ed96f8ef9e115c012581f20e074d6bc11b
-								</li>
-								<li>
-<<<<<<< HEAD
-									<div class="relation_box push_box">
-										<strong class="p_main_title">수업종료</strong>
-										<span class="p_sub_title">수업 종료 후 해당 수업의 토픽 정보를 알려드려요.</span>
-										<p class="rel_chk">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="FinishSchool" id="FinishSchool">
-											<label for="FinishSchool">수업종료 알림 받기</label>
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="relation_box push_box">
-										<strong class="p_main_title">문의답변</strong>
-										<span class="p_sub_title">문의하신 내용에 답변이 등록되면 알려드려요.</span>
-										<p class="rel_chk">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="InquiryAnswer" id="InquiryAnswer">
-											<label for="InquiryAnswer">문의답변 알림 받기</label>
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="relation_box push_box">
-										<strong class="p_main_title">관심 비교과 프로그램 안내</strong>
-										<span class="p_sub_title">관심 있는 비교과 프로그램을 안내해 드려요.</span>
-										<p class="rel_chk">
-											<input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="NonSubjectProgram" id="NonSubjectProgram">
-											<label for="NonSubjectProgram">관심 비교과 프로그램 안내 알림 받기</label>
-										</p>
-									</div>
-=======
-									<a href="#" target="_blank" class="tit">[블렌딩] KPOP 영상서비스 해외마케팅 모집</a>
-									<p class="tit_info">죽전 | 서울 | 블렌딩 | 21.02.15</p>
-								</li>
-								<li>
-									<a href="#" target="_blank" class="tit">㈜이카운트 신입사원 채용공고</a>
-									<p class="tit_info">공통 | 서울 | ㈜이카운트 | 21.02.15</p>
->>>>>>> 2ce649ed96f8ef9e115c012581f20e074d6bc11b
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="modal_footer">
-					<button type="button" class="btn btn_tertiary">취소</button>
-					<button type="button" class="btn btn_primary btn_primary01">저장</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<<<<<<< HEAD
-	<!-- // Push 설정 팝업 -->
-	<!-- 1 : 1 문의 팝업 -->
-	<div class="modal full_modal fade" id="Pop_Inquiry" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal_type_03">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h5 class="pop_title">1 : 1 문의</h5>
-=======
-	<!-- // 토픽 출처 정보 - 채용 팝업 -->
-	<!-- 교과개요 팝업 -->
-	<div class="modal fade full_modal" id="Pop_SubjectSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">교과개요</h3>
->>>>>>> 2ce649ed96f8ef9e115c012581f20e074d6bc11b
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<div class="modal_tab_area">
-						<ul class="modal_tab modal_tab2">
-							<li class="active" rel="modal_tab_box1">1 : 1 문의 목록</li>
-							<li rel="modal_tab_box2">1 : 1 문의 등록</li>
-						</ul>
-						<div class="modal_tab_con_area">
-							<form>
-								<!-- 1 : 1 문의 목록 -->
-								<div class="modal_tab_box active" id="modal_tab_box1">
-									<div class="tbl_wrap inquiry_tbl_wrap">
-										<div class="tbl_title_area">
-											<p class="tbl_count">총 <strong>12</strong>개</p>
-											<p class="tbl_btn">
-												<button type="button" class="btn btn_secondary">삭제</button>
-											</p>
-										</div>
-										<div class="tbl_area pop_tbl_area">
-											<table class="tbl tbl_list">
-												<colgroup>
-													<col style="width:60px" />
-													<col style="width:auto">
-													<col style="width:120px">
-												</colgroup>
-												<tbody>
-													<tr onclick="fn_InquiryOpen(this);">
-														<td onclick='event.cancelBubble=true;'>
-															<input type="checkbox" class="icon_chk icon_chk_notxt" id="tr1" />
-															<label for="tr1">1:1문의 선택</label>
-														</td>
-														<td class="ta_l">
-															<span class="p_sub_title">2020.10.09 12:23:11</span>
-															<strong class="p_main_title ellipsis" title="시간표 공유 방법 알고 싶어요">시간표 공유 방법 알고 싶어요</strong>
-														</td>
-														<td>
-															<!-- 답변 완료일 때 ft_gray 클래스 추가 -->
-															<span>답변준비중</span>
-														</td>
-													</tr>
-													<!-- 문의 & 답변 영역 -->
-													<tr class="tbl_answer_area">
-														<td colspan="3" class="answer_area">
-															<dl class="answer_box">
-																<dt>문의내용</dt>
-																<dd>
-																	<textarea class="form-control">다른 정보 불러오고 싶어요
-빠른 답변 부탁드립니다.</textarea>
-																</dd>
-															</dl>
-															<p class="inquiry_btn">
-																<button type="button" class="btn btn_secondary">삭제</button>
-																<button type="button" class="btn btn_tertiary btn_tertiary02">수정</button>
-															</p>
-															<button type="button" class="btn_icon btn_delete" onclick="fn_InquiryClose(this);"><span>문의 내용 닫기</span></button>
-														</td>
-													</tr>
-													<!-- // 문의 & 답변 영역 -->
-													<tr onclick="fn_InquiryOpen(this);">
-														<td onclick='event.cancelBubble=true;'>
-															<input type="checkbox" class="icon_chk icon_chk_notxt" id="tr1" />
-															<label for="tr1">1:1문의 선택</label>
-														</td>
-														<td class="ta_l">
-															<span class="p_sub_title">2020.10.09 12:23:11</span>
-															<strong class="p_main_title ellipsis" title="시간표 공유 방법 알고 싶어요">시간표 공유 방법 알고 싶어요</strong>
-														</td>
-														<td>
-															<!-- 답변 완료일 때 ft_gray 클래스 추가 -->
-															<span class="ft_gray">답변완료</span>
-														</td>
-													</tr>
-													<!-- 문의 & 답변 영역 -->
-													<tr class="tbl_answer_area">
-														<td colspan="3" class="answer_area">
-															<dl class="answer_box">
-																<dt>문의내용</dt>
-																<dd>
-																	<textarea class="form-control" readonly="readonly">다른 정보 불러오고 싶어요
-빠른 답변 부탁드립니다.</textarea>
-																</dd>
-																<dt>답변내용</dt>
-																<dd>
-																	<textarea class="form-control" readonly="readonly">빠른 시일 내 반영하도록 하겠습니다.</textarea>
-																</dd>
-															</dl>
-															<button type="button" class="btn_icon btn_delete" onclick="fn_InquiryClose(this);"><span>문의 내용 닫기</span></button>
-														</td>
-													</tr>
-													<!-- // 문의 & 답변 영역 -->
-												</tbody>
-											</table>
-										</div>
-									</div>
-									<div class="paging_area">
-										<ul class="paging">
-											<li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
-											<li class="active"><a href="#none">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
-										</ul>
-									</div>
-									<!-- 등록된 문의가 없을 경우 -->
-									<!--<p class="sub_tab_none sub_tab_none02">
-										<span>
-											등록된 문의가 없어요.<br />
-											단아이(Dan.i)에게 문의하고 싶다면,‘1:1 문의 등록’ 에서 문의를 작성해 주세요!
-
-										</span>
-									</p>-->
-									<!-- // 등록된 문의가 없을 경우 -->
-								</div>
-								<!-- // 1 : 1 문의 목록 -->
-								<!-- 1 : 1 문의 등록 -->
-								<div class="modal_tab_box" id="modal_tab_box2">
-									<div class="tbl_wrap inquiry_tbl_wrap">
-										<h6 class="pop_sub_info pop_sub_info01">
-											단아이(Dan.i) 이용 중 궁금하신 부분이 있다면 내용을 남겨주세요.<br />
-											검토 후에 답변 드리도록 하겠습니다.
-										</h6>
-										<p class="inquiry_box">
-											<textarea class="form-control" placeholder="내용을 입력하세요. (최대 1,000자 작성 가능)" maxlength="1000"></textarea>
-										</p>
-									</div>
-									<div class="modal-footer only">
-										<!-- 내용 미등록시 등록 버튼 비활성화 -->
-										<!--<button type="button" class="btn btn_primary btn_primary01" disabled="disabled">등록</button>-->
-										<button type="button" class="btn btn_primary btn_primary01">등록</button>
-									</div>
-								</div>
-								<!-- // 1 : 1 문의 등록 -->
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<<<<<<< HEAD
-	<!-- // 1 : 1 문의 팝업 -->
-	<!-- 도움말 팝업 -->
-	<div class="modal full_modal fade" id="Pop_Help" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal_type_03">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h5 class="pop_title">도움말</h5>
-=======
-	<!-- // 교과개요 팝업 -->
-	<!-- 선행/연계 팝업 -->
-	<div class="modal fade full_modal" id="Pop_RelationSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">선행/연계 교과</h3>
->>>>>>> 2ce649ed96f8ef9e115c012581f20e074d6bc11b
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal-body">
-					TBD
-				</div>
-			</div>
-		</div>
-	</div>
-<<<<<<< HEAD
-	<!-- // 도움말 팝업 -->
-=======
-	<!-- // 선행/연계 팝업 -->
->>>>>>> 2ce649ed96f8ef9e115c012581f20e074d6bc11b
-	<!-- // modal -->
+    <div class="container-wrap">
+        <div class="container">
+            <nav class="nav_select_swiper">
+                <h2 class="skip">2차메뉴</h2>
+                <ul class="sub_menu swiper-wrapper">
+                    <li class="swiper-slide"><a href="AnalysisTopic.html">분석토픽</a></li>
+                    <li class="swiper-slide"><a href="InterestTopic.html">관심토픽</a></li>
+                    <li class="swiper-slide"><a href="LectureHistory_plural.html">수강이력</a></li>
+                    <li class="swiper-slide"><a href="Curriculum_plural.html">교과과정</a></li>
+                    <li class="swiper-slide"><a href="Scrap.html">스크랩</a></li>
+                    <li class="swiper-slide"><a href="Favorite.html">즐겨찾기</a></li>
+                    <li class="swiper-slide active"><a href="Setting.html">설정</a></li>
+                </ul>
+                <script>
+                    var swiper = new Swiper('.nav_select_swiper', {
+                        slidesPerView: 4,
+                        centeredSlides: false,
+                        grabCursor: true,
+                    });
+                </script>
+            </nav>
+            <div class="contents contents01">
+                <div class="set_wrap">
+                    <p class="user_info">
+                        <strong>#김단국# (학부-재학생)</strong>
+                        <span>죽전캠퍼스 | 문과대학 국어국문학과</span>
+                        <a href="#" class="a_btn a_btn_gray logout">로그아웃</a>
+                    </p>
+                    <ul class="set_list">
+                        <li><a href="#Pop_PushSetting" data-toggle="modal"><i class="ic ic_push"></i><span>Push 설정</span></a></li>
+                        <li><a href="#Pop_Inquiry" data-toggle="modal"><i class="ic ic_inquiry"></i><span>1:1 문의</span></a></li>
+                        <li><a href="#Pop_Help" data-toggle="modal"><i class="ic ic_help"></i><span>도움말</span></a></li>
+                        <li class="version_area"><i class="ic ic_version"></i><span>버전정보</span><span class="version">0.0.0</span></li>
+                    </ul>
+                </div>
+            </div><!--//.contents-->
+        </div><!--//.container-->
+    </div><!--//.container-wrap-->
+    <footer class="footer">
+        <nav class="footer_nav">
+            <h2 class="skip">1차메뉴</h2>
+            <ul class="main_menu">
+                <li class="my_desk active"><a href="#">MY-Desk</a></li>
+                <li class="department_lounge"><a href="#">학과라운지</a></li>
+                <li class="subject"><a href="#">교과/비교과</a></li>
+                <li class="recruit"><a href="#">채용</a></li>
+                <li class="chatbot"><a href="#">챗봇</a></li>
+            </ul>
+        </nav>
+    </footer><!--//.footer-->
+    <!-- Modal -->
+    <!-- Push 설정 팝업 -->
+    <div class="modal full_modal fade" id="Pop_PushSetting" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <h5 class="pop_title">Push 설정</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
+                </div>
+                <div class="modal_body modal_body02">
+                    <div class="push_wrap">
+                        <p class="icon_chk_wrap push_all">
+                            <input type="checkbox" class="icon_chk icon_chk_use" id="PushAll" />
+                            <label for="PushAll">전체 Push 알림 받기</label>
+                        </p>
+                        <div class="list_view">
+                            <div class="list_cont list_cont_box">
+                                <ul class="list push_list">
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">주간브리핑</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="WeekBriefing" id="WeekBriefing">
+                                                    <label for="WeekBriefing">주간브리핑 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">지난 활동한 정보들을 정리해 알려드려요.</p>
+                                        </div>
+                                        <ul class="topic_list">
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">지난주 출결 현황</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="WeekBriefing" id="LastAttendanceStatus">
+                                                        <label for="LastAttendanceStatus">지난 주 출결 현황 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">지난주 출결 현황을 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">지난주 지식 토픽</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="WeekBriefing" id="KnowledgeTopic">
+                                                        <label for="KnowledgeTopic">지난 주 지식 토픽 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">지난주 지식 토픽을 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">지난주 신규 비교과 정보</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="WeekBriefing" id="NewNonSubject">
+                                                        <label for="NewNonSubject">지난 주 신규 비교과 정보 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">지난주 신규 비교과 정보를 알려드려요.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">오늘의 일정</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="TodaySchedule">
+                                                    <label for="TodaySchedule">오늘의 일정 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">오늘의 일정을 정리해 알려드려요.</p>
+                                        </div>
+                                        <ul class="topic_list">
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">학사일정</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="GraduateSchedule">
+                                                        <label for="GraduateSchedule">학사일정 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">오늘 예정된 학사 일정을 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">학과 공지사항</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="GraduateNotice">
+                                                        <label for="GraduateNotice">학과 공지사항 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">오늘 새롭게 올라온 학과 공지사항을 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">수업 공지사항</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="ClassNotice">
+                                                        <label for="ClassNotice">수업 공지사항 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">오늘 새롭게 올라온 수업 공지사항을 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">오늘의 시간표</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="TodayTimeTable">
+                                                        <label for="TodayTimeTable">오늘의 시간표 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">오늘의 수업 시간표을 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">관심 토픽 관련 채용 정보</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="InterestTopic">
+                                                        <label for="InterestTopic">관심 토픽 관련 채용 정보 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">관심 토픽 관련 실시간 채용 정보를 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">날씨 정보</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="WeatherInfomation">
+                                                        <label for="WeatherInfomation">날씨 정보 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">오늘 캠퍼스 날씨 정보를 알려드려요.</p>
+                                            </li>
+                                            <li>
+                                                <div class="inline_wrap">
+                                                    <p class="tit">식단 정보</p>
+                                                    <p class="icon_chk_wrap">
+                                                        <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="TodaySchedule" id="MenuInformation">
+                                                        <label for="MenuInformation">식단 정보 알림 받기</label>
+                                                    </p>
+                                                </div>
+                                                <p class="tit_info">오늘 캠퍼스 식단 정보를 알려드려요.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">수업시간 안내</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="SchoolHour" id="SchoolHour">
+                                                    <label for="SchoolHour">수업시간 안내 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">수업 시간을 시작 시간 30분 전에 알려드려요.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">출결현황</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="AttendanceStatus" id="AttendanceStatus">
+                                                    <label for="AttendanceStatus">출결현황 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">수강하고 있는 강의의 출결 현황을 알려드려요.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">수업종료</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="FinishSchool" id="FinishSchool">
+                                                    <label for="FinishSchool">수업종료 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">수업 종료 후 해당 수업의 토픽 정보를 알려드려요.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">문의답변</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="InquiryAnswer" id="InquiryAnswer">
+                                                    <label for="InquiryAnswer">문의답변 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">문의하신 내용에 답변이 등록되면 알려드려요.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="topic_box">
+                                            <div class="inline_wrap">
+                                                <p class="tit">관심 비교과 프로그램 안내</p>
+                                                <p class="icon_chk_wrap">
+                                                    <input type="checkbox" class="icon_chk icon_notxt icon_chk_use" name="NonSubjectProgram" id="NonSubjectProgram">
+                                                    <label for="NonSubjectProgram">관심 비교과 프로그램 안내 알림 받기</label>
+                                                </p>
+                                            </div>
+                                            <p class="tit_info">관심 있는 비교과 프로그램을 안내해 드려요.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_btn_area">
+                        <button type="button" class="btn btn_tertiary" data-dismiss="modal" aria-hidden="true">취소</button>
+                        <button type="button" class="btn btn_primary btn_primary01">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Push 설정 팝업 -->
+    <!-- 1 : 1 문의 팝업 -->
+    <div class="modal full_modal fade" id="Pop_Inquiry" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <h5 class="pop_title">1 : 1 문의</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 창 닫기</i></button>
+                </div>
+                <div class="modal_body">
+                    <div class="inquiry_wrap">
+                        <p class="inquiry_btn">
+                            <a href="#" class="a_btn a_btn_gray">문의등록</a>
+                        </p>
+                        <div class="list_view">
+                            <div class="list_hd">
+                                <div>
+                                    <h3 class="tit">1:1 문의 목록</h3>
+                                </div>
+                            </div>
+                            <ul class="list inquiry_list">
+                                <li>
+                                    <div class="inquiry_swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <p class="tit">
+                                                    <span>2020.10.09 12:23:11</span>
+                                                    <strong>시간표 공유 방법 알고 싶어요</strong>
+                                                </p>
+                                                <!-- 답변 완료일 때 text_lightgray 클래스 추가 -->
+                                                <p class="state text_lightgray">답변완료</p>
+                                            </div>
+                                            <div class="swiper-slide inquiry_del_btn">
+                                                <button type="button" class="btn_delete"><i class="ic circle_delete">문의 삭제</i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        //var menuButton = document.querySelector('.inquiry_del_btn');
+                                        //var openMenu = function () {
+                                        //    swiper.slidePrev();
+                                        //};
+                                        //var swiper = new Swiper('.inquiry_swiper', {
+                                        //    slidesPerView: 'auto',
+                                        //    initialSlide: 1,
+                                        //    resistanceRatio: 0,
+                                        //    slideToClickedSlide: true,
+                                        //});
+                                    </script>
+                                </li>
+                                <!--<li>
+                                    <div class="swiper-container inqury_swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="inline_wrap swiper-slide">
+                                                <p class="tit">
+                                                    <span>2020.10.09 12:23:11</span>
+                                                    <strong>개인정보 설정 바꾸고 싶어요</strong>
+                                                </p>
+                                                <p class="state">답변준비</p>
+                                            </div>
+                                            <div class="swiper-slide inquiry_del_btn">
+                                                <button type="button" class="btn_delete"><i class="ic circle_delete">문의 삭제</i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>-->
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 1 : 1 문의 팝업 -->
+    <!-- 도움말 팝업 -->
+    <div class="modal full_modal fade" id="Pop_Help" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <h5 class="pop_title">도움말</h5>
+                </div>
+                <div class="modal_body">
+                    TBD
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 도움말 팝업 -->
+    <!-- // modal -->
 </body>
 </html>
 
