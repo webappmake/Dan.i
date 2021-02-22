@@ -1466,7 +1466,7 @@ select.form-control {
   display: -ms-flexbox;
   display: flex;
   align-items: center; }
-  .control_wrap .sel_area + .btn {
+  .control_wrap .sel_area + .btn, .control_wrap .sel_area + .filter_wrap {
     margin-left: 0.97656vw; }
   .control_wrap.only {
     width: 100%;

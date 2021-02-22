@@ -320,7 +320,7 @@ select.form-control {
 .control_wrap {
   @include flex;
   align-items: center;
-  .sel_area + .btn { margin-left: $gutter_xs; }
+  .sel_area + .btn, .sel_area + .filter_wrap { margin-left: $gutter_xs; }
   &.only { 
     width: 100%;
     justify-content: flex-end; 
