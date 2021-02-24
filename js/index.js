@@ -129,8 +129,16 @@
         $('.con_tab_box').removeClass('active');
         $('.con_tab').find('#RecommendSubject').addClass('active')
         $('#' + activeTab).addClass('active');
-
     }
+
+    // 필터 영역 이외의 영역 클릭시 필터 영역 닫기
+    $(document).mouseup(function (e) {
+        var ico_filter = $(".btn_select");
+        var filterPopup = $(".filter_wrap");
+        if (filterPopup.has(e.target).length === 0) {
+            ico_filter.removeClass("active").next().hide();
+        }
+    });
 
     // modal backdrop multiple issue
     $(document).on('show.bs.modal', '.modal', function (event) {

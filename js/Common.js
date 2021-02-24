@@ -109,7 +109,7 @@ function fn_Toast() {
 // 페이지마다 메뉴 개수가 다르고 즐겨찾기, 설정과 같이 메뉴가 우측에 있어 잘려보이는 경우에 실행되도록 해주시면 됩니다.
 // 디바이스 가로 크기보다 메뉴 가로 크기가 더 큰 경우 크기 구해서 페이지 로드시 위치 이동
 function nav_position() {
-    var vwValue = 1024 * 7.81250 / 100; // vw 변환
+    var vwValue = 1024 * 3.90625 / 100; // vw 변환
 
     var nav_wid = $(".sub_menu").outerWidth() + vwValue;
     var swiper_position = - (nav_wid - $(".nav_select_swiper").outerWidth()) + "px";
