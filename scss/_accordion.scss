@@ -316,3 +316,9 @@
     .ic { width: 3.90625vw; height: 3.90625vw; }
   }
 }
+.box_gray {
+  border: 1px solid $border;
+  &.total_box {
+    
+  }
+}
