@@ -65,10 +65,10 @@
     &.icon_chk + label:before{content: ''; display: inline-block; text-align: center; vertical-align: middle; background-image:url(../images/icons_m.png); background-size: 97.65625vw auto; background-repeat:no-repeat;}
     &.icon_chk_use + label:before{width:11.91406vw; height:6.44531vw; background-position: -45.89844vw -5.66406vw;}
     &.icon_chk_use:checked + label:before{background-position:-45.89844vw -12.10938vw;}
-    &.icon_chk_like + label:before {width:64px; height:64px; background-position:0 -776px;}
-    &.icon_chk_like:checked + label:before {background-position:-64px -776px;}
-    &.icon_chk_unlike + label:before {width:64px; height:64px; background-position:-128px -776px;}
-    &.icon_chk_unlike:checked + label:before {background-position:-192px -776px;}
+    &.icon_chk_like + label:before {width:6.25000vw; height:6.25000vw; background-position:0 -75.78125vw;}
+    &.icon_chk_like:checked + label:before {background-position:-6.25000vw -75.78125vw;}
+    &.icon_chk_unlike + label:before {width:6.25000vw; height:6.25000vw; background-position:-12.50000vw -75.78125vw;}
+    &.icon_chk_unlike:checked + label:before {background-position:-18.75000vw -75.78125vw;}
   }
 }
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */

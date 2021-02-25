@@ -1811,17 +1811,17 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     .icon_chk_wrap .icon_chk.icon_chk_use:checked + label:before {
       background-position: -45.89844vw -12.10938vw; }
     .icon_chk_wrap .icon_chk.icon_chk_like + label:before {
-      width: 64px;
-      height: 64px;
-      background-position: 0 -776px; }
+      width: 6.25000vw;
+      height: 6.25000vw;
+      background-position: 0 -75.78125vw; }
     .icon_chk_wrap .icon_chk.icon_chk_like:checked + label:before {
-      background-position: -64px -776px; }
+      background-position: -6.25000vw -75.78125vw; }
     .icon_chk_wrap .icon_chk.icon_chk_unlike + label:before {
-      width: 64px;
-      height: 64px;
-      background-position: -128px -776px; }
+      width: 6.25000vw;
+      height: 6.25000vw;
+      background-position: -12.50000vw -75.78125vw; }
     .icon_chk_wrap .icon_chk.icon_chk_unlike:checked + label:before {
-      background-position: -192px -776px; }
+      background-position: -18.75000vw -75.78125vw; }
 
 /* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
 .header {
