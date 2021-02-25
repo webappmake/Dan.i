@@ -1056,6 +1056,249 @@ button {
             font-size: 4.68750vw;
             font-weight: 400; }
 
+.modal_body .list .tit {
+  font-size: 3.90625vw; }
+
+.accordion {
+  margin: 0 -3.90625vw; }
+  .accordion .card {
+    -webkit-box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+    box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+    margin: 1.95313vw 0;
+    border: none;
+    border-radius: 0; }
+    .accordion .card:first-child {
+      margin: 0; }
+    .accordion .card .card-header {
+      -webkit-box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+      box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+      background-color: #fff;
+      padding: 0;
+      border-top: 0.09766vw solid #d4d4d4;
+      border-bottom: 0.09766vw solid #d4d4d4; }
+      .accordion .card .card-header .btn_collapse {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        padding: 5.27344vw 3.90625vw;
+        border-bottom: 0.09766vw solid #d4d4d4 !important; }
+        .accordion .card .card-header .btn_collapse .tit {
+          font-size: 5.07813vw;
+          font-family: "Gong Gothic", sans-serif !important;
+          font-weight: 400; }
+          .accordion .card .card-header .btn_collapse .tit small {
+            display: inline-block;
+            font-size: 3.12500vw;
+            color: #555;
+            font-weight: 300; }
+            .accordion .card .card-header .btn_collapse .tit small strong {
+              color: #000;
+              font-weight: 400 !important; }
+        .accordion .card .card-header .btn_collapse .ic {
+          width: 5.37109vw;
+          height: 5.37109vw; }
+        .accordion .card .card-header .btn_collapse.collapsed .ic {
+          background-position: -37.50000vw -24.02344vw; }
+  .accordion .list_view .topic_box {
+    margin: 0.97656vw 3.90625vw;
+    padding: 0 3.90625vw !important;
+    border: 0.09766vw solid #d4d4d4 !important; }
+    .accordion .list_view .topic_box .tit {
+      font-size: 4.29688vw; }
+  .accordion .list_view .topic_btn_wrap {
+    border: 0.09766vw solid #d4d4d4 !important; }
+    .accordion .list_view .topic_btn_wrap .tit {
+      padding-bottom: 0 !important; }
+  .accordion .list_view .topic_box + .topic_btn_wrap {
+    border-top: none !important; }
+  .accordion .list_view > .list_cont > .list > li {
+    border: 0 !important; }
+    .accordion .list_view > .list_cont > .list > li:last-child {
+      margin-bottom: 8.78906vw !important; }
+  .accordion + .a_btn_sky {
+    width: 82.03125vw;
+    border-radius: 0;
+    margin: 8.78906vw 4.88281vw 19.53125vw;
+    font-size: 4.68750vw; }
+    .accordion + .a_btn_sky .ic {
+      width: 3.90625vw;
+      height: 3.90625vw; }
+
+.topic_list_wrap {
+  display: none;
+  padding: 4.88281vw 3.90625vw 3.90625vw;
+  background-color: #f5f5f5; }
+  .topic_list_wrap .tab_wrap > .nav > li > a {
+    font-size: 3.51563vw; }
+  .topic_list_wrap .topic_list {
+    display: block !important;
+    padding: 0 !important; }
+
+.feedback_form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.97656vw 0 3.90625vw; }
+  .feedback_form input {
+    flex-grow: 1;
+    height: 9.76563vw;
+    border: 0.09766vw solid #d4d4d4;
+    border-right: none;
+    font-size: 3.51563vw;
+    padding: 0 2.92969vw; }
+  .feedback_form .btn_submit {
+    width: 13.67188vw;
+    height: 9.76563vw;
+    font-size: 3.51563vw;
+    font-weight: 500;
+    background-color: #0054a3;
+    border: 0.09766vw solid #d4d4d4;
+    color: #fff; }
+
+.major_select_swiper {
+  margin: 4.88281vw 0; }
+  .major_select_swiper .swiper-wrapper .swiper-slide {
+    width: auto !important;
+    height: 44.04297vw;
+    border: 0.19531vw solid #d4d4d4;
+    border-radius: 1.95313vw;
+    display: inline-block;
+    margin: 0.97656vw; }
+    .major_select_swiper .swiper-wrapper .swiper-slide:first-child {
+      margin-left: 0; }
+    .major_select_swiper .swiper-wrapper .swiper-slide.major_total_slide {
+      height: auto; }
+      .major_select_swiper .swiper-wrapper .swiper-slide.major_total_slide > a {
+        padding: 5.37109vw 2.44141vw 15.13672vw 2.44141vw;
+        position: relative; }
+        .major_select_swiper .swiper-wrapper .swiper-slide.major_total_slide > a .major_total {
+          position: absolute;
+          left: 2.44141vw;
+          bottom: 6.83594vw;
+          text-align: left; }
+    .major_select_swiper .swiper-wrapper .swiper-slide > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 10.25391vw 2.73438vw 2.73438vw; }
+    .major_select_swiper .swiper-wrapper .swiper-slide ul {
+      margin-top: 4.88281vw; }
+      .major_select_swiper .swiper-wrapper .swiper-slide ul li {
+        font-size: 3.51563vw;
+        font-weight: 600;
+        line-height: 1.28; }
+    .major_select_swiper .swiper-wrapper .swiper-slide.all {
+      width: 23.04688vw !important;
+      background: #ccdded; }
+      .major_select_swiper .swiper-wrapper .swiper-slide.all > a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        font-size: 4.49219vw;
+        font-family: "Gong Gothic", sans-serif !important; }
+        .major_select_swiper .swiper-wrapper .swiper-slide.all > a .ic {
+          width: 5.76172vw;
+          height: 5.76172vw; }
+
+.pag_info_none.full_gray {
+  min-height: calc(100vh - 11.71875vw - 18.55469vw - 11.71875vw);
+  background-color: #fafafa;
+  border: 0.09766vw solid #d4d4d4; }
+
+.major_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 14.64844vw;
+  justify-content: center;
+  align-items: center;
+  margin: 4.88281vw -3.90625vw 0;
+  padding: 3.90625vw 3.90625vw;
+  background-color: #fafafa; }
+  .major_wrap .ic {
+    width: 6.44531vw;
+    height: 6.44531vw;
+    margin-right: 0.97656vw;
+    flex-shrink: 0; }
+  .major_wrap span {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 5.07813vw;
+    color: #222; }
+
+.major_total {
+  font-family: "Gong Gothic", sans-serif !important;
+  font-size: 3.51563vw;
+  color: #222;
+  text-align: center; }
+
+.major_grade_box {
+  background-color: #fafafa;
+  margin: 0 -3.90625vw 0;
+  padding: 3.90625vw 0; }
+  .cont_hd + .major_grade_box {
+    margin-top: 4.88281vw; }
+  .major_grade_box .major_wrap {
+    margin: 0;
+    padding-top: 0;
+    background-color: transparent; }
+    .major_grade_box .major_wrap.only {
+      min-height: inherit;
+      margin-top: 0;
+      padding-bottom: 2.92969vw; }
+  .major_grade_box .grade_box {
+    border: 0.09766vw solid #d3d3d3;
+    background-color: #fff;
+    margin: 0 3.90625vw; }
+    .major_grade_box .grade_box > .grade_box_list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 19.53125vw; }
+      .major_grade_box .grade_box > .grade_box_list.list_01 > li {
+        width: 100%; }
+      .major_grade_box .grade_box > .grade_box_list.list_03 > li {
+        width: 33.3333%; }
+      .major_grade_box .grade_box > .grade_box_list > li {
+        position: relative;
+        font-family: "Gong Gothic", sans-serif !important; }
+        .major_grade_box .grade_box > .grade_box_list > li::before {
+          content: '';
+          width: 0.09766vw;
+          height: 11.71875vw;
+          background-color: #d4d4d4;
+          position: absolute;
+          right: 0;
+          top: 3.90625vw; }
+        .major_grade_box .grade_box > .grade_box_list > li:last-child::before {
+          background-color: transparent; }
+        .major_grade_box .grade_box > .grade_box_list > li > a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          text-align: center;
+          padding: 3.90625vw;
+          cursor: unset; }
+          .major_grade_box .grade_box > .grade_box_list > li > a > span {
+            display: block;
+            font-weight: 300;
+            font-size: 3.90625vw; }
+          .major_grade_box .grade_box > .grade_box_list > li > a > strong {
+            font-size: 4.68750vw;
+            font-weight: 400; }
+
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
