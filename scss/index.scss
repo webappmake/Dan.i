@@ -361,6 +361,7 @@ select.form-control {
   background-color: #fff;
   .ic { width: 3.80859vw; height: 3.80859vw; }
   .num { font-size: 3.41797vw; color: #333; margin-left: $gutter_xs; }
+  @at-root .topic_box .btn_like { margin: $gutter_md 0 0 $gutter_md; }
 }
 /* ------------------------------------------------------- COMMON > CLASS > .inline_wrap ------------------------------------------------------- */
 .inline_wrap {

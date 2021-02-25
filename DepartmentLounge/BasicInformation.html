@@ -1,0 +1,908 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>기본정보</title>
+    <meta name="description" content="단아이">
+    <meta name="keywords" content="단아이">
+    <meta property="og:title" content="단아이">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="단아이">
+    <link rel="canonical" href="#">
+    <meta name="robots" content="index,follow">
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/swiper.css" rel="stylesheet">
+    <link href="../../css/Base.css" rel="stylesheet">
+    <link href="../../css/Layout.css" rel="stylesheet">
+    <link href="../../css/Common.css" rel="stylesheet">
+    <link href="../../css/chatbot.css" rel="stylesheet">
+    <!-- // css -->
+    <!-- js -->
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/FuncScript.js"></script>
+    <script src="../../js/Common.js"></script>
+    <script src="../../js/respond.js"></script>
+    <script src="../../js/html5shiv.js"></script>
+    <!-- // js -->
+    <!-- page script -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- // page script -->
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="header_wrap">
+                <div class="inner_wrap">
+                    <h1 class="logo"><a href="#"><span class="icon">단아이</span></a></h1>
+                    <nav class="gnb">
+                        <!-- gnb -->
+                        <h2 class="skip">주메뉴</h2>
+                        <ul class="gnb_menu">
+                            <!-- MY-DESK - 1학년 2학기~4학년 2학기 -->
+                            <li>
+                                <a href="#none">MY-Desk</a>
+                                <div class="sub_menu_area">
+                                    <ul class="sub_menu">
+                                        <li><a href="../MyDesk/AnalysisTopic_Student.html">분석토픽</a></li>
+                                        <li><a href="../MyDesk/InterestTopic.html">관심토픽</a></li>
+                                        <li><a href="../MyDesk/LectureHistory.html">수강이력</a></li>
+                                        <li><a href="../MyDesk/Curriculum_Student.html">교과과정</a></li>
+                                        <li><a href="../MyDesk/Scrap.html">스크랩</a></li>
+                                        <li><a href="../MyDesk/Favorite.html">즐겨찾기</a></li>
+                                        <li><a href="../MyDesk/Setting.html">설정</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- // MY-DESK - 1학년 2학기~4학년 2학기 -->
+                            <!-- 학과 라운지 - 공통 -->
+                            <li class="active">
+                                <a href="#none">학과라운지</a>
+                                <div class="sub_menu_area">
+                                    <ul class="sub_menu">
+                                        <li class="active"><a href="../DepartmentLounge/BasicInformation.html">기본정보</a></li>
+                                        <li><a href="../DepartmentLounge/GraduationStatus.html">졸업현황</a></li>
+                                        <li><a href="../DepartmentLounge/TopicInformation.html">토픽정보</a></li>
+                                        <li><a href="../DepartmentLounge/NonSubject.html">비교과</a></li>
+                                        <li><a href="../DepartmentLounge/Reference.html">교재/참고문헌</a></li>
+                                        <li><a href="../DepartmentLounge/Recruit.html">채용</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- // 학과 라운지 - 공통 -->
+                            <!-- 교과/비교과 - 대학생 -->
+                            <li>
+                                <a href="#none">교과/비교과</a>
+                                <div class="sub_menu_area">
+                                    <ul class="sub_menu">
+                                        <li><a href="../Subject/Subject_Student.html">교과</a></li>
+                                        <li><a href="../Subject/NonSubject.html">비교과</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- // 교과/비교과 - 대학생 -->
+                            <!-- 채용 - 대학생 & 대학원생 -->
+                            <li>
+                                <a href="#none">채용</a>
+                                <div class="sub_menu_area">
+                                    <ul class="sub_menu">
+                                        <li><a href="../Recruit/RecruitAnalysis.html">채용분석</a></li>
+                                        <li><a href="../Recruit/RecruitSearch.html">실시간 채용검색</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- // 채용 - 대학생 & 대학원생 -->
+                            <!-- 캠퍼스라이프 -->
+                            <li>
+                                <a href="#none">캠퍼스라이프</a>
+                                <div class="sub_menu_area">
+                                    <ul class="sub_menu">
+                                        <li><a href="#">캠퍼스라이프</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- // 캠퍼스라이프 -->
+                        </ul>
+                        <!-- // gnb -->
+                    </nav>
+                    <div class="location">
+                        <!-- 알림이 있을 경우 on 클래스 추가 -->
+                        <span class="ico_noti on" onclick="fn_MoreToggle(this)">
+                            <span class="icon">알림</span>
+                        </span>
+                        <div class="noti_pop_area">
+                            <div class="noti_pop_hd">
+                                <h4>알림</h4>
+                                <button type="button" class="btn_icon btn_noti_colse" onclick="fn_NotiClose();"><span>알림 팝업 닫기</span></button>
+                            </div>
+                            <ul class="noti_pop_list">
+                                <!-- 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
+                                <li>
+                                    <p>
+                                        <strong>[주간브리핑]</strong>
+                                        <!-- 알림 내용이 길 경우 미리보기 되므로 title 필요 -->
+                                        <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                    </p>
+                                    <span class="date">2020.12.13 09:0:00</span>
+                                    <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>[주간브리핑]</strong>
+                                        <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                    </p>
+                                    <span class="date">2020.12.13 09:0:00</span>
+                                    <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>[주간브리핑]</strong>
+                                        <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                    </p>
+                                    <span class="date">2020.12.13 09:0:00</span>
+                                    <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>[주간브리핑]</strong>
+                                        <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                    </p>
+                                    <span class="date">2020.12.13 09:0:00</span>
+                                    <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>[주간브리핑]</strong>
+                                        <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                    </p>
+                                    <span class="date">2020.12.13 09:0:00</span>
+                                    <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                                </li>
+                                <!-- // 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
+                                <!-- 알림이 없을 경우 -->
+                                <!--<li class="none">도착한 알림이 없어요!</li>-->
+                                <!-- // 알림이 없을 경우 -->
+                            </ul>
+                            <div class="noti_pop_ft">
+                                <p class="more"><a href="../Common/Notification.html"><span class="icon_after">더보기</span></a></p>
+                            </div>
+                        </div>
+                        <span class="logout"><a href="#"><span class="icon">로그아웃</span></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bg"></div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div class="inner_wrap">
+                <div class="contents_wrap">
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        <ul class="cont_breadcrumb">
+                            <li class="home"><span>홈</span></li>
+                            <li><span>학과라운지</span></li>
+                            <li class="now"><span>기본정보</span></li>
+                        </ul>
+                        <!-- breadcrumb -->
+                        <div class="cont_hd">
+                            <h3 class="main_title">기본정보</h3>
+                            <p class="pag_info">전공 학과들의 기본 정보들을 확인하실 수 있어요!</p>
+                            <p class="topic_btn major_btn">
+                                <a href="#" target="_blank" title="학과 홈페이지로 이동" class="a_btn a_btn_white a_btn_lg"><span class="icon_before icon_after">학과 홈페이지 바로가기</span></a>
+                                <a href="#Pop_DepartmentInfo" class="a_btn a_btn_white a_btn_lg" data-toggle="modal"><span class="icon_before icon_after">학과정보 바로가기</span></a>
+                                <!-- 팝업 외부 파일 호출시 -->
+                                <!--<a href="Pop_DepartmentInfo.html" data-popup-get="Pop_DepartmentInfo.html" class="a_btn a_btn_white a_btn_lg"><span class="icon_before icon_after">학과정보 바로가기</span></a>-->
+                                <!-- // 팝업 외부 파일 호출시 -->
+                            </p>
+                        </div>
+                        <div class="cont_body">
+                            <form action="#" method="#">
+                                <div class="major_wrap">
+                                    <!-- 단일전공일 경우 -->
+                                    <div class="major_area">
+                                        <span class="icon_before icon_major">문과대학 국어국문학과</span>
+                                    </div>
+                                    <!-- // 단일전공일 경우 -->
+                                    <!-- 부전공/복수전공/융합전공일 경우 -->
+                                    <div class="major_area">
+                                        <span class="icon_before icon_after icon_major icon_major01" onclick="fn_Toggle(this)">
+                                            <strong>주전공</strong>
+                                            <span>문과대학 국어국문학과</span>
+                                        </span>
+                                        <div class="major_pop_area">
+                                            <ul class="major_list">
+                                                <li>
+                                                    <strong>주전공</strong>
+                                                    <span>문과대학 국어국문학과</span>
+                                                </li>
+                                                <li>
+                                                    <strong>부전공</strong>
+                                                    <span>생명공학대학 환경원예조경학부 환경원예학전공</span>
+                                                </li>
+                                                <li>
+                                                    <strong>융합전공</strong>
+                                                    <span>경영경제대학 경제학과</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- // 부전공/복수전공/융합전공일 경우 -->
+                                    <div class="img_upload_wrap">
+                                        <div class="img_upload_area swiper-container">
+                                            <div class="img_upload_box swiper-wrapper">
+                                                <div class="upload_list swiper-slide">
+                                                    <ul class="upload_img_list">
+                                                        <!-- 업로드한 이미지 src 변경 -->
+                                                        <li><img src="https://cdn.edujin.co.kr/news/photo/201808/19741_36052_4558.JPG" alt="학과 이미지" /></li> <!-- 테스트용 임시 이미지 -->
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li> <!-- 파일 첨부 전 기본 이미지 -->
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="upload_list swiper-slide">
+                                                    <ul class="upload_img_list">
+                                                        <!-- 업로드한 이미지 src 변경 -->
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                        <li><img src="../../images/bg/img_none.png" alt="학과 이미지" /></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="img_upload_bar">
+                                            <ul class="img_upload_info">
+                                                <li>- 우리 학과와 어울리는 이미지를 올려주세요.</li>
+                                                <li>- 개별 삭제는 불가능하오니 신중하게 이미지를 올려주세요.</li>
+
+                                            </ul>
+                                            <p class="file_btn_box">
+                                                <label for="img_upload"><span class="icon_before">사진 업로드</span></label>
+                                                <input type="file" id="img_upload" class="ipt_file">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- Swiper JS -->
+                                    <script src="../../js/swiper.min.js"></script>
+                                    <script>
+                                        // 이미지 리스트 2개일 때부터 slide & autoplay 실행
+                                        if ($(".swiper-slide").length > 1) {
+                                            var swiper = new Swiper('.img_upload_area', {
+                                                slidesPerView: 1,
+                                                autoplay: {
+                                                    delay: 5000, // 5초 후 롤링
+                                                    disableOnInteraction: false
+                                                },
+                                                loop: true // 무한 롤링
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                                <div class="grade_wrap grade_wrap01">
+                                    <div class="cont_sub_hd">
+                                        <h4 class="dot_title">숫자로 보는 우리학과</h4>
+                                        <p class="pag_info pag_info01">2013년 학과 통폐합 이후 누적 통계 데이터입니다.</p>
+                                    </div>
+                                    <ul class="grade_area grade_area03">
+                                        <li>
+                                            <div class="grade_box">
+                                                <p>재학생 수 (학년별 현황)</p>
+                                                <ul class="grade_sub_list grade_sub_list04">
+                                                    <li class="grade_01">
+                                                        <p>
+                                                            <span>1학년</span>
+                                                            <strong><span>170</span>명</strong>
+                                                        </p>
+                                                    </li>
+                                                    <li class="grade_02">
+                                                        <p>
+                                                            <span>2학년</span>
+                                                            <strong><span>120</span>명</strong>
+                                                        </p>
+                                                    </li>
+                                                    <li class="grade_03">
+                                                        <p>
+                                                            <span>3학년</span>
+                                                            <strong><span>100</span>명</strong>
+                                                        </p>
+                                                    </li>
+                                                    <li class="grade_04">
+                                                        <p>
+                                                            <span>4학년</span>
+                                                            <strong><span>150</span>명</strong>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="grade_box">
+                                                <p>졸업자 수</p>
+                                                <ul class="grade_sub_list">
+                                                    <li class="grade_all">
+                                                        <p>
+                                                            <strong><span>5,353</span>명</strong>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="grade_num_list">
+                                        <li class="grade_num01">
+                                            <p>학과의 총 수강 교과목</p>
+                                            <span><strong>1,050</strong>건</span>
+                                        </li>
+                                        <li class="grade_num02">
+                                            <p>학과 졸업생의 입사기업</p>
+                                            <span><strong>124</strong>건</span>
+                                        </li>
+                                        <li class="grade_num03">
+                                            <p>부전공/복수전공 선택졸업자</p>
+                                            <span><strong>49</strong>명</span>
+                                        </li>
+                                        <li class="grade_num04">
+                                            <p>학과 분석 토픽정보</p>
+                                            <span><strong>1,923</strong>건</span>
+                                        </li>
+                                        <li class="grade_num05">
+                                            <p>교내 비교과</p>
+                                            <span><strong>223</strong>건</span>
+                                        </li>
+                                        <li class="grade_num06">
+                                            <p>학과 소속의 교재/참고문헌</p>
+                                            <span><strong>770</strong>건</span>
+                                        </li>
+                                        <li class="grade_num07">
+                                            <p>학과 학생들의 관심기업</p>
+                                            <span><strong>48</strong>건</span>
+                                        </li>
+                                        <li class="grade_num08">
+                                            <p>학과 우대 채용정보</p>
+                                            <span><strong>240</strong>건</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="topic_area">
+                                    <div class="cont_sub_hd">
+                                        <h4 class="dot_title">우리 학과 교과과정</h4>
+                                        <p class="pag_info pag_info01">교과구분을 선택하면 해당 교과목을 확인할 수 있어요.</p>
+                                        <h5 class="sub_sc_title">- 교과구분</h5>
+                                    </div>
+                                    <ul class="topic_list topic_list01">
+                                        <li class="active">
+                                            <button type="button" class="btn_txt">
+                                                <span>학과기초</span>
+                                                <strong><span>06</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>전공필수</span>
+                                                <strong><span>03</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>전공선택</span>
+                                                <strong><span>29</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>문화예술교육사</span>
+                                                <strong><span>02</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>POSE(English)</span>
+                                                <strong><span>03</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>POSE(Open source)</span>
+                                                <strong><span>04</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>교직</span>
+                                                <strong><span>03</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>법학소양</span>
+                                                <strong><span>29</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>SW융합수학</span>
+                                                <strong><span>02</span>개</strong>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn_txt">
+                                                <span>POSE(Project)</span>
+                                                <strong><span>04</span>개</strong>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <p class="topic_btn topic_btn01">
+                                        <a href="../MyDesk/Curriculum_Student.html" class="a_btn a_btn_white a_btn_lg"><span class="icon_after">MY-Desk <strong class="ft_purple">교과과정</strong></span></a>
+                                        <a href="../MyDesk/LectureHistory.html" class="a_btn a_btn_white a_btn_lg"><span class="icon_after">MY-Desk <strong class="ft_lightpurple">수강이력</strong></span></a>
+                                    </p>
+                                </div>
+                                <div class="subject_wrap">
+                                    <div class="cont_sub_hd">
+                                        <h4 class="sub_sc_title">- <strong>학과기초</strong> 교과목록</h4>
+                                        <div class="filter_wrap">
+                                            <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                            <div class="filter_pop_list">
+                                                <strong class="title">정렬</strong>
+                                                <span class="icon_after active" onclick="fn_Toggle(this);">교과목명</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="subject_area">
+                                        <ul class="subject_list">
+                                            <li>
+                                                <span class="semester">(520500-1)</span>
+                                                <strong class="p_main_title" title="국문학개론">국문학개론</strong>
+                                                <span class="p_sub_title only">학과기초 | 학점 3</span>
+                                                <span class="p_sub_title" title="문과대학 국어국문학과">문과대학 국어국문학과</span>
+                                                <p class="subject_btn">
+                                                    <a href="#Pop_SubjectSummary" class="a_btn a_btn_sky icon_after" data-toggle="modal">교과개요</a>
+                                                    <!-- 팝업 외부 파일 호출시 -->
+                                                    <!--<a href="Pop_SubjectSummary.html" data-popup-get="Pop_SubjectSummary.html" class="icon_after">교과개요</a>-->
+                                                    <!-- // 팝업 외부 파일 호출시 -->
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span class="semester">(420500-1)</span>
+                                                <strong class="p_main_title" title="한국현대문학의이해">한국현대문학의이해</strong>
+                                                <span class="p_sub_title only">학과기초 | 학점 3</span>
+                                                <span class="p_sub_title" title="문과대학 국어국문학과">문과대학 국어국문학과</span>
+                                                <p class="subject_btn">
+                                                    <a href="#Pop_SubjectSummary" class="a_btn a_btn_sky icon_after" data-toggle="modal">교과개요</a>
+                                                    <!-- 팝업 외부 파일 호출시 -->
+                                                    <!--<a href="Pop_SubjectSummary.html" data-popup-get="Pop_SubjectSummary.html" class="icon_after">교과개요</a>-->
+                                                    <!-- // 팝업 외부 파일 호출시 -->
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span class="semester">(620530-1)</span>
+                                                <strong class="p_main_title" title="언어학의이해">언어학의이해</strong>
+                                                <span class="p_sub_title only">학과기초 | 학점 3</span>
+                                                <span class="p_sub_title" title="문과대학 국어국문학과">문과대학 국어국문학과</span>
+                                                <p class="subject_btn">
+                                                    <a href="#Pop_SubjectSummary" class="a_btn a_btn_sky icon_after" data-toggle="modal">교과개요</a>
+                                                    <!-- 팝업 외부 파일 호출시 -->
+                                                    <!--<a href="Pop_SubjectSummary.html" data-popup-get="Pop_SubjectSummary.html" class="icon_after">교과개요</a>-->
+                                                    <!-- // 팝업 외부 파일 호출시 -->
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span class="semester">(420500-1)</span>
+                                                <strong class="p_main_title" title="국문학개론">국문학개론</strong>
+                                                <span class="p_sub_title only">학과기초 | 학점 3</span>
+                                                <span class="p_sub_title" title="문과대학 국어국문학과">문과대학 국어국문학과</span>
+                                                <p class="subject_btn">
+                                                    <a href="#Pop_SubjectSummary" class="a_btn a_btn_sky icon_after" data-toggle="modal">교과개요</a>
+                                                    <!-- 팝업 외부 파일 호출시 -->
+                                                    <!--<a href="Pop_SubjectSummary.html" data-popup-get="Pop_SubjectSummary.html" class="icon_after">교과개요</a>-->
+                                                    <!-- // 팝업 외부 파일 호출시 -->
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span class="semester">(420500-1)</span>
+                                                <strong class="p_main_title" title="한국현대문학의이해">한국현대문학의이해</strong>
+                                                <span class="p_sub_title only">학과기초 | 학점 3</span>
+                                                <span class="p_sub_title" title="문과대학 국어국문학과">문과대학 국어국문학과</span>
+                                                <p class="subject_btn">
+                                                    <a href="#Pop_SubjectSummary" class="a_btn a_btn_sky icon_after" data-toggle="modal">교과개요</a>
+                                                    <!-- 팝업 외부 파일 호출시 -->
+                                                    <!--<a href="Pop_SubjectSummary.html" data-popup-get="Pop_SubjectSummary.html" class="icon_after">교과개요</a>-->
+                                                    <!-- // 팝업 외부 파일 호출시 -->
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span class="semester">(620530-1)</span>
+                                                <strong class="p_main_title" title="언어학의이해">언어학의이해</strong>
+                                                <span class="p_sub_title only">학과기초 | 학점 3</span>
+                                                <span class="p_sub_title" title="문과대학 국어국문학과">문과대학 국어국문학과</span>
+                                                <p class="subject_btn">
+                                                    <a href="#Pop_SubjectSummary" class="a_btn a_btn_sky icon_after" data-toggle="modal">교과개요</a>
+                                                    <!-- 팝업 외부 파일 호출시 -->
+                                                    <!--<a href="Pop_SubjectSummary.html" data-popup-get="Pop_SubjectSummary.html" class="icon_after">교과개요</a>-->
+                                                    <!-- // 팝업 외부 파일 호출시 -->
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="paging_area">
+                                            <ul class="paging">
+                                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                                <li class="active"><a href="#none">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- // contents -->
+                    <!-- chatbot input area -->
+                    <button type="button" class="btn_icon btn_chatbot"><span onclick="fn_Chatbot_Open(this);">챗봇 메시지 입력</span></button>
+                    <div class="chat_btn_wrap">
+                        <div class="chat_btn_area">
+                            <div class="chat_ipt_area">
+                                <button type="button" class="btn_icon btn_chat_close" onclick="fn_Chatbot_Close();"><span>챗봇 영역 닫기</span></button>
+                                <span class="chat_ipt_box">
+                                    <input type="text" class="form-control" placeholder="궁금한 점을 입력해주세요." />
+                                    <button type="button" class="btn_icon btn_send"><span>챗봇 메시지 전송</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // chatbot input area -->
+                </div>
+            </div>
+            <!-- contents -->
+        </div>
+        <!-- // container -->
+        <!-- chatbot -->
+        <div class="chatbot_wrap">
+            <div class="chatbot_area">
+                <h3>단아이 챗봇</h3>
+                <div class="chatbot_box">
+                    <div class="chat_msg my_msg">
+                        <p class="text">르네상스문화와 인문주의 분석정보 알려줘</p>
+                        <p class="info">
+                            <span class="time">오전 09:00</span>
+                        </p>
+                    </div>
+                    <div class="chat_msg bot_msg">
+                        <p class="avatar">단아이</p>
+                        <p class="text">르네상스문화와 인문주의 분석정보를 알려드릴게요.</p>
+                        <ul class="tag_list">
+                            <li>#연관토픽</li>
+                            <li>#연관교과</li>
+                            <li>#연관비교과</li>
+                            <li>#연관채용정보</li>
+                        </ul>
+                        <p class="info">
+                            <span class="time">오전 09:00</span>
+                            <span class="like">
+                                <strong>답변이 도움되셨나요?</strong>
+                                <span class="like_chk">
+                                    <input type="radio" class="icon_chk icon_chk_notxt icon_chk_like" name="like_status" id="like" />
+                                    <label for="like">도움</label>
+                                    <input type="radio" class="icon_chk icon_chk_notxt icon_chk_unlike" name="like_status" id="unlike" />
+                                    <label for="unlike">미도움</label>
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="chat_msg bot_msg">
+                        <p class="avatar">단아이</p>
+                        <div class="chat_info_area">
+                            <div class="chat_info_hd">
+                                <h4>연관토픽</h4>
+                                <span>총 <strong>12</strong>개</span>
+                            </div>
+                            <div class="chat_info_bd">
+                                <ul class="chat_topic_list">
+                                    <li>
+                                        <!-- 토픽명이 길면 말줄임되므로 title 필요-->
+                                        <strong title="르네상스문화와 인문주의 르네상스문화와 인문주의">르네상스문화와 인문주의 르네상스문화와 인문주의</strong>
+                                        <div class="chat_voca_area">
+                                            <ul class="voca_list">
+                                                <li class="icon voca_state subject">교과</li>
+                                            </ul>
+                                            <span>빈도수 1210</span>
+                                        </div>
+                                        <span class="topic_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="voca_status" id="voca1" />
+                                            <label for="voca1">사용여부</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <!-- 토픽명이 길면 말줄임되므로 title 필요-->
+                                        <strong title="인공지능">인공지능</strong>
+                                        <div class="chat_voca_area">
+                                            <ul class="voca_list">
+                                                <li class="icon voca_state nonsubject">비교과</li>
+                                                <li class="icon voca_state recruit">채용</li>
+                                            </ul>
+                                            <span>빈도수 1210</span>
+                                        </div>
+                                        <span class="topic_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="voca_status" id="voca1" />
+                                            <label for="voca1">사용여부</label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <!-- 토픽명이 길면 말줄임되므로 title 필요-->
+                                        <strong title="담화와논리">담화와논리</strong>
+                                        <div class="chat_voca_area">
+                                            <ul class="voca_list">
+                                                <li class="icon voca_state subject">교과</li>
+                                                <li class="icon voca_state recruit">채용</li>
+                                            </ul>
+                                            <span>빈도수 1210</span>
+                                        </div>
+                                        <span class="topic_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="voca_status" id="voca1" />
+                                            <label for="voca1">사용여부</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="chat_info_ft">
+                                <p class="more"><a href="#"><span class="icon_after">전체보기</span></a></p>
+                            </div>
+                        </div>
+                        <ul class="tag_list">
+                            <li>#연관토픽</li>
+                            <li>#연관교과</li>
+                            <li>#연관비교과</li>
+                            <li>#연관채용정보</li>
+                        </ul>
+                        <p class="info">
+                            <span class="time">오전 09:00</span>
+                            <span class="like">
+                                <strong>답변이 도움되셨나요?</strong>
+                                <span class="like_chk">
+                                    <input type="radio" class="icon_chk icon_chk_notxt icon_chk_like" name="like_status" id="like" />
+                                    <label for="like">도움</label>
+                                    <input type="radio" class="icon_chk icon_chk_notxt icon_chk_unlike" name="like_status" id="unlike" />
+                                    <label for="unlike">미도움</label>
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // chatbot -->
+        <!-- footer -->
+        <footer id="footer">
+            <div class="inner_wrap footer_wrap">
+                <h2 class="skip">푸터 메뉴</h2>
+                <h2 class="foot_logo"><a href="#"><span class="icon">DKU</span></a></h2>
+                <div class="foot_info_wrap">
+                    <p class="center">
+                        <strong>미래교육혁신원 EduAI센터</strong>
+                        <span>Innovation Institute for Future Education EduAI Center</span>
+                    </p>
+                    <address class="address">
+                        <strong>죽전캠퍼스</strong>
+                        <span>(우) 16890 경기도 용인시 수지구 죽전로 152 범정관 117-1호 EduAI센터</span>
+                    </address>
+                    <p class="copy">Copyright&copy; BY DANKOOK UNIVERSITY. All rights reserved.</p>
+                </div>
+                <ul class="foot_btn_area">
+                    <li>
+                        <select class="form-control" onchange="javascript:go_url(this.options[this.selectedIndex].value);">
+                            <option value="#">서비스 바로가기</option>
+                            <option value="https://www.dankook.ac.kr/web/kor">단국대학교 홈페이지</option>
+                            <option value="https://portal.dankook.ac.kr">단국대학교 포털</option>
+                            <option value="http://eduai.dankook.ac.kr/pc.html">EduAI</option>
+                            <option value="https://i.dankook.ac.kr/">단아이(Dan.i)</option>
+                            <option value="https://youngwoong.dankook.ac.kr">영웅스토리</option>
+                            <option value="https://mirae.dankook.ac.kr/web/mirae/-ctl">교수학습개발센터</option>
+                            <option value="https://lincplus.dankook.ac.kr">LINC+사업단</option>
+                            <option value="http://lib.dankook.ac.kr">퇴계도서관(죽전)</option>
+                            <option value="http://libc.dankook.ac.kr">퇴계도서관(천안)</option>
+                            <option value="https://nlms.dankook.ac.kr/">e-Campus</option>
+                            <option value="https://lms.dankook.ac.kr/">(구)e-Campus</option>
+                            <option value="https://domi.dankook.ac.kr">생활관</option>
+                            <option value="https://cms.dankook.ac.kr/web/innovation">대학혁신사업단</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
+        </footer>
+        <!-- // footer -->
+    </div>
+    <!-- 교과개요 팝업 -->
+    <div class="modal fade" id="Pop_SubjectSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="pop_title">교과개요</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="sub_tab_title">국문학개론</h6>
+                    <div class="list_title_area">
+                        <p class="list_count list_count01">전체 분반 <strong>03</strong>개</p>
+                        <p class="pag_info">분반이 있는 경우 01반 기준으로 정보를 제공합니다.</p>
+                    </div>
+                    <dl class="summary_info">
+                        <dt>교수자</dt>
+                        <dd>윤재환</dd>
+                        <dt>교과목 개요</dt>
+                        <dd>&lt;국문학개론&gt;은 각 장르의 생성과 발전, 소멸과정을 살피면서 장르간의 영향관계와 특색을 파악하는 것이 중요하다. 각 장르의 주요 작가와 작품을 중심으로 분석, 비판하는 능력을 기른다.</dd>
+                        <dt>학습목표</dt>
+                        <dd>국문학 각 장르의 생성배경과 장르간의 상호 영향관계를 살핀다. 주요 작가와 작품 분석을 통해 장르의 특성을 이해한다.</dd>
+                        <dt>학습효과</dt>
+                        <dd>전공을 심화하기 전에 국문학 각 장르의 특색을 살피고, 주요 작품 분석 및 작가 연구를 통해 국문학 이해의 폭을 넓힌다.</dd>
+                        <dt>전공역량</dt>
+                        <dd>
+                            <ul class="ability_list">
+                                <li>
+                                    <strong>주역량</strong>
+                                    <span>지식활용 40%</span>
+                                </li>
+                                <li>
+                                    <strong>부역량</strong>
+                                    <span>
+                                        창의적 문제해결 30%<br>
+                                        의사소통 30%
+                                    </span>
+                                </li>
+                            </ul>
+                        </dd>
+
+                    </dl>
+                    <!-- null 값일 경우 -->
+                    <!--<p class="sub_tab_none">
+                        <span>
+                            선택한 교과의 교과개요는<br />
+                            아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                        </span>
+                    </p>-->
+                    <!-- // null 값일 경우 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 교과개요 팝업 -->
+    <!-- 학과정보 팝업 -->
+    <div class="modal fade" id="Pop_DepartmentInfo" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal_type_03">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="pop_title">학과정보</h5>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="pop_sub_title pop_sub_title03">문과대학 국어국문학과</h6>
+                    <dl class="summary_info">
+                        <dt>학과개요</dt>
+                        <dd>우리가 매일 접하는 모국어와 문학은 모든 학문의 기초라고 할 수 있습니다. 따라서 국어국문학과는 한국의 모든 학과의 선도자라고 해도 과언이 아닙니다. 국어국문학과에서는 우리말과 우리말로 된 문화유산을 연구하고, 한국 문학을 세계적 수준으로 끌어 올릴 수 있는 인재를 키웁니다. 국어국문학과에서는 국어학, 국문학 등을 체계적으로 학습하고, 탐구하며, 글쓰기에 대해서도 배웁니다.</dd>
+                        <dt>학과특성</dt>
+                        <dd>최근 세계 각국에 ‘한류’ 열풍이 불면서 한국 문화를 선도적으로 알리는 국어국문학과의 역할이 중요해지고 있습니다. ‘스토리텔링’과 ‘문화콘텐츠’의 열풍에서 알 수 있듯이, 우리는 창의적 글쓰기가 중요한 시대에 살고 있습니다. 국어국문학과를 졸업하면 이와 같은 시대에 중요한 역할을 할 수 있을 것입니다.</dd>
+                        <dt>흥미와 적성</dt>
+                        <dd>중ㆍ고등학교에서 배우는 국어 관련 여러 과목을 즐겨 공부했거나, 책 읽는 것을 좋아하고 우리 문화와 예술에 관심과 흥미가 있다면, 이 학과의 문을 두드려 볼 만합니다. 국어국문학과에서는 국어학에 대해 배우기 때문에 언어적 구조를 공부할 수 있는 기본적인 언어 감각과 논리적 사고력, 분석력을 갖추면 도움이 됩니다. 국문학 분야에서는 문학 작품을 비평적으로 읽고 분석하는 능력도 필요합니다.</dd>
+                        <dt>관련 자격</dt>
+                        <dd>국어능력인증시험, 사서, 중등학교2급정교사, 한국어교육능력검정시험</dd>
+                        <dt>관련 직업</dt>
+                        <dd>광고ㆍ홍보전문가, 구성작가 , 극작가 , 기자 , 네이미스트 , 독서지도사 , 방송기자, 방송연출가 , 방송작가, 사서 , 소설가 , 스크립터, 시인 , 신문기자, 아나운서 , 애니메이션작가 , 중등국어교사, 통번역가</dd>
+                        <dt>졸업 후 진출 분야</dt>
+                        <dd>
+                            <ul class="depart_info_list">
+                                <li><strong>기업 및 산업체</strong><span>출판사, 광고 기획사, 광고 대행사, 기업 일반 사무직, 사설 학원, 신문사, 잡지사, 방송국</span></li>
+                                <li><strong>학계 및 연구기관</strong><span>언어ㆍ민족ㆍ문화 관련 국가ㆍ민간연구소</span></li>
+                                <li><strong>정부 및 공공기관</strong><span>한국교육학술정보원, 한국고전번역원, 한국언론진흥재단, 한국출판문화산업진흥원 등 언어 관련 공공기관</span></li>
+                            </ul>
+                        </dd>
+                        <dt>세부관련학과</dt>
+                        <dd>KFL전공,KFL학부,관광한국어학과,국어국문ㆍ영어영문학과군,국어국문전공,국어국문학,국어국문학과,국어국문학부,국어국문학전공,국어국문한국어교육학과,국어국문한문학과군,글로벌지역학부 한국언어문화전공,문학영상학과,통상언어전공,한국어문콘텐츠전공,한국어문학·문화학과,한국어문학과,한국어문학부,한국어문학전공,한국어문학전공 트랙,한국어문화학과,한국어문화학부,한국언어문학과,한국언어문화교육전공,한국언어문화전공,한국언어문화학과</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 학과정보 팝업 -->
+</body>
+</html>
