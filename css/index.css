@@ -1119,6 +1119,8 @@ button {
             font-weight: 500; }
   .status_area > .status_cont {
     background-color: #fafafa;
+    margin: 0 -3.90625vw;
+    padding: 0 3.90625vw;
     border-top: 1px solid #d4d4d4;
     border-bottom: 1px solid #d4d4d4; }
     .status_area > .status_cont > li {

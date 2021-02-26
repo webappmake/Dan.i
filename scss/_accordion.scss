@@ -272,6 +272,8 @@
   }
   & > .status_cont {
     background-color: #fafafa;
+    margin: 0 -#{$gutter_md};
+    padding: 0 $gutter_md;
     border-top: 1px solid $border;
     border-bottom: 1px solid $border;
     & > li {
