@@ -241,6 +241,7 @@
 }
 .major_wrap + .cont_tit, .list_view + .cont_tit { margin-top: 7.81250vw; }
 .major_wrap + .tab_wrap { margin-top: 2.92969vw; }
+.block { display: block; }
 .status_area {
   margin-bottom: 19.53125vw;
   & > .status_list {
@@ -251,6 +252,7 @@
       width: 33.3%;
       border: 0.09766vw solid $border;
       &.active .btn_txt { background-color: #e1e8f2; }
+      &:first-child button { @include opacity(.4); } //임의로 disabled 일 때 효과줌 > 디자인없음
       &:first-child.active .btn_txt { background-color: transparent; }
       .btn_txt { 
         width: 100%;
@@ -285,12 +287,14 @@
         & > li {
           @include flex;
           width: 100%;
-          height: 11.71875vw;
+          min-height: 11.71875vw;
           align-items: center;
           justify-content: space-between;
           font-size: 3.90625vw;
           border-bottom: 0.09766vw solid $border;
+          padding: 20px 0;
           strong { margin-right: $gutter_xs; }
+          .block + .block { padding-top: $gutter_xs; }
           &.hd {
             color: #333;
             font-weight: 600;
@@ -302,20 +306,24 @@
     }
   }
 }
-.list_view.column {
+.list_view.column { //원래 한줄에 2개씩 나오는 거였는데 1줄로 바꿔서 덮어서 수정함
   .list_hd { border-bottom: transparent; }
   .list {
     @include flex;
     flex-wrap: wrap;
     margin: 0 -#{$gutter_xs};
     & > li {
-      width: calc(50% - #{$gutter_sm});
+      width: calc(100% - #{$gutter_sm});
       margin: $gutter_xs !important;
       border: 0.09766vw solid $border;
       padding: $gutter_md !important;
       overflow: hidden;
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      & > div { margin: 0 !important; }
       .tit_lg { font-size: 4.29688vw; }
-      .desc { display: block; font-size: 3.51563vw; margin: 0 0 $gutter_sm; }
+      .desc { display: block; font-size: 3.51563vw; margin: $gutter_xs 0 0; }
       .icon_chk_wrap { float: right; }
       &:last-child { border-bottom: 0.09766vw solid $border !important; }
     }

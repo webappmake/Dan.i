@@ -1084,6 +1084,9 @@ button {
 .major_wrap + .tab_wrap {
   margin-top: 2.92969vw; }
 
+.block {
+  display: block; }
+
 .status_area {
   margin-bottom: 19.53125vw; }
   .status_area > .status_list {
@@ -1098,6 +1101,11 @@ button {
       border: 0.09766vw solid #d4d4d4; }
       .status_area > .status_list > li.active .btn_txt {
         background-color: #e1e8f2; }
+      .status_area > .status_list > li:first-child button {
+        opacity: 0.4;
+        /* All modern browsers */
+        filter: alpha(opacity=40);
+        /* For IE5~IE9 */ }
       .status_area > .status_list > li:first-child.active .btn_txt {
         background-color: transparent; }
       .status_area > .status_list > li .btn_txt {
@@ -1143,13 +1151,16 @@ button {
           display: -ms-flexbox;
           display: flex;
           width: 100%;
-          height: 11.71875vw;
+          min-height: 11.71875vw;
           align-items: center;
           justify-content: space-between;
           font-size: 3.90625vw;
-          border-bottom: 0.09766vw solid #d4d4d4; }
+          border-bottom: 0.09766vw solid #d4d4d4;
+          padding: 20px 0; }
           .status_area > .status_cont > li .major_list > li strong {
             margin-right: 0.97656vw; }
+          .status_area > .status_cont > li .major_list > li .block + .block {
+            padding-top: 0.97656vw; }
           .status_area > .status_cont > li .major_list > li.hd {
             color: #333;
             font-weight: 600;
@@ -1167,17 +1178,25 @@ button {
   flex-wrap: wrap;
   margin: 0 -0.97656vw; }
   .list_view.column .list > li {
-    width: calc(50% - 1.95313vw);
+    width: calc(100% - 1.95313vw);
     margin: 0.97656vw !important;
     border: 0.09766vw solid #d4d4d4;
     padding: 3.90625vw !important;
-    overflow: hidden; }
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .list_view.column .list > li > div {
+      margin: 0 !important; }
     .list_view.column .list > li .tit_lg {
       font-size: 4.29688vw; }
     .list_view.column .list > li .desc {
       display: block;
       font-size: 3.51563vw;
-      margin: 0 0 1.95313vw; }
+      margin: 0.97656vw 0 0; }
     .list_view.column .list > li .icon_chk_wrap {
       float: right; }
     .list_view.column .list > li:last-child {
