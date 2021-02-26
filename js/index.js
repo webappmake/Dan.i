@@ -148,6 +148,17 @@
             $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
         }, 0);
     });
+
+    //전공이수에 따른 졸업자수 .status_area
+    $('.status_list > li').click(function(){
+        var num=$(this).index();
+
+        $('.status_list > li').removeClass('active');
+        $(this).addClass('active');
+        $('.status_area > .status_cont > li').removeClass('active');
+        $('.status_area > .status_cont > li').eq(num).addClass('active');
+        return false;
+    })
 });
 
 

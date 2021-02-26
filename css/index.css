@@ -1058,21 +1058,21 @@ button {
 
 .cont_tit {
   font-family: "Gong Gothic", sans-serif !important;
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 400;
+  line-height: 1.4375;
   padding-left: 3.90625vw;
-  position: relative;
-  border: 1px solid red; }
+  position: relative; }
   .cont_tit::before {
     content: '';
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     background-color: #333;
     position: absolute;
     top: 50%;
     left: 0;
-    margin-top: -7px; }
+    margin-top: -8px; }
   .cont_tit + .list_view {
     margin-top: 0; }
   .cont_tit + .tab_wrap {
@@ -1085,7 +1085,7 @@ button {
   margin-top: 30px; }
 
 .status_area {
-  border: 1px solid red; }
+  margin-bottom: 200px; }
   .status_area > .status_list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1095,14 +1095,17 @@ button {
     margin: 1.95313vw 0 0.97656vw; }
     .status_area > .status_list > li {
       width: 33.3%;
-      height: 180px;
       border: 1px solid #d4d4d4; }
+      .status_area > .status_list > li.active .btn_txt {
+        background-color: #e1e8f2; }
+      .status_area > .status_list > li:first-child.active .btn_txt {
+        background-color: transparent; }
       .status_area > .status_list > li .btn_txt {
         width: 100%;
         height: 100%;
-        padding: 1.95313vw;
+        padding: 3.90625vw 30px;
         text-align: left;
-        color: #555; }
+        color: #333; }
         .status_area > .status_list > li .btn_txt > span {
           display: block;
           font-size: 32px; }
@@ -1112,8 +1115,44 @@ button {
           font-weight: 400;
           margin-top: 1.95313vw; }
           .status_area > .status_list > li .btn_txt > strong span {
-            font-size: 44px;
+            font-size: 52px;
             font-weight: 500; }
+  .status_area > .status_cont {
+    background-color: #fafafa;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4; }
+    .status_area > .status_cont > li {
+      display: none; }
+      .status_area > .status_cont > li.active {
+        display: block; }
+      .status_area > .status_cont > li .tit {
+        font-size: 44px;
+        color: #333;
+        margin: 3.90625vw 0 1.95313vw; }
+      .status_area > .status_cont > li .desc {
+        font-size: 40px;
+        color: #333;
+        line-height: 1.5; }
+      .status_area > .status_cont > li .major_list {
+        margin-bottom: -1.95313vw; }
+        .status_area > .status_cont > li .major_list > li {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          height: 120px;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 40px;
+          border-bottom: 1px solid #d4d4d4; }
+          .status_area > .status_cont > li .major_list > li strong {
+            margin-right: 0.97656vw; }
+          .status_area > .status_cont > li .major_list > li.hd {
+            color: #333;
+            font-weight: 600;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222; }
 
 .list_view.column .list_hd {
   border-bottom: transparent; }
@@ -1161,6 +1200,14 @@ button {
 
 .mb_last {
   margin-bottom: 200px !important; }
+
+.pop_sub_title + .desc {
+  font-size: 40px;
+  color: #333;
+  margin-top: 1.95313vw; }
+
+.pop_sub_title + .desc + .list_view {
+  margin-top: 100px; }
 
 .btn_shortcut_wrap {
   display: -webkit-box;
