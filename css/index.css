@@ -1419,8 +1419,8 @@ button {
     border: 0; }
 
 .img_upload_wrap .img_upload_box {
-  margin: 5.85938vw -0.48828vw 2.92969vw; }
-  .img_upload_wrap .img_upload_box .upload_list {
+  margin: 5.85938vw 0 2.92969vw; }
+  .img_upload_wrap .img_upload_box .upload_list .upload_img_list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1429,7 +1429,7 @@ button {
     flex-wrap: wrap;
     justify-content: space-between; }
     .img_upload_wrap .img_upload_box .upload_list .upload_img_list > li {
-      width: calc(10% - 0.48828vw);
+      width: calc(10% - 0.97656vw);
       display: inline-block;
       margin: 0.48828vw;
       background-color: #f5f5f5;
