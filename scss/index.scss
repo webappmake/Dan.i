@@ -930,7 +930,7 @@ select.form-control {
     background-color: #fff; 
     border: 0.09766vw solid #d4d4d4; 
     border-radius: $radius_xs; 
-    position: absolute; right: 0; top: 10.74219vw; z-index: 9; // 110px
+    position: absolute; right: 0; top: 10.74219vw; z-index: 9; 
     min-width: 30vw;
     & > strong { 
       display: block;
@@ -944,8 +944,8 @@ select.form-control {
     & > .toggle_filter { 
       display: block; 
       width: 100%;
-      height: 9.76563vw; // 100px
-      line-height: 9.76563vw; // 100px
+      height: 9.76563vw;
+      line-height: 9.76563vw;
       padding: 0 $gutter_md;
       font-size: $font_size;
       color: #333;
@@ -953,11 +953,11 @@ select.form-control {
       position: relative;
       &::before {
         content: '';
-        width: 3.90625vw;  // 40px
-        height: 3.90625vw; // 40px
+        width: 3.90625vw; 
+        height: 3.90625vw; 
         display: inline-block;
-        background: url(../images/icons_m.png) no-repeat -7.81250vw -32.81250vw / 97.65625vw auto;// -80px -336px
-        position: absolute; top: 2.92969vw; right: 2.92969vw; // 30px
+        background: url(../images/icons_m.png) no-repeat -7.81250vw -32.81250vw / 97.65625vw auto;
+        position: absolute; top: 2.92969vw; right: 2.92969vw; 
       }
       &.active::before { transform: rotate(-180deg); }
     }

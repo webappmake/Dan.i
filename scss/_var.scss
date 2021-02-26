@@ -37,7 +37,6 @@ $font_size: 3.51563vw;
 $header_height: 11.71875vw; //120px;
 $nav_height: 11.71875vw; //120px;
 $footer_height: 18.55469vw; //190px;
-$form_min_width: 200px;
 
 $gutter_xs: 0.97656vw; //10px;
 $gutter_sm: 1.95313vw; //20px;
@@ -45,30 +44,14 @@ $gutter_md: 3.90625vw; //40px;
 $radius: 1.95313vw; //20px;
 $radius_xs: 0.29297vw; //3px;
 /* ------------------------------------------------------- MIXINS ------------------------------------------------------- */
-// Drop shadows
-// @mixin shadow_bottom() {
-//     -webkit-box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
-//     box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2), 0px 11px 15px 1px rgba(0,0,0,0.14), 0px 4px 20px 3px rgba(0,0,0,0.12);
-// }
-
-// @mixin shadow_right() {
-//     -webkit-box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
-//     box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
-// }
-
-// @mixin shadow_box() {
-//     -webkit-box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-//     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-// }
-
 @mixin shadow_accodion() {
-    -webkit-box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
-    box-shadow: 1px 2px 18.6px 11.4px rgba(17, 17, 17, 0.05);
+    -webkit-box-shadow: 0.09766vw 0.19531vw 1.81641vw 1.11328vw rgba(17, 17, 17, 0.05);
+    box-shadow: 0.09766vw 0.19531vw 1.81641vw 1.11328vw rgba(17, 17, 17, 0.05);
 }
 
 @mixin shadow_gnb() {
-    -webkit-box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
-    box-shadow: 0px -2px 18px 11px rgba(17, 17, 17, 0.05);
+    -webkit-box-shadow: 0.00000vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
+    box-shadow: 0.00000vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
 }
 
 @mixin shadow_filter_pop_list() {
@@ -106,7 +89,7 @@ $radius_xs: 0.29297vw; //3px;
 @mixin card_design() {
     border-radius: $radius;
     background-color: #f7f7f7;
-    border: 1px solid $border;
-    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    border: 0.09766vw solid $border;
+    box-shadow: 0 0.19531vw 0.58594vw rgba(0,0,0,.1);
     overflow: hidden;
 }
