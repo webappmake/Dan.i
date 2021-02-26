@@ -237,13 +237,12 @@
     margin-top: -8px;
   }
   & + .list_view { margin-top: 0; }
-  & + .tab_wrap { margin-top: $gutter_sm; }
+  & + .tab_wrap, & + .pag_info { margin-top: $gutter_sm; }
 }
 .major_wrap + .cont_tit, .list_view + .cont_tit { margin-top: 80px; }
 .major_wrap + .tab_wrap { margin-top: 30px; }
 .status_area {
   margin-bottom: 200px;
-
   & > .status_list {
     @include flex;
     flex-wrap: wrap;
@@ -325,7 +324,7 @@
 }
 .btn_filter {
   width: 82.03125vw;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 500;
   border-radius: 0;
   border: 1px solid $border;
@@ -345,16 +344,113 @@
   .a_btn_white {
     width: calc(50% - #{$gutter_sm});
     margin: $gutter_xs !important;
-    font-size: 34px;
+    font-size: 35px; //원래는 36인데 글씨가 떨어져서 바꿈
     font-weight: 500;
     letter-spacing: -.02rem;
-    padding: 25px $gutter_md;
+    padding: 20px 35px;
     .ic { width: 3.90625vw; height: 3.90625vw; }
   }
 }
 .box_gray {
   border: 1px solid $border;
+  background-color: #fafafa;
+  padding: 30px; 
+  min-height: 120px;
+  font-size: 32px;
   &.total_box {
-    
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    strong { font-size: 52px; }
+  }
+  &.grade_box {
+    height: 380px;
+    margin: $gutter_sm 0 100px;
+    .desc { font-size: 32px; }
+    & > ul {
+      @include flex;
+      justify-content: space-between;
+      margin: $gutter_sm 0 0;
+      & > li {
+        text-align: center;
+        & > span { display: block; font-weight: 500; }
+        .round {
+          width: 198px;
+          height: 198px;
+          display: inline-block;
+          border-radius: 50%;
+          color: #fff;
+          line-height: 198px;
+          strong { font-size: 52px; margin-right: $gutter_xs; }
+        }
+        &:first-child .round { background-color: #838eda; }
+        &:nth-child(2) .round { background-color: #87b069; }
+        &:nth-child(3) .round { background-color: #e3993d; }
+        &:nth-child(4) .round { background-color: #47939f; }
+      }
+    }
+  }
+}
+.box_count {
+  @include flex;
+  flex-wrap: wrap;
+  margin: $gutter_sm 0 $gutter_md;
+  & > li {
+    width: 25%;
+    height: 180px;
+    border: 1px solid $border;
+    padding: 25px 30px;
+    & > span {
+      display: block;
+      font-size: 32px;
+      strong { font-size: 52px; }
+      & + span { margin-top: $gutter_xs}
+      &:nth-child(2) {
+        height: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        -webkit-box-orient: vertical; 
+        -webkit-line-clamp: 1;
+      }
+    }
+  }
+}
+.modal_body .summary_info.lg {
+  margin: 30px -#{$gutter_md} 0;
+  background: transparent;
+  border-left: transparent;
+  border-right: transparent;
+} 
+.grade_num_list {
+  @include flex;
+  flex-wrap: wrap;
+  margin: 50px -#{$gutter_xs} 30px;
+  & > li {
+    width: calc(50% - #{$gutter_sm});
+    height: 230px;
+    border: 1px solid $border;
+    border-radius: $radius;
+    margin: $gutter-xs;
+    font-size: 32px;
+    padding: 50px 30px;
+    position: relative;
+    p { font-size: 32px; margin-bottom: 10px; }
+    strong { font-size: 52px; margin-right: $gutter_xs; }
+    &::before {
+      content: '';
+      width: 97px;
+      height: 97px;
+      display: inline-block;
+      position: absolute; bottom: 40px; right: 30px; 
+      background: url(../images/icons_m.png) no-repeat 0 0 / 97.65625vw auto;  
+    }
+    &.grade_num01::before { background-position: -800px -595px; }
+    &.grade_num02::before { background-position: -903px -595px; }
+    &.grade_num03::before { background-position: -800px -698px; bottom: 10px; }
+    &.grade_num04::before { background-position: -903px -698px; }
+    &.grade_num05::before { background-position: -800px -801px; }
+    &.grade_num06::before { background-position: -903px -801px; }
+    &.grade_num07::before { background-position: -800px -904px; }
+    &.grade_num08::before { background-position: -903px -904px; }
   }
 }
