@@ -1362,13 +1362,13 @@ button {
     .grade_num_list > li.grade_num08::before {
       background-position: -903px -904px; }
 
-.img_upload_bar .img_upload_info li {
+.img_upload_wrap .img_upload_bax .img_upload_info li {
   font-size: 38px;
   line-height: 1.75; }
 
-.img_upload_bar .file_btn_box {
+.img_upload_wrap .img_upload_bax .file_btn_box {
   margin: 40px 0 100px; }
-  .img_upload_bar .file_btn_box label {
+  .img_upload_wrap .img_upload_bax .file_btn_box label {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1383,13 +1383,13 @@ button {
     text-align: center;
     cursor: pointer;
     margin: 0 auto; }
-    .img_upload_bar .file_btn_box label .ic {
+    .img_upload_wrap .img_upload_bax .file_btn_box label .ic {
       width: 60px;
       height: 60px;
       margin-right: 1.95313vw; }
-    .img_upload_bar .file_btn_box label span {
+    .img_upload_wrap .img_upload_bax .file_btn_box label span {
       font-size: 40px; }
-  .img_upload_bar .file_btn_box input {
+  .img_upload_wrap .img_upload_bax .file_btn_box input {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1398,6 +1398,29 @@ button {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0; }
+
+.img_upload_wrap .img_upload_box {
+  margin: 60px -5px 30px; }
+  .img_upload_wrap .img_upload_box .upload_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .img_upload_wrap .img_upload_box .upload_list .upload_img_list > li {
+      width: calc(10% - 5px);
+      display: inline-block;
+      margin: 5px;
+      background-color: #f5f5f5;
+      border-radius: 1.95313vw;
+      overflow: hidden; }
+      .img_upload_wrap .img_upload_box .upload_list .upload_img_list > li:nth-child(10n+1) {
+        clear: both; }
+      .img_upload_wrap .img_upload_box .upload_list .upload_img_list > li img {
+        width: 87px;
+        height: 87px; }
 
 /* chatbot popup */
 .chatbot_modal .modal-content {
