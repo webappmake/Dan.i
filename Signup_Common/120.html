@@ -30,11 +30,14 @@
                     <button type="submit" class="btn btn_like"><i class="ic"></i><span>좋아요</span></button>
                     <button type="submit" class="btn btn_unlike"><i class="ic"></i><span>힘들어요</span></button>                                   
                 </div>
-                <div class="feedback_form">
-                    <input type="text" placeholder="한 줄 평을 남겨주세요. (20자 내외)"/>
-                    <button type="submit" class="btn btn_submit">등록</button>
+                <div class="feedback_form_wrap">
+                    <a href="#" class="a_link" onclick="fn_feedback_show(this)">한 줄 평 남기기</a>
+                    <div class="feedback_form">
+                        <input type="text" placeholder="한 줄 평을 남겨주세요. (20자 내외)"/>
+                        <button type="submit" class="btn btn_default_line" onclick="fn_Toast()">등록</button>
+                    </div>
                 </div>
-                <p class="desc">EduAI는 맞춤형 교육정보제공을 위해 항상 노력하고 있어요.</p>
+                <p class="desc">EduAI는 맞춤형 교육정보제공을 위해<br/>항상 노력하고 있어요.</p>
             </div>
             <div class="signup_footer">
                 <div class="btn_wrap only">
@@ -44,5 +47,10 @@
         </div>
     </div>
 </body>
+<!-- Toast -->
+<div class="toast hide" data-delay="1000">
+    <div class="toast_txt center">한 줄 평 남겨주셔서 감사해요.</div>
+</div>
+<!-- // Toast -->
 </html>
 
