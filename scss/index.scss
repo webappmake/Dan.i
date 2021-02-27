@@ -1,6 +1,6 @@
 ﻿@charset "utf-8";
 
-@import "fonts", "var", "reset", "popup", "accordion", "chatbot";
+@import "fonts", "var", "reset", "popup", "accordion", "chatbot", "signup";
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
@@ -666,7 +666,7 @@ select.form-control {
       width: 8.20313vw;
       height: 8.20313vw;
       display: inline-block;
-      padding: $gutter_xs
+      padding: $gutter_xs;
     }
     & + .desc { margin-top: $gutter_xs; }
   }
