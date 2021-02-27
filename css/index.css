@@ -2309,7 +2309,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(../images/entry_bg.png) no-repeat center center/314px 146px; }
+  background: url(../images/entry_bg.png) no-repeat center center/454px auto; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
