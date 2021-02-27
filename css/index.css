@@ -1929,6 +1929,11 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   width: 100vw;
   height: 100vh; }
 
+.signin_wrap input::-webkit-input-placeholder, .signin_wrap input::-moz-input-placeholder, .signin_wrap input::-o-input-placeholder, .signin_wrap input::-ms-input-placeholder,
+.signup_wrap input::-webkit-input-placeholder, .signup_wrap input::-moz-input-placeholder, .signup_wrap input::-o-input-placeholder, .signup_wrap input::-ms-input-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
 /* sign-in > chatbot_box */
 .chatbot_box.signin {
   display: flex;
@@ -2003,38 +2008,6 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   font-size: 18px;
   color: #222;
   font-weight: bold; }
-
-.signin_wrap input::-webkit-input-placeholder, .signin_wrap input::-moz-input-placeholder, .signin_wrap input::-o-input-placeholder, .signin_wrap input::-ms-input-placeholder,
-.signup_wrap input::-webkit-input-placeholder, .signup_wrap input::-moz-input-placeholder, .signup_wrap input::-o-input-placeholder, .signup_wrap input::-ms-input-placeholder {
-  color: #a9a9a9;
-  opacity: 1; }
-
-.signup_wrap .chk_wrap span {
-  height: 60px;
-  line-height: 60px;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 3px;
-  flex-grow: 1;
-  margin: 0 5px;
-  text-align: center; }
-
-.signup_wrap .chk_wrap span label {
-  display: block;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 600; }
-
-.signup_wrap .chk_wrap span input[type=radio] + label {
-  border: 1px solid #555;
-  background-color: #fff;
-  color: #555; }
-
-.signup_wrap .chk_wrap span input[type=radio]:checked + label {
-  border: 1px solid #0087f9;
-  background-color: #fff;
-  color: #0087f9; }
 
 /* sign-up */
 .signup_wrap {
@@ -2299,16 +2272,6 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       color: #333;
       font-weight: 600; }
 
-.signup_contents.entry {
-  width: 100vw;
-  height: calc(100vh - $signup_footer_height);
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url(../images/entry_bg.png) no-repeat center center/454px auto; }
-
 .signup_contents .chk_list_wrap {
   margin: 80px 0 3.90625vw; }
   .signup_contents .chk_list_wrap > .txt {
@@ -2325,6 +2288,16 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     display: flex;
     justify-content: space-between;
     align-items: center; }
+
+.signup_contents.entry {
+  width: 100vw;
+  height: calc(100vh - $signup_footer_height);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/entry_bg.png) no-repeat center center/454px auto; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
