@@ -19,7 +19,6 @@
 .signin_wrap input::-webkit-input-placeholder, .signin_wrap input::-moz-input-placeholder, .signin_wrap input::-o-input-placeholder, .signin_wrap input::-ms-input-placeholder,
 .signup_wrap input::-webkit-input-placeholder, .signup_wrap input::-moz-input-placeholder, .signup_wrap input::-o-input-placeholder, .signup_wrap input::-ms-input-placeholder { color: #a9a9a9; opacity: 1; }
 
-.signup_wrap .chk_wrap{}
 .signup_wrap .chk_wrap span{height: 60px; line-height:60px; display: inline-block; font-size: 18px; font-weight: 600; border-radius: 3px; flex-grow: 1; margin: 0 5px; text-align:center;}
 .signup_wrap .chk_wrap span label{display:block; width:100%; font-size:16px; font-weight:600;}
 .signup_wrap .chk_wrap span input[type=radio] + label{border: 1px solid #555; background-color: #fff; color: #555;}
@@ -29,6 +28,8 @@
 .signup_wrap {
   @include flex;
   flex-direction: column; 
+  position: relative;
+  min-height: 100vh;
   .signup_header {
     width: 100vw;
     height: $signup_header_height;
@@ -43,8 +44,8 @@
     width: 100vw;
     height: calc(100vh - #{$signup_header_height} - #{$signup_footer_height});
     flex-grow: 1; 
-    position: relative;
-    padding: $gutter_md;
+    padding: $gutter_md $gutter_md $signup_footer_height;
+    overflow-y: auto;
   }
   .signup_footer {
     @include shadow_gnb;
@@ -53,74 +54,93 @@
     .btn_wrap { 
       @include flex;
       justify-content: space-between; 
-      align-items: center; border: 1px solid red;
+      align-items: center; 
       .btn {
         height: $signup_footer_height;
-        display: inline-block; 
         font-size: 44px; 
-        font-weight: 600; 
         flex-grow: 1;
-        & > span { vertical-align: middle; } 
         &:nth-child(2) { width: 704px; }       
       }
-      .btn_default { border: 1px solid #d4d4d4; background-color: #fff; color: #222; }
-      .btn_submit { border: 1px solid #0054a3; background-color: #0054a3; color: #fff; }
-      .btn_default_line { border: 1px solid #555; background-color: #fff; color: #555; font-size: 16px; }
-      .btn_submit_line { border: 1px solid #0087f9; background-color: #fff; color: #0087f9; font-size: 16px; }
-      .btn_like { border: 1px solid #0087f9; color: #0087f9; font-size: 16px; }
-      .btn_unlike { border: 1px solid #e62122; color: #e62122; font-size: 16px; }
-      .btn_like .ic, .signup_wrap .btn_wrap .btn_unlike .ic { width: 26px; height: 26px; display: inline-block; margin-right: 6px; vertical-align: middle; background-image: url(../images/icon.png); background-repeat: no-repeat; background-size: 500px 500px; background-position: -179px -239px; } /* ic는 24px로 보여지되 잘리지 않도록 1px씩 여유줌 */
-      .btn_unlike .ic { background-position-x: -219px; }
     }
   }
+  .btn {
+    display: inline-block; 
+    font-size: 40px; 
+    font-weight: 600; 
+    & > span { vertical-align: middle; font-size: 40px; }
+    &.btn_like,
+    &.btn_unlike {
+      width: 100%;
+      height: 120px;
+      border-radius: 0;
+      border: 1px solid #0087f9;
+      color: #0087f9;
+      margin-bottom: $gutter_sm;
+      .ic {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        margin-right: $gutter_sm;
+        vertical-align: middle;
+        background: url(../images/icons_m.png) no-repeat -64px -776px / 97.65625vw auto;
+      }
+    }
+    &.btn_unlike {
+      border: 1px solid #e62122;
+      color: #e62122;
+      .ic { background-position-x: -192px; }
+    }
+    &.btn_submit_line,
+    &.btn_default_line { width: 100%; height: 120px; margin-bottom: $gutter_sm; }
+  }
+  .btn_default { border: 1px solid #d4d4d4; background-color: #fff; color: #222; }
+  .btn_submit { border: 1px solid #0054a3; background-color: #0054a3; color: #fff; }
+  .btn_default_line { border: 1px solid #555; background-color: #fff; color: #555; }
+  .btn_submit_line { border: 1px solid #0087f9; background-color: #fff; color: #0087f9; }
 }
-
 .signup_contents { 
   .txt { 
     font-size: 44px; 
     color: #222; 
     line-height: 1.72; 
-    span { border: 1px solid red; }
-    small { font-weight: 600; color: #555; }
-    .text_oblique { font-style: oblique; }
-    strong.text_oblique, & strong.text_blue{ font-weight:600; }
-    .text_blue { color: #0054a3; }
-    .text_bold { font-weight: 700; }
+    small { font-size: 44px; color: #888; display: inline-block; }
+    .text_oblique { font-size: 52px; font-style: oblique; font-weight: 600; }
+    strong.text_oblique, & strong.text_blue { font-weight: 600; }
+    .text_blue { font-size: 52px; color: #0054a3; font-weight: 600; }
+    .text_bold { font-weight: 600; }
     & + .txt { margin-top: 80px; }
     & + .btn_wrap { margin-top: 58px; }
+    & + .word_wrap { margin-top: 90px; }
     & + .search_form_wrap { margin-top: 100px; }
     & + .search_form_wrap + .txt{ margin-top: 60px; }
     & + .chk_list_wrap { margin-top: 38px; }
+    &.txt_lg { font-size: 52px; }
   }
   .desc { 
     color: #999; 
     font-size: 40px; 
     line-height: 1.55;   
     text-align: right;  
-    position: absolute; bottom: $gutter_md; right: $gutter_md;     
-    a { color: #999; text-decoration: underline; }
+    position: absolute; right: $gutter_md; bottom: calc(#{$signup_footer_height} + #{$gutter_md});
+    a { font-size: 40px; color: #000; text-decoration: underline; }
   }
+  .entry_message { font-size: 52px; font-weight: 600; }
   .search_form_wrap {
     .search_form { 
       margin: 0; 
       & + .desc { margin-top: 50px; }
+      & + .word_wrap { margin-top: $gutter_md; }
     }
-    .desc { position: inherit; } 
+    .desc { position: inherit; margin-bottom: $gutter_md; } 
+    & + .word_wrap { margin-top: $gutter_md; }
   }
-  // .signup_wrap .signup_contents .search_form_wrap .search_form .btn .ic_search { width: 26px; height: 26px; display: inline-block; text-indent: -9999px; background-image: url(../images/icon.png); background-repeat: no-repeat; background-size: 500px 500px; background-position: -299px -159px; }
-  // .signup_wrap .signup_contents .search_form_wrap .desc { }
-  // .signup_wrap .signup_contents .inner_box > .tbl:nth-of-type(1) { margin: -8px 0 16px 0; }
-  // .signup_wrap .signup_contents .inner_box .tbl tbody { background-color: #fff; border-right: 1px solid #d4d4d4; border-left: 1px solid #d4d4d4; }
-  // .signup_wrap .signup_contents .inner_box .tbl .left { text-align: left !important; }
-  // .signup_wrap .signup_contents .inner_box .tbl th.left { padding-left: 45px; }
-  // .signup_wrap .signup_contents .inner_box .tbl td.left { padding-left: 30px; height: 65px; }
-  // .signup_wrap .signup_contents .inner_box .tbl .txt { font-size: 14px; color: #333; display:inline-block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; max-width:100%; }
-  // .signup_wrap .signup_contents .inner_box .tbl .date { font-size: 12px; color: #888; }
   .word_wrap {
+    margin: 0 -#{$gutter_xs};
+    & + .txt { margin-top: $gutter_md; }
     .word {
       display: inline-block;
-      padding: 30px 70px;
-      margin: 6px 4px;
+      padding: 20px 70px;
+      margin: $gutter_xs;
       font-size: 40px;
       font-weight: 600;
       color: #333;
@@ -141,26 +161,110 @@
     }//.word
   }//.word_wrap
 }
-
-// .signup_wrap .signup_contents .inner_box { width: 100%; height: auto; display: inline-block; border: 1px solid #d4d4d4; background-color: #f9f9f9; border-radius: 3px; padding: 20px; margin: 20px 0;  }
-// .signup_wrap .signup_contents .inner_box.img { width: 200px; height: 200px; margin: 0 0 40px 0; padding: 0; }
-// .signup_wrap .signup_contents .inner_box.word_wrap { min-height: 130px; padding: 12px; }
-// .signup_wrap .signup_contents .inner_box.word_wrap .word { margin: 6px; }
-
-// .signup_wrap .signup_contents .inner_box.text { padding: 24px; }
-// .signup_wrap .signup_contents .inner_box.text > dl { display: flex; flex-direction: row; flex-wrap: wrap; font-size: 16px; line-height: 34px; }
-// .signup_wrap .signup_contents .inner_box.text > dl dt { width: 160px; font-weight: 600; }
-// .signup_wrap .signup_contents .inner_box.text > dl dd { width: calc(100% - 160px); font-weight: 600; }
+.ranking {
+  margin-top: $gutter_md;
+  li {
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+    line-height: 34px;
+    padding: $gutter_sm 0;
+    .num {
+      width: 86px;
+      height: 86px;
+      display: inline-block;
+      margin-right: 25px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 86px;
+      color: #fff;
+      background-color: #aeaeae;
+      &.red { background-color: #f17164; }
+    }
+  }
+}
+.inner_box {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border: 1px solid #d4d4d4;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  padding: 40px;
+  margin: 40px 0;
+  &.img {
+    width: 540px;
+    height: 540px;
+    margin: 0 0 50px 0;
+    padding: 0;
+  }
+  &.text {
+    & > dl {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-size: 40px;
+      line-height: 120px;
+      border-top: 1px solid $border;
+      dt, dd { border-bottom: 1px solid $border; }
+      dt {
+        width: calc(100% - 200px);
+        font-weight: 500; 
+      }
+      dd {
+        width: 200px;
+        font-weight: 600;
+        text-align: left;
+      }
+    }
+  }
+  .tbl {
+    width: calc(100vw - 162px);
+    max-width: calc(100vw - 162px); 
+    margin-top: -30px;
+    .left { text-align: left !important; }
+    th, td {
+      height: 120px;
+      font-size: 40px;
+      text-align: center;
+      border-bottom: 1px solid $border;
+    }
+    th { border-color: $border_dark; }
+    .txt {
+      max-width: 657px;
+      font-size: 40px;
+      color: #333;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
+    .date {
+      width: 200px;
+      display: inline-block;
+      font-size: 40px;
+      color: #333;
+      font-weight: 600;
+    }
+  }
+}
 
 
 // .signup_wrap .signup_contents .chk_list_wrap .chk_list { width: 100%; height: 60px; border: 1px solid #d4d4d4; border-radius: 3px; padding: 20px; margin-bottom: 7px; display: flex; justify-content: space-between; align-items: center; }
-// .signup_wrap .signup_contents .ranking { margin-top: 40px; }
-// .signup_wrap .signup_contents .ranking li { font-size: 16px; font-weight: 600; color: #222; line-height: 34px; margin: 10px 0; }
-// .signup_wrap .signup_contents .ranking li .num { width: 30px; height: 34px; display: inline-block; margin-right: 18px; text-align: center; font-size: 14px; font-weight: 600; color: #fff; background-color: #aeaeae; }
-// .signup_wrap .signup_contents .ranking li .num.red { background-color: #f17164; }
+.signup_contents.entry {
+  width: 100vw;
+  height: calc(100vh - $signup_footer_height); 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/entry_bg.png) no-repeat center center / 314px 146px;
+}
 
-// .signup_wrap .signup_contents.entry { width: 100%; height: 100%; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; background: url(../images/entry_bg.png) no-repeat center center  / 314px 146px; }
-// .signup_wrap .signup_contents .entry_message { font-size: 30px; font-weight: 600; }
+
 // .signup_wrap .signup_contents .feedback_form { overflow: hidden; margin: 20px 0; }
 // .signup_wrap .signup_contents .feedback_form input { width: calc(100% - 70px); height: 50px; float: left; border: 1px solid #d4d4d4; border-right: none; font-size: 16px; padding: 0 18px; ;}
 // .signup_wrap .signup_contents .feedback_form .btn_submit { width: 70px; height: 50px; float: right; background-color: #0054a3;  border: 1px solid #0054a3; font-size: 14px; color: #fff; }

@@ -1,35 +1,21 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <title>공통 레이아웃</title>
-    <meta name="description" content="단아이">
-    <meta name="keywords" content="단아이">
-    <meta property="og:title" content="단아이">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="단아이">
-    <link rel="canonical" href="#">
-    <meta name="robots" content="index,follow">
-    <!-- css -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/Base.css" rel="stylesheet">
-    <link href="../../css/Layout.css" rel="stylesheet">
-    <link href="../../css/Common.css" rel="stylesheet">
-    <link href="../../css/chatbot.css" rel="stylesheet">
-    <link href="../../css/signup.css" rel="stylesheet">
-    <!-- // css -->
-    <!-- js -->
-    <script src="../../js/jquery-3.5.1.min.js"></script>
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/FuncScript.js"></script>
-    <script src="../../js/Common.js"></script>
-    <script src="../../js/respond.js"></script>
-    <script src="../../js/html5shiv.js"></script>
-    <!-- // js -->
-    <!-- page script -->
-    <script type="text/javascript">
-
-    </script>
-    <!-- // page script -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>가입프로세스</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<!--lib-->
+	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
+	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/lib/swiper.css">
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
 </head>
 <body>
     <div class="wrapper">
@@ -44,15 +30,9 @@
                     ‘주차 별 관심 주제'를 받으실 수 있어요.<br /><br />
                     매주 학생들의 관심 주제를 받으실래요?
                 </p>
-                <div class="btn_wrap chk_wrap">
-                    <span>
-                        <input type="radio" class="icon_chk icon_chk_noicon" name="topic" id="yes" checked="checked" />
-                        <label for="yes">네, 받을게요</label>
-                    </span>
-                    <span>
-                        <input type="radio" class="icon_chk icon_chk_noicon" name="topic" id="no" />
-                        <label for="no">아니오, 괜찮아요</label>
-                    </span>
+                <div class="btn_wrap">                                    
+                    <button type="submit" class="btn btn_submit_line"><span>네, 받을게요</span></button>
+                    <button type="submit" class="btn btn_default_line"><span>아니오, 괜찮아요</span></button>
                 </div>
                 <p class="desc">EduAI는 교과 정보를 분석해요</p>
             </div>
