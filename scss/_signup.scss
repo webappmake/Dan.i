@@ -273,3 +273,18 @@
   align-items: center;
   background: url(../images/entry_bg.png) no-repeat center center / 454px auto;
 }
+.feedback_form_wrap {
+  text-align: right;
+  margin-top: 80px;
+  .a_link { font-size: 40px; color: #000; text-decoration: underline; }
+  .feedback_form {
+    display: none;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    input { width: 100%; }
+    .btn_default_line { width: 420px; margin-top: 30px; }
+  }
+}
+.toast .toast_txt.center { bottom: calc(50% - 62px); }

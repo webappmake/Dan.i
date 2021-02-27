@@ -2299,6 +2299,28 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   align-items: center;
   background: url(../images/entry_bg.png) no-repeat center center/454px auto; }
 
+.feedback_form_wrap {
+  text-align: right;
+  margin-top: 80px; }
+  .feedback_form_wrap .a_link {
+    font-size: 40px;
+    color: #000;
+    text-decoration: underline; }
+  .feedback_form_wrap .feedback_form {
+    display: none;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .feedback_form_wrap .feedback_form input {
+      width: 100%; }
+    .feedback_form_wrap .feedback_form .btn_default_line {
+      width: 420px;
+      margin-top: 30px; }
+
+.toast .toast_txt.center {
+  bottom: calc(50% - 62px); }
+
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
