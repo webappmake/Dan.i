@@ -149,7 +149,11 @@
         }
         &.sub_type02{
             width:auto;
-            & > li{width:17.57813vw;}
+            & > li{
+                width:17.57813vw;
+                &.sub_menu_lg{width:330px;}
+                > a{max-width:100% !important;}
+            }
         }
       }
     }
@@ -931,13 +935,16 @@ select.form-control {
 //COMMON > TAB > 하늘색 보더 디자인
 .tab_wrap.tab_type02 {
   & > .nav {
+    @include box();
     position: relative;
     border-bottom:1px solid #d4d4d4;
     & > li {
       overflow: visible;
       a {
+        width:200px;
         background: none;
         border: none;
+        position:relative;
         &.active { 
           color: #222;
           &:after{
@@ -1078,6 +1085,24 @@ select.form-control {
     }
   }
 }
+
+/* ------------------------------------------------------- research ------------------------------------------------------- */
+.research_ipt{
+    margin:40px 0 50px 0;
+    input{}
+}
+.research_list{    
+    border-top:2px solid #a3a3a3;
+    > li{
+        @include flex();
+        justify-content:space-between;
+        padding:25px 0;
+        border-bottom:0.09766vw solid $border;
+        > strong{font-size:44px; line-height:100px;}
+        > a{display: block; padding: 2.34375vw 2.63672vw; border: 0.09766vw solid $border; border-radius: 1.95313vw; font-size: 3.51563vw; font-weight: 600; background-color: #eee;}
+    }
+}
+
 
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top{
