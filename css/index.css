@@ -2366,7 +2366,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     width: calc(100% - 8.78906vw*2);
     margin: 1.95313vw 8.78906vw; }
   .modal-content.camp_wrap .modal_header {
-    height: 604px;
+    height: 580px;
     padding: 0;
     position: inherit;
     background-color: transparent; }
@@ -2437,7 +2437,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
           background-position: -821px -336px; }
   .modal-content.camp_wrap .modal_body {
     width: 100vw;
-    height: calc(100vh - 604px);
+    height: calc(100vh - 580px);
     padding-top: 165px; }
 
 .modal-content.camp_wrap {
