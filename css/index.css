@@ -2366,10 +2366,18 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     width: calc(100% - 8.78906vw*2);
     margin: 1.95313vw 8.78906vw; }
   .modal-content.camp_wrap .modal_header {
-    height: 580px;
+    height: 750px;
     padding: 0;
     position: inherit;
     background-color: transparent; }
+    .modal-content.camp_wrap .modal_header .btn_transparent {
+      width: 840px;
+      height: 120px;
+      color: #fff;
+      font-size: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #fff;
+      margin: 40px 90px 120px; }
     .modal-content.camp_wrap .modal_header .camp_menu_wrap {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2437,8 +2445,42 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
           background-position: -821px -336px; }
   .modal-content.camp_wrap .modal_body {
     width: 100vw;
-    height: calc(100vh - 580px);
+    height: calc(100vh - 750px);
     padding-top: 165px; }
+    .modal-content.camp_wrap .modal_body.scroll_none {
+      overflow-y: hidden; }
+    .modal-content.camp_wrap .modal_body .scroll_section {
+      height: calc(100vh - 750px - 165px);
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 3.90625vw;
+      overflow-x: hidden;
+      overflow-y: auto; }
+
+.timetable_wrap .timetable {
+  margin-bottom: 3.90625vw; }
+  .timetable_wrap .timetable h5.tit {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-weight: 400;
+    font-size: 40px;
+    color: #222;
+    padding: 0.97656vw 0; }
+  .timetable_wrap .timetable .tbl thead {
+    border-bottom: 4px solid #666; }
+    .timetable_wrap .timetable .tbl thead th {
+      padding: 1.95313vw 14px;
+      font-size: 36px;
+      color: #555;
+      font-weight: 600; }
+  .timetable_wrap .timetable .tbl tbody tr {
+    border-bottom: 1px solid #d4d4d4; }
+  .timetable_wrap .timetable .tbl tbody td {
+    padding: 3.90625vw 14px; }
+    .timetable_wrap .timetable .tbl tbody td span {
+      font-size: 36px;
+      color: #222;
+      font-weight: 400;
+      line-height: 1.38; }
 
 .modal-content.camp_wrap {
   color: #fff; }

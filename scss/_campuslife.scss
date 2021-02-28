@@ -36,10 +36,19 @@
     }
   }
   .modal_header {
-    height: 580px;
+    height: 750px;
     padding: 0;
     position: inherit;
     background-color: transparent;
+    .btn_transparent {
+      width: 840px;
+      height: 120px;
+      color: #fff;
+      font-size: 40px;
+      background-color: rgba(255, 255, 255, .2);
+      border: 1px solid #fff;
+      margin: 40px 90px 120px;
+    }
     .camp_menu_wrap {
       @include flex;
       width: 100vw;
@@ -98,9 +107,49 @@
   }
   .modal_body {
     width: 100vw;
-    height: calc(100vh - 580px);
+    height: calc(100vh - 750px);
     padding-top: 165px;
+    &.scroll_none {  overflow-y: hidden; }
+    .scroll_section {
+      height: calc(100vh - 750px - 165px);
+      background-color: #fff;
+      border-radius: 10px;
+      padding: $gutter_md;
+      overflow-x: hidden;
+      overflow-y: auto;      
+    }
   }
+}
+.timetable_wrap {
+  .timetable {
+    margin-bottom: $gutter_md;
+    h5.tit { 
+      font-family: $sub_font_family;
+      font-weight: 400;
+      font-size: 40px; 
+      color: #222; 
+      padding: $gutter_xs 0;
+    }
+    .tbl {
+      thead {
+        border-bottom: 4px solid #666;
+        th {
+          padding: $gutter_sm 14px;
+          font-size: 36px; 
+          color: #555; 
+          font-weight: 600;
+        }
+      }
+      tbody {
+        tr { border-bottom: 1px solid $border; }
+        td {
+          padding: $gutter_md 14px;          
+          span { font-size: 36px; color: #222; font-weight: 400;  line-height: 1.38; }
+        }
+      }
+    }
+  }
+
 }
 .modal-content.camp_wrap {
   color: #fff;
@@ -127,7 +176,6 @@
     }
   }
 }
-
 
 // 캠퍼스라이프 팝업
 .camp_pop_cont {

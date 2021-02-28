@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>캠퍼스라이프_시간표</title>
+	<title>캠퍼스라이프_검색</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
 	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
@@ -33,10 +33,10 @@
 				<div class="modal_header">
 					<div class="camp_menu_wrap">
 						<ul class="camp_menu">
-							<li class="active"><a href="CampusLife_Timetable.html"><i class="ic ic_time"></i><span>시간표</span></a></li>
+							<li><a href="CampusLife_Timetable.html"><i class="ic ic_time"></i><span>시간표</span></a></li>
 							<li><a href="CampusLife_Board.html"><i class="ic ic_bell"></i><span>공지사항</span></a></li>
 							<li><a href="CampusLife_Schedule.html"><i class="ic ic_cap"></i><span>학사일정</span></a></li>
-							<li><a href="CampusLife_Status.html"><i class="ic ic_book"></i><span>열람실현황</span></a></li>
+							<li class="active"><a href="CampusLife_Status.html"><i class="ic ic_book"></i><span>열람실현황</span></a></li>
 							<li><a href="CampusLife_Weather.html"><i class="ic ic_weather"></i><span>날씨</span></a></li>
 							<li><a href="CampusLife_Search.html"><i class="ic ic_search_sm"></i><span>검색</span></a></li>
 						</ul>
@@ -44,81 +44,57 @@
 							<i class="ic"><i></i> 닫기</i>
 						</button>
 					</div>
-					<button type="button" class="btn_transparent">시간표 다운로드</button>
 				</div>
-				<div class="modal_body scroll_none">
-					<section class="scroll_section">
-						<div class="timetable_wrap"> 
-							<div class="timetable">
-								<h5 class="tit">2019.09</h5>
-								<table class="tbl" cellpadding="0" cellspacing="0" summary="sampleTable">
-									<caption>Timetable</caption>
-									<thead>
-										<tr>
-											<th class="left">제목</th>
-											<th>일정기간</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="timetable">
-								<h5 class="tit">2019.10</h5>
-								<table class="tbl" cellpadding="0" cellspacing="0" summary="sampleTable">
-									<caption>Timetable</caption>
-									<thead>
-										<tr>
-											<th class="left">제목</th>
-											<th>일정기간</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-										<tr>
-											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
-										</tr>
-									</tbody>
-								</table>
-							</div>
+				<div class="modal_body">
+
+					<div class="control_wrap">
+						<p class="sel_area">
+							<select class="form-control" id="select_01" name="budget">
+								<option value="#">죽전캠퍼스 퇴계기념중앙도서관</option>
+								<option value="#">천안캠퍼스 율곡기념도서관</option>
+							</select>
+						</p>
+					</div>
+					<div class="status_hd inline_wrap">
+						<h4 class="txt">열람실 현황</h4>
+						<div class="btn_wrap">
+							<button type="button"><i class="ic">배정현황 바로가기</i></button>
+							<button type="button"><i class="ic">새로고침</i></button>
 						</div>
-					</section>
+					</div>
+					<div class="status_cont">
+						<dl>
+							<dt><span>1층 1열람</span></dt>
+							<dd><span class="text_red">344</span>/<span>344</span></dd>
+							<dt><span>1층 6열람</span></dt>
+							<dd><span class="text_red">54</span>/<span>54</span></dd>
+
+							<dt><span>2층 2열람</span></dt>
+							<dd><span class="text_red">176</span>/<span>176</span></dd>
+							<dt><span>2층 3열람</span></dt>
+							<dd><span class="text_red">148</span>/<span>148</span></dd>
+
+							<dt><span>2층 4열람</span></dt>
+							<dd><span class="text_red">278</span>/<span>278</span></dd>
+							<dt><span>2층 대학원 열람실</span></dt>
+							<dd><span class="text_red">70</span>/<span>70</span></dd>
+
+							<dt><span>미사용</span></dt>
+							<dd><span class="text_red">133</span>/<span>133</span></dd>
+							<dt><span>법학 열람실</span></dt>
+							<dd><span class="text_red">133</span>/<span>133</span></dd>
+						</dl>
+					</div>
+					<div class="status_hd">
+						<h4 class="txt">도서관 바로가기</h4>
+					</div>
+					<div class="status_cont">
+						<ul>
+							<li><a href="http://libc.dankook.ac.kr/local/html/loanGuide">대출/반납/연장</a></li>
+							<li><a href="http://libc.dankook.ac.kr/local/html/studyRoomGuide1">스터디룸예약</a></li>
+							<li><a href="http://libc.dankook.ac.kr/mylist/search/list">나의 서재</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
