@@ -2321,6 +2321,188 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
 .toast .toast_txt.center {
   bottom: calc(50% - 62px); }
 
+/*----------------------------------------------------- Campus Life -----------------------------------------------------*/
+.btn_campuslife {
+  -webkit-box-shadow: 0vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
+  box-shadow: 0vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
+  width: 140px;
+  height: 140px;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: fixed;
+  right: 40px;
+  bottom: 290px;
+  z-index: 999; }
+
+.modal-content.camp_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column-reverse;
+  background-color: transparent;
+  padding: 0; }
+  .modal-content.camp_wrap .search_form_wrap .search_form {
+    border-bottom: 0.58594vw solid #fff; }
+    .modal-content.camp_wrap .search_form_wrap .search_form input::-webkit-input-placeholder, .modal-content.camp_wrap .search_form_wrap .search_form input::-moz-input-placeholder, .modal-content.camp_wrap .search_form_wrap .search_form input::-o-input-placeholder, .modal-content.camp_wrap .search_form_wrap .search_form input::-ms-input-placeholder {
+      color: #fff !important;
+      opacity: 1; }
+    .modal-content.camp_wrap .search_form_wrap .search_form input {
+      background: transparent;
+      color: #fff; }
+  .modal-content.camp_wrap .modal_header {
+    height: 604px;
+    padding: 0;
+    position: inherit;
+    background-color: transparent; }
+    .modal-content.camp_wrap .modal_header .camp_menu_wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100vw;
+      height: 220px;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 3.90625vw;
+      position: fixed;
+      bottom: 250px;
+      left: 0; }
+      .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu {
+        width: calc(100% - 140px); }
+        .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li {
+          display: inline-block;
+          margin: 8px 6px; }
+          .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 250px;
+            height: 100px;
+            align-items: center;
+            padding: 0 1.95313vw;
+            border-radius: 10px;
+            background-color: #f9f9f9; }
+            .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic {
+              width: 45px;
+              height: 45px;
+              margin-right: 1.95313vw;
+              border: 1px solid red; }
+            .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a span {
+              font-size: 32px;
+              color: #555; }
+      .modal-content.camp_wrap .modal_header .camp_menu_wrap .btn_pop_close {
+        width: 140px;
+        height: 140px;
+        margin: 0;
+        position: initial;
+        display: inline-block;
+        background: #fff;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1000; }
+  .modal-content.camp_wrap .modal_body {
+    width: 100vw;
+    height: calc(100vh - 604px);
+    padding-top: 165px; }
+
+.modal-content.camp_wrap {
+  color: #fff; }
+  .modal-content.camp_wrap .txt {
+    font-size: 40px; }
+    .modal-content.camp_wrap .txt.txt_sm {
+      font-size: 30px; }
+      .modal-content.camp_wrap .txt.txt_sm .ic {
+        margin-right: 8px; }
+      .modal-content.camp_wrap .txt.txt_sm .ic, .modal-content.camp_wrap .txt.txt_sm span {
+        vertical-align: middle; }
+
+.camp_pop_cont > .tit:first-child {
+  font-size: 36px;
+  font-weight: 400;
+  color: #555;
+  border-bottom: 4px solid #666;
+  padding-bottom: 30px; }
+  .camp_pop_cont > .tit:first-child > .text_blue {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 46px;
+    text-decoration: underline;
+    margin-right: 0.97656vw; }
+
+.camp_pop_cont .summary_info.lg {
+  margin: 0;
+  padding: 3.90625vw 0; }
+  .camp_pop_cont .summary_info.lg > dt::before {
+    display: none; }
+  .camp_pop_cont .summary_info.lg dt, .camp_pop_cont .summary_info.lg dd {
+    padding-left: 0.97656vw; }
+  .camp_pop_cont .summary_info.lg dd {
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 60px;
+    margin-bottom: 40px; }
+    .camp_pop_cont .summary_info.lg dd:last-of-type {
+      border-bottom: transparent;
+      margin-bottom: 0;
+      padding-bottom: 1.95313vw; }
+
+.camp_pop_cont .list_view .label_round_wrap {
+  justify-content: start; }
+  .camp_pop_cont .list_view .label_round_wrap > p:first-child {
+    width: 270px; }
+    .camp_pop_cont .list_view .label_round_wrap > p:first-child .label_round {
+      font-size: 30px;
+      margin: 0 3.90625vw;
+      width: 190px; }
+  .camp_pop_cont .list_view .label_round_wrap > a {
+    width: calc(100% - 270px); }
+    .camp_pop_cont .list_view .label_round_wrap > a .tit {
+      font-size: 36px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: middle; }
+    .camp_pop_cont .list_view .label_round_wrap > a .tit_info {
+      font-size: 32px; }
+
+.camp_pop_cont .login_shortcut {
+  text-align: center;
+  margin-top: 100px; }
+  .camp_pop_cont .login_shortcut .desc {
+    font-size: 32px;
+    color: #555;
+    line-height: 1.875; }
+  .camp_pop_cont .login_shortcut .a_btn_white {
+    width: calc(100% - 100px);
+    border-radius: 0;
+    margin: 50px;
+    font-size: 40px; }
+
+.camp_pop_cont .list_view .surrounding_info {
+  text-align: right; }
+  .camp_pop_cont .list_view .surrounding_info .tit {
+    text-align: left;
+    font-size: 36px; }
+  .camp_pop_cont .list_view .surrounding_info .tit_info {
+    display: block;
+    text-align: left;
+    font-size: 32px; }
+  .camp_pop_cont .list_view .surrounding_info .a_btn.a_btn_white {
+    width: 500px;
+    height: 100px;
+    padding: 0;
+    margin: 50px 0 20px;
+    color: #555;
+    font-size: 36px; }
+
+.text_green {
+  color: #3b991a; }
+
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {
   width: 100%;
