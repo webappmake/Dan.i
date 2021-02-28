@@ -9,7 +9,8 @@
   display: inline-block;
   background: url(../images/icons_m.png) no-repeat 0 0 / 97.65625vw auto;
   text-indent: -1000vw;
-  &.alert { background-position: -13.99vw 0; }
+  &.logo { background-position: -85.44922vw 0; }
+  &.alert { background-position: -13.99vw -1px; }
   &.logout { background-position: -19.53125vw 0; }
   &.selectbox { background-position: -17.57813vw -24.02344vw; }
   &.search { background-position: -26.36719vw -23.92578vw; }
@@ -83,8 +84,8 @@
   border-bottom: 0.09766vw solid $border;
   z-index: 999;
   h1.logo {
-    width: 13.86719vw;
-    height: 5.66406vw;
+    width: 12.20703vw;
+    height: 6.15234vw;
     display: inline-block;
   }
   .location {
@@ -650,6 +651,35 @@ select.form-control {
   }
   & + .search_form { margin-bottom: 0; }
 }
+
+.filter_search_wrap{
+    padding:0 $gutter_md; margin: 2.92969vw -$gutter_md 5.37109vw -$gutter_md; background-color:#fafafa;
+    .filter_search_area{
+        overflow:hidden;
+        > dt{
+            padding-top:4.39453vw; padding-bottom:$gutter_sm;
+        }
+        > dd{
+            margin-bottom:3.41797vw;
+        }        
+    }
+    .filter_sub_list{
+        display:flex; flex-wrap:wrap; padding-left:$gutter_md;
+        > li{
+            flex:0 0 33.33%; width:33.33%; height:9.76563vw; line-height:9.37500vw;
+            display:inline-block; vertical-align:middle; margin-left:$gutter_sm; margin-bottom:$gutter_sm; background-color:#fff; border:0.19531vw solid $border; border-radius:9.76563vw; cursor:pointer; text-align:center;
+            &:nth-child(3n+1){clear:both; margin-left:-$gutter_md;}
+            &.active{color:$color_sky; font-weight:600; border-color:$color_sky; }
+        }
+    }
+    .filter_sel_list{
+        margin-top:$gutter_sm;
+        > li{margin-top:$gutter_sm;}
+        > li select{width:100%; height:10.74219vw; }
+    }
+}
+
+
 /* ------------------------------------------------------- COMMON > SEARCH ------------------------------------------------------- */
 .search_form_wrap {
   margin: 5.27344vw 0 7.22656vw; 

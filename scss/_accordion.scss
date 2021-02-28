@@ -227,6 +227,9 @@
   line-height: 1.4375;
   padding-left: $gutter_md;
   position: relative;
+  &.only{
+      margin-top:6.83594vw;
+  }
   &::before {
     content: '';
     width: 1.56250vw;
@@ -292,7 +295,7 @@
           justify-content: space-between;
           font-size: 3.90625vw;
           border-bottom: 0.09766vw solid $border;
-          padding: 20px 0;
+          padding: $gutter_sm 0;
           strong { margin-right: $gutter_xs; }
           .block + .block { padding-top: $gutter_xs; }
           &.hd {
@@ -340,7 +343,10 @@
   padding: 2.92969vw; 
   * { vertical-align: middle; }
   .ic { width: 3.90625vw; height: 3.90625vw; }
+  @at-root .list_cont + .btn_filter{width:100%; margin:4.88281vw 0 6.83594vw 0;}
 }
+
+
 .mb_last { margin-bottom: 19.53125vw !important; }
 .pop_sub_title + .desc { font-size: 3.90625vw; color: #333; margin-top: $gutter_sm; }
 .pop_sub_title + .desc + .list_view { margin-top: 9.76563vw; }
