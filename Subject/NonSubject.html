@@ -41,7 +41,7 @@
 						slidesPerView: 'auto',
 						centeredSlides: false,
 						grabCursor: true,
-                        touchRatio: 0, // 메뉴 개수가 적어 스와이프 불필요할 때 적용
+						touchRatio: 0, // 메뉴 개수가 적어 스와이프 불필요할 때 적용
 					});
 				</script>
 			</nav>
@@ -140,7 +140,7 @@
 									<li><a href="#">#EDWITH</a></li>
 									<li><a href="#">#EDISON MOOC</a></li>
 								</ul>
-								<button type="button" class="btn_filter"><span>필터 더보기</span>&nbsp;<i class="ic arrow_shortcut"></i></button>
+								<button type="button" class="btn_filter" data-toggle="modal" data-target="#Pop_FilterMore"><span>필터 더보기</span>&nbsp;<i class="ic arrow_shortcut"></i></button>
 								<div class="search_form_wrap">
 									<div class="search_form">
 										<input type="text" placeholder="프로그램명을 입력하세요." />
@@ -237,7 +237,7 @@
 									<li><a href="#">#EDWITH</a></li>
 									<li><a href="#">#EDISON MOOC</a></li>
 								</ul>
-								<button type="button" class="btn_filter"><span>필터 더보기</span>&nbsp;<i class="ic arrow_shortcut"></i></button>
+								<button type="button" class="btn_filter" data-toggle="modal" data-target="#Pop_FilterMore"><span>필터 더보기</span>&nbsp;<i class="ic arrow_shortcut"></i></button>
 								<div class="search_form_wrap">
 									<div class="search_form">
 										<input type="text" placeholder="프로그램명을 입력하세요." />
@@ -503,363 +503,71 @@
 		</div>
 	</div>
 	<!--//전체보기 팝업-->
-	<!-- 교과 연관 정보 팝업 -->
-	<div class="modal fade full_modal" id="Pop_SubjectGraduate" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+	<!-- 영웅스토리 - 필터 더보기 팝업 -->
+	<div class="modal fade full_modal" id="Pop_FilterMore" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal_header">
-					<h3 class="pop_title">교과 연관 정보</h3>
+					<h3 class="pop_title">영웅스토리 필터</h3>
 					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
 				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">국어연구방법론</h4>
-					<div class="tab_wrap tab_type01" role="tabpanel">
-						<!-- Nav tabs -->
-						<ul class="nav" role="tablist">
-							<li role="presentation"><a class="active" href="#popTab1" aria-controls="popTab1" role="tab" data-toggle="tab">교재/참고문헌 정보</a></li>
-							<li role="presentation"><a href="#popTab2" aria-controls="popTab2" role="tab" data-toggle="tab">논문/연구 정보</a></li>
-						</ul>
-						<!-- Tab panes -->
-						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="popTab1">
-								<div class="search_form_wrap">
-									<div class="search_form">
-										<input type="text" placeholder="교재 또는 참고문헌명을 입력해주세요." />
-										<button type="submit" class="btn"><i class="ic search">검색</i></button>
-									</div>
-								</div>
-								<section class="list_view">
-									<div class="list_hd">
-										<div>
-											<p class="desc">총 <span class="text_blue">N</span>개</p>
-										</div>
-										<div class="control_wrap">
-											<p class="sel_area">
-												<select class="form-control" id="select_01" name="budget">
-													<option value="#">전체</option>
-													<option value="#">주교재</option>
-													<option value="#">부교재</option>
-													<option value="#">참고문헌</option>
-												</select>
-											</p>
-											<div class="filter_wrap">
-												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
-												<div class="filter_pop_list">
-													<strong>정렬</strong>
-													<span class="toggle_filter active" onclick="fn_Toggle(this);">교재명</span>
-												</div>
-											</div>
-										</div>
-									</div><!--//.list_hd-->
-									<div class="list_cont">
-										<ul class="list">
-											<!--like 오른쪽 배치 리스트-->
-											<li>
-												<div class="inline_wrap btn_like_list align_top">
-													<a href="#">
-														<span class="label_round">주교재</span>
-														<h4 class="tit tit_lg">창조경제에서의 경영전략</h4>
-														<span class="tit_info text_lightgray">이장우 | 법문사</span>
-													</a>
-													<button class="btn_like">
-														<i class="ic like"></i> <span class="num">100</span>
-													</button>
-												</div>
-											</li>
-											<li>
-												<div class="inline_wrap btn_like_list align_top">
-													<a href="#">
-														<span class="label_round">주교재</span>
-														<h4 class="tit tit_lg">창조경제에서의 경영전략</h4>
-														<span class="tit_info text_lightgray">이장우 | 법문사</span>
-													</a>
-													<button class="btn_like">
-														<i class="ic like"></i> <span class="num">100</span>
-													</button>
-												</div>
-											</li>
-										</ul>
-									</div><!--//.list_cont-->
-									<div class="list_ft">
-										<ul class="paging">
-											<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-											<li class="active"><a href="#none">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-										</ul>
-									</div><!--//.list_ft-->
-								</section><!--//.list_view-->
-								<!-- null 값일 경우 -->
-								<!-- <div class="pag_info_none full_gray">
-									<span class="ic_before ic_info_lg">
-										선택한 교과와 연관된 교재/참고문헌 정보는<br/>
-										아직 분석되지 않았어요. 추후에 반영될 예정입니다.
-									</span>
-								</div> -->
-								<!-- // null 값일 경우 -->
-							</div>
-							<div role="tabpanel" class="tab-pane" id="popTab2">
-								<ul class="filter_list">
-									<!--배경있는 디자인은 .with_bg 추가-->
-									<li class="active"><a href="#">#RISS</a></li>
-									<li><a href="#">#NTIS</a></li>
-									<li><a href="#">#NDSL</a></li>
+				<div class="modal_body modal_body02">
+					<div class="filter_search_wrap">
+						<div class="filter_result_area">
+							<p class="reset_area">
+								<span>초기화</span>
+								<button type="button" class="btn_reset"><i class="ic ic_reset"></i></button>
+							</p>
+							<input type="text" class="form-control" value="자기주도, 신청가능" readonly="readonly" />
+						</div>
+						
+						<dl class="filter_search_area">
+							<dt>6대 핵심역량</dt>
+							<dd>
+								<ul class="filter_sub_list">
+									<li class="active">#자기주도</li>
+									<li>#의사소통</li>
+									<li>#문제해결</li>
+									<li>#전문지식</li>
+									<li>#세계시민</li>
+									<li>#협력·헌신</li>
 								</ul>
-								<div class="search_form_wrap">
-									<div class="search_form">
-										<input type="text" placeholder="논문/연구명을 입력하세요." />
-										<button type="submit" class="btn"><i class="ic search">검색</i></button>
-									</div>
-								</div>
-								<section class="list_view list_view_type01">
-									<div class="list_hd">
-										<p class="desc">총 <span class="text_blue">N</span>개</p>
-										<div class="filter_wrap">
-											<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
-											<div class="filter_pop_list">
-												<strong>정렬</strong>
-												<span class="toggle_filter active" onclick="fn_Toggle(this);">논문/연구명</span>
-											</div>
-										</div>
-									</div><!--//.list_hd-->
-									<div class="list_cont">
-										<ul class="list">
-											<li>
-												<div class="list_scrap">
-													<!--스크랩 하단 배치 리스트 스타일 생성-->
-													<a href="#">
-														<h4 class="tit tit_lg">빅데이터 분석을 활용한 관광기반형 연구…</h4>
-														<span class="tit_info text_lightgray">학위논문 | 전소라 | 2020</span>
-													</a>
-													<button class="btn_like">
-														<i class="ic like"></i> <span class="num">100</span>
-													</button>
-													<div class="btn_scrap_wrap">
-														<span class=></span>
-														<button class="btn_scrap">
-															<i class="ic ic_scrap"></i> <span>스크랩</span>
-														</button>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="list_scrap">
-													<!--스크랩 하단 배치 리스트 스타일 생성-->
-													<a href="#">
-														<h4 class="tit tit_lg">빅데이터 분석을 활용한 관광기반형 연구…</h4>
-														<span class="tit_info text_lightgray">학위논문 | 전소라 | 2020</span>
-													</a>
-													<button class="btn_like">
-														<i class="ic like"></i> <span class="num">100</span>
-													</button>
-													<div class="btn_scrap_wrap">
-														<span class=></span>
-														<button class="btn_scrap">
-															<i class="ic ic_scrap"></i> <span>스크랩</span>
-														</button>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div><!--//.list_cont-->
-									<div class="list_ft">
-										<ul class="paging">
-											<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-											<li class="active"><a href="#none">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-										</ul>
-									</div><!--//.list_ft-->
-								</section><!--//.list_view-->
-								<!-- null 값일 경우 -->
-								<!-- <div class="pag_info_none full_gray">
-									<span class="ic_before ic_info_lg">
-										선택한 교과와 연관된 논문/연구 정보는<br/>
-										아직 분석되지 않았어요. 추후에 반영될 예정입니다.
-									</span>
-								</div> -->
-								<!-- // null 값일 경우 -->
-							</div>
-						</div>
+							</dd>
+							<dt>운영조직</dt>
+							<dd>
+								<ul class="filter_sel_list">
+									<li>
+										<select class="form-control">
+											<option value="#">대학/부속·부설기관</option>
+										</select>
+									</li>
+									<li>
+										<select class="form-control">
+											<option value="#">담당 부서</option>
+										</select>
+									</li>
+									<li>
+										<select class="form-control">
+											<option value="#">운영 캠퍼스</option>
+										</select>
+									</li>
+								</ul>
+							</dd>
+							<dt>신청가능일</dt>
+							<dd>
+								<ul class="filter_sub_list">
+									<li class="active">#전체</li>
+									<li>#신청가능</li>
+									<li>#마감</li>
+								</ul>
+							</dd>
+						</dl>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--//교과 연관 정보 팝업-->
-	<!-- 교과개요 팝업 -->
-	<div class="modal fade full_modal" id="Pop_SubjectSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">교과개요</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">국문학개론</h4>
-					<div class="summary_tit">
-						<p class="desc">전체분반 <span class="text_blue">3</span>개</p>
-						<p class="pag_info inline_wrap">
-							<i class="ic ic_info"></i><span>분반이 있는 경우 01반 기준으로 정보를 제공합니다.</span>
-						</p>
-					</div>
-					<dl class="summary_info">
-						<dt>교수자</dt>
-						<dd>윤재환</dd>
-						<dt>교과목 개요</dt>
-						<dd>&lt;국문학개론&gt;은 각 장르의 생성과 발전, 소멸과정을 살피면서 장르간의 영향관계와 특색을 파악하는 것이 중요하다. 각 장르의 주요 작가와 작품을 중심으로 분석, 비판하는 능력을 기른다.</dd>
-						<dt>학습목표</dt>
-						<dd>국문학 각 장르의 생성배경과 장르간의 상호 영향관계를 살핀다. 주요 작가와 작품 분석을 통해 장르의 특성을 이해한다.</dd>
-						<dt>학습효과</dt>
-						<dd>전공을 심화하기 전에 국문학 각 장르의 특색을 살피고, 주요 작품 분석 및 작가 연구를 통해 국문학 이해의 폭을 넓힌다.</dd>
-						<dt>전공역량</dt>
-						<dd>
-							<ul class="ability_list">
-								<li class="inline_wrap justify_start">
-									<strong>주역량</strong>
-									<span>지식활용 <strong>40%</strong></span>
-								</li>
-								<li class="inline_wrap justify_start">
-									<strong>부역량</strong>
-									<span>
-										창의적 문제해결 <strong>30%</strong><br>
-										의사소통 <strong>30%</strong>
-									</span>
-								</li>
-							</ul>
-						</dd>
-
-					</dl>
-					<!-- null 값일 경우 -->
-					<div class="pag_info_none">
-						<span class="ic_before ic_info_lg">
-							선택한 교과의 교과개요는 아직 분석되지 않았어요.<br />
-							추후에 반영될 예정입니다.
-						</span>
-					</div>
-					<!-- // null 값일 경우 -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 교과개요 팝업 -->
-	<!-- 선행/연계 팝업 -->
-	<div class="modal fade full_modal" id="Pop_RelationSummary" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal_header">
-					<h3 class="pop_title">선행/연계 교과</h3>
-					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
-				</div>
-				<div class="modal_body">
-					<h4 class="pop_sub_title">국문학개론</h4>
-					<ul class="filter_list">
-						<li class="active"><a href="#">#선행교과</a></li>
-						<li><a href="#">#연계교과</a></li>
-					</ul>
-					<div class="search_form_wrap">
-						<div class="search_form">
-							<input type="text" placeholder="토픽명을 입력하세요." />
-							<button type="submit" class="btn"><i class="ic search">검색</i></button>
-						</div>
-					</div>
-					<section class="list_view list_view_type01">
-						<div class="list_hd">
-							<div>
-								<p class="desc">총 <span class="text_blue">12</span>개</p>
-							</div>
-							<div class="control_wrap">
-								<p class="sel_area">
-									<select class="form-control" id="select_01" name="budget">
-										<option value="#">전체</option>
-									</select>
-								</p>
-								<div class="filter_wrap">
-									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
-									<div class="filter_pop_list">
-										<strong>정렬</strong>
-										<span class="toggle_filter active" onclick="fn_Toggle(this);">교과목명</span>
-									</div>
-								</div>
-							</div>
-						</div><!--//.list_hd-->
-						<div class="list_cont list_cont_box">
-							<ul class="list">
-								<li>
-									<div class="topic_box">
-										<div class="inline_wrap">
-											<h4 class="tit">언어학의이해</h4>
-											<p class="icon_chk_wrap">
-												<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-												<label for="r1">On/Off</label>
-											</p>
-										</div>
-										<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
-									</div>
-									<div class="inline_wrap topic_btn_wrap">
-										<p class="topic_btn">
-											<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
-										</p>
-									</div>
-									<ul class="topic_list">
-										<li>
-											<div class="inline_wrap">
-												<h4 class="tit">국어학개론</h4>
-												<p class="icon_chk_wrap">
-													<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
-													<label for="r1">On/Off</label>
-												</p>
-											</div>
-											<div class="inline_wrap justify_start">
-												<ul class="tag_list">
-													<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
-													<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
-													<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
-												</ul>
-												<span class="desc">빈도수 121</span>
-											</div>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div><!--//.list_cont-->
-						<div class="list_ft">
-							<ul class="paging">
-								<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
-								<li class="active"><a href="#none">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
-							</ul>
-						</div><!--//.list_ft-->
-					</section><!--//.list_view-->
-					<!-- null 값일 경우 -->
-					<!--<div class="pag_info_none pag_sm_info_none">
-						<span class="ic_before ic_info_lg">
-							선택한 교과의 선행교과는 아직 분석되지 않았어요.<br />
-							추후에 반영될 예정입니다.
-						</span>
-					</div>-->
-					<!--<div class="pag_info_none pag_sm_info_none">
-						<span class="ic_before ic_info_lg">
-							선택한 교과의 연계교과는 아직 분석되지 않았어요.<br />
-							추후에 반영될 예정입니다.
-						</span>
-					</div>-->
-					<!-- // null 값일 경우 -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // 선행/연계 팝업 -->
+	<!--// 영웅스토리 - 필터 더보기 팝업-->
 </body>
 </html>
 

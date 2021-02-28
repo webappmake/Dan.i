@@ -8,6 +8,18 @@
         //alert("팝업 닫힘");
     });
 
+    // tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // tooltip sm custom
+    $('.tooltip_sm').on('shown.bs.tooltip', function () {
+        $(".tooltip").addClass("tooltip-sm");
+    })
+
+    $('.tooltip_sm').on('hidden.bs.tooltip', function () {
+        $(".tooltip").removeClass("tooltip-sm");
+    })
+
     // 스크롤 여부에 따라 top 버튼 생성
     $(".contents").scroll(function () {
         setTimeout(scroll_top, 0);//화살표가 반응하여 생기는 시간

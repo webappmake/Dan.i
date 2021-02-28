@@ -181,6 +181,7 @@
   margin: 0 -3.90625vw 0;
   padding: $gutter_md 0;
   @at-root .cont_hd + .major_grade_box{margin-top:4.88281vw;}
+        & + .major_grade_box{}
   .major_wrap { 
       margin: 0; padding-top: 0; background-color: transparent; 
       &.only{min-height:inherit; margin-top:0; padding-bottom:2.92969vw;}
