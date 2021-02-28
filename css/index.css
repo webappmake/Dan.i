@@ -1934,11 +1934,6 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   width: 100vw;
   height: 100vh; }
 
-.signin_wrap input::-webkit-input-placeholder, .signin_wrap input::-moz-input-placeholder, .signin_wrap input::-o-input-placeholder, .signin_wrap input::-ms-input-placeholder,
-.signup_wrap input::-webkit-input-placeholder, .signup_wrap input::-moz-input-placeholder, .signup_wrap input::-o-input-placeholder, .signup_wrap input::-ms-input-placeholder {
-  color: #a9a9a9;
-  opacity: 1; }
-
 /* sign-in > chatbot_box */
 .chatbot_box.signin {
   display: flex;
@@ -2023,6 +2018,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   flex-direction: column;
   position: relative;
   min-height: 100vh; }
+  .signup_wrap input::placeholder {
+    color: #a9a9a9; }
   .signup_wrap .signup_header {
     width: 100vw;
     height: 13.86719vw;
@@ -2340,6 +2337,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   right: 40px;
   bottom: 290px;
   z-index: 999; }
+  .btn_campuslife .ic {
+    background-position: -681px -336px; }
 
 .modal-content.camp_wrap {
   display: -webkit-box;
@@ -2354,12 +2353,18 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   padding: 0; }
   .modal-content.camp_wrap .search_form_wrap .search_form {
     border-bottom: 0.58594vw solid #fff; }
-    .modal-content.camp_wrap .search_form_wrap .search_form input::-webkit-input-placeholder, .modal-content.camp_wrap .search_form_wrap .search_form input::-moz-input-placeholder, .modal-content.camp_wrap .search_form_wrap .search_form input::-o-input-placeholder, .modal-content.camp_wrap .search_form_wrap .search_form input::-ms-input-placeholder {
-      color: #fff !important;
-      opacity: 1; }
     .modal-content.camp_wrap .search_form_wrap .search_form input {
       background: transparent;
       color: #fff; }
+    .modal-content.camp_wrap .search_form_wrap .search_form input::placeholder {
+      color: #fff; }
+    .modal-content.camp_wrap .search_form_wrap .search_form .ic_voice {
+      width: 43px;
+      height: 66px;
+      background-position: -622px -336px; }
+  .modal-content.camp_wrap .search_form_wrap .txt_sm {
+    width: calc(100% - 8.78906vw*2);
+    margin: 1.95313vw 8.78906vw; }
   .modal-content.camp_wrap .modal_header {
     height: 604px;
     padding: 0;
@@ -2395,13 +2400,29 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
             border-radius: 10px;
             background-color: #f9f9f9; }
             .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic {
-              width: 45px;
-              height: 45px;
-              margin-right: 1.95313vw;
-              border: 1px solid red; }
+              width: 60px;
+              height: 62px;
+              margin-right: 3px; }
+              .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic.ic_time {
+                background-position: 0 -633px; }
+              .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic.ic_bell {
+                background-position: -60px -633px; }
+              .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic.ic_cap {
+                background-position: -120px -633px; }
+              .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic.ic_book {
+                background-position: -180px -633px; }
+              .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic.ic_weather {
+                background-position: -240px -633px; }
+              .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a .ic.ic_search_sm {
+                background-position: -300px -633px; }
             .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li > a span {
               font-size: 32px;
               color: #555; }
+          .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li.active > a span {
+            color: #48b9e1;
+            font-weight: 500; }
+          .modal-content.camp_wrap .modal_header .camp_menu_wrap .camp_menu > li.active > a .ic {
+            background-position-y: -695px; }
       .modal-content.camp_wrap .modal_header .camp_menu_wrap .btn_pop_close {
         width: 140px;
         height: 140px;
@@ -2412,6 +2433,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
         border-radius: 50%;
         overflow: hidden;
         z-index: 1000; }
+        .modal-content.camp_wrap .modal_header .camp_menu_wrap .btn_pop_close .ic {
+          background-position: -821px -336px; }
   .modal-content.camp_wrap .modal_body {
     width: 100vw;
     height: calc(100vh - 604px);
@@ -2422,11 +2445,19 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   .modal-content.camp_wrap .txt {
     font-size: 40px; }
     .modal-content.camp_wrap .txt.txt_sm {
-      font-size: 30px; }
+      font-size: 29px; }
       .modal-content.camp_wrap .txt.txt_sm .ic {
         margin-right: 8px; }
       .modal-content.camp_wrap .txt.txt_sm .ic, .modal-content.camp_wrap .txt.txt_sm span {
         vertical-align: middle; }
+  .modal-content.camp_wrap .filter_list {
+    margin: 50px -0.48828vw 130px; }
+    .modal-content.camp_wrap .filter_list > li > a {
+      background-color: #555;
+      color: rgba(255, 255, 255, 0.5); }
+    .modal-content.camp_wrap .filter_list > li.active > a {
+      background-color: #fff;
+      color: #222; }
 
 .camp_pop_cont > .tit:first-child {
   font-size: 36px;
@@ -2505,8 +2536,82 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     color: #555;
     font-size: 36px; }
 
+.camp_pop_cont .facility_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 3.90625vw 0; }
+  .camp_pop_cont .facility_info dt, .camp_pop_cont .facility_info dd {
+    min-height: 94px;
+    line-height: 94px;
+    font-size: 36px;
+    padding: 0 0.97656vw; }
+  .camp_pop_cont .facility_info dt {
+    width: 235px; }
+  .camp_pop_cont .facility_info dd {
+    width: calc(100% - 235px); }
+  .camp_pop_cont .facility_info .a_btn_white {
+    width: 320px;
+    height: 90px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #555;
+    border-radius: 0;
+    padding: 0;
+    line-height: initial; }
+
+.modal.voice_alert .modal-dialog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal.voice_alert .modal-dialog .modal-content {
+    width: 750px;
+    height: 400px;
+    padding: 0;
+    border-radius: 1.95313vw;
+    overflow: hidden; }
+    .modal.voice_alert .modal-dialog .modal-content .modal_header {
+      position: initial; }
+    .modal.voice_alert .modal-dialog .modal-content .modal_body {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0; }
+      .modal.voice_alert .modal-dialog .modal-content .modal_body .btn_pop_close {
+        position: absolute;
+        top: 3.90625vw;
+        right: 3.90625vw; }
+        .modal.voice_alert .modal-dialog .modal-content .modal_body .btn_pop_close .ic {
+          background-position: -19.53125vw -32.81250vw; }
+      .modal.voice_alert .modal-dialog .modal-content .modal_body .tit {
+        font-size: 44px;
+        font-family: "Gong Gothic", sans-serif !important;
+        font-weight: 400; }
+      .modal.voice_alert .modal-dialog .modal-content .modal_body .desc {
+        font-size: 32px;
+        color: #555;
+        text-align: center; }
+      .modal.voice_alert .modal-dialog .modal-content .modal_body .tit + .desc {
+        margin-top: 50px; }
+
 .text_green {
   color: #3b991a; }
+
+.campuslife_body .modal-backdrop.show {
+  opacity: .8; }
+  .campuslife_body .modal-backdrop.show + .modal-backdrop.show {
+    opacity: 0; }
 
 /* ------------------------------------------------------- COMMON > ICONS ------------------------------------------------------- */
 .ic {

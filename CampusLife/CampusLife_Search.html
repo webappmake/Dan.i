@@ -17,7 +17,7 @@
 	<!--custom-->
 	<link rel="stylesheet" type="text/css" href="../css/index.css" />
 </head>
-<body>
+<body class="campuslife_body">
 	<header class="header">
 		<h1 class="logo">
 			<a href="index.html"><i class="ic logo">Dan.i</i></a>
@@ -135,7 +135,7 @@
 	
 	<!-- 캠퍼스라이프 -->
 	<button type="button" class="btn_campuslife" data-toggle="modal" data-target="#Pop_CampusLife">
-		<i class="ic ic_campuslife">캠퍼스라이프</i>
+		<i class="ic">캠퍼스라이프</i>
 	</button>	
 	<div class="modal fade full_modal" id="Pop_CampusLife" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -143,15 +143,15 @@
 				<div class="modal_header">
 					<div class="camp_menu_wrap">
 						<ul class="camp_menu">
-							<li><a href="#"><i class="ic"></i><span>시간표</span></a></li>
-							<li><a href="#"><i class="ic"></i><span>공지사항</span></a></li>
-							<li><a href="#"><i class="ic"></i><span>학사일정</span></a></li>
-							<li><a href="#"><i class="ic"></i><span>열람실현황</span></a></li>
-							<li><a href="#"><i class="ic"></i><span>날씨</span></a></li>
-							<li><a href="#"><i class="ic"></i><span>검색</span></a></li>
+							<li><a href="#"><i class="ic ic_time"></i><span>시간표</span></a></li>
+							<li><a href="#"><i class="ic ic_bell"></i><span>공지사항</span></a></li>
+							<li><a href="#"><i class="ic ic_cap"></i><span>학사일정</span></a></li>
+							<li><a href="#"><i class="ic ic_book"></i><span>열람실현황</span></a></li>
+							<li><a href="#"><i class="ic ic_weather"></i><span>날씨</span></a></li>
+							<li class="active"><a href="#"><i class="ic ic_search_sm"></i><span>검색</span></a></li>
 						</ul>
 						<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close">
-							<i class="ic ic_campuslife_close">닫기</i>
+							<i class="ic"><i></i> 닫기</i>
 						</button>
 					</div>
 				</div>
@@ -167,12 +167,12 @@
 					<div class="search_form_wrap">
 						<div class="search_form">
 							<input type="text" placeholder="검색어를 입력하세요." />
-							<button type="submit" class="btn"><i class="ic search">검색</i></button>
+							<button type="submit" class="btn" data-target="#Pop_VoiceAlert" data-toggle="modal"><i class="ic ic_voice">검색</i></button>
 						</div>
+						<p class="txt txt_sm">
+							<i class="ic ic_info"></i><span>용어사전은 네이버 지식백과를 통해 결과를 제공하고 있어요.</span>
+						</p>
 					</div>
-					<p class="txt txt_sm">
-						<i class="ic ic_info"></i><span>용어사전은 네이버 지식백과를 통해 결과를 제공하고 있어요.</span>
-					 </p>
 				</div>
 			</div>
 		</div>
@@ -302,7 +302,20 @@
 				<div class="modal_body">
 					<div class="camp_pop_cont">
 						<p class="tit"><span class="text_blue">상경관 복사실</span>에 대한 검색결과입니다.</p>
-						
+						<dl class="facility_info">
+							<dt>◎ 캠퍼스</dt>
+							<dd>죽전</dd>
+							<dt>◎ 처/대학</dt>
+							<dd>상경관</dd>
+							<dt>◎ 호실번호</dt>
+							<dd>210</dd>
+							<dt>◎ 명칭/이름</dt>
+							<dd>복사실</dd>
+							<dt>◎ 위치</dt>
+							<dd>
+								<button type="button" class="a_btn a_btn_white">지도 바로가기</button>
+							</dd>
+						</dl>
 					</div>
 				</div>
 			</div>
@@ -332,10 +345,6 @@
 											</button>
 										</div>
 									</li>
-									
- 
-
-
 									<li>
 										<div class="surrounding_info">											
 											<h4 class="tit">이삭토스트 용인보정점</h4>
@@ -354,6 +363,23 @@
 		</div>
 	</div>
 	<!-- // 캠퍼스 주변검색 팝업 -->
+	<!-- 캠퍼스 음성검색 팝업 -->
+	<div class="modal fade full_modal voice_alert" id="Pop_VoiceAlert" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_body">
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+					<p class="tit">듣고 있어요!</p>
+					<p class="desc">
+						음성 대기모드입니다.<br/>
+						약 3~5초 동안 정확히 질의 되지 않는 경우<br/>
+						대기모드가 닫힙니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 캠퍼스 음성검색 팝업 -->
 </body>
 </html>
 

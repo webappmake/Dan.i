@@ -1,9 +1,6 @@
 ﻿@charset "UTF-8";
 
 .wrapper { width: 100vw; height: 100vh; }
-.signin_wrap input::-webkit-input-placeholder, .signin_wrap input::-moz-input-placeholder, .signin_wrap input::-o-input-placeholder, .signin_wrap input::-ms-input-placeholder,
-.signup_wrap input::-webkit-input-placeholder, .signup_wrap input::-moz-input-placeholder, .signup_wrap input::-o-input-placeholder, .signup_wrap input::-ms-input-placeholder { color: #a9a9a9; opacity: 1; }
-
 /* sign-in > chatbot_box */
 .chatbot_box.signin { display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; }
 .chatbot_box.signin .signin_message { font-size: 18px; color: #222; font-weight: 600; }
@@ -25,6 +22,7 @@
   flex-direction: column; 
   position: relative;
   min-height: 100vh;
+  input::placeholder { color: #a9a9a9; }
   .signup_header {
     width: 100vw;
     height: $signup_header_height;
@@ -289,6 +287,20 @@
 }
 .toast .toast_txt.center { bottom: calc(50% - 62px); }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------------------- Campus Life -----------------------------------------------------*/
 .btn_campuslife {
   @include shadow_gnb;
@@ -300,11 +312,7 @@
   overflow: hidden;
   position: fixed; right: 40px; bottom: 290px;
   z-index: 999;
-  .ic {
-    &.active {
-
-    }
-  }
+  .ic { background-position: -681px -336px; }
 }
 .modal-content.camp_wrap {
   @include flex;
@@ -317,8 +325,17 @@
   .search_form_wrap {
     .search_form {
       border-bottom: 0.58594vw solid #fff;
-      input::-webkit-input-placeholder, input::-moz-input-placeholder, input::-o-input-placeholder, input::-ms-input-placeholder { color: #fff !important; opacity: 1; }
       input { background: transparent; color: #fff; }
+      input::placeholder { color: #fff; }
+      .ic_voice { 
+        width: 43px;
+        height: 66px;
+        background-position: -622px -336px; 
+      }
+    }
+    .txt_sm { 
+      width: calc(100% - 8.78906vw*2);
+      margin: $gutter_sm 8.78906vw;
     }
   }
   .modal_header {
@@ -348,12 +365,23 @@
             border-radius: 10px;
             background-color: #f9f9f9;         
             .ic {
-              width: 45px;
-              height: 45px;
-              margin-right: $gutter_sm;
-              border: 1px solid red; 
+              width: 60px;
+              height: 62px;
+              margin-right: 3px;
+              &.ic_time { background-position: 0 -633px; }
+              &.ic_bell { background-position: -60px -633px; }
+              &.ic_cap { background-position: -120px -633px; }
+              &.ic_book { background-position: -180px -633px; }
+              &.ic_weather { background-position: -240px -633px; }
+              &.ic_search_sm { background-position: -300px -633px; }
             }
             span { font-size: 32px; color: #555; }
+          }
+          &.active {
+            & > a { 
+              span { color: #48b9e1; font-weight: 500; }
+              .ic { background-position-y: -695px; }
+            }
           }
         }
       }
@@ -367,6 +395,7 @@
         border-radius: 50%;
         overflow: hidden;
         z-index: 1000;
+        .ic { background-position: -821px -336px; }
       }
     }
   }
@@ -381,12 +410,27 @@
   .txt { 
     font-size: 40px; 
     &.txt_sm { 
-      font-size: 30px; 
+      font-size: 29px; //글씨 떨어져서 1px줄임
       .ic { margin-right: 8px; } 
       .ic, span { vertical-align: middle; }
     }
   }
+  .filter_list {
+    margin: 50px -0.48828vw 130px;
+    & > li {
+      & > a {
+        background-color: #555;
+        color: rgba(255, 255, 255, .5);
+      }
+      &.active > a {
+        background-color: #fff;
+        color: #222;
+      }
+    }
+  }
 }
+
+
 // 캠퍼스라이프 팝업
 .camp_pop_cont {
   & > .tit:first-child {
@@ -467,7 +511,68 @@
       color: #555;
       font-size: 36px;
     }
-
   }//.list_view .surrounding_info
+  .facility_info {
+    @include flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: $gutter_md 0;
+    dt, dd { 
+      min-height: 94px; 
+      line-height: 94px; 
+      font-size: 36px;
+      padding: 0 $gutter_xs; 
+    }
+    dt { width: 235px; }
+    dd { width: calc(100% - 235px); }
+    .a_btn_white { 
+      width: 320px;
+      height: 90px;
+      font-size: 36px;
+      font-weight: 400;
+      color: #555;
+      border-radius: 0;
+      padding: 0;
+      line-height: initial;
+    }
+  }//.facility_info
+}
+//캠퍼스 음성검색 팝업
+.modal.voice_alert {
+  .modal-dialog {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    .modal-content { 
+      width: 750px;
+      height: 400px;
+      padding: 0;
+      border-radius: $radius;
+      overflow: hidden;
+      .modal_header { position: initial; }
+      .modal_body {
+        @include flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        .btn_pop_close {
+          position: absolute; top: $gutter_md; right: $gutter_md;
+          .ic { background-position: -19.53125vw -32.81250vw; }
+        }
+        .tit { font-size: 44px; font-family: $sub_font_family; font-weight: 400; }
+        .desc { font-size: 32px; color: #555; text-align: center; }
+        .tit + .desc { margin-top: 50px; }
+      }
+    }
+  }
+}
+.modal-content.voice_alert {
+
 }
 .text_green { color: #3b991a; }
+.campuslife_body .modal-backdrop.show { 
+  opacity: .8; 
+  & + .modal-backdrop.show { opacity: 0; }
+}

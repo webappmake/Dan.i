@@ -159,6 +159,17 @@
         $('.status_area > .status_cont > li').eq(num).addClass('active');
         return false;
     })
+
+     // 캠퍼스라이프 gnb 활성화
+     $(".camp_menu > li").on("hover mouseenter mouseover", function () {
+        $(".camp_menu > li").removeClass("active");
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active")
+        } else {
+            $(".camp_menu > li").removeClass("active");
+            $(this).addClass("active");
+        }
+    });
 });
 
 
