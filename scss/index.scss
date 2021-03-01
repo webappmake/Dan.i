@@ -150,8 +150,8 @@
         &.sub_type02{
             width:auto;
             & > li{
-                width:17.57813vw;
-                &.sub_menu_lg{width:330px;}
+                width:22.46094vw;
+                &.sub_menu_lg{width:32.22656vw;}
                 > a{max-width:100% !important;}
             }
         }
@@ -287,6 +287,7 @@
         background-color:#eee; border-color:$border; color:#333;
         &.btn_tertiary01{background-color:$color_white; border-color:#333; color:#333;}
         &.btn_tertiary02{background-color:$color_white; border-color:$color_red; color:$color_red;}
+        &.btn_tertiary03{background-color:$color_white; border-color:$border; color:#333;}
     }
     &.btn_primary01{border-color:$border;}
 }
@@ -503,6 +504,10 @@ select.form-control {
               margin-bottom: $gutter_xs;
               background-color: #fff;
               border: 0.09766vw solid $border;
+              &.business{
+                  margin-bottom:$gutter_sm; border-color:$color_primary;
+                  .tit{color: $color_primary;}
+              }
               &:last-child { margin-bottom: 0; }
               & .tag_list > li > a {
                 padding-top: $gutter_xs;
@@ -662,6 +667,14 @@ select.form-control {
     background-color: #fafafa;
     padding: $gutter_sm $gutter_md;
     margin: $gutter_md -#{$gutter_md};
+  }
+  &.filter_list01{
+      font-size:0; padding-left:$gutter_sm;
+      & > li{
+          width:50%; margin:$gutter_sm 0 $gutter_sm $gutter_sm;
+          &:first-child{margin-left:-#{$gutter_sm};}
+          > a{padding-left:4.88281vw; padding-right:4.88281vw;}
+      }
   }
   & + .search_form { margin-bottom: 0; }
 }
@@ -937,11 +950,11 @@ select.form-control {
   & > .nav {
     @include box();
     position: relative;
-    border-bottom:1px solid #d4d4d4;
+    border-bottom:0.09766vw solid $border;
     & > li {
       overflow: visible;
       a {
-        width:200px;
+        width:19.53125vw;
         background: none;
         border: none;
         position:relative;
@@ -949,8 +962,8 @@ select.form-control {
           color: #222;
           &:after{
             content: '';
-            width: 200px;
-            height: 6px;
+            width: 19.53125vw;
+            height: 0.58594vw;
             display: inline-block;
             background: #67b7dd;
             position: absolute; bottom: 0; left: 0;
@@ -966,7 +979,7 @@ select.form-control {
       height: 0.09766vw;
       display: inline-block;
       background: $border;
-      position: absolute; bottom: -1px; left: -#{$gutter_md};
+      position: absolute; bottom: -0.09766vw; left: -#{$gutter_md};
     }
     &::after { left: unset; right: -#{$gutter_md}; }
   }
@@ -1028,6 +1041,7 @@ select.form-control {
   font-size:0;
   margin-top: 3.41797vw;
   margin-bottom: 0;
+  &.only{margin-top:0;}
   & > li {
       display: inline-block;
       margin: 0 0.48828vw;
@@ -1088,20 +1102,50 @@ select.form-control {
 
 /* ------------------------------------------------------- research ------------------------------------------------------- */
 .research_ipt{
-    margin:40px 0 50px 0;
+    margin:3.90625vw 0 4.88281vw 0;
     input{}
 }
 .research_list{    
-    border-top:2px solid #a3a3a3;
+    border-top:0.19531vw solid #a3a3a3;
     > li{
         @include flex();
         justify-content:space-between;
-        padding:25px 0;
+        padding:2.44141vw 0;
         border-bottom:0.09766vw solid $border;
-        > strong{font-size:44px; line-height:100px;}
+        > strong{font-size:4.29688vw; line-height:9.76563vw;}
         > a{display: block; padding: 2.34375vw 2.63672vw; border: 0.09766vw solid $border; border-radius: 1.95313vw; font-size: 3.51563vw; font-weight: 600; background-color: #eee;}
     }
 }
+
+
+/* ------------------------------------------------------- keyword ------------------------------------------------------- */
+.keyword_area{
+    padding:5.85938vw $gutter_md; margin:$gutter_md -3.90625vw; background-color:#fafafa; position:relative;
+    .keyword_box{
+        
+        > dt{font-size:4.29688vw; font-weight:600; color:#222; margin-bottom:1.95313vw;}
+        > dd{}
+        > dd .keyword_none{font-size:1.56250vw; color:#999; padding:1.46484vw 0 3.90625vw 0; text-align:center; cursor:pointer;}
+    }    
+    .keyword_list{
+        @include flex(); flex-wrap:wrap;
+        margin-top:-1.75781vw;
+        > li{
+            font-size:3.90625vw; font-weight:500; margin-right:1.75781vw; margin-top:1.75781vw; padding:1.95313vw 6.83594vw; background-color:#fff; border:0.19531vw solid #d4d4d4; border-radius:4.88281vw; cursor:pointer;
+            &.business{color:#da97ab; border-color:#da97ab;}
+            &.voca{color:#67b7dd; border-color:#67b7dd;}
+        }
+    }
+    .all_view{
+        position:absolute; right:1.17188vw; top:1.46484vw; 
+        > a{
+        color:#000; line-height:1.56250vw;
+        .ic{width:8.30078vw; height:6.05469vw; background-position:-50.97656vw -40.62500vw;}
+            
+        }
+    }
+}
+
 
 
 /* ------------------------------------------------------- top button ------------------------------------------------------- */

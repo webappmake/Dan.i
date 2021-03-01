@@ -59,25 +59,21 @@ function fn_ListSequence(obj) {
     }
 };
 
-// 챗봇 입력 창 열기
-function fn_Chatbot_Open(obj) {
-    $(obj).parent().addClass("active");
+// 채용정보 분석 미니 팝업 오픈
+function fn_mini_pop_open(obj) {
+    $(obj).next(".mini_popup_wrap").addClass("active");
+    var minipop_wid = ($(obj).next().find(".mini_popup").outerWidth() / 2) - 10;
+    var minipop_hei = $(obj).next().find(".mini_popup").outerHeight() + 40;
+    
+    
+    $(obj).next().find(".mini_popup").css({ "right": -minipop_wid, "top": -minipop_hei });
 }
 
-// 챗봇 입력 창 닫기
-function fn_Chatbot_Close() {
-    $(".btn_chatbot").removeClass("active");
+// 채용정보 분석 미니 팝업 닫기
+function fn_mini_pop_close(obj) {
+    $(obj).parents(".mini_popup_wrap").removeClass("active");
 }
 
-// 챗봇 팝업 창 열기
-function fn_chat_pop_open(id) {
-    $("#pop_" + id).show();
-}
-
-// 챗봇 팝업 창 닫기
-function fn_chat_pop_close(id) {
-    $("#pop_" + id).hide();
-}
 
 // filter area close
 function fn_filterClose() {
