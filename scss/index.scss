@@ -95,7 +95,11 @@
       width: 5.66406vw;
       height: 5.66406vw;
       display: inline-block;
-      & > .alert{padding:0; margin-bottom:0; border:none;}
+      position:relative;
+      & > .alert{
+          padding:0; margin-bottom:0; border:none;
+      }
+     .on{font-size:0; position:absolute; right:-0.97656vw; top:0; width:1.66016vw; height:1.66016vw; background-color:#f17164; border-radius:50%;}
     }
   }
 }
@@ -1165,28 +1169,24 @@ select.form-control {
         }
     }
 }
-<<<<<<< HEAD
 
 /* ------------------------------------------------------- recruit ------------------------------------------------------- */
 .recruit_tbl_wrap{
-    border-top:1px solid #c8c8c8;
+    border-top:0.09766vw solid #c8c8c8;
     .recruit_tbl{
         width:100%;
         th, td{
-            font-size:40px; vertical-align:middle; text-align:center; 
+            font-size:3.90625vw; vertical-align:middle; text-align:center; 
         }
         th{
-            height:125px; font-weight:500; border-bottom:1px solid #a3a3a3;
+            height:12.20703vw; font-weight:500; border-bottom:0.09766vw solid #a3a3a3;
         }
         td{
-            height:120px; line-height:60px; padding:$gutter_sm 0; border-bottom:1px solid #d4d4d4;
+            height:11.71875vw; line-height:5.85938vw; padding:$gutter_sm 0; border-bottom:0.09766vw solid #d4d4d4;
         }
     }
 }
 
-
-=======
->>>>>>> e8a2b4f4b0e23d88643d318de2d65b25502801c3
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top{
     display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:1.95313vw; bottom:21.48438vw; z-index:999;

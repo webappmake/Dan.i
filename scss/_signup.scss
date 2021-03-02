@@ -69,6 +69,18 @@
       border: 0.09766vw solid #0087f9;
       color: #0087f9;
       margin-bottom: $gutter_sm;
+      &.btn_like.active{
+          background-color:#0087f9; color:#fff;
+          .ic{
+              background-position:-25.00000vw -75.78125vw;
+          }
+      }
+      &.btn_unlike.active{
+          background-color:#e62122; color:#fff;
+          .ic{
+              background-position:-31.25000vw -75.78125vw;
+          }
+      }
       .ic {
         width: 6.25000vw;
         height: 6.25000vw;
@@ -112,8 +124,9 @@
     color: #999; 
     font-size: 3.90625vw; 
     line-height: 1.55;   
-    text-align: right;  
-    position: absolute; right: $gutter_md; bottom: calc(#{$signup_footer_height} + #{$gutter_md});
+    text-align: right;
+    margin-top:9.76563vw;
+    &.fix_desc{position: absolute; right: $gutter_md; bottom: calc(#{$signup_footer_height} + #{$gutter_md});}
     a { font-size: 3.90625vw; color: #000; text-decoration: underline; }
   }
   .entry_message { font-size: 5.07813vw; font-weight: 600; }

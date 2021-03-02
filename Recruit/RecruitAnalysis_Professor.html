@@ -34,7 +34,7 @@
 				<h2 class="skip">2차메뉴</h2>
 				<ul class="sub_menu sub_type02 swiper-wrapper">
 					<li class="swiper-slide sub_menu_lg active"><a href="RecruitAnalysis.html">채용/취업분석</a></li>
-					<li class="swiper-slide sub_menu_lg"><a href="RecruitSearch.html">실시간 채용검색</a></li>
+					<li class="swiper-slide sub_menu_lg"><a href="RecruitSearch_Professor.html">실시간 채용검색</a></li>
 				</ul>
 				<script>
 					var swiper = new Swiper('.nav_select_swiper', {
@@ -115,7 +115,7 @@
 											</tr>
 										</tbody>
 									</table>
-									<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+									<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_EmploymentStatus">전체보기</button>
 								</div>
 							</li>
 						</ul>
@@ -362,8 +362,8 @@
 			<ul class="main_menu">
 				<li class="my_desk"><a href="#">MY-Desk</a></li>
 				<li class="department_lounge"><a href="#">학과라운지</a></li>
-				<li class="subject active"><a href="#">교과/연구</a></li>
-				<li class="recruit"><a href="#">취업분석</a></li>
+				<li class="subject"><a href="#">교과/연구</a></li>
+				<li class="recruit active"><a href="#">취업분석</a></li>
 				<li class="chatbot"><a href="#">챗봇</a></li>
 			</ul>
 		</nav>
@@ -479,7 +479,7 @@
 															</div>
 														</li>
 													</ul>
-													<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_EmploymentStatus">전체보기</button>
+													<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#">전체보기</button>
 												</div>
 											</li>
 										</ul>
@@ -710,44 +710,65 @@
 					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 닫기</i></button>
 				</div>
 				<div class="modal_body">
+					<h4 class="pop_sub_title">한국현대시인론</h4>
+					<p class="pop_sub_info pop_sub_info01">전공필수 | 520500</p>
 					<div class="recruit_tbl_wrap">
-						<table class="tbl recruit_tbl">
-							<colgroup>
-								<col style="width:60%;" />
-								<col style="width:20%;" />
-								<col style="width:20%;" />
-							</colgroup>
-							<thead>
-								<tr>
-									<th class="left">수강 학과</th>
-									<th>회사</th>
-									<th>취업자 수</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="left">문과대학 국어국문학과</td>
-									<td><strong class="text_blue">25</strong></td>
-									<td><strong class="text_blue">25</strong></td>
-								</tr>
-								<tr>
-									<td class="left">상경대학 경영학부</td>
-									<td><strong class="text_blue">25</strong></td>
-									<td><strong class="text_blue">25</strong></td>
-								</tr>
-								<tr>
-									<td class="left">버과대학 법학과</td>
-									<td><strong class="text_blue">25</strong></td>
-									<td><strong class="text_blue">25</strong></td>
-								</tr>
-								<tr>
-									<td class="left">사회과학대학 정치외교학과</td>
-									<td><strong class="text_blue">25</strong></td>
-									<td><strong class="text_blue">25</strong></td>
-								</tr>
-							</tbody>
-						</table>
-						<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+						<div class="control_wrap only">
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list" style="display: none;">
+									<strong>정렬</strong>
+									<span class="toggle_filter active" onclick="fn_Toggle(this);">취업자 수</span>
+								</div>
+							</div>
+						</div>
+						<div class="recruit_tbl_area">
+							<table class="tbl recruit_tbl">
+								<colgroup>
+									<col style="width:60%;" />
+									<col style="width:20%;" />
+									<col style="width:20%;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="left">수강 학과</th>
+										<th>회사</th>
+										<th>취업자 수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="left">문과대학 국어국문학과</td>
+										<td><strong class="text_blue">25</strong></td>
+										<td><strong class="text_blue">25</strong></td>
+									</tr>
+									<tr>
+										<td class="left">상경대학 경영학부</td>
+										<td><strong class="text_blue">25</strong></td>
+										<td><strong class="text_blue">25</strong></td>
+									</tr>
+									<tr>
+										<td class="left">버과대학 법학과</td>
+										<td><strong class="text_blue">25</strong></td>
+										<td><strong class="text_blue">25</strong></td>
+									</tr>
+									<tr>
+										<td class="left">사회과학대학 정치외교학과</td>
+										<td><strong class="text_blue">25</strong></td>
+										<td><strong class="text_blue">25</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="paging">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
