@@ -10,7 +10,7 @@
   background: url(../images/icons_m.png) no-repeat 0 0 / 97.65625vw auto;
   text-indent: -1000vw;
   &.logo { background-position: -85.44922vw 0; }
-  &.alert { background-position: -13.99vw -1px; }
+  &.alert { background-position: -13.99vw -0.09766vw; }
   &.logout { background-position: -19.53125vw 0; }
   &.selectbox { background-position: -17.57813vw -24.02344vw; }
   &.search { background-position: -26.36719vw -23.92578vw; }
@@ -227,7 +227,6 @@
     }
   }
 }
-
 /* ------------------------------------------------------- COMMON > FONTS ------------------------------------------------------- */
 .tit {
   color: #333;
@@ -695,7 +694,6 @@ select.form-control {
   }
   & + .search_form { margin-bottom: 0; }
 }
-
 .filter_search_wrap{
     display:inline-block; padding:0 $gutter_md; margin: 2.92969vw -#{$gutter_md} 5.37109vw -#{$gutter_md}; background-color:#fafafa;
     @at-root .modal_body .filter_search_wrap{padding:6.83594vw $gutter_md; margin:0; background-color:$color_white;}
@@ -740,13 +738,12 @@ select.form-control {
         }
     }
 }
-
 /* tooltip */
 .ic_tooltip{width:6.83594vw; height:6.83594vw; vertical-align:middle; cursor:pointer;}
 .tooltip{
     width:100%; padding:0 $gutter_md;
     &.show{opacity:1;}
-    /*.arrow{height:90px; position:static; margin-top:-180px;}*/
+    /*.arrow{height:8.78906vw; position:static; margin-top:-17.57813vw;}*/
     .tooltip-inner{
     @include shadow_filter_pop_list;
     max-width: 100%; padding: 2.92969vw $gutter_md; color: #000; font-size:2.92969vw; line-height:5.85938vw; background-color: #fff; border:0.09766vw solid $border; position:relative; text-align:left; letter-spacing:-0.02em;
@@ -1133,8 +1130,6 @@ select.form-control {
         > a{display: block; padding: 2.34375vw 2.63672vw; border: 0.09766vw solid $border; border-radius: 1.95313vw; font-size: 3.51563vw; font-weight: 600; background-color: #eee;}
     }
 }
-
-
 /* ------------------------------------------------------- keyword ------------------------------------------------------- */
 .keyword_area{
     padding:5.37109vw $gutter_md; margin:$gutter_md -3.90625vw; background-color:#fafafa; position:relative;
@@ -1170,6 +1165,7 @@ select.form-control {
         }
     }
 }
+<<<<<<< HEAD
 
 /* ------------------------------------------------------- recruit ------------------------------------------------------- */
 .recruit_tbl_wrap{
@@ -1189,6 +1185,8 @@ select.form-control {
 }
 
 
+=======
+>>>>>>> e8a2b4f4b0e23d88643d318de2d65b25502801c3
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top{
     display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:1.95313vw; bottom:21.48438vw; z-index:999;
