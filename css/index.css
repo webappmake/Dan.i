@@ -2571,14 +2571,6 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     padding: 0;
     position: inherit;
     background-color: transparent; }
-    .modal-content.camp_wrap .modal_header .btn_transparent {
-      width: 840px;
-      height: 120px;
-      color: #fff;
-      font-size: 40px;
-      background-color: rgba(255, 255, 255, 0.2);
-      border: 1px solid #fff;
-      margin: 40px 90px 120px; }
     .modal-content.camp_wrap .modal_header .camp_menu_wrap {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2647,9 +2639,19 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   .modal-content.camp_wrap .modal_body {
     width: 100vw;
     height: calc(100vh - 750px);
-    padding-top: 165px; }
-    .modal-content.camp_wrap .modal_body.scroll_none {
-      overflow-y: hidden; }
+    padding-top: 165px;
+    overflow-y: hidden; }
+    .modal-content.camp_wrap .modal_body .btn_transparent {
+      width: 840px;
+      height: 120px;
+      color: #fff;
+      font-size: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #fff;
+      margin: 40px 90px 120px;
+      position: fixed;
+      bottom: 460px;
+      left: 0; }
     .modal-content.camp_wrap .modal_body .scroll_section {
       height: calc(100vh - 750px - 165px);
       background-color: #fff;
@@ -2657,6 +2659,14 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       padding: 3.90625vw;
       overflow-x: hidden;
       overflow-y: auto; }
+    .modal-content.camp_wrap .modal_body .scroll_section.transparent {
+      background: transparent;
+      border-radius: 0;
+      margin: -3.90625vw; }
+    .modal-content.camp_wrap .modal_body > section {
+      display: none !important; }
+    .modal-content.camp_wrap .modal_body > section.active {
+      display: block !important; }
 
 .schedule_wrap .schedule {
   margin-bottom: 3.90625vw; }

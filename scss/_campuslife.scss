@@ -40,15 +40,6 @@
     padding: 0;
     position: inherit;
     background-color: transparent;
-    .btn_transparent {
-      width: 840px;
-      height: 120px;
-      color: #fff;
-      font-size: 40px;
-      background-color: rgba(255, 255, 255, .2);
-      border: 1px solid #fff;
-      margin: 40px 90px 120px;
-    }
     .camp_menu_wrap {
       @include flex;
       width: 100vw;
@@ -109,7 +100,19 @@
     width: 100vw;
     height: calc(100vh - 750px);
     padding-top: 165px;
-    &.scroll_none {  overflow-y: hidden; }
+    overflow-y: hidden; 
+    .scroll_none {
+    }
+    .btn_transparent {
+      width: 840px;
+      height: 120px;
+      color: #fff;
+      font-size: 40px;
+      background-color: rgba(255, 255, 255, .2);
+      border: 1px solid #fff;
+      margin: 40px 90px 120px;
+      position: fixed; bottom: 460px; left: 0;
+    }
     .scroll_section {
       height: calc(100vh - 750px - 165px);
       background-color: #fff;
@@ -118,6 +121,13 @@
       overflow-x: hidden;
       overflow-y: auto;      
     }
+    .scroll_section.transparent {
+      background: transparent;
+      border-radius: 0;
+      margin: -#{$gutter_md};
+    }
+    & > section { display: none !important; }
+    & > section.active { display: block !important; }
   }
 }
 .schedule_wrap {
@@ -313,9 +323,6 @@
       }
     }
   }
-}
-.modal-content.voice_alert {
-
 }
 .text_green { color: #3b991a; }
 .campuslife_body .modal-backdrop.show { 

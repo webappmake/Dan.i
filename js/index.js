@@ -173,14 +173,23 @@
     })
 
      // 캠퍼스라이프 gnb 활성화
-     $(".camp_menu > li").on("hover mouseenter mouseover", function () {
-        $(".camp_menu > li").removeClass("active");
-        if ($(this).hasClass("active")) {
-            $(this).removeClass("active")
-        } else {
-            $(".camp_menu > li").removeClass("active");
-            $(this).addClass("active");
-        }
+     $('.camp_menu > li').click(function(){
+        var num=$(this).index();
+
+        $('.camp_menu > li').removeClass('active');
+        $(this).addClass('active');
+
+        $('.modal_body > section').removeClass('active');
+        $('.modal_body > section').eq(num).addClass('active');
+        return false;
+
+
+        // if ($(this).hasClass("active")) {
+        //     $(this).removeClass("active")
+        // } else {
+        //     $(".camp_menu > li").removeClass("active");
+        //     $(this).addClass("active");
+        // }
     });
 });
 
