@@ -262,6 +262,14 @@
     color: #000;
     font-weight: 400;
   }
+  @at-root .cont_hd .cont_tit + .desc{
+    font-family: $sub_font_family;
+    font-size: 3.51563vw;
+    color: #000;
+    font-weight: 400;
+    text-align:right;
+    padding:$gutter_sm 0;
+  }
 }
 .text_blue { color: $color_primary !important; }
 .text_red{color:$color_red !important;}
@@ -395,6 +403,7 @@ select.form-control {
       }
   }
   &.justify_start { justify-content: start; }	
+  &.justify_end { justify-content: flex-end; }	
   &.align_top { align-items: flex-start; }
   &.topic_btn_wrap {
     padding: $gutter_md;
@@ -494,6 +503,14 @@ select.form-control {
               border-bottom: 0.29297vw solid $color_primary;
             }
           }
+            .topic_recruit_btn {
+                & strong {
+                display: inline-block;
+                font-size: 3.90625vw;
+                padding-bottom: 0.48828vw;
+                border-bottom: 0.29297vw solid $color_primary;
+                }
+            }
           .topic_list {
             padding: 4.88281vw $gutter_md;
             background-color: #f5f5f5;
@@ -1120,12 +1137,21 @@ select.form-control {
 
 /* ------------------------------------------------------- keyword ------------------------------------------------------- */
 .keyword_area{
-    padding:5.85938vw $gutter_md; margin:$gutter_md -3.90625vw; background-color:#fafafa; position:relative;
+    padding:5.37109vw $gutter_md; margin:$gutter_md -3.90625vw; background-color:#fafafa; position:relative;
     .keyword_box{
         
         > dt{font-size:4.29688vw; font-weight:600; color:#222; margin-bottom:1.95313vw;}
         > dd{}
-        > dd .keyword_none{font-size:1.56250vw; color:#999; padding:1.46484vw 0 3.90625vw 0; text-align:center; cursor:pointer;}
+        > dd .keyword_none{            
+            display:flex; align-items:center; justify-content:center;
+            & > span{
+            display:block; line-height:6.25000vw; font-family: $sub_font_family; font-weight: 300; font-size:4.29688vw; color:#999; padding-top:15.62500vw; text-align:center;
+                &:before{
+                    position:absolute; top:0; left:50%; margin-left:-5.37109vw;
+                }
+                & > span{line-height:8.20313vw;}
+            }
+        }
     }    
     .keyword_list{
         @include flex(); flex-wrap:wrap;
@@ -1137,15 +1163,30 @@ select.form-control {
         }
     }
     .all_view{
-        position:absolute; right:1.17188vw; top:1.46484vw; 
+        position:absolute; right:3.90625vw; top:4.39453vw; 
         > a{
-        color:#000; line-height:1.56250vw;
-        .ic{width:8.30078vw; height:6.05469vw; background-position:-50.97656vw -40.62500vw;}
-            
+        display:block; font-size:3.90625vw; color:#000; line-height:6.05469vw;
+        .ic{width:8.30078vw; height:6.05469vw; background-position:-50.97656vw -40.62500vw; vertical-align:middle;}
         }
     }
 }
 
+/* ------------------------------------------------------- recruit ------------------------------------------------------- */
+.recruit_tbl_wrap{
+    border-top:1px solid #c8c8c8;
+    .recruit_tbl{
+        width:100%;
+        th, td{
+            font-size:40px; vertical-align:middle; text-align:center; 
+        }
+        th{
+            height:125px; font-weight:500; border-bottom:1px solid #a3a3a3;
+        }
+        td{
+            height:120px; line-height:60px; padding:$gutter_sm 0; border-bottom:1px solid #d4d4d4;
+        }
+    }
+}
 
 
 /* ------------------------------------------------------- top button ------------------------------------------------------- */

@@ -43,32 +43,6 @@
         $(".btn_top").fadeOut("slow");
     });
 
-
-    // gnb 활성화
-    $(".gnb_menu > li").on("hover mouseenter mouseover", function () {
-        $(".gnb_menu > li").removeClass("active");
-        if ($(this).hasClass("active")) {
-            // 클래스 있음
-            $(this).removeClass("active")
-        } else {
-            // 클래스 없음
-            $(".gnb_menu > li").removeClass("active");
-            $(this).addClass("active");
-        }
-    });
-
-    $(".gnb_menu > li").on("mouseout mouseleave", function () {
-        $(".gnb_menu > li").removeClass("active");
-        if ($(this).hasClass("active")) {
-            // 클래스 있음
-            $(this).removeClass("active")
-        } else {
-            // 클래스 없음
-            $(".gnb_menu > li").removeClass("active");
-            $(this).addClass("active")
-        }
-    });
-
     // Tab
     $('.con_tab > li').click(function () {
         var activeTab = $(this).attr('rel');
@@ -116,6 +90,19 @@
             $(this).find("strong").text("토픽보기").removeClass('active');
             $(this).parent().next().show();
             $(this).find("strong").text("토픽접기").addClass('active');
+        }
+    });
+
+    // Topic Toggle
+    $('.topic_recruit_btn').click(function () {
+        if ($(this).find("strong").hasClass('active')) {
+            $(this).parent().next().hide();
+            $(this).find("strong").removeClass('active');
+        }
+        else {
+            $(this).find("strong").removeClass('active');
+            $(this).parent().next().show();
+            $(this).find("strong").addClass('active');
         }
     });
 

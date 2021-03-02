@@ -876,50 +876,52 @@ button {
       background-color: rgba(0, 0, 0, 0.8); }
 
 /* 채용 관심 키워드 */
-.keyword_search_wrap {
-  display: flex; }
-
 .keyword_search_wrap .search_box {
-  flex-grow: 1;
-  margin-right: 0.97656vw; }
-
-.keyword_search_wrap .search_box select, .keyword_search_wrap .search_box input {
-  width: 100%;
-  height: 3.90625vw;
-  border-radius: 0.19531vw; }
-
-.keyword_search_wrap .search_box select {
-  margin-bottom: 0.97656vw; }
+  margin-top: 5.37109vw; }
+  .keyword_search_wrap .search_box select, .keyword_search_wrap .search_box input {
+    width: 100%;
+    height: 100px; }
+  .keyword_search_wrap .search_box select {
+    margin-bottom: 0.97656vw; }
 
 .keyword_search_wrap > button {
-  flex-basis: 8.78906vw;
-  flex-shrink: 1;
-  width: 8.78906vw;
-  height: 8.78906vw;
-  font-size: 1.36719vw;
-  border-radius: 0.97656vw; }
+  display: block;
+  width: 840px;
+  height: 160px;
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+  margin: 60px auto;
+  background-color: #67b7dd; }
 
 .keyword_area01 .keyword_box {
-  height: 34.17969vw;
-  overflow-y: auto; }
+  /*height:34.17969vw; overflow-y:auto;*/ }
+  .keyword_area01 .keyword_box > dt {
+    display: inline-block; }
+  .keyword_area01 .keyword_box > dd {
+    padding-top: 1.95313vw; }
+    .keyword_area01 .keyword_box > dd .keyword_list > li .btn_delete {
+      width: 40px;
+      height: 40px;
+      margin-left: 20px;
+      margin-top: -5px; }
+      .keyword_area01 .keyword_box > dd .keyword_list > li .btn_delete > .ic {
+        background-position: -253px -375px; }
 
-.keyword_area01 .keyword_box > dt {
-  margin-bottom: 2.44141vw; }
-
-.keyword_area01 > button {
+.keyword_area01 > .all_delete {
   position: absolute;
-  right: 0.97656vw;
-  top: 0.97656vw;
-  width: 7.81250vw;
-  height: 3.90625vw;
-  font-size: 1.36719vw;
+  right: 40px;
+  top: 55px;
+  font-size: 40px;
   color: #000; }
-
-.keyword_area01 .keyword_list > li .btn_delete > span {
-  width: 0.97656vw;
-  height: 0.97656vw;
-  margin-left: 1.75781vw;
-  background-position: -21.48438vw -15.62500vw; }
+  .keyword_area01 > .all_delete:after {
+    content: "";
+    width: 154px;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    left: -3px;
+    bottom: -10px; }
 
 .toast {
   width: inherit;
@@ -1252,6 +1254,15 @@ button {
     margin-top: 0; }
   .cont_tit + .tab_wrap, .cont_tit + .pag_info {
     margin-top: 1.95313vw; }
+  .cont_tit + .topic_count {
+    font-size: 3.12500vw;
+    line-height: 1.2;
+    color: #fff; }
+    .cont_tit + .topic_count > span {
+      display: block; }
+    .cont_tit + .topic_count > strong {
+      font-size: 5.07813vw;
+      font-weight: 600; }
 
 .major_wrap + .cont_tit, .list_view + .cont_tit {
   margin-top: 7.81250vw; }
@@ -3208,6 +3219,13 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     font-size: 3.51563vw;
     color: #000;
     font-weight: 400; }
+  .cont_hd .cont_tit + .desc {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 3.51563vw;
+    color: #000;
+    font-weight: 400;
+    text-align: right;
+    padding: 1.95313vw 0; }
 
 .text_blue {
   color: #0054a3 !important; }
@@ -3407,6 +3425,8 @@ select.form-control {
       text-overflow: ellipsis; }
   .inline_wrap.justify_start {
     justify-content: start; }
+  .inline_wrap.justify_end {
+    justify-content: flex-end; }
   .inline_wrap.align_top {
     align-items: flex-start; }
   .inline_wrap.topic_btn_wrap {
@@ -3503,6 +3523,11 @@ select.form-control {
         font-size: 3.90625vw;
         padding-bottom: 0.48828vw;
         border-bottom: 0.29297vw solid #0054a3; }
+    .list_view .list_cont.list_cont_box .list > li .topic_recruit_btn strong {
+      display: inline-block;
+      font-size: 3.90625vw;
+      padding-bottom: 0.48828vw;
+      border-bottom: 0.29297vw solid #0054a3; }
     .list_view .list_cont.list_cont_box .list > li .topic_list {
       padding: 4.88281vw 3.90625vw;
       background-color: #f5f5f5;
@@ -4251,7 +4276,7 @@ select.form-control {
 
 /* ------------------------------------------------------- keyword ------------------------------------------------------- */
 .keyword_area {
-  padding: 5.85938vw 3.90625vw;
+  padding: 5.37109vw 3.90625vw;
   margin: 3.90625vw -3.90625vw;
   background-color: #fafafa;
   position: relative; }
@@ -4261,11 +4286,25 @@ select.form-control {
     color: #222;
     margin-bottom: 1.95313vw; }
   .keyword_area .keyword_box > dd .keyword_none {
-    font-size: 1.56250vw;
-    color: #999;
-    padding: 1.46484vw 0 3.90625vw 0;
-    text-align: center;
-    cursor: pointer; }
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .keyword_area .keyword_box > dd .keyword_none > span {
+      display: block;
+      line-height: 6.25000vw;
+      font-family: "Gong Gothic", sans-serif !important;
+      font-weight: 300;
+      font-size: 4.29688vw;
+      color: #999;
+      padding-top: 15.62500vw;
+      text-align: center; }
+      .keyword_area .keyword_box > dd .keyword_none > span:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -5.37109vw; }
+      .keyword_area .keyword_box > dd .keyword_none > span > span {
+        line-height: 8.20313vw; }
   .keyword_area .keyword_list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4291,15 +4330,37 @@ select.form-control {
         border-color: #67b7dd; }
   .keyword_area .all_view {
     position: absolute;
-    right: 1.17188vw;
-    top: 1.46484vw; }
+    right: 3.90625vw;
+    top: 4.39453vw; }
     .keyword_area .all_view > a {
+      display: block;
+      font-size: 3.90625vw;
       color: #000;
-      line-height: 1.56250vw; }
+      line-height: 6.05469vw; }
       .keyword_area .all_view > a .ic {
         width: 8.30078vw;
         height: 6.05469vw;
-        background-position: -50.97656vw -40.62500vw; }
+        background-position: -50.97656vw -40.62500vw;
+        vertical-align: middle; }
+
+/* ------------------------------------------------------- recruit ------------------------------------------------------- */
+.recruit_tbl_wrap {
+  border-top: 1px solid #c8c8c8; }
+  .recruit_tbl_wrap .recruit_tbl {
+    width: 100%; }
+    .recruit_tbl_wrap .recruit_tbl th, .recruit_tbl_wrap .recruit_tbl td {
+      font-size: 40px;
+      vertical-align: middle;
+      text-align: center; }
+    .recruit_tbl_wrap .recruit_tbl th {
+      height: 125px;
+      font-weight: 500;
+      border-bottom: 1px solid #a3a3a3; }
+    .recruit_tbl_wrap .recruit_tbl td {
+      height: 120px;
+      line-height: 60px;
+      padding: 1.95313vw 0;
+      border-bottom: 1px solid #d4d4d4; }
 
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top {

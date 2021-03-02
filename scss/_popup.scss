@@ -494,18 +494,38 @@
 .analysis_btn_area > li{}
 
 /* 채용 관심 키워드 */
-.keyword_search_wrap{display:flex;}
-.keyword_search_wrap .search_box{flex-grow:1; margin-right:0.97656vw;}
-.keyword_search_wrap .search_box select, .keyword_search_wrap .search_box input{width:100%; height:3.90625vw; border-radius:0.19531vw;}
-.keyword_search_wrap .search_box select{margin-bottom:0.97656vw;}
-.keyword_search_wrap .search_box input{}
-.keyword_search_wrap > button{flex-basis:8.78906vw; flex-shrink:1; width:8.78906vw; height:8.78906vw; font-size:1.36719vw; border-radius:0.97656vw;}
+.keyword_search_wrap{
+    .search_box{
+        margin-top:5.37109vw;
+        select, input{width:100%; height:100px;}
+        select{margin-bottom:0.97656vw;}
+        input{}
+    }    
+    > button{display:block; width:840px; height:160px; font-size:48px; font-weight:500; color:#fff; margin:60px auto; background-color:#67b7dd;}
+}
 
-.keyword_area01{}
-.keyword_area01 .keyword_box{height:34.17969vw; overflow-y:auto;}
-.keyword_area01 .keyword_box > dt{margin-bottom:2.44141vw;}
-.keyword_area01 > button{position:absolute; right:0.97656vw; top:0.97656vw; width:7.81250vw; height:3.90625vw; font-size:1.36719vw; color:#000;}
-.keyword_area01 .keyword_list > li .btn_delete > span{width:0.97656vw; height:0.97656vw; margin-left:1.75781vw; background-position:-21.48438vw -15.62500vw;}
+
+.keyword_area01{
+    .keyword_box{
+        /*height:34.17969vw; overflow-y:auto;*/
+        > dt{display:inline-block;}
+        > dd{
+            padding-top:$gutter_sm;
+            .keyword_list{
+                > li .btn_delete{
+                    width:40px; height:40px; margin-left:20px; margin-top:-5px;
+                    > .ic{background-position:-253px -375px;}
+                }
+            }
+        }
+    }
+    > .all_delete{
+        position:absolute; right:40px; top:55px; font-size:40px; color:#000;
+        &:after{content: ""; width:154px; height:4px; background-color:#000; position:absolute; left:-3px; bottom:-10px;}
+    }
+
+}
+
 
 
 .toast{

@@ -243,6 +243,16 @@
   }
   & + .list_view { margin-top: 0; }
   & + .tab_wrap, & + .pag_info { margin-top: $gutter_sm; }
+  & + .topic_count{
+    font-size: 3.12500vw;
+    line-height: 1.2;
+    color: #fff;
+        & > span { display: block; }
+        & > strong {
+        font-size: 5.07813vw; 
+        font-weight: 600;
+        }
+    }
 }
 .major_wrap + .cont_tit, .list_view + .cont_tit { margin-top: 7.81250vw; }
 .major_wrap + .tab_wrap { margin-top: 2.92969vw; }
