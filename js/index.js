@@ -178,19 +178,11 @@
 
         $('.camp_menu > li').removeClass('active');
         $(this).addClass('active');
-
         $('.modal_body > section').removeClass('active');
         $('.modal_body > section').eq(num).addClass('active');
         return false;
-
-
-        // if ($(this).hasClass("active")) {
-        //     $(this).removeClass("active")
-        // } else {
-        //     $(".camp_menu > li").removeClass("active");
-        //     $(this).addClass("active");
-        // }
     });
+    
 });
 
 
