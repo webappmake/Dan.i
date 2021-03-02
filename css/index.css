@@ -2991,6 +2991,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       line-height: 1.625; }
       .modal-content.camp_wrap .status_cont .weather_box .detail_area > p span {
         margin: 0 0.48828vw; }
+      .modal-content.camp_wrap .status_cont .weather_box .detail_area > p.left {
+        width: 23.43750vw; }
     .modal-content.camp_wrap .status_cont .weather_box .detail_area .current_temp * {
       font-size: 8.78906vw;
       font-weight: 600;
