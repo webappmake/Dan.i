@@ -550,6 +550,8 @@ button {
   .modal_body .desc {
     font-size: 3.90625vw;
     line-height: 5.85938vw; }
+    .tag_list + .desc {
+      font-size: 3.12500vw; }
 
 .modal_footer {
   text-align: center;
@@ -2314,62 +2316,50 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: flex-end;
+  padding: 9.76563vw 3.90625vw; }
 
 .signin_wrap .signin_form {
-  width: 54.19922vw;
-  height: 51.95313vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 0.09766vw solid #d4d4d4; }
+  width: 100%; }
 
 .signin_wrap .signin_form .logo {
-  width: 15.03906vw;
-  height: 7.22656vw;
+  width: 44.43359vw;
+  height: 20.80078vw;
   display: inline-block;
-  margin: 4.68750vw 0 3.12500vw;
+  margin-bottom: 34.66797vw;
   padding: 0;
   position: relative;
-  background: url(../images/logo_dku.png) no-repeat 0 0/100% auto; }
-
-/* 기존 것 사용시 깨져서 새로 만듬 > 기존: background: url(../images/icon.png) -32.42188vw 0 / 81.05469vw auto;*/
-.signin_wrap .signin_form .logo::before {
-  content: '';
-  width: 39.06250vw;
-  height: 0.39063vw;
-  display: inline-block;
-  background-color: #1a5c9e;
-  position: absolute;
-  bottom: -3.12500vw;
-  left: -12.01172vw; }
+  background: url(../images/icon/sign_logo.png) no-repeat 0 0/100% auto; }
 
 .signin_wrap .signin_form > button, .signin_wrap .signin_form > input {
-  width: 39.06250vw;
-  height: 5.85938vw;
-  font-size: 1.75781vw;
+  width: 100%;
+  height: 11.71875vw;
+  font-size: 3.90625vw;
   color: #fff;
-  font-weight: bold; }
+  font-weight: 500; }
 
 .signin_wrap .signin_form > input {
-  height: 4.88281vw;
-  color: #444;
+  height: 9.76563vw;
+  font-size: 3.51563vw;
   font-weight: 400;
-  margin: 2.73438vw 0 1.95313vw;
-  padding: 0 1.95313vw;
-  border: 0.09766vw solid #e8e8e8; }
+  padding: 2.44141vw 3.90625vw;
+  margin-bottom: 3.90625vw;
+  border: 0.09766vw solid #d4d4d4; }
 
 .signin_wrap .signin_form > button:nth-of-type(1) {
-  background-color: #48b9e1;
-  margin: 3.12500vw 0 2.34375vw; }
+  background-color: #48b9e1; }
 
 .signin_wrap .signin_form > button:nth-of-type(2) {
   background-color: #1a5c9e; }
 
 .signin_wrap .signin_form > span {
-  font-size: 1.75781vw;
-  color: #222;
-  font-weight: bold; }
+  font-size: 3.90625vw;
+  color: #000;
+  font-weight: bold;
+  line-height: 14.64844vw; }
 
 /* sign-up */
 .signup_wrap {
@@ -2401,11 +2391,16 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     flex-grow: 1;
     padding: 3.90625vw 3.90625vw 19.53125vw;
     overflow-y: auto; }
+    .signup_wrap .signup_contents.signup_contents01 {
+      padding-bottom: 3.90625vw; }
+      .signup_wrap .signup_contents.signup_contents01 .desc {
+        margin-top: 17.57813vw; }
   .signup_wrap .signup_footer {
     -webkit-box-shadow: 0vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
     box-shadow: 0vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
     width: 100vw;
-    height: 19.53125vw; }
+    height: 19.53125vw;
+    position: relative; }
     .signup_wrap .signup_footer .btn_wrap {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2481,7 +2476,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   color: #222;
   line-height: 1.72; }
   .signup_contents .txt small {
-    font-size: 4.29688vw;
+    font-size: 32px;
     color: #888;
     display: inline-block; }
   .signup_contents .txt .text_oblique {
@@ -2519,9 +2514,17 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     position: absolute;
     right: 3.90625vw;
     bottom: calc(19.53125vw + 3.90625vw); }
-  .signup_contents .desc a {
+  .signup_footer .desc {
+    color: #999;
     font-size: 3.90625vw;
-    color: #000;
+    line-height: 1.55;
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    top: -100px; }
+  .signup_contents .desc a {
+    font-size: 3.51563vw;
+    color: #999;
     text-decoration: underline; }
 
 .signup_contents .entry_message {
@@ -2569,6 +2572,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
 
 .ranking {
   margin-top: 3.90625vw; }
+  .signup_wrap .ranking {
+    padding-bottom: 0; }
   .ranking li {
     font-size: 3.90625vw;
     font-weight: 600;
@@ -2654,16 +2659,25 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     margin-bottom: 2.92969vw; }
   .signup_contents .chk_list_wrap .chk_list {
     width: 100%;
-    height: 11.71875vw;
-    font-size: 3.90625vw;
+    font-size: 3.51563vw;
     font-weight: 500;
     border: 0.09766vw solid #d4d4d4;
     border-radius: 0.29297vw;
-    padding: 0 3.90625vw;
+    padding: 22px 3.90625vw;
     margin-bottom: 1.95313vw;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .signup_contents .chk_list_wrap .chk_list .txt {
+      font-size: 3.51563vw;
+      padding-right: 3.90625vw;
+      max-height: 122px;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      overflow: hidden; }
 
 .signup_contents.entry {
   width: 100vw;
@@ -3113,13 +3127,18 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       position: absolute;
       top: 0;
       left: 0;
-      border-bottom: 0.09766vw solid #d4d4d4; }
+      border-bottom: 0.09766vw solid #d4d4d4;
+      background-repeat: no-repeat;
+      background-position: center; }
     .modal-content.camp_wrap .status_cont .library_shortcuts > li > a.return::before {
-      background: url(../images/icon/library/01.png) no-repeat center center; }
+      background-image: url(../images/icon/library/01.png);
+      background-size: 10.54688vw 11.23047vw; }
     .modal-content.camp_wrap .status_cont .library_shortcuts > li > a.reservation::before {
-      background: url(../images/icon/library/02.png) no-repeat center center; }
+      background-image: url(../images/icon/library/02.png);
+      background-size: 11.23047vw 11.23047vw; }
     .modal-content.camp_wrap .status_cont .library_shortcuts > li > a.mylibrary::before {
-      background: url(../images/icon/library/03.png) no-repeat center center; }
+      background-image: url(../images/icon/library/03.png);
+      background-size: 13.08594vw 10.44922vw; }
 
 .modal-content.camp_wrap .status_hd .btn_wrap span {
   font-size: 3.51563vw; }
@@ -3143,6 +3162,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     align-items: center;
     width: 51.75781vw;
     height: 100%; }
+    .modal-content.camp_wrap .status_cont .weather_box .img_area > img {
+      max-height: 25.87891vw; }
     .modal-content.camp_wrap .status_cont .weather_box .img_area > p {
       font-size: 3.51563vw;
       color: #222;
@@ -3180,6 +3201,14 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       color: #0054a3; }
     .modal-content.camp_wrap .status_cont .weather_box .detail_area .high {
       color: #e62122; }
+
+.modal-content.camp_wrap.camp_wrap01 .modal_header {
+  height: 56.64063vw; }
+
+.modal-content.camp_wrap.camp_wrap01 .modal_body {
+  height: calc(100vh - 56.64063vw); }
+  .modal-content.camp_wrap.camp_wrap01 .modal_body .scroll_section {
+    height: calc(100vh - 56.64063vw - 16.11328vw); }
 
 .modal-content.camp_wrap .timetable_wrap {
   margin: -3.90625vw; }

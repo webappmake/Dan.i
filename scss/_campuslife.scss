@@ -397,10 +397,12 @@
             display: inline-block;
             position: absolute; top: 0; left: 0; 
             border-bottom: 0.09766vw solid $border;
+            background-repeat:no-repeat;
+            background-position:center;
           }
-          &.return::before { background: url(../images/icon/library/01.png) no-repeat center center ; }
-          &.reservation::before { background: url(../images/icon/library/02.png) no-repeat center center ; }
-          &.mylibrary::before { background: url(../images/icon/library/03.png) no-repeat center center ; }
+          &.return::before { background-image: url(../images/icon/library/01.png); background-size:10.54688vw 11.23047vw; }
+          &.reservation::before { background-image: url(../images/icon/library/02.png); background-size:11.23047vw 11.23047vw; }
+          &.mylibrary::before { background-image: url(../images/icon/library/03.png); background-size:13.08594vw 10.44922vw; }
         }
         
       }
@@ -426,7 +428,7 @@
         align-items: center;
         width: 51.75781vw;
         height: 100%;
-        & > img { }
+        & > img {max-height:25.87891vw; }
         & > p { 
           font-size: 3.51563vw; 
           color: #222; 
@@ -458,6 +460,13 @@
 }
 //캠퍼스라이프_시간표
 .modal-content.camp_wrap {
+    &.camp_wrap01{
+        .modal_header{height:56.64063vw;}
+        .modal_body{
+            height: calc(100vh - 56.64063vw);
+        .scroll_section{height:calc(100vh - 56.64063vw - 16.11328vw);}
+        }
+    }
   .timetable_wrap {
     margin: -3.90625vw;
     .tbl {

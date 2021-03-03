@@ -43,41 +43,6 @@
         $(".btn_top").fadeOut("slow");
     });
 
-    // Tab
-    $('.con_tab > li').click(function () {
-        var activeTab = $(this).attr('rel');
-        $('.con_tab > li').removeClass('active');
-        $('.con_tab_box').removeClass('active');
-        $(this).addClass('active');
-        $('#' + activeTab).addClass('active');
-        load_chatbox();
-    });
-
-    $('.con_sub_tab > li').click(function () {
-        var activeTab = $(this).attr('rel');
-        $('.con_sub_tab > li').removeClass('active');
-        $('.con_sub_tab_box').removeClass('active');
-        $(this).addClass('active');
-        $('#' + activeTab).addClass('active');
-        load_chatbox();
-    });
-
-    $('.modal_tab > li').click(function () {
-        var activeTab = $(this).attr('rel');
-        $('.modal_tab > li').removeClass('active');
-        $('.modal_tab_box').removeClass('active');
-        $(this).addClass('active');
-        $('#' + activeTab).addClass('active');
-    });
-
-    $('.modal_sub_tab > li').click(function () {
-        var activeTab = $(this).attr('rel');
-        $('.modal_sub_tab > li').removeClass('active');
-        $('.modal_sub_tab_box').removeClass('active');
-        $(this).addClass('active');
-        $('#' + activeTab).addClass('active');
-    });
-
     // Topic Toggle
     $('.topic_btn').click(function () {
         if ($(this).find("strong").hasClass('active')) {
@@ -120,16 +85,6 @@
         }
     });
 
-    if (location.hash == "#RecommendSubject") {
-        var activeTab = $("#RecommendSubject").attr('rel');
-
-        $(window).scrollTop(0);
-        $('.con_tab').find("li").removeClass("active");
-        $('.con_tab_box').removeClass('active');
-        $('.con_tab').find('#RecommendSubject').addClass('active')
-        $('#' + activeTab).addClass('active');
-    }
-
     // 필터 영역 이외의 영역 클릭시 필터 영역 닫기
     $(document).mouseup(function (e) {
         var ico_filter = $(".btn_select");
@@ -166,7 +121,12 @@
         $('.camp_menu > li').removeClass('active');
         $(this).addClass('active');
         $('.modal_body > section').removeClass('active');
-        $('.modal_body > section').eq(num).addClass('active');
+         $('.modal_body > section').eq(num).addClass('active');
+         if ($(this).hasClass("camp_menu_lg")) {
+             $(".camp_wrap").removeClass("camp_wrap01");
+         } else {
+             $(".camp_wrap").addClass("camp_wrap01");
+         }
         return false;
     });
     

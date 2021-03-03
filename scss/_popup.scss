@@ -221,6 +221,7 @@
     }
     & .desc{
         font-size:3.90625vw; line-height:5.85938vw;
+        @at-root .tag_list + .desc{font-size:3.12500vw;}
     }
 }
 
