@@ -2395,6 +2395,9 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       padding-bottom: 3.90625vw; }
       .signup_wrap .signup_contents.signup_contents01 .desc {
         margin-top: 17.57813vw; }
+      @media (min-width: 768px) {
+        .signup_wrap .signup_contents.signup_contents01 .fix_desc {
+          position: static; } }
   .signup_wrap .signup_footer {
     -webkit-box-shadow: 0vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
     box-shadow: 0vw -0.19531vw 1.75781vw 1.07422vw rgba(17, 17, 17, 0.05);
@@ -2476,7 +2479,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   color: #222;
   line-height: 1.72; }
   .signup_contents .txt small {
-    font-size: 32px;
+    font-size: 3.12500vw;
     color: #888;
     display: inline-block; }
   .signup_contents .txt .text_oblique {
@@ -2520,8 +2523,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     line-height: 1.55;
     text-align: right;
     position: absolute;
-    right: 40px;
-    top: -100px; }
+    right: 3.90625vw;
+    top: -9.76563vw; }
   .signup_contents .desc a {
     font-size: 3.51563vw;
     color: #999;
@@ -2546,7 +2549,8 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   margin-top: 3.90625vw; }
 
 .signup_contents .word_wrap {
-  margin: 0 -0.97656vw; }
+  margin: 0 -0.97656vw;
+  max-height: inherit; }
   .signup_contents .word_wrap + .txt {
     margin-top: 3.90625vw; }
   .signup_contents .word_wrap .word {
@@ -2573,7 +2577,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
 .ranking {
   margin-top: 3.90625vw; }
   .signup_wrap .ranking {
-    padding-bottom: 0; }
+    padding: 0; }
   .ranking li {
     font-size: 3.90625vw;
     font-weight: 600;
@@ -2602,7 +2606,9 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
   background-color: #f9f9f9;
   border-radius: 0.29297vw;
   padding: 3.90625vw;
-  margin: 3.90625vw 0; }
+  margin: 3.90625vw 0;
+  max-height: 75.58594vw;
+  overflow-y: auto; }
   .inner_box.img {
     width: 52.73438vw;
     height: 52.73438vw;
@@ -2663,7 +2669,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     font-weight: 500;
     border: 0.09766vw solid #d4d4d4;
     border-radius: 0.29297vw;
-    padding: 22px 3.90625vw;
+    padding: 2.14844vw 3.90625vw;
     margin-bottom: 1.95313vw;
     display: flex;
     justify-content: space-between;
@@ -2671,7 +2677,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     .signup_contents .chk_list_wrap .chk_list .txt {
       font-size: 3.51563vw;
       padding-right: 3.90625vw;
-      max-height: 122px;
+      max-height: 11.91406vw;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 2;

@@ -41,6 +41,9 @@
     &.signup_contents01{
         padding-bottom:$gutter_md;
         .desc{margin-top:17.57813vw;}
+        @media (min-width:768px){
+            .fix_desc{position:static;}
+        }
     }
   }
   .signup_footer {
@@ -112,7 +115,7 @@
     font-size: 4.29688vw; 
     color: #222; 
     line-height: 1.72; 
-    small { font-size: 32px; color: #888; display: inline-block; }
+    small { font-size: 3.12500vw; color: #888; display: inline-block; }
     .text_oblique { font-size: 5.07813vw; font-style: oblique; font-weight: 600; }
     strong.text_oblique, & strong.text_blue { font-weight: 600; }
     .text_blue { font-size: 5.07813vw; color: #0054a3; font-weight: 600; }
@@ -136,7 +139,7 @@
     font-size: 3.90625vw; 
     line-height: 1.55;   
     text-align: right;
-    position:absolute; right:40px; top:-100px;}
+    position:absolute; right:3.90625vw; top:-9.76563vw;}
     a { font-size: $font_size; color: #999; text-decoration: underline; }
   }
   .entry_message { font-size: 5.07813vw; font-weight: 600; }
@@ -151,6 +154,7 @@
   }
   .word_wrap {
     margin: 0 -#{$gutter_xs};
+    max-height:inherit;
     & + .txt { margin-top: $gutter_md; }
     .word {
       display: inline-block;
@@ -178,7 +182,7 @@
 }
 .ranking {
   margin-top: $gutter_md;
-  @at-root .signup_wrap .ranking{padding-bottom:0;}
+  @at-root .signup_wrap .ranking{padding:0;}
   li {
     font-size: 3.90625vw;
     font-weight: 600;
@@ -209,6 +213,8 @@
   border-radius: 0.29297vw;
   padding: 3.90625vw;
   margin: 3.90625vw 0;
+  max-height:75.58594vw;
+  overflow-y:auto;
   &.img {
     width: 52.73438vw;
     height: 52.73438vw;
@@ -277,7 +283,7 @@
       font-weight: 500;
       border: 0.09766vw solid #d4d4d4;
       border-radius: 0.29297vw;
-      padding: 22px $gutter_md;
+      padding: 2.14844vw $gutter_md;
       margin-bottom: $gutter_sm;
       display: flex;
       justify-content: space-between;
@@ -285,7 +291,7 @@
       .txt{
           font-size:$font_size;
           padding-right:$gutter_md;
-          max-height: 122px;
+          max-height: 11.91406vw;
           text-overflow: ellipsis;
           display: -webkit-box;
           -webkit-line-clamp: 2;
