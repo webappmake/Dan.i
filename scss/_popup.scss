@@ -100,7 +100,7 @@
     &.full_modal{
         text-align:left;
     }
-    &:not(.full_modal):before{
+    &:not(.full_modal):not(.voice_alert01):before{
         display: inline-block; vertical-align: middle; content: ""; height: 100%;
     }
     & .modal-dialog{

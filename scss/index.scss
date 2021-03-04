@@ -1187,7 +1187,14 @@ select.form-control {
     }
 }
 
+/* ------------------------------------------------------- error ------------------------------------------------------- */
+.error_wrap{
+    display:flex; align-items:center; justify-content:center; width:100%; height:100%;
+    .error_info{width:100%; font-size:3.90625vw; font-weight:600; color:#222;  padding-top:26.36719vw; padding-bottom:14.64844vw; background-image:url(../images/icon/error.png); background-repeat:no-repeat; background-position:center top; background-size:19.53125vw 19.53125vw; text-align:center;}
+    .btn_error{width:70.31250vw; height:11.71875vw; font-size:$font_size; font-weight:500; color:#222; background-color:#fff; border-color:#555; border-radius:0;}
+}
+
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top{
-    display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:1.95313vw; bottom:21.48438vw; z-index:999;
+    display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:3.90625vw; bottom:48.82813vw; z-index:999;
 }
