@@ -79,21 +79,13 @@
       &.btn_like.active{
           background-color:#0087f9; color:#fff;
           .ic{
-<<<<<<< HEAD
               background-position:-25.00000vw -75.78125vw;
-=======
-              background-position:-8.78906vw -47.07031vw;
->>>>>>> parent of 75902ef... cc
           }
       }
       &.btn_unlike.active{
           background-color:#e62122; color:#fff;
           .ic{
-<<<<<<< HEAD
               background-position:-31.25000vw -75.78125vw;
-=======
-              background-position:-15.03906vw -47.07031vw;
->>>>>>> parent of 75902ef... cc
           }
       }
       .ic {
@@ -334,4 +326,4 @@
     .btn_default_line { width: 41.01563vw; margin-top: 2.92969vw; }
   }
 }
-.toast .toast_txt.center { bottom: calc(50% - 6.05469vw); }
+.toast .toast_txt.center { bottom: calc(50% - 6.05469vw); } 

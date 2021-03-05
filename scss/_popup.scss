@@ -49,7 +49,7 @@
             }
             & .site_list{
                 & > li{
-                    
+
                     & > a{
                         display:flex; width:74.21875vw; margin:0 auto $gutter_sm auto; border:0.09766vw solid $border;
                         & > img{width:29.29688vw;}
@@ -64,7 +64,7 @@
 
 /* setting */
 .set_wrap{
-    
+
     & .user_info{
         padding:4.39453vw 2.92969vw; text-align:center;
         & strong, & span{display:block;}
@@ -100,11 +100,7 @@
     &.full_modal{
         text-align:left;
     }
-<<<<<<< HEAD
     &:not(.full_modal):before{
-=======
-    &:not(.full_modal):not(.voice_alert01):before{
->>>>>>> parent of 75902ef... cc
         display: inline-block; vertical-align: middle; content: ""; height: 100%;
     }
     & .modal-dialog{
@@ -233,7 +229,7 @@
     text-align:center; margin-top:$gutter_md;
     @at-root{
         .modal_body .modal_footer{
-            
+
         }
     }
     &.only{
@@ -296,7 +292,7 @@
             }
         }
 
-        
+
     }
     & .depart_info_list{
 
@@ -314,7 +310,7 @@
                 content:""; position:absolute; left:0; top:50%; width:0.19531vw; height:0.19531vw; margin-top:-0.09766vw; margin-right:0.48828vw; background-color:#333;
             }
         }
-        
+
     }
 }
 
@@ -324,7 +320,7 @@
 }
 
 .site_add_wrap{
-    
+
     & .search_box{
         & .form-control{
             margin-bottom:$gutter_sm;
@@ -502,7 +498,7 @@
                 }
                 &:after{content:""; width:2.44141vw; height:2.73438vw; background-image:url(../images/icon/ic_sm_tooltip.png); background-repeat:no-repeat; background-position:0 0; background-size:100%; position:absolute; left:50%; bottom:-2.53906vw; margin-left:-1.36719vw;}
             }
-            
+
         }
         .mini_bg{display:none; position: fixed; top: 0; left: 0; z-index: 2000; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.8);}
     }
@@ -598,7 +594,7 @@
                 }
             }
         }
-        
+
 
         .noti_sub_list{
             padding:2.73438vw $gutter_md;
@@ -649,4 +645,4 @@
 .alert_modal_wrap .modal-footer{justify-content:center;}
 .alert_modal_wrap .modal-footer:not(.only){padding:0 0 0 0.97656vw;}
 .alert_modal_wrap .modal-footer.only{padding:0;}
-.alert_modal_wrap .modal-footer > button{width:13.28125vw; font-weight:500;}
+.alert_modal_wrap .modal-footer > button{width:13.28125vw; font-weight:500;} 
