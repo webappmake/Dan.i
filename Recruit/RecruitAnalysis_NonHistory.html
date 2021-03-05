@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>채용분석</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<!--lib-->
+	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
+	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/lib/swiper.css">
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<a href="index.html"><i class="ic logo">Dan.i</i></a>
+		</h1>
+		<div class="location">
+			<!-- 알림이 있을 경우 on 클래스 추가 -->
+			<a href="#" class="ico_noti"><i class="ic alert">알림</i></a>
+		</div>
+	</header><!--//.header-->
+
+	<div class="container-wrap">
+		<div class="container">
+			<nav class="nav_select_swiper">
+				<h2 class="skip">2차메뉴</h2>
+				<ul class="sub_menu sub_type02 swiper-wrapper">
+					<li class="swiper-slide active"><a href="RecruitAnalysis.html">채용분석</a></li>
+					<li class="swiper-slide sub_menu_lg"><a href="RecruitSearch.html">실시간 채용검색</a></li>
+				</ul>
+				<script>
+					var swiper = new Swiper('.nav_select_swiper', {
+						slidesPerView: 'auto',
+						centeredSlides: false,
+						grabCursor: true,
+						touchRatio: 0, // 메뉴 개수가 적어 스와이프 불필요할 때 적용
+					});
+				</script>
+			</nav>
+			<div class="contents">
+				<div class="cont_hd">
+					<h3 class="cont_tit only">학과 기반 기반 취업현황</h3>
+					<p class="tit">
+						우리 학과 학생들이<br />가장 많이 취업한 기업 Top 5을 알려드려요.
+					</p>
+				</div>
+				<section class="list_view column column_type01">
+					<div class="list_cont">
+						<ul class="list">
+							<li>
+								<span class="num">1</span>
+								<div>
+									<h4 class="tit tit_lg">기아자동차</h4>
+									<a href="#Pop_RecruitInfo" data-toggle="modal">실시간 채용정보</a>
+								</div>
+								<p class="icon_chk_wrap">
+									<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+									<label for="r1">On/Off</label>
+								</p>
+							</li>
+							<li>
+								<span class="num">2</span>
+								<div>
+									<h4 class="tit tit_lg">기아자동차</h4>
+									<a href="#Pop_RecruitInfo" data-toggle="modal">실시간 채용정보</a>
+								</div>
+								<p class="icon_chk_wrap">
+									<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+									<label for="r2">On/Off</label>
+								</p>
+							</li>
+							<li>
+								<span class="num">3</span>
+								<div>
+									<h4 class="tit tit_lg">기아자동차</h4>
+									<a href="#Pop_RecruitInfo" data-toggle="modal">실시간 채용정보</a>
+								</div>
+								<p class="icon_chk_wrap">
+									<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+									<label for="r2">On/Off</label>
+								</p>
+							</li>
+							<li>
+								<span class="num">4</span>
+								<div>
+									<h4 class="tit tit_lg">기아자동차</h4>
+									<a href="#Pop_RecruitInfo" data-toggle="modal">실시간 채용정보</a>
+								</div>
+								<p class="icon_chk_wrap">
+									<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+									<label for="r2">On/Off</label>
+								</p>
+							</li>
+							<li>
+								<span class="num">5</span>
+								<div>
+									<h4 class="tit tit_lg">기아자동차</h4>
+									<a href="#Pop_RecruitInfo" data-toggle="modal">실시간 채용정보</a>
+								</div>
+								<p class="icon_chk_wrap">
+									<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+									<label for="r2">On/Off</label>
+								</p>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+				</section>
+				<div class="cont_hd">
+					<h3 class="cont_tit only">관심 토픽</h3>
+					<p class="desc">
+						총 <span class="text_blue">25</span>개
+					</p>
+				</div>
+				<section class="reactive_box_wrap">
+					<!--<section class="reactive_box_wrap even">-->
+					<!--
+			반응형 박스 개수에 따라 이중클래스 사용
+			1개: .only
+			2개, 4개: .even
+		-->
+					<h3 class="sr_only">반응형 박스 레이아웃</h3>
+					<div class="research">
+						<h4>연구(Research)</h4>
+						<p><strong>N</strong>개</p>
+					</div>
+					<div class="voca">
+						<h4>용어</h4>
+						<p><strong>N</strong>개</p>
+					</div>
+					<div class="subject">
+						<h4>교과</h4>
+						<p><strong>N</strong>개</p>
+					</div>
+					<div class="nonsubject">
+						<h4>비교과</h4>
+						<p><strong>N</strong>개</p>
+					</div>
+					<div class="business">
+						<h4>기업</h4>
+						<p><strong>N</strong>개</p>
+					</div>
+					<div class="license">
+						<h4>자격증</h4>
+						<p><strong>N</strong>개</p>
+					</div>
+				</section>
+				<div class="search_form_wrap">
+					<div class="search_form">
+						<input type="text" placeholder="토픽명을 입력하세요.">
+						<button type="submit" class="btn"><i class="ic search">검색</i></button>
+					</div>
+				</div>
+				<section class="list_view">
+					<div class="list_hd">
+						<div>
+							<h3 class="tit">용어</h3>
+							<p class="desc">총 <span class="text_blue">N</span>개</p>
+						</div>
+						<div class="filter_wrap">
+							<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+							<div class="filter_pop_list" style="display: none;">
+								<strong>정렬</strong>
+								<span class="toggle_filter" onclick="fn_Toggle(this);">최근담은순</span>
+							</div>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont">
+						<ul class="list">
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">국어학개론</h4>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_list">
+										<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
+										<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
+										<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
+									</ul>
+									<span class="desc">빈도수 121</span>
+								</div>
+								<ul class="tag_btn_list">
+									<li><a href="#" class="a_btn a_btn_gray">성향분석</a></li>
+									<li><a href="#Pop_RecruitInfo" data-toggle="modal" class="a_btn a_btn_pink">실시간 채용정보</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">국어학개론</h4>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_list">
+										<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
+										<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
+										<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
+									</ul>
+									<span class="desc">빈도수 121</span>
+								</div>
+								<ul class="tag_btn_list">
+									<li><a href="#" class="a_btn a_btn_gray">성향분석</a></li>
+									<li><a href="#Pop_RecruitInfo" data-toggle="modal" class="a_btn a_btn_pink">실시간 채용정보</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+					<div class="list_ft">
+						<ul class="paging sm">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
+					</div><!--//.list_ft-->
+				</section>
+				<div class="cont_hd">
+					<h3 class="cont_tit only">성향분석</h3>
+					<p class="tit">나와 비슷한 토픽을 담은 사용자 <span class="text_blue">n</span>명</p>
+				</div>
+				<section class="list_view">
+					<div class="list_hd">
+						<div class="control_wrap only">
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list" style="display: none;">
+									<strong>정렬</strong>
+									<span class="toggle_filter" onclick="fn_Toggle(this);">빈도수</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont">
+						<ul class="list">
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">국어학개론</h4>
+									<p class="icon_chk_wrap">
+										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+										<label for="r1">On/Off</label>
+									</p>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_btn_list only">
+										<li><a href="#Pop_RecruitInfo" data-toggle="modal" class="a_btn a_btn_pink">실시간 채용정보</a></li>
+									</ul>
+									<span class="desc">빈도수 121</span>
+								</div>
+							</li>
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">국어학개론</h4>
+									<p class="icon_chk_wrap">
+										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+										<label for="r1">On/Off</label>
+									</p>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_btn_list only">
+										<li><a href="#Pop_RecruitInfo" data-toggle="modal" class="a_btn a_btn_pink">실시간 채용정보</a></li>
+									</ul>
+									<span class="desc">빈도수 121</span>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+					<div class="list_ft">
+						<ul class="paging sm">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
+					</div><!--//.list_ft-->
+				</section>
+				<div class="cont_hd">
+					<h3 class="cont_tit only">학교추천 채용분석(영웅스토리)</h3>
+					<p class="tit">
+						최근 3년 (2017~2019년) 동안 채용을 진행했던<br />
+						회사들을 찾아봤어요. <strong>(총 <span class="text_blue">75</span>개)</strong>
+					</p>
+				</div>
+				<section class="list_view">
+					<div class="list_hd">
+						<div class="control_wrap only">
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list" style="display: none;">
+									<strong>정렬</strong>
+									<span class="toggle_filter active" onclick="fn_Toggle(this);">기업명</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont">
+						<ul class="list">
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">삼성전자</h4>
+									<p class="icon_chk_wrap">
+										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+										<label for="r1">On/Off</label>
+									</p>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_btn_list">
+										<li><a href="#Pop_RecruitAnalysis" data-toggle="modal">분석</a></li>
+										<li><a href="#Pop_RecruitInfo" data-toggle="modal" class="a_btn a_btn_pink">실시간 채용정보</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="inline_wrap">
+									<h4 class="tit">CJ ENM</h4>
+									<p class="icon_chk_wrap">
+										<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+										<label for="r1">On/Off</label>
+									</p>
+								</div>
+								<div class="inline_wrap">
+									<ul class="tag_btn_list">
+										<li><a href="#Pop_RecruitAnalysis" data-toggle="modal">분석</a></li>
+										<li><a href="#" data-toggle="modal" class="a_btn a_btn_pink">실시간 채용정보</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+					<div class="list_ft">
+						<ul class="paging sm">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
+					</div><!--//.list_ft-->
+				</section>
+				<h3 class="cont_tit only">채용 관련 영상 정보</h3>
+				<div class="search_form_wrap">
+					<div class="search_form">
+						<input type="text" placeholder="제목을 입력하세요." />
+						<button type="submit" class="btn"><i class="ic search">검색</i></button>
+					</div>
+				</div>
+				<section class="list_view list_view_type01">
+					<div class="list_hd">
+						<p class="desc">총 <span class="text_blue">N</span>개</p>
+						<div class="filter_wrap">
+							<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+							<div class="filter_pop_list">
+								<strong>정렬</strong>
+								<span class="toggle_filter active" onclick="fn_Toggle(this);">콘텐츠명</span>
+							</div>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont">
+						<ul class="list">
+							<li>
+								<div class="list_scrap">
+									<!--스크랩 하단 배치 리스트 스타일 생성-->
+									<a href="#">
+										<h4 class="tit tit_lg">11월 가을은 갔다. 상반기 인턴은 지금...</h4>
+										<span class="tit_info text_lightgray">다쓰배이더 | 2020.11.11 </span>
+									</a>
+									<button class="btn_like">
+										<i class="ic like"></i> <span class="num">100</span>
+									</button>
+									<div class="btn_scrap_wrap">
+										<span class=""></span>
+										<button class="btn_scrap">
+											<i class="ic ic_scrap"></i> <span>스크랩</span>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="list_scrap">
+									<!--스크랩 하단 배치 리스트 스타일 생성-->
+									<a href="#">
+										<h4 class="tit tit_lg">11월 가을은 갔다. 상반기 인턴은 지금...</h4>
+										<span class="tit_info text_lightgray">다쓰배이더 | 2020.11.11 </span>
+									</a>
+									<button class="btn_like">
+										<i class="ic like"></i> <span class="num">100</span>
+									</button>
+									<div class="btn_scrap_wrap">
+										<span class=""></span>
+										<button class="btn_scrap">
+											<i class="ic ic_scrap"></i> <span>스크랩</span>
+										</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list_ft">
+						<ul class="paging">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
+					</div><!--//.list_ft-->
+				</section><!--//.list_view-->
+			</div><!--//.contents-->
+		</div><!--//.container-->
+	</div><!--//.container-wrap-->
+
+	<footer class="footer">
+		<nav class="footer_nav">
+			<h2 class="skip">1차메뉴</h2>
+			<ul class="main_menu">
+				<li class="my_desk"><a href="#">MY-Desk</a></li>
+				<li class="department_lounge"><a href="#">학과라운지</a></li>
+				<li class="subject active"><a href="#">교과/비교과</a></li>
+				<li class="recruit"><a href="#">취업분석</a></li>
+				<li class="chatbot"><a href="#">챗봇</a></li>
+			</ul>
+		</nav>
+	</footer><!--//.footer-->
+	<button type="button" class="btn_icon btn_top"><i class="ic ic_top">상단으로 이동</i></button> <!-- top -->
+	<!--modal 기본구조
+	<div class="modal fade full_modal" id="" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h3 class="pop_title">타이틀</h3>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+				</div>
+				<div class="modal_body">
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<!-- 실시간 채용정보 팝업 -->
+	<div class="modal fade full_modal" id="Pop_RecruitInfo" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h3 class="pop_title">실시간 채용정보</h3>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 닫기</i></button>
+				</div>
+				<div class="modal_body">
+					<h4 class="pop_sub_title">기아자동차</h4>
+					<div class="tab_wrap tab_type01" role="tabpanel">
+						<!-- Nav tabs -->
+						<ul class="nav" role="tablist">
+							<li role="presentation"><a class="active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">분석</a></li>
+							<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">실시간</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab1">
+								<ul class="filter_list filter_list01">
+									<li class="active"><a href="#">#영웅스토리 추천채용</a></li>
+									<li><a href="#">#영웅스토리 일반채용</a></li>
+								</ul>
+								<div class="search_form_wrap">
+									<div class="search_form">
+										<input type="text" placeholder="기업명 또는 채용 공고명을 입력하세요." />
+										<button type="submit" class="btn"><i class="ic search">검색</i></button>
+									</div>
+								</div>
+								<section class="list_view list_view_type01">
+									<div class="list_hd">
+										<p class="desc">총 <span class="text_blue">N</span>개</p>
+										<div class="control_wrap">
+											<p class="sel_area">
+												<select class="form-control" id="select_01" name="budget">
+													<option value="#">전체</option>
+													<option value="#">신청가능</option>
+													<option value="#">마감</option>
+												</select>
+											</p>
+											<div class="filter_wrap">
+												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+												<div class="filter_pop_list">
+													<strong>정렬</strong>
+													<span class="toggle_filter" onclick="fn_Toggle(this);">마감일</span>
+												</div>
+											</div>
+										</div>
+									</div><!--//.list_hd-->
+									<div class="list_cont list_cont_box">
+										<ul class="list">
+											<li>
+												<div class="topic_box">
+													<!--스크랩 하단 배치 리스트 스타일 생성-->
+													<div class="inline_wrap">
+														<a href="#">
+															<h4 class="tit tit_lg">[기아타이거즈] 육성지원 인턴 채용</h4>
+															<span class="tit_info text_lightgray p0">공통 | 전국 | 기아자동차㈜ | 21.02.15</span>
+														</a>
+														<p class="icon_chk_wrap">
+															<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked>
+															<label for="r1">On/Off</label>
+														</p>
+													</div>
+													<button class="btn_like">
+														<i class="ic like"></i> <span class="num">100</span>
+													</button>
+												</div>
+												<div class="inline_wrap topic_btn_wrap">
+													<h4 class="tit">
+														연관토픽
+														<span class="total">총 <span class="text_blue">N</span>개</span>
+													</h4>
+													<p class="topic_btn">
+														<strong class="ic_after ic_toggle text_blue">토픽보기</strong>
+													</p>
+												</div>
+												<div class="topic_list">
+													<ul class="topic_list">
+														<li>
+															<div class="inline_wrap">
+																<h4 class="tit">국어학개론</h4>
+																<p class="icon_chk_wrap">
+																	<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+																	<label for="r1">On/Off</label>
+																</p>
+															</div>
+															<div class="inline_wrap justify_start">
+																<ul class="tag_list">
+																	<li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
+																	<li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
+																	<li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
+																</ul>
+																<span class="desc">빈도수 121</span>
+															</div>
+														</li>
+													</ul>
+													<button type="button" class="a_btn a_btn_white" data-toggle="modal" data-target="#Pop_SubjectAll">전체보기</button>
+												</div>
+											</li>
+										</ul>
+									</div><!--//.list_cont-->
+									<div class="list_ft">
+										<ul class="paging">
+											<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+											<li class="active"><a href="#none">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+										</ul>
+									</div><!--//.list_ft-->
+								</section><!--//.list_view-->
+							</div>
+							<div role="tabpanel" class="tab-pane" id="tab2">
+								<ul class="filter_list">
+									<li class="active"><a href="#">#영웅스토리 추천채용</a></li>
+									<li><a href="#">#사람인</a></li>
+									<li><a href="#">#잡코리아</a></li>
+									<li><a href="#">#워크넷</a></li>
+								</ul>
+								<div class="search_form_wrap">
+									<div class="search_form">
+										<input type="text" placeholder="기업명 또는 채용 공고명을 입력하세요." />
+										<button type="submit" class="btn"><i class="ic search">검색</i></button>
+									</div>
+								</div>
+								<section class="list_view list_view_type01">
+									<div class="list_hd">
+										<p class="desc">총 <span class="text_blue">N</span>개</p>
+										<div class="control_wrap">
+											<p class="sel_area">
+												<select class="form-control" id="select_01" name="budget">
+													<option value="#">전체</option>
+													<option value="#">신청가능</option>
+													<option value="#">마감</option>
+												</select>
+											</p>
+											<div class="filter_wrap">
+												<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+												<div class="filter_pop_list">
+													<strong>정렬</strong>
+													<span class="toggle_filter" onclick="fn_Toggle(this);">마감일</span>
+												</div>
+											</div>
+										</div>
+									</div><!--//.list_hd-->
+									<div class="list_cont">
+										<ul class="list">
+											<li>
+												<div class="list_scrap">
+													<!--스크랩 하단 배치 리스트 스타일 생성-->
+													<a href="#">
+														<h4 class="tit tit_lg">KPOP 영상서비스 해외마케팅 모집</h4>
+														<span class="tit_info text_lightgray">죽전 | 서울 | 블렌딩 | 21.02.12</span>
+													</a>
+													<button class="btn_like">
+														<i class="ic like"></i> <span class="num">100</span>
+													</button>
+													<div class="btn_scrap_wrap">
+														<span class=></span>
+														<button class="btn_scrap">
+															<i class="ic ic_scrap"></i> <span>스크랩</span>
+														</button>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div><!--//.list_cont-->
+									<div class="list_ft">
+										<ul class="paging">
+											<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+											<li class="active"><a href="#none">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+										</ul>
+									</div><!--//.list_ft-->
+								</section><!--//.list_view-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 실시간 채용정보 팝업 -->
+	<!-- 채용정보 분석 팝업 -->
+	<div class="modal fade full_modal" id="Pop_RecruitAnalysis" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_header">
+					<h3 class="pop_title">채용정보 분석</h3>
+					<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">팝업 닫기</i></button>
+				</div>
+				<div class="modal_body">
+					<h4 class="pop_sub_title">삼성전자</h4>
+					<div class="analysis_area">
+						<ul class="analysis_list">
+							<li>
+								<p>
+									<span>직종/직무</span><strong class="text_blue">경영/인사</strong>
+								</p>
+								<ul class="analysis_count">
+									<li>
+										<p>
+											<span>채용시기 : </span>
+											<strong>3월</strong>
+										</p>
+										<p>
+											<span>채용횟수 : </span>
+											<strong>5회</strong>
+										</p>
+									</li>
+									<li>
+										<p>
+											<span>채용시기 : </span>
+											<strong>8월</strong>
+										</p>
+										<p>
+											<span>채용횟수 : </span>
+											<strong>3회</strong>
+										</p>
+									</li>
+								</ul>
+								<ul class="analysis_btn_area">
+									<li>
+										<button type="button" class="btn btn_tertiary btn_tertiary03" onclick="fn_mini_pop_open(this)">우대전공보기</button>
+										<div class="mini_popup_wrap">
+											<div class="mini_popup">
+												<ul class="major_list">
+													<li><strong>우대전공</strong><span>법학전공법학전공</span></li>
+													<li><strong>우대전공</strong><span>법학전공</span></li>
+												</ul>
+												<button type="button" class="btn_mini_close" onclick="fn_mini_pop_close(this)"><i class="ic">팝업 창 닫기</i></button>
+											</div>
+											<div class="mini_bg"></div>
+										</div>
+									</li>
+									<li>
+										<button type="button" class="btn btn_tertiary btn_tertiary03" onclick="fn_mini_pop_open(this)">성적/어학보기</button>
+										<div class="mini_popup_wrap">
+											<div class="mini_popup">
+												<ul class="major_list">
+													<li><strong>성적</strong><span>TOEIC 700 이상</span></li>
+													<li><strong>어학</strong><span>평점 3.0 이상</span></li>
+												</ul>
+												<button type="button" class="btn_mini_close" onclick="fn_mini_pop_close(this)"><i class="ic">팝업 창 닫기</i></button>
+											</div>
+											<div class="mini_bg"></div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+									<span>직종/직무</span><strong class="text_blue">반도체</strong>
+								</p>
+								<ul class="analysis_count">
+									<li>
+										<p>
+											<span>채용시기 : </span>
+											<strong>3월</strong>
+										</p>
+										<p>
+											<span>채용횟수 : </span>
+											<strong>5회</strong>
+										</p>
+									</li>
+									<li>
+										<p>
+											<span>채용시기 : </span>
+											<strong>8월</strong>
+										</p>
+										<p>
+											<span>채용횟수 : </span>
+											<strong>3회</strong>
+										</p>
+									</li>
+								</ul>
+								<ul class="analysis_btn_area">
+									<li>
+										<button type="button" class="btn btn_tertiary btn_tertiary03" onclick="fn_mini_pop_open(this)">우대전공보기</button>
+										<div class="mini_popup_wrap">
+											<div class="mini_popup">
+												<ul class="major_list">
+													<li><strong>우대전공</strong><span>법학전공법학전공</span></li>
+													<li><strong>우대전공</strong><span>법학전공</span></li>
+												</ul>
+												<button type="button" class="btn_mini_close" onclick="fn_mini_pop_close(this)"><i class="ic">팝업 창 닫기</i></button>
+											</div>
+											<div class="mini_bg"></div>
+										</div>
+									</li>
+									<li>
+										<button type="button" class="btn btn_tertiary btn_tertiary03" onclick="fn_mini_pop_open(this)">성적/어학보기</button>
+										<div class="mini_popup_wrap">
+											<div class="mini_popup">
+												<ul class="major_list">
+													<li><strong>성적</strong><span>TOEIC 700 이상</span></li>
+													<li><strong>어학</strong><span>평점 3.0 이상</span></li>
+												</ul>
+												<button type="button" class="btn_mini_close" onclick="fn_mini_pop_close(this)"><i class="ic">팝업 창 닫기</i></button>
+											</div>
+											<div class="mini_bg"></div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 채용정보 분석 팝업 -->
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>관심토픽</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<!--lib-->
+	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
+	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/lib/swiper.css">
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<a href="index.html"><i class="ic logo">Dan.i</i></a>
+		</h1>
+		<div class="location">
+			<!-- 알림이 있을 경우 on 클래스 추가 -->
+			<a href="#" class="ico_noti"><i class="ic alert">알림</i></a>
+		</div>
+	</header><!--//.header-->
+
+	<div class="container-wrap">
+		<div class="container">
+			<nav class="nav_select_swiper">
+				<h2 class="skip">2차메뉴</h2>
+				<ul class="sub_menu swiper-wrapper">
+					<li class="swiper-slide"><a href="AnalysisTopic.html">분석토픽</a></li>
+					<li class="swiper-slide active"><a href="InterestTopic.html">관심토픽</a></li>
+					<li class="swiper-slide"><a href="LectureHistory_plural.html">수강이력</a></li><!--신입은 노출안됨-->
+					<li class="swiper-slide"><a href="Curriculum_plural.html">교과과정</a></li>
+					<li class="swiper-slide"><a href="Scrap.html">스크랩</a></li>
+					<li class="swiper-slide"><a href="Favorite.html">즐겨찾기</a></li>
+					<li class="swiper-slide"><a href="Setting.html">설정</a></li>
+				</ul>
+				<script>
+					var swiper = new Swiper('.nav_select_swiper', {
+						slidesPerView: 'auto',
+						centeredSlides: false,
+						grabCursor: true,
+					});
+				</script>
+			</nav>
+			<div class="contents">
+				<div class="cont_hd">
+					<p class="tit">내가 담고 등록했던 토픽들과 내가 질의한 내용 등을 모두 확인하세요!</p>
+				</div>
+				<div class="tab_wrap" role="tabpanel">
+					<!-- Nav tabs -->
+					<ul class="nav nav_03" role="tablist">
+						<li role="presentation"><a class="active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">관심 토픽</a></li>
+						<li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">대표 질의 <span>(개인)</span></a></li>
+						<li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">대표 질의 <span>(전체)</span></a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="tab1">
+							<p class="total">총 <span class="text_blue">N</span>개</p>
+							<!--
+								반응형 박스 개수에 따라 이중클래스 사용
+								1개: .only
+								2개, 4개: .even
+							-->
+							<section class="reactive_box_wrap">
+								<!--<section class="reactive_box_wrap even">-->
+								<h3 class="sr_only">반응형 박스 레이아웃</h3>
+								<div class="research">
+									<h4>연구(Research)</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="voca">
+									<h4>용어</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="subject">
+									<h4>교과</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="nonsubject">
+									<h4>비교과</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="business">
+									<h4>기업</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<div class="license">
+									<h4>자격증</h4>
+									<p><strong>N</strong>개</p>
+								</div>
+								<!-- <div class="research">
+									<h4>연구</h4>
+									<p><strong>N</strong>개</p>
+								</div> -->
+							</section>
+							<div class="search_form_wrap">
+								<div class="search_form">
+									<input type="text" placeholder="토픽명을 입력하세요." />
+									<button type="submit" class="btn"><i class="ic search">검색</i></button>
+								</div>
+							</div>
+							<section class="list_view">
+								<div class="list_hd">
+									<div>
+										<h3 class="tit">타이틀</h3>
+										<p class="desc">총 <span class="text_blue">N</span>개</p>
+									</div>
+									<div class="filter_wrap">
+										<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+										<div class="filter_pop_list">
+											<strong>정렬</strong>
+											<span class="toggle_filter" onclick="fn_Toggle(this);">최근담은순</span>
+										</div>
+									</div>
+								</div><!--//.list_hd-->
+								<div class="list_cont">
+									<ul class="list">
+										<li>
+											<div class="inline_wrap">
+												<h4 class="tit">국어학개론</h4>
+												<p class="icon_chk_wrap">
+													<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+													<label for="r1">On/Off</label>
+												</p>
+											</div>
+											<div class="inline_wrap justify_start">
+												<ul class="tag_list">
+													<li><a href="#" class="subject">교과</a></li>
+													<li><a href="#" class="nonsubject">비교과</a></li>
+													<li><a href="#" class="recruit">채용</a></li>
+												</ul>
+												<span class="desc">빈도수 121</span>
+											</div>
+										</li>
+										<li>
+											<div class="inline_wrap">
+												<h4 class="tit">국어학개론</h4>
+												<p class="icon_chk_wrap">
+													<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff">
+													<label for="r2">On/Off</label>
+												</p>
+											</div>
+											<div class="inline_wrap justify_start">
+												<ul class="tag_list">
+													<li><a href="#" class="subject">교과</a></li>
+													<li><a href="#" class="nonsubject">비교과</a></li>
+													<li><a href="#" class="recruit">채용</a></li>
+												</ul>
+												<span class="desc">빈도수 121</span>
+											</div>
+										</li>
+									</ul>
+								</div><!--//.list_cont-->
+								<div class="list_ft">
+									<ul class="paging">
+										<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+										<li class="active"><a href="#none">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+									</ul>
+								</div><!--//.list_ft-->
+							</section><!--//.list_view-->
+						</div>
+						<div role="tabpanel" class="tab-pane" id="tab2">
+							<ul class="ranking">
+								<li><a href="#"><span class="num">1</span><span>강의계획서</span></a></li>
+								<li><a href="#"><span class="num">2</span><span>출석조회</span></a></li>
+								<li><a href="#"><span class="num">3</span><span>사회봉사확인서제출</span></a></li>
+								<li><a href="#"><span class="num">4</span><span>성적장학금</span></a></li>
+								<li><a href="#"><span class="num">5</span><span>교양교육대학 글쓰기센터</span></a></li>
+								<li><a href="#"><span class="num">6</span><span>출석조회</span></a></li>
+								<li><a href="#"><span class="num">7</span><span>사회봉사확인서제출</span></a></li>
+								<li><a href="#"><span class="num">8</span><span>성적장학금</span></a></li>
+								<li><a href="#"><span class="num">9</span><span>교양교육대학 글쓰기센터</span></a></li>
+								<li><a href="#"><span class="num">10</span><span>교양교육대학 글쓰기센터</span></a></li>
+							</ul>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="tab3">
+							<ul class="ranking">
+								<li><a href="#"><span class="num">1</span><span>강의계획서</span></a></li>
+								<li><a href="#"><span class="num">2</span><span>출석조회</span></a></li>
+								<li><a href="#"><span class="num">3</span><span>사회봉사확인서제출</span></a></li>
+								<li><a href="#"><span class="num">4</span><span>성적장학금</span></a></li>
+								<li><a href="#"><span class="num">5</span><span>교양교육대학 글쓰기센터</span></a></li>
+								<li><a href="#"><span class="num">6</span><span>출석조회</span></a></li>
+								<li><a href="#"><span class="num">7</span><span>사회봉사확인서제출</span></a></li>
+								<li><a href="#"><span class="num">8</span><span>성적장학금</span></a></li>
+								<li><a href="#"><span class="num">9</span><span>교양교육대학 글쓰기센터</span></a></li>
+								<li><a href="#"><span class="num">10</span><span>교양교육대학 글쓰기센터</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><!--//.contents-->
+		</div><!--//.container-->
+	</div><!--//.container-wrap-->
+
+	<footer class="footer">
+		<nav class="footer_nav">
+			<h2 class="skip">1차메뉴</h2>
+			<ul class="main_menu">
+				<li class="my_desk active"><a href="#">MY-Desk</a></li>
+				<li class="department_lounge"><a href="#">학과라운지</a></li>
+				<li class="subject"><a href="#">교과/비교과</a></li>
+				<li class="recruit"><a href="#">채용</a></li>
+				<li class="chatbot"><a href="#">챗봇</a></li>
+			</ul>
+		</nav>
+	</footer><!--//.footer-->
+	<button type="button" class="btn_icon btn_top"><i class="ic ic_top">상단으로 이동</i></button> <!-- top -->
+</body>
+</html>
+
