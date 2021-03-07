@@ -26,14 +26,12 @@
   &.arrow_shortcut_white { background-position: -3.90625vw -36.71875vw; }
   &.circle_delete { background-position: -66.50391vw -18.55469vw; }
   &.circle_add { background-position: -57.71484vw -18.55469vw; }
-  &.like { background-position: -27.24609vw -32.81250vw; }
   &.unlike { background-position: -23.43750vw -32.81250vw; }
   &.circle_delete {border-radius:50%;}
   &.ic_push{background-position:0 -40.62500vw;}
   &.ic_inquiry{background-position:-5.07813vw -40.62500vw;}
   &.ic_help{background-position:-10.15625vw -40.62500vw;}
   &.ic_version{background-position:-15.23438vw -40.62500vw;}
-  &.ic_scrap { background-position: -36.52344vw -32.81250vw; }
   &.ic_top{background-position:-70.89844vw -5.85938vw; }
   &.circle_delete {border-radius:50%;}
   &.ic_push{background-position:0 -40.62500vw;}
@@ -176,7 +174,7 @@
                     margin-top:7.32422vw; margin-bottom:5.37109vw;
                 }
             }
-
+                
         }
     }
   }
@@ -384,7 +382,8 @@ select.form-control {
   border: 0.09766vw solid #d5d5d5;
   border-radius: 6.34766vw;
   background-color: #fff;
-  .ic { width: 3.80859vw; height: 3.80859vw; }
+  & > .ic {width:3.80859vw; height:3.80859vw; background-position: -23.43750vw -32.81250vw; }
+  &.active > .ic { background-position: -27.24609vw -32.81250vw; }
   .num { font-size: 3.41797vw; color: #333; margin-left: $gutter_xs; }
   @at-root .topic_box .btn_like { margin: $gutter_md 0 0 $gutter_md; }
 }
@@ -640,7 +639,11 @@ select.form-control {
     display: block;
     .tit { margin-bottom: $gutter_sm; }
   }
-  & > .btn_like { margin: 2.92969vw 0 $gutter_md 0; }
+  & > .btn_like { 
+      margin: 2.92969vw 0 $gutter_md 0; 
+      & > .ic {width:3.80859vw; height:3.80859vw; background-position: -23.43750vw -32.81250vw; }
+      &.active > .ic { background-position: -27.24609vw -32.81250vw; }
+  }
   & > .btn_scrap_wrap {
     border-top: 0.09766vw solid $border;
     margin: 0 -#{$gutter_md} -#{$gutter_sm};
@@ -650,7 +653,8 @@ select.form-control {
       justify-content: center;
       align-items: center;
       padding: $gutter_sm; //눌렀을 때 모양때문에 추가
-      & > .ic { width: 5.46875vw; height: 5.46875vw; margin-top: -#{$gutter_xs}; }
+      & > .ic { width: 5.46875vw; height: 5.46875vw; margin-top: -#{$gutter_xs}; background-position: -31.05469vw -32.81250vw; }
+      &.active > .ic{background-position: -36.52344vw -32.81250vw;}
       & > span { font-size: 3.90625vw; font-weight: 600; margin-left: $gutter_sm; }
     }
   }
@@ -1138,7 +1142,7 @@ select.form-control {
 .keyword_area{
     padding:5.37109vw $gutter_md; margin:$gutter_md -3.90625vw; background-color:#fafafa; position:relative;
     .keyword_box{
-
+        
         > dt{font-size:4.29688vw; font-weight:600; color:#222; margin-bottom:1.95313vw;}
         > dd{}
         > dd .keyword_none{            
@@ -1187,7 +1191,14 @@ select.form-control {
     }
 }
 
+/* ------------------------------------------------------- error ------------------------------------------------------- */
+.error_wrap{
+    display:flex; align-items:center; justify-content:center; width:100%; height:100%;
+    .error_info{width:100%; font-size:3.90625vw; font-weight:600; color:#222;  padding-top:26.36719vw; padding-bottom:14.64844vw; background-image:url(../images/icon/error.png); background-repeat:no-repeat; background-position:center top; background-size:19.53125vw 19.53125vw; text-align:center;}
+    .btn_error{width:70.31250vw; height:11.71875vw; font-size:$font_size; font-weight:500; color:#222; background-color:#fff; border-color:#555; border-radius:0;}
+}
+
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top{
-    display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:1.95313vw; bottom:21.48438vw; z-index:999;
+    display:none; width:9.76563vw; height:9.76563vw; position:fixed; right:3.90625vw; bottom:48.82813vw; z-index:999;
 }

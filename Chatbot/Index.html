@@ -188,6 +188,8 @@
 					<!-- // 챗봇 타이틀 영역 -->
 					<!-- 챗봇 박스 영역 -->
 					<div class="chatbot_box">
+						<p class="previous_msg"><a href="#">이전 대화 보기</a></p>
+						<p class="divider_date"><span>2020년 12월 3일 목요일</span></p>
 						<!-- 내 메시지 -->
 						<div class="chat_msg my_msg">
 							<div class="icBubbleClass8">
@@ -206,18 +208,10 @@
 							</div>
 							<p class="info">
 								<span class="time">오전 09:00</span>
-								<span class="like">
-									<strong>답변이 도움되셨나요?</strong>
-									<span class="icon_chk_wrap">
-										<input type="radio" class="icon_chk icon_notxt icon_chk_like" name="like_status" id="like">
-										<label for="like">도움</label>
-										<input type="radio" class="icon_chk icon_notxt icon_chk_unlike" name="like_status" id="unlike">
-										<label for="unlike">미도움</label>
-									</span>
-								</span>
 							</p>
 						</div>
 						<!-- // 챗봇 메시지 -->
+						<p class="divider_dot"></p>
 						<!-- 챗봇 메시지 -->
 						<div class="chat_msg bot_msg">
 							<p class="avatar ic_before">단아이</p>
@@ -243,10 +237,25 @@
 						<!-- // 챗봇 메시지 -->
 					</div>
 					<!-- // 챗봇 박스 영역 -->
-					<div class="chatbot_footer">
-						<input type="text" class="form-control" placeholder="궁금한 점을 입력해주세요.">
-						<button type="button" class="btn_icon"><i class="ic send">챗봇 메시지 전송</i></button>
+					<div class="chatbot_footer active">
+						<input type="text" class="form-control" id="chat" placeholder="궁금한 점을 입력해주세요.">
+						<button type="button" class="btn_icon" id="btn_voice" data-target="#Pop_VoiceAlert" data-toggle="modal"><i class="ic voice">챗봇 음성 질의</i></button>
+						<button type="button" class="btn_icon" id="btn_send" style="display:none"><i class="ic send">챗봇 메시지 전송</i></button>
 					</div>
+					<script>
+						// 임시 적용
+						// 입력 필드 선택시 마이크를 전송 버튼으로 변경
+						// 포커스 잃을 경우 다시 마이크 버튼으로 변경
+						$('#chat').on('focusin', function (e) {
+							$("#btn_voice").hide();
+							$("#btn_send").show();
+						})
+
+						$('#chat').on('focusout', function (e) {
+							$("#btn_send").hide();
+							$("#btn_voice").show();
+						})
+					</script>
 				</div>
 			</div>
 		</div>
@@ -280,6 +289,27 @@
 		</div>
 	</div>
 	<!-- // 공통 - 챗봇 전체보기 팝업 -->
+	<!-- 음석 인식 안내 팝업 -->
+	<div class="modal fade voice_alert01" id="Pop_VoiceAlert" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_body">
+					<p class="tit ic_before">
+						듣고 있어요!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 음석 인식 팝업 5초 뒤 종료되도록 임시 적용
+		$('.voice_alert01').on('shown.bs.modal', function (e) {
+			setTimeout(function () {
+				$('.voice_alert01').modal("hide");
+			}, 5000);
+		})
+	</script>
+	<!-- // 음석 인식 안내 팝업 -->
 	<!-- // modal -->
 </body>
 </html>

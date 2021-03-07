@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>졸업현황</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<!--lib-->
+	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
+	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/lib/swiper.css">
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<a href="index.html"><i class="ic logo">Dan.i</i></a>
+		</h1>
+		<div class="location">
+			<!-- 알림이 있을 경우 on 클래스 추가 -->
+			<a href="#" class="ico_noti"><i class="ic alert">알림</i></a>
+		</div>
+	</header><!--//.header-->
+
+	<div class="container-wrap">
+		<div class="container">
+			<nav class="nav_select_swiper">
+				<h2 class="skip">2차메뉴</h2>
+				<ul class="sub_menu swiper-wrapper">
+					<li class="swiper-slide"><a href="BasicInformation.html">기본정보</a></li>
+					<li class="swiper-slide active"><a href="GraduationStatus.html">졸업현황</a></li>
+					<li class="swiper-slide"><a href="TopicInformation.html">토픽정보</a></li>
+					<li class="swiper-slide"><a href="NonSubject.html">비교과</a></li>
+					<li class="swiper-slide"><a href="Reference.html">교재문헌</a></li>
+					<li class="swiper-slide"><a href="Recruit.html">채용</a></li>
+				</ul>
+				<script>
+					var swiper = new Swiper('.nav_select_swiper', {
+						slidesPerView: 'auto',
+						centeredSlides: false,
+						grabCursor: true,
+					});
+				</script>
+			</nav>
+			<div class="contents">
+				<div class="cont_hd">
+					<p class="tit">
+						우리 학과 졸업자들의 현황과 관련해<br />분석한 내용을 확인하실 수 있어요!
+					</p>
+				</div>
+				<div class="major_select_swiper">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide all">
+							<a href="#">
+								<i class="ic major"></i>&nbsp;
+								<span>전체</span>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">
+								<span class="label_round">주전공</span>
+								<ul>
+									<li>문과대학</li>
+									<li>국어국문학과</li>
+								</ul>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">
+								<span class="label_round">복수전공</span>
+								<ul>
+									<li>생명공학대학</li>
+									<li>환경원예조경학부</li>
+									<li>환경원예학 전공</li>
+								</ul>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#">
+								<span class="label_round">융합전공</span>
+								<ul>
+									<li>경영경제대학</li>
+									<li>경제학과</li>
+								</ul>
+							</a>
+						</li>
+					</ul>
+					<script>
+						var swiper = new Swiper('.major_select_swiper', {
+							slidesPerView: 3,
+							centeredSlides: false,
+							grabCursor: true,
+						});
+					</script>
+				</div>
+				<h3 class="cont_tit">많이 들었던 교과목 정보</h3>
+				<section class="list_view list_view_type01">
+					<div class="list_hd">
+						<div class="control_wrap only">
+							<p class="sel_area">
+								<select class="form-control" id="select_01" name="budget">
+									<option value="#">전체</option>
+									<option value="#">학과기초</option>
+									<option value="#">전공필수</option>
+									<option value="#">교양필수</option>
+								</select>
+							</p>
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list">
+									<strong>정렬</strong>
+									<span class="toggle_filter" onclick="fn_Toggle(this);">총 수강인원</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont list_cont_box">
+						<ul class="list">
+							<li>
+								<div class="topic_box">
+									<div class="inline_wrap">
+										<h4 class="tit">한국현대문학의이해</h4>
+										<p class="icon_chk_wrap">
+											<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+											<label for="r1">On/Off</label>
+										</p>
+									</div>
+									<p class="tit_info">전공선택 | 학점 3 | 총 수강인원 <span class="text_blue">323</span> 명</p>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+				</section><!--//.list_view-->
+				<h3 class="cont_tit">졸업한 선배들이 많이 입사한 기업</h3>
+				<section class="list_view list_view_type01">
+					<div class="list_hd">
+						<div class="control_wrap only">
+							<p class="sel_area">
+								<select class="form-control" id="select_01" name="budget">
+									<option value="#">전체</option>
+									<option value="#">학과기초</option>
+									<option value="#">전공필수</option>
+									<option value="#">교양필수</option>
+								</select>
+							</p>
+							<div class="filter_wrap">
+								<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+								<div class="filter_pop_list">
+									<strong>정렬</strong>
+									<span class="toggle_filter" onclick="fn_Toggle(this);">총 입사인원</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont list_cont_box">
+						<ul class="list">
+							<li>
+								<div class="topic_box">
+									<div class="inline_wrap">
+										<h4 class="tit">기아자동차</h4>
+										<p class="icon_chk_wrap">
+											<input id="r2" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+											<label for="r2">On/Off</label>
+										</p>
+									</div>
+									<p class="tit_info">총 입사인원 <span class="text_blue">100</span> 명</p>
+									<ul class="tag_btn_list m0">
+										<li><a href="#Pop_LectureHistoryAnalysis" data-toggle="modal">수강이력분석</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+				</section>
+				<h3 class="cont_tit">전공 이수에 따른 졸업자 수</h3>
+				<div class="status_area">
+					<ul class="status_list">
+						<li>
+							<button type="button" class="btn_txt" disabled>
+								<span>1전공</span>
+								<strong><span>10</span>명</strong>
+							</button>
+						</li>
+						<li class="active">
+							<button type="button" class="btn_txt">
+								<span>1전공+1부전공</span>
+								<strong><span>22</span>명</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_txt">
+								<span>1전공+2부전공</span>
+								<strong><span>10</span>명</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_txt">
+								<span>2전공</span>
+								<strong><span>05</span>명</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_txt">
+								<span>2전공+1부전공</span>
+								<strong><span>02</span>명</strong>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_txt">
+								<span>3전공</span>
+								<strong><span>10</span>명</strong>
+							</button>
+						</li>
+					</ul>
+					<ul class="status_cont">
+						<li class="skip">Disabled</li>
+						<li class="active">
+							<h5 class="tit">1전공+1부전공</h5>
+							<p class="desc">우리 학과 졸업 선배들은 어떤 부전공을 <br />많이 선택했을까요?</p>
+							<div class="control_wrap only">
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter" onclick="fn_Toggle(this);">총 인원</span>
+									</div>
+								</div>
+							</div>
+							<ul class="major_list">
+								<li class="hd">
+									<p>부전공 학과</p>
+									<span>인원수</span>
+								</li>
+								<li>
+									<p><strong class="text_blue">[부전공]</strong><span>경영학</span></p>
+									<p><strong>8</strong><span>명</span></p>
+								</li>
+							</ul>
+							<div class="list_ft">
+								<ul class="paging sm">
+									<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+									<li class="active"><a href="#none">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<h5 class="tit">1전공+2부전공</h5>
+							<p class="desc">우리 학과 외에 2개의 부전공을 선택한 선배들은 <br />어떤 부전공을 선택했을까요?</p>
+							<div class="control_wrap only">
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter" onclick="fn_Toggle(this);">총 인원</span>
+									</div>
+								</div>
+							</div>
+							<ul class="major_list">
+								<li class="hd">
+									<p>부전공 학과</p>
+									<span>인원수</span>
+								</li>
+								<li>
+									<p>
+										<span class="block"><strong class="text_blue">[부전공]</strong><span>경영학</span></span>
+										<span class="block"><strong class="text_blue">[부전공]</strong><span>모바일시스템공학과</span></span>
+									</p>
+									<p><strong>4</strong><span>명</span></p>
+								</li>
+							</ul>
+							<div class="list_ft">
+								<ul class="paging sm">
+									<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+									<li class="active"><a href="#none">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<h5 class="tit">2전공</h5>
+							<p class="desc">우리 학과 졸업 선배들은 <br />어떤 복수전공을 많이 선택했을까요?</p>
+							<div class="control_wrap only">
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter" onclick="fn_Toggle(this);">총 인원</span>
+									</div>
+								</div>
+							</div>
+							<ul class="major_list">
+								<li class="hd">
+									<p>전공 학과</p>
+									<span>인원수</span>
+								</li>
+								<li>
+									<p><strong class="text_blue">[전공]</strong><span>모바일시스템공학과</span></p>
+									<p><strong>2</strong><span>명</span></p>
+								</li>
+							</ul>
+							<div class="list_ft">
+								<ul class="paging sm">
+									<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+									<li class="active"><a href="#none">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<h5 class="tit">2전공+1부전공</h5>
+							<p class="desc">우리 학과 외에 1개의 복수전공/1개의 부전공을<br />추가로 선택한 선배들은 어떤 전공을 선택했을까요?</p>
+							<div class="control_wrap only">
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter" onclick="fn_Toggle(this);">총 인원</span>
+									</div>
+								</div>
+							</div>
+							<ul class="major_list">
+								<li class="hd">
+									<p>전공/부전공 학과</p>
+									<span>인원수</span>
+								</li>
+								<li>
+									<p>
+										<span class="block"><strong class="text_blue">[전공]</strong><span>모바일시스템공학과</span></span>
+										<span class="block"><strong class="text_blue">[부전공]</strong><span>심리학과</span></span>
+									</p>
+									<p><strong>2</strong><span>명</span></p>
+								</li>
+							</ul>
+							<div class="list_ft">
+								<ul class="paging sm">
+									<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+									<li class="active"><a href="#none">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<h5 class="tit">3전공</h5>
+							<p class="desc">우리 학과 외에 2개의 복수전공을 선택한 선배들은<br />어떤 전공을 선택했을까요?</p>
+							<div class="control_wrap only">
+								<div class="filter_wrap">
+									<button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+									<div class="filter_pop_list">
+										<strong>정렬</strong>
+										<span class="toggle_filter" onclick="fn_Toggle(this);">총 인원</span>
+									</div>
+								</div>
+							</div>
+							<ul class="major_list">
+								<li class="hd">
+									<p>전공 학과</p>
+									<span>인원수</span>
+								</li>
+								<li>
+									<p>
+										<span class="block"><strong class="text_blue">[전공]</strong><span>경영학과</span></span>
+										<span class="block"><strong class="text_blue">[전공]</strong><span>모바일시스템공학과</span></span>
+									</p>
+									<p><strong>1</strong><span>명</span></p>
+								</li>
+							</ul>
+							<div class="list_ft">
+								<ul class="paging sm">
+									<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+									<li class="active"><a href="#none">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!--//.contents-->
+		</div><!--//.container-->
+	</div><!--//.container-wrap-->
+
+	<footer class="footer">
+		<nav class="footer_nav">
+			<h2 class="skip">1차메뉴</h2>
+			<ul class="main_menu">
+				<li class="my_desk"><a href="#">MY-Desk</a></li>
+				<li class="department_lounge active"><a href="#">학과라운지</a></li>
+				<li class="subject"><a href="#">교과/비교과</a></li>
+				<li class="recruit"><a href="#">채용</a></li>
+				<li class="chatbot"><a href="#">챗봇</a></li>
+			</ul>
+		</nav>
+	</footer><!--//.footer-->
+	<button type="button" class="btn_icon btn_top"><i class="ic ic_top">상단으로 이동</i></button> <!-- top -->
+</body>
+
+<!-- 수강이력분석 팝업 -->
+<div class="modal fade full_modal" id="Pop_LectureHistoryAnalysis" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal_header">
+				<h3 class="pop_title">수강이력분석</h3>
+				<button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+			</div>
+			<div class="modal_body">
+				<h4 class="pop_sub_title">기아자동차</h4>
+				<p class="desc">입사한 선배 <span class="text_blue">100</span> 명의 수강 이력을 분석했어요!</p>
+				<section class="list_view list_view_type01">
+					<div class="list_hd">
+						<div>
+							<p class="desc">총 <span class="text_blue">12</span>개</p>
+						</div>
+					</div><!--//.list_hd-->
+					<div class="list_cont list_cont_box">
+						<ul class="list">
+							<li>
+								<div class="topic_box">
+									<div class="inline_wrap">
+										<h4 class="tit">국문학개론</h4>
+										<p class="icon_chk_wrap">
+											<input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+											<label for="r1">On/Off</label>
+										</p>
+									</div>
+									<p class="tit_info">전공필수 | 학점 3 | 문과대학 국어국문학과</p>
+									<p class="tit_info">수강인원 <span class="text_blue">50</span> 명</p>
+								</div>
+							</li>
+						</ul>
+					</div><!--//.list_cont-->
+					<div class="list_ft">
+						<ul class="paging">
+							<li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+							<li class="active"><a href="#none">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+						</ul>
+					</div><!--//.list_ft-->
+				</section><!--//.list_view-->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // 수강이력분석 팝업 -->
+</html>
+

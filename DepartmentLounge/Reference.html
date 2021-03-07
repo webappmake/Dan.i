@@ -46,6 +46,11 @@
 						centeredSlides: false,
 						grabCursor: true,
 					});
+
+                    // 해당 function은 임시로 넣어두었습니다. (Common.js 하단)
+                    // 페이지마다 메뉴 개수가 다르고 즐겨찾기, 설정과 같이 메뉴가 우측에 있어 잘려보이는 경우에 실행되도록 해주시면 됩니다.
+                    // 디바이스 가로 크기보다 메뉴 가로 크기가 더 큰 경우 크기 구해서 페이지 로드시 위치 이동
+                    nav_position();
 				</script>
 			</nav>
 			<div class="contents">
@@ -96,7 +101,7 @@
 										<h4 class="tit tit_lg">창조경제에서의 경영전략</h4>
 										<span class="tit_info text_lightgray">이장우 | 법문사</span>
 									</a>
-									<button class="btn_like">
+									<button class="btn_like" onclick="fn_Toggle(this)">
 										<i class="ic like"></i> <span class="num">100</span>
 									</button>
 								</div>

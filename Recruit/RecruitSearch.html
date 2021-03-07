@@ -121,7 +121,7 @@
                                                         <label for="r1">On/Off</label>
                                                     </p>
                                                 </div>
-                                                <button class="btn_like">
+                                                <button class="btn_like" onclick="fn_Toggle(this)">
                                                     <i class="ic like"></i> <span class="num">100</span>
                                                 </button>
                                             </div>
@@ -225,12 +225,12 @@
                                                     <h4 class="tit tit_lg">KPOP 영상서비스 해외마케팅 모집</h4>
                                                     <span class="tit_info text_lightgray">죽전 | 서울 | 블렌딩 | 21.02.12</span>
                                                 </a>
-                                                <button class="btn_like">
+                                                <button class="btn_like" onclick="fn_Toggle(this)">
                                                     <i class="ic like"></i> <span class="num">100</span>
                                                 </button>
                                                 <div class="btn_scrap_wrap">
                                                     <span class=></span>
-                                                    <button class="btn_scrap">
+                                                    <button class="btn_scrap" onclick="fn_Toggle(this)">
                                                         <i class="ic ic_scrap"></i> <span>스크랩</span>
                                                     </button>
                                                 </div>
@@ -327,6 +327,89 @@
         </div>
     </div>
     <!-- // 채용 관심 키워드 팝업 -->
+    <!-- 전체보기 팝업 -->
+    <div class="modal fade full_modal" id="Pop_SubjectAll" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <h3 class="pop_title">연관토픽 전체보기</h3>
+                    <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><i class="ic ic_pop_close">목록선택</i></button>
+                </div>
+                <div class="modal_body">
+                    <div class="business_area">
+                        <h4 class="pop_sub_title">블렌딩</h4>
+                        <p class="pop_sub_info">[KR산업] 2021년 신입사원 정기 공개 채용 공고</p>
+                        <div class="inline_wrap m0">
+                            <h4 class="tit">블렌딩</h4>
+                            <p class="icon_chk_wrap">
+                                <input id="company1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+                                <label for="company1">블렌딩</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="search_form_wrap">
+                        <div class="search_form">
+                            <input type="text" placeholder="토픽명을 입력하세요." />
+                            <button type="submit" class="btn"><i class="ic search">검색</i></button>
+                        </div>
+                    </div>
+                    <section class="list_view">
+                        <div class="list_hd">
+                            <p class="desc">총 <span class="text_blue">N</span>개</p>
+                            <div class="filter_wrap">
+                                <button type="button" class="btn btn_select" onclick="fn_MoreToggle(this);"><i class="ic selectbox">필터</i></button>
+                                <div class="filter_pop_list">
+                                    <strong>정렬</strong>
+                                    <span class="toggle_filter" onclick="fn_Toggle(this);">빈도수</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list_cont">
+                            <ul class="list">
+                                <li>
+                                    <div class="inline_wrap m0">
+                                        <h4 class="tit">국어학개론</h4>
+                                        <p class="icon_chk_wrap">
+                                            <input id="r1" class="icon_chk icon_notxt icon_chk_use" type="checkbox" name="onOff" value="onOff" checked="">
+                                            <label for="r1">On/Off</label>
+                                        </p>
+                                    </div>
+                                    <div class="inline_wrap justify_start">
+                                        <ul class="tag_list">
+                                            <li><a href="#Pop_Subject" data-toggle="modal" class="subject">교과</a></li>
+                                            <li><a href="#Pop_NonSubject" data-toggle="modal" class="nonsubject">비교과</a></li>
+                                            <li><a href="#Pop_Recruit" data-toggle="modal" class="recruit">채용</a></li>
+                                        </ul>
+                                        <span class="desc">빈도수 121</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_ft">
+                            <ul class="paging">
+                                <li class="page_prev"><a href="#"><i class="ic pagination_prev">이전 페이지로 이동</i></a></li>
+                                <li class="active"><a href="#none">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="page_next"><a href="#"><i class="ic pagination_next">다음 페이지로 이동</i></a></li>
+                            </ul>
+                        </div><!--//.list_ft-->
+                    </section>
+                    <!-- null 값일 경우 -->
+                    <!--<div class="pag_info_none pag_sm_info_none">
+                        <span class="ic_before ic_info_lg">
+                            선택한 교과와 연관된 토픽은<br>
+                            아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                        </span>
+                    </div>-->
+                    <!-- // null 값일 경우 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//전체보기 팝업-->
 </body>
 </html>
 

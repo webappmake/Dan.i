@@ -370,7 +370,7 @@ button {
   text-align: center; }
   .modal.full_modal {
     text-align: left; }
-  .modal:not(.full_modal):before {
+  .modal:not(.full_modal):not(.voice_alert01):before {
     display: inline-block;
     vertical-align: middle;
     content: "";
@@ -945,6 +945,15 @@ button {
     padding: 0 3.90625vw 3.90625vw 3.90625vw;
     background-color: #f5f5f5;
     border: 0.09766vw solid #b1b1b1; }
+
+.business_area .pop_sub_info {
+  font-size: 3.51563vw;
+  color: #888;
+  padding: 1.95313vw 0 3.90625vw 0; }
+
+.business_area .inline_wrap {
+  padding: 1.95313vw 3.90625vw;
+  border: 0.09766vw solid #d4d4d4; }
 
 /* notofication */
 .noti_info {
@@ -1606,7 +1615,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -0.97656vw;
-  padding: 0 3.90625vw; }
+  padding: 0 3.90625vw;
+  justify-content: center; }
   .btn_shortcut_wrap .a_btn_white {
     width: calc(50% - 1.95313vw);
     margin: 0.97656vw !important;
@@ -1927,7 +1937,7 @@ button {
   bottom: 0;
   border-top: 0.09766vw solid #d4d4d4;
   padding: 2.92969vw 14.64844vw 2.92969vw 2.92969vw;
-  background-color: #bbb; }
+  background-color: #222; }
   .chatbot_modal .chatbot_footer > input {
     width: 100%;
     height: 11.71875vw;
@@ -1943,6 +1953,8 @@ button {
     top: 0; }
     .chatbot_modal .chatbot_footer > button .ic.send {
       background-position: -35.05859vw -80.07813vw; }
+    .chatbot_modal .chatbot_footer > button .ic.voice {
+      background-position: -61.42578vw -68.35938vw; }
 
 /* chatbot sub popup */
 .chat_pop_wrap {
@@ -1982,6 +1994,101 @@ button {
     padding: 3.90625vw;
     background-color: #fff;
     position: relative; }
+
+.ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%; }
+
+.divider_date {
+  margin-bottom: 5.85938vw;
+  text-align: center;
+  position: relative; }
+  .divider_date::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -0.04883vw;
+    height: 0.09766vw;
+    background-color: #d4d4d4; }
+  .divider_date span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2.92969vw;
+    font-weight: 500;
+    padding: 0 2.92969vw;
+    background-color: #fff;
+    position: relative;
+    z-index: 9; }
+
+.divider_dot {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 0.19531vw;
+  margin: 9.76563vw 0 5.85938vw 0;
+  position: relative; }
+  .divider_dot:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0.19531vw;
+    background-image: url(../images/bg/chat_dash.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 1.17188vw 0.19531vw; }
+
+.previous_msg {
+  margin-bottom: 3.90625vw; }
+  .previous_msg > a {
+    display: block;
+    width: 100%;
+    height: 7.81250vw;
+    line-height: 7.81250vw;
+    font-weight: 500;
+    color: #6e757c;
+    background-color: #ccdded;
+    text-align: center; }
+
+.modal.voice_alert01 {
+  height: 35.15625vw;
+  top: auto;
+  bottom: 0;
+  background-color: #222; }
+  .modal.voice_alert01 .modal-dialog, .modal.voice_alert01 .modal-content {
+    width: 100%;
+    height: 100%;
+    background: #222; }
+  .modal.voice_alert01 .modal_body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0; }
+    .modal.voice_alert01 .modal_body .tit {
+      font-family: "Gong Gothic", sans-serif !important;
+      font-size: 4.88281vw;
+      font-weight: 400;
+      color: #fff;
+      position: relative;
+      padding-top: 12.20703vw; }
+      .modal.voice_alert01 .modal_body .tit:before {
+        width: 11.71875vw;
+        height: 12.20703vw;
+        background-position: -49.70703vw -70.80078vw;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -5.85938vw; }
 
 /*.chat_pop_body .search_area{margin-top:25px;}
 .chat_pop_body .search_box{width:100%;}
@@ -2390,12 +2497,12 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
         background-color: #0087f9;
         color: #fff; }
         .signup_wrap .btn.btn_like.btn_like.active .ic, .signup_wrap .btn.btn_unlike.btn_like.active .ic {
-          background-position: -25.00000vw -75.78125vw; }
+          background-position: -8.78906vw -47.07031vw; }
       .signup_wrap .btn.btn_like.btn_unlike.active, .signup_wrap .btn.btn_unlike.btn_unlike.active {
         background-color: #e62122;
         color: #fff; }
         .signup_wrap .btn.btn_like.btn_unlike.active .ic, .signup_wrap .btn.btn_unlike.btn_unlike.active .ic {
-          background-position: -31.25000vw -75.78125vw; }
+          background-position: -15.03906vw -47.07031vw; }
       .signup_wrap .btn.btn_like .ic, .signup_wrap .btn.btn_unlike .ic {
         width: 6.25000vw;
         height: 6.25000vw;
@@ -3254,8 +3361,6 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     background-position: -66.50391vw -18.55469vw; }
   .ic.circle_add {
     background-position: -57.71484vw -18.55469vw; }
-  .ic.like {
-    background-position: -27.24609vw -32.81250vw; }
   .ic.unlike {
     background-position: -23.43750vw -32.81250vw; }
   .ic.circle_delete {
@@ -3268,8 +3373,6 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
     background-position: -10.15625vw -40.62500vw; }
   .ic.ic_version {
     background-position: -15.23438vw -40.62500vw; }
-  .ic.ic_scrap {
-    background-position: -36.52344vw -32.81250vw; }
   .ic.ic_top {
     background-position: -70.89844vw -5.85938vw; }
   .ic.circle_delete {
@@ -3741,9 +3844,12 @@ select.form-control {
   border: 0.09766vw solid #d5d5d5;
   border-radius: 6.34766vw;
   background-color: #fff; }
-  .btn_like .ic {
+  .btn_like > .ic {
     width: 3.80859vw;
-    height: 3.80859vw; }
+    height: 3.80859vw;
+    background-position: -23.43750vw -32.81250vw; }
+  .btn_like.active > .ic {
+    background-position: -27.24609vw -32.81250vw; }
   .btn_like .num {
     font-size: 3.41797vw;
     color: #333;
@@ -4000,6 +4106,12 @@ select.form-control {
       margin-bottom: 1.95313vw; }
   .list_scrap > .btn_like {
     margin: 2.92969vw 0 3.90625vw 0; }
+    .list_scrap > .btn_like > .ic {
+      width: 3.80859vw;
+      height: 3.80859vw;
+      background-position: -23.43750vw -32.81250vw; }
+    .list_scrap > .btn_like.active > .ic {
+      background-position: -27.24609vw -32.81250vw; }
   .list_scrap > .btn_scrap_wrap {
     border-top: 0.09766vw solid #d4d4d4;
     margin: 0 -3.90625vw -1.95313vw;
@@ -4015,7 +4127,10 @@ select.form-control {
       .list_scrap > .btn_scrap_wrap > .btn_scrap > .ic {
         width: 5.46875vw;
         height: 5.46875vw;
-        margin-top: -0.97656vw; }
+        margin-top: -0.97656vw;
+        background-position: -31.05469vw -32.81250vw; }
+      .list_scrap > .btn_scrap_wrap > .btn_scrap.active > .ic {
+        background-position: -36.52344vw -32.81250vw; }
       .list_scrap > .btn_scrap_wrap > .btn_scrap > span {
         font-size: 3.90625vw;
         font-weight: 600;
@@ -4712,12 +4827,41 @@ select.form-control {
       padding: 1.95313vw 0;
       border-bottom: 0.09766vw solid #d4d4d4; }
 
+/* ------------------------------------------------------- error ------------------------------------------------------- */
+.error_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+  .error_wrap .error_info {
+    width: 100%;
+    font-size: 3.90625vw;
+    font-weight: 600;
+    color: #222;
+    padding-top: 26.36719vw;
+    padding-bottom: 14.64844vw;
+    background-image: url(../images/icon/error.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 19.53125vw 19.53125vw;
+    text-align: center; }
+  .error_wrap .btn_error {
+    width: 70.31250vw;
+    height: 11.71875vw;
+    font-size: 3.51563vw;
+    font-weight: 500;
+    color: #222;
+    background-color: #fff;
+    border-color: #555;
+    border-radius: 0; }
+
 /* ------------------------------------------------------- top button ------------------------------------------------------- */
 .btn_top {
   display: none;
   width: 9.76563vw;
   height: 9.76563vw;
   position: fixed;
-  right: 1.95313vw;
-  bottom: 21.48438vw;
+  right: 3.90625vw;
+  bottom: 48.82813vw;
   z-index: 999; }

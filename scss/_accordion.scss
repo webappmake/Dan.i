@@ -378,6 +378,7 @@
   flex-wrap: wrap;
   margin: 0 -#{$gutter_xs};
   padding: 0 $gutter_md;
+  justify-content:center;
   .a_btn_white {
     width: calc(50% - #{$gutter_sm});
     margin: $gutter_xs !important;
