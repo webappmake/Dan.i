@@ -235,6 +235,7 @@
   font-size: 3.90625vw;
   font-weight: 500;
   line-height: 1.25;
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
   .tit_lg { font-size: 4.29688vw !important; }
   &.ellipsis{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
   @at-root .cont_hd > .tit { 
@@ -250,12 +251,17 @@
     color: #000;
   }
 }
+
+.tit_info{
+    display:block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
 .desc {
   color: #555;  
   line-height: 1.8;
   font-size: 2.73438vw;
   @at-root .list .desc { 
     line-height: 1.78;
+    display:block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
   }
   @at-root .list_hd .desc, .total {
     font-family: $sub_font_family;
@@ -397,6 +403,9 @@ select.form-control {
 		flex: 0 0 auto;
 		margin-left: .75rem;
   }
+  & > a, & > .tit_area{
+     max-width:calc(100% - 13.67188vw);
+  }
   a.ellipsis{
       display:block; max-width:calc(100% - 11.91406vw);
       & + .icon_chk_wrap{margin-top:- #{$gutter_sm};}
@@ -436,7 +445,7 @@ select.form-control {
     border-bottom: 0.19531vw solid $border_light;
     padding: 1.17188vw 0;
     & > div {      
-      * { display: inline-block; }
+      * { display: inline-block; vertical-align:middle;}
       .filter_pop_list { display: none; }
       .tit{ margin-right: 1.56250vw; }
     } 
@@ -453,6 +462,7 @@ select.form-control {
         }
       }
       .tag_list {
+          font-size:0; width:46.87500vw;
         & > li {
           display: inline-block;
           margin: 0 0.48828vw;
@@ -639,6 +649,9 @@ select.form-control {
     display: block;
     .tit { margin-bottom: $gutter_sm; }
   }
+  & > .tit_area{
+    .tit { margin-bottom: $gutter_sm; }
+  }
   & > .btn_like { 
       margin: 2.92969vw 0 $gutter_md 0; 
       & > .ic {width:3.80859vw; height:3.80859vw; background-position: -23.43750vw -32.81250vw; }
@@ -667,6 +680,14 @@ select.form-control {
   & > span {
     display:block; line-height:6.25000vw; font-family: $sub_font_family; font-weight: 300; font-size:4.29688vw; color:#999; padding-top:15.62500vw; text-align:center;
     &:before { position:absolute; top:0; left:50%; margin-left:-5.37109vw; }
+  }
+  &.pag_info_sm_none{
+      min-height:inherit !important;
+      background-color:#fff !important;
+      border:none !important;
+      padding-top:60px; padding-bottom:60px;
+
+      & > span{font-size:$font_size; line-height:50px;}
   }
 }
 /* ------------------------------------------------------- COMMON > CLASS > .filter_list ------------------------------------------------------- */
@@ -1191,11 +1212,20 @@ select.form-control {
     }
 }
 
-/* ------------------------------------------------------- error ------------------------------------------------------- */
+/* ------------------------------------------------------- common ------------------------------------------------------- */
 .error_wrap{
     display:flex; align-items:center; justify-content:center; width:100%; height:100%;
     .error_info{width:100%; font-size:3.90625vw; font-weight:600; color:#222;  padding-top:26.36719vw; padding-bottom:14.64844vw; background-image:url(../images/icon/error.png); background-repeat:no-repeat; background-position:center top; background-size:19.53125vw 19.53125vw; text-align:center;}
     .btn_error{width:70.31250vw; height:11.71875vw; font-size:$font_size; font-weight:500; color:#222; background-color:#fff; border-color:#555; border-radius:0;}
+}
+
+.loading{
+    display: none; z-index: 1000; position: fixed; top: 0; right: 0; left: 0; bottom: 0; background-color: rgba(0,0,0,0.8);
+    .loading_icon{
+        display:flex; flex-direction: column; align-items:center; justify-content:center; width:100%; height:100%;
+        > img{width:17.57813vw; height:17.57813vw;}
+        > span{display:block; line-height:5.85938vw; font-family:$sub_font_family; font-weight: 400; font-size:4.29688vw; color:#fff; padding-top:$gutter_md; text-align:center;}
+    }
 }
 
 /* ------------------------------------------------------- top button ------------------------------------------------------- */

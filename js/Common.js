@@ -66,7 +66,16 @@ function fn_mini_pop_open(obj) {
     var minipop_hei = $(obj).next().find(".mini_popup").outerHeight() + 40;
     
     
-    $(obj).next().find(".mini_popup").css({ "right": -minipop_wid, "top": -minipop_hei });
+    $(obj).next().find(".mini_popup").css({ /*"left": minipop_wid,*/ "top": -minipop_hei });
+}
+
+function fn_mini_pop_open01(obj) {
+    $(obj).next(".mini_popup_wrap").addClass("active");
+    var minipop_wid = ($(obj).next().find(".mini_popup").outerWidth() / 2) - 10;
+    var minipop_hei = $(obj).next().find(".mini_popup").outerHeight() + 40;
+
+
+    $(obj).next().find(".mini_popup").css({ "right": minipop_wid, "top": -minipop_hei });
 }
 
 // 채용정보 분석 미니 팝업 닫기

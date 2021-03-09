@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>로딩 페이지</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<!--lib-->
+	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../js/lib/swiper.min.js"></script>
+	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/lib/swiper.css">
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<!--custom-->
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<a href="index.html"><i class="ic logo">Dan.i</i></a>
+		</h1>
+		<div class="location">
+			<!-- 알림이 있을 경우 on 클래스 추가 -->
+			<a href="#Pop_Notification" data-toggle="modal" class="ico_noti">
+				<i class="ic alert">알림</i>
+				<span class="on">알림 수신</span>
+			</a>
+		</div>
+	</header><!--//.header-->
+
+	<div class="container-wrap">
+		<div class="container">
+			<nav class="nav_select_swiper">
+				<h2 class="skip">2차메뉴</h2>
+				<ul class="sub_menu swiper-wrapper">
+					<li class="swiper-slide active"><a href="AnalysisTopic.html">분석토픽</a></li>
+					<li class="swiper-slide"><a href="InterestTopic.html">관심토픽</a></li>
+					<li class="swiper-slide"><a href="LectureHistory_plural.html">수강이력</a></li><!--신입은 노출안됨-->
+					<li class="swiper-slide"><a href="Curriculum_plural.html">교과과정</a></li>
+					<li class="swiper-slide"><a href="Scrap.html">스크랩</a></li>
+					<li class="swiper-slide"><a href="Favorite.html">즐겨찾기</a></li>
+					<li class="swiper-slide"><a href="Setting.html">설정</a></li>
+				</ul>
+				<script>
+					var swiper = new Swiper('.nav_select_swiper', {
+						slidesPerView: 'auto',
+						centeredSlides: false,
+						grabCursor: true,
+					});
+				</script>
+			</nav>
+			<div class="contents">
+				<a href="#Alert_Basic" data-toggle="modal">일반 팝업</a>
+				<a href="#Alert_Confirm" data-toggle="modal">컨펌 팝업</a>
+			</div><!--//.contents-->
+		</div><!--//.container-->
+	</div><!--//.container-wrap-->
+	<footer class="footer">
+		<nav class="footer_nav">
+			<h2 class="skip">1차메뉴</h2>
+			<ul class="main_menu">
+				<li class="my_desk"><a href="#">MY-Desk</a></li>
+				<li class="department_lounge"><a href="#">학과라운지</a></li>
+				<li class="subject"><a href="#">교과/비교과</a></li>
+				<li class="recruit"><a href="#">채용</a></li>
+				<li class="chatbot"><a href="#Chatbot" data-toggle="modal">챗봇</a></li>
+			</ul>
+		</nav>
+	</footer><!--//.footer-->
+	<button type="button" class="btn_icon btn_top"><i class="ic ic_top">상단으로 이동</i></button> <!-- top -->
+	<!-- Alert -->
+	<div class="modal fade alert_modal" id="Alert_Basic" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p class="alert_txt">수정되었습니다.</p>
+				</div>
+				<div class="modal-footer only">
+					<button type="button" class="btn btn_primary btn_primary01" data-dismiss="modal" aria-hidden="true">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade alert_modal" id="Alert_Confirm" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p class="alert_txt">저장하시겠습니까?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn_tertiary" data-dismiss="modal" aria-hidden="true">취소</button>
+					<button type="button" class="btn btn_primary btn_primary01">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Alert -->
+</body>
+</html>
+

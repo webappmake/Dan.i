@@ -266,6 +266,7 @@
     & > li {
       width: 33.3%;
       border: 0.09766vw solid $border;
+      &.none{width:100%;}
       &.active .btn_txt { background-color: #e1e8f2; }
       &:first-child button { @include opacity(.4); } //임의로 disabled 일 때 효과줌 > 디자인없음
       &:first-child.active .btn_txt { background-color: transparent; }
@@ -336,6 +337,9 @@
       @include flex;
       justify-content: space-between;
       align-items: center;
+      &.none{
+          justify-content:center;
+      }
       & > div { margin: 0 !important; }
       .tit_lg { font-size: 4.29688vw; }
       .desc { display: block; font-size: 3.51563vw; margin: $gutter_xs 0 0; }
@@ -438,6 +442,7 @@
     height: 17.57813vw;
     border: 0.09766vw solid $border;
     padding: 2.44141vw 2.92969vw;
+    &.none{width:100%; height:auto;}
     & > span {
       display: block;
       font-size: 3.12500vw;
