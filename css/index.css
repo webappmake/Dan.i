@@ -3992,7 +3992,7 @@ select.form-control {
         margin-bottom: 0; }
   .list_view .list_cont .list .tag_list {
     font-size: 0;
-    width: 46.87500vw; }
+    /*width:46.87500vw;*/ }
     .list_view .list_cont .list .tag_list > li {
       display: inline-block;
       margin: 0 0.48828vw; }
