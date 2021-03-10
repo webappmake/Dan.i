@@ -2867,9 +2867,9 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       height: 6.44531vw;
       background-position: -60.74219vw -32.81250vw; }
     .modal-content.camp_wrap .search_form_wrap .search_form .ic_search {
-      width: 64px;
-      height: 64px;
-      background-position: -558px -336px; }
+      width: 6.25000vw;
+      height: 6.25000vw;
+      background-position: -54.49219vw -32.81250vw; }
   .modal-content.camp_wrap .search_form_wrap .txt_sm {
     width: calc(100% - 8.78906vw*2);
     margin: 1.95313vw 8.78906vw; }
@@ -3001,7 +3001,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       font-weight: 400;
       line-height: 1.38; }
       .schedule_wrap .schedule .tbl tbody td span.txt {
-        height: 105px;
+        height: 10.25391vw;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -4260,11 +4260,11 @@ select.form-control {
     min-height: inherit !important;
     background-color: #fff !important;
     border: none !important;
-    padding-top: 60px;
-    padding-bottom: 60px; }
+    padding-top: 5.85938vw;
+    padding-bottom: 5.85938vw; }
     .pag_info_none.pag_info_sm_none > span {
       font-size: 3.51563vw;
-      line-height: 50px; }
+      line-height: 4.88281vw; }
 
 /* ------------------------------------------------------- COMMON > CLASS > .filter_list ------------------------------------------------------- */
 .filter_list {
@@ -4857,6 +4857,9 @@ select.form-control {
     font-weight: 600;
     color: #222;
     margin-bottom: 1.95313vw; }
+  .keyword_area .keyword_box > dd {
+    height: 22.46094vw;
+    overflow: hidden; }
   .keyword_area .keyword_box > dd .keyword_none {
     display: flex;
     align-items: center;
@@ -4883,9 +4886,7 @@ select.form-control {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -1.75781vw;
-    max-height: 250px;
-    overflow: hidden; }
+    margin-top: -1.75781vw; }
     .keyword_area .keyword_list > li {
       font-size: 3.90625vw;
       font-weight: 500;
@@ -4996,10 +4997,10 @@ select.form-control {
 
 /* ------------------------------------------------------- autocomplete ------------------------------------------------------- */
 .auto_complete_wrap {
-  /*display:none;*/
-  max-height: 396px;
+  display: none;
+  max-height: 38.67188vw;
   overflow-y: auto;
-  padding: 18px 30px;
+  padding: 1.75781vw 2.92969vw;
   background-color: #fafafa; }
 
 .ui-autocomplete {
@@ -5009,8 +5010,8 @@ select.form-control {
   /*display:block !important;*/ }
 
 .ui-autocomplete > li.ui-menu-item {
-  font-size: 40px;
-  line-height: 72px;
+  font-size: 3.90625vw;
+  line-height: 7.03125vw;
   color: #222; }
 
 .ui-autocomplete > li.ui-menu-item:last-child {
@@ -5028,7 +5029,7 @@ select.form-control {
   border: none;
   color: #222;
   margin: 0;
-  padding: 5px; }
+  padding: 0.48828vw; }
 
 .ui-autocomplete > li.ui-menu-item .ui-state-highlight {
   background: #fff;
