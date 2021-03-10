@@ -35,10 +35,26 @@
                 </p>
                 <div class="search_form_wrap">
                     <div class="search_form">
-                        <input type="text" placeholder="검색어를 입력하세요"/>
+                        <input type="text" placeholder="검색어를 입력하세요" />
                         <button type="submit" class="btn"><i class="ic search">검색</i></button>
                     </div>
-                    <p class="desc">단어로 적어주세요.<br/>EX) 기획, 영업, 인턴, 정보처리기사, TOEIC (O)</p>
+                    <!-- 자동 완성 영역 -->
+                    <!-- 기본 display:none이나 확인하실 수 있도록 임시로 display:block 처리되어 있습니다. -->
+                    <div class="auto_complete_wrap" style="display:block">
+                        <div class="auto_complete_area">
+                            <!-- 자동 완성 영역 ADD 되는 위치 -->
+                            <ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front">
+                                <li class="ui-menu-item"><div class="ui-menu-item-wrapper">빅데이터</div></li>
+                                <li class="ui-menu-item"><div class="ui-menu-item-wrapper">빅데이터처리(CE)</div></li>
+                                <li class="ui-menu-item"><div class="ui-menu-item-wrapper">디자인컴퓨팅:빅데이터와딥러닝</div></li>
+                                <li class="ui-menu-item"><div class="ui-menu-item-wrapper">빅데이터</div></li>
+                                <li class="ui-menu-item"><div class="ui-menu-item-wrapper">빅데이터처리(CE)</div></li>
+                                <li class="ui-menu-item"><div class="ui-menu-item-wrapper">디자인컴퓨팅:빅데이터와딥러닝</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // 자동 완성 영역 -->
+                    <p class="desc">단어로 적어주세요.<br />EX) 기획, 영업, 인턴, 정보처리기사, TOEIC (O)</p>
                     <div class="word_wrap">
                         <span class="word">마케팅<button type="button" class="btn_close">삭제</button></span>
                         <span class="word">마케팅<button type="button" class="btn_close">삭제</button></span>

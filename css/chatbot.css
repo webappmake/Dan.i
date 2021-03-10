@@ -174,8 +174,8 @@
 .icBubbleClass3 .icImageClass1{border-radius:0 20px 0 0;}
 .icBubbleClass3 .bot_card{padding:10px 20px;}
 .icBubbleClass4{padding:10px 20px; background-color:#f1f1f1; border:0.09766vw solid #d4d4d4; border-radius:0 0 25px 20px;}
-.icBubbleClass10{display: inline-block; vertical-align: middle; height: auto; line-height: 24px; padding: 8px 22px; background-color: #f1f1f1; border: 1px solid #d4d4d4; border-radius: 0 20px 25px 20px;}
-.icBubbleClass8 .icBubbleClass10{background-color:#fff;}*/
+.icBubbleClass80{display: inline-block; vertical-align: middle; height: auto; line-height: 24px; padding: 8px 22px; background-color: #f1f1f1; border: 1px solid #d4d4d4; border-radius: 0 20px 25px 20px;}
+.icBubbleClass8 .icBubbleClass80{background-color:#fff;}*/
 
 /* image wrap */
 /*.icImageClass1{width:100%; border-radius:10px;}
@@ -268,7 +268,7 @@
 .swiper_wrap .swiper-slide{display:inline-block; vertical-align:middle; height:auto; line-height:24px; padding-bottom:30px;*/ /*padding:8px 22px; background-color:#f1f1f1; border:0.09766vw solid #d4d4d4; border-radius:0 20px 25px 20px;*//*}
 .swiper_wrap .swiper-slide .icBubbleClass8{max-width:100%;}
 .swiper_wrap .swiper-slide .icLayoutClass2{margin-bottom:10px;}
-.swiper_wrap .swiper-slide .icBubbleClass10{border:none;}
+.swiper_wrap .swiper-slide .icBubbleClass80{border:none;}
 .owl-theme .owl-nav + .owl-dots{margin-top:10px;}
 .owl-theme .owl-dots .owl-dot span{width:7px; height:7px; margin:0 3px; background-color:#d4d4d4; border-radius:50%; opacity:1;}
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{background-color:#0054a3;}

@@ -340,7 +340,7 @@
       &.none{
           justify-content:center;
       }
-      & > div { margin: 0 !important; }
+      & > div { margin: 0 !important; max-width:calc(100% - 19.53125vw);}
       .tit_lg { font-size: 4.29688vw; }
       .desc { display: block; font-size: 3.51563vw; margin: $gutter_xs 0 0; }
       .icon_chk_wrap { float: right; }

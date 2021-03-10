@@ -90,7 +90,7 @@
 						<ul class="list">
 							<!--like 오른쪽 배치 리스트-->
 							<li>
-								<div class="inline_wrap btn_like_list align_top">
+								<div class="inline_wrap btn_like_list btn_like_list01 align_top">
 									<a href="#">
 										<span class="label_round">주교재</span>
 										<h4 class="tit tit_lg">창조경제에서의 경영전략</h4>
@@ -329,6 +329,10 @@
 								<h5 class="tit">2019.09</h5>
 								<table class="tbl" cellpadding="0" cellspacing="0" summary="sampleTable">
 									<caption>Schedule</caption>
+									<colgroup>
+										<col style="width:auto">
+										<col style="width:260px">
+									</colgroup>
 									<thead>
 										<tr>
 											<th class="left">제목</th>
@@ -338,23 +342,23 @@
 									<tbody>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>
 										</tr>
 									</tbody>
 								</table>
@@ -372,23 +376,23 @@
 									<tbody>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>                                                
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>                                                
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>                                                
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>                                                
 										</tr>
 										<tr>
 											<td class="left"><span class="txt">2020학년도 2학기 졸업인증 공인영어 신청서 제출기간</span></td>
-											<td><span class="date">2020.09.01 ~ 2020.12.17</span></td>                                                
+											<td><span class="date">2020.09.01 ~<br />2020.12.17</span></td>                                                
 										</tr>
 									</tbody>
 								</table>
@@ -509,15 +513,31 @@
 						</ul>
 						<div class="search_form_wrap">
 							<div class="search_form">
-								<input type="text" placeholder="검색어를 입력하세요." />
-								<button type="submit" class="btn" data-target="#Pop_VoiceAlert" data-toggle="modal"><i class="ic ic_voice">검색</i></button>
+								<input type="text" id="Search_Txt" placeholder="검색어를 입력하세요." />
+								<button type="submit" class="btn" id="btn_voice" data-target="#Pop_VoiceAlert" data-toggle="modal"><i class="ic ic_voice">검색</i></button>
+								<button type="submit" class="btn" id="btn_search"><i class="ic ic_search">검색</i></button>
 							</div>
+							<script>
+								// 임시 적용
+								// 입력 필드 선택시 마이크를 전송 버튼으로 변경
+								// 포커스 잃을 경우 다시 마이크 버튼으로 변경
+                                $('#Search_Txt').on('focusin', function (e) {
+									$("#btn_voice").hide();
+                                    $("#btn_search").show();
+								})
+
+                                $('#Search_Txt').on('focusout', function (e) {
+                                    $("#btn_search").hide();
+									$("#btn_voice").show();
+								})
+							</script>
 							<p class="txt txt_sm">
 								<i class="ic ic_info"></i><span>용어사전은 네이버 지식백과를 통해 결과를 제공하고 있어요.</span>
 							</p>
 						</div>
 					</section>
 					<!--//검색-->
+
 				</div><!--//.modal_body-->
 			</div>
 		</div>
