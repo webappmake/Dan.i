@@ -933,7 +933,8 @@ button {
   display: inline-block; }
 
 .keyword_area01 .keyword_box > dd {
-  padding-top: 1.95313vw; }
+  padding-top: 1.95313vw;
+  height: auto !important; }
   .keyword_area01 .keyword_box > dd .keyword_list > li .btn_delete {
     width: 3.90625vw;
     height: 3.90625vw;

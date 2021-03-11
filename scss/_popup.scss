@@ -529,7 +529,7 @@
     .keyword_box{
         > dt{display:inline-block;}
         > dd{
-            padding-top:$gutter_sm;
+            padding-top:$gutter_sm; height:auto !important;
             .keyword_list{
                 > li .btn_delete{
                     width:3.90625vw; height:3.90625vw; margin-left:1.95313vw; margin-top:-0.48828vw;

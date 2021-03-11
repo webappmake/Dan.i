@@ -1,15 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\Error",
-    "\\images",
-    "\\images\\bg",
-    "\\images\\icon",
-    "\\js",
-    "\\Notification",
+    "\\CampusLife",
+    "\\DepartmentLounge",
+    "\\Recruit",
     "\\scss",
+    "\\Signup_Common",
     "\\Subject"
   ],
+  "SelectedNode": "\\scss\\index.scss",
   "PreviewInSolutionExplorer": false
 }
