@@ -2683,17 +2683,17 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       background: url(../images/icons_m.png) no-repeat -15.625vw -36.71875vw/97.65625vw auto;
       background-repeat: no-repeat; }
 
-.ranking {
+.signup_contents .ranking {
   margin-top: 3.90625vw; }
   .signup_wrap .ranking {
     padding: 0; }
-  .ranking li {
+  .signup_contents .ranking li {
     font-size: 3.90625vw;
     font-weight: 600;
     color: #333;
     line-height: 3.32031vw;
     padding: 1.95313vw 0; }
-    .ranking li .num {
+    .signup_contents .ranking li .num {
       width: 8.39844vw;
       height: 8.39844vw;
       display: inline-block;
@@ -2704,7 +2704,7 @@ chat_info_area .chat_topic_list > li .chat_voca_area .voca_list, .chat_info_area
       line-height: 8.39844vw;
       color: #fff;
       background-color: #aeaeae; }
-      .ranking li .num.red {
+      .signup_contents .ranking li .num.red {
         background-color: #f17164; }
 
 .inner_box {
@@ -4748,13 +4748,19 @@ select.form-control {
         font-family: "Gong Gothic", sans-serif !important;
         vertical-align: middle;
         font-style: oblique;
-        color: #333; }
+        color: #333;
+        display: inline-block; }
         .ranking li a span.num {
           width: 4.88281vw;
           margin-right: 3.90625vw;
           text-align: right;
-          color: #999;
-          display: inline-block; }
+          color: #999; }
+        .ranking li a span.txt {
+          max-width: calc(100% - 8.78906vw);
+          padding-right: 0.97656vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
 
 /* ------------------------------------------------------- tag_btn_list ------------------------------------------------------- */
 .tag_btn_list {

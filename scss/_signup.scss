@@ -180,30 +180,33 @@
     }//.word
   }//.word_wrap
 }
-.ranking {
-  margin-top: $gutter_md;
-  @at-root .signup_wrap .ranking{padding:0;}
-  li {
-    font-size: 3.90625vw;
-    font-weight: 600;
-    color: #333;
-    line-height: 3.32031vw;
-    padding: $gutter_sm 0;
-    .num {
-      width: 8.39844vw;
-      height: 8.39844vw;
-      display: inline-block;
-      margin-right: 2.44141vw;
-      text-align: center;
-      font-size: 3.90625vw;
-      font-weight: 600;
-      line-height: 8.39844vw;
-      color: #fff;
-      background-color: #aeaeae;
-      &.red { background-color: #f17164; }
+.signup_contents{
+    .ranking {
+      margin-top: $gutter_md;
+      @at-root .signup_wrap .ranking{padding:0;}
+      li {
+        font-size: 3.90625vw;
+        font-weight: 600;
+        color: #333;
+        line-height: 3.32031vw;
+        padding: $gutter_sm 0;
+        .num {
+          width: 8.39844vw;
+          height: 8.39844vw;
+          display: inline-block;
+          margin-right: 2.44141vw;
+          text-align: center;
+          font-size: 3.90625vw;
+          font-weight: 600;
+          line-height: 8.39844vw;
+          color: #fff;
+          background-color: #aeaeae;
+          &.red { background-color: #f17164; }
+        }
+      }
     }
-  }
 }
+
 .inner_box {
   width: 100%;
   height: auto;

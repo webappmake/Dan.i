@@ -1079,12 +1079,19 @@ select.form-control {
         vertical-align: middle;
         font-style: oblique;
         color: #333;
+        display:inline-block;
         &.num {
           width: 4.88281vw;
           margin-right: $gutter_md;
           text-align: right;
           color: #999;
-          display: inline-block;
+        }
+        &.txt{
+            max-width:calc(100% - 8.78906vw);
+            padding-right:0.97656vw;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
         }
       }
     }
